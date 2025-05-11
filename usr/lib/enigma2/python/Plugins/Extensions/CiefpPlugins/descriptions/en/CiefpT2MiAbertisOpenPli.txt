@@ -1,0 +1,36 @@
+CiefpSettings T2MI Abertis OpenPLi 1.1
+
+is a customized version for OpenPLi
+which enables the installation and configuration of add-ons required for using T2MI and Abertis satellite settings.
+
+
+Changes in the new version:
+
+Enlarged screen:
+Changed screen size from 1200x600 to 1600x800,
+adjusted widget positions and sizes (info, status, buttons) and increased font size for better readability.
+
+Local files:
+We have removed the download of files from the Internet (except for astra-sm)
+and switched to copying files from local directories (data and data/scripts) using shutil.copy.
+
+
+The plugin automatically installs:
+Astra-SM: A tool for handling T2MI signals. (this file is downloaded from the internet)
+Configuration files: astra-sm.conf, astra-sm.lua, and sysctl.conf, SoftCam.Key, abertis script (now copied from local directory)
+Integration with oscam-emu.
+This plugin simplifies the installation process of the necessary components and is tailored 
+for users who want to quickly and easily configure OpenPLi for T2MI/Abertis.
+
+Nameserver - DNS settings:
+In order for the network to work properly when using a static IP address, it is necessary to manually set DNS servers.
+
+These DNS servers belong to Google and enable reliable resolution of domain names.
+This is done through network configuration:
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+Restarting the network: After the changes, be sure to restart the network:
+
+When properly configured, the static IP network works without problems, and the plugin can download the necessary files from the Internet.
+
+..:: ciefpsettings ::..

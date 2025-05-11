@@ -1,0 +1,50 @@
+**CiefpChannelManager** is a powerful Enigma2 plugin designed for managing TV bouquets and channels on Enigma2-based satellite receivers.
+Evolving from the original `CiefpBouquetUpdater`, it offers advanced features for updating, organizing, and editing bouquets and channels,
+including robust support for IPTV streams. The plugin provides an intuitive interface for users to customize their channel lists efficiently.
+
+## Functional Components
+
+### 1. Updater ( CiefpBouquetUpdater )
+The **Updater** component handles the initial creation and updating of bouquets based on predefined or user-provided channel lists.  
+- **Capabilities**:
+  - Imports channel lists from Github site (e.g.,"ciefp-E2-75E-34W").
+  - Supports updating one or more bouquets, the user chooses what to update.
+  - Use the OK button to select, the green button to copy, and the yellow button to install.
+  - Reloads Enigma2 service lists and bouquets after updates to apply changes seamlessly.
+  - The blue button is used to move to the next bouquet editor screen (Editor).
+
+### 2. Bouquet Editor ( CiefpBouquetEditor )
+**Bouquet Editor** allows users to manage the bouquet structure, changing the positions of one or more bouquets. 
+  - **Capabilities**:
+  - Use the OK button to select one or more bouquets, bouquets are prefixed with a „+“.
+  - The yellow button activates the Move Mode, the move bouquets are prefixed with „>>“.
+  - Use the up and down keys to move the selected bouquets.
+  - When you reach the desired location, turn off the (Move Mode) option on the yellow button.
+  - Use the green button to save changes to the bouquet files, preserving the structure for Enigma2.
+  - If we want to edit channels within a bouquet with the selection bar, we come to the bouquet in which the channels we want to edit are located.
+  - The blue button is used to move to the next bouquet editor screen (Channels).
+
+### 3. Channel Editor ( CiefpChannelEditor )
+The **Channel Editor** provides detailed control over individual channels within a bouquet.  
+- **Capabilities**:
+  - Select channels (OK button) for editing, marked with a „+“ prefix.
+  - Delete selected channels or groups (Red button) with immediate list updates.
+  - Move channels or groups up/down (Yellow button for „Move Mode“) to reorganize the list.
+  - Selection of the entire channel group blue button, by selecting a marker and using the blue button, all channels up to the next marker are selected.
+  - By activating "Move Mode", you have the option to move a channel group to the desired location.
+  - If you want sports channels to be at the top of your bouquet, this option is made for you.
+  - Support for both standard DVB channels (via `lamedb`) and IPTV channels, ensuring accurate naming and handling.
+  - Save changes to the bouquet file, with automatic `#DESCRIPTION` generation for IPTV channels.
+
+## Key Features
+- **User-Friendly Interface**: Intuitive navigation with color-coded buttons (Green: Save, Yellow: Move Mode, Red: Delete, Blue: Select Group).
+- **IPTV Support**: Seamless handling of IPTV channels with proper name extraction and filtering.
+- **Debug Logging**: Detailed logs in `/tmp/channel_editor_debug.log` for troubleshooting.
+- **Robust Error Handling**: Graceful management of missing files or invalid formats, with clear status messages.
+
+**CiefpChannelManager** is the ultimate tool for Enigma2 users seeking complete control over their TV bouquets and channels,
+ combining updating, editing, and organizing into one comprehensive plugin.
+
+## Credits
+Made by **Grok** (powered by xAI) in collaboration with **CiefpSettings**.  
+Special thanks to the Enigma2 community for inspiration and support.

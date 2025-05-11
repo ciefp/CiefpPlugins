@@ -1,0 +1,42 @@
+CiefpSelectSatellite 1.7
+
+Plugin - Opis i Upotreba
+Šta plugin radi?
+- Omogućava izbor satelita iz liste dostupnih satelita.
+- Filtrira tematske bukete (EX-YU, Sport, Film, Muzika, Dokumentarci itd.) prema izabranim satelitima.
+- Automatski prepoznaje satelitske markere (#SERVICE 1:64) i dodaje sve kanale (#SERVICE 1:0) koji im pripadaju.
+- Pretražuje bukete i kopira samo one kanale koji pripadaju izabranim satelitima.
+- Satelitski buketi se kopiraju unapred određenim mapama i prema selektovanim satelitima.
+- Uz svaku listu se automatski kopiraju IPTV,Radio i DVB.T/T2 buketi.
+- Instalira filtrirane bukete u Enigma2 sistem i omogućava korisnicima da gledaju samo želejene satelite.
+- Daje mogućnost korisniku da sam kreira svoju listu prema svojim potrebama.
+
+# Kako koristiti plugin?
+
+1.Pokretanje plugina
+Instalirajte i pokrenite CiefpSelectSatellite iz Enigma2 plugina menija.
+Plugin će učitati listu dostupnih satelita iz satellites.xml.
+
+2.Izbor satelita
+Pomoću strelica na daljinskom birate satelite koje želite.
+Pritisnite OK da biste dodali ili uklonili satelit iz izbora.
+Odabrani sateliti se pojavljuju na desnoj strani ekrana.
+
+3.Kopiranje buketa
+Pritisnite ZELENI taster (GREEN) da biste filtrirali bukete i kanale prema izabranim satelitima.
+Plugin pretražuje bukete, zadržava samo kanale iz izabranih satelita i briše ostalo.
+
+4.Instalacija buketa
+Pritisnite ŽUTI taster (YELLOW) da instalirate filtrirane bukete u /etc/enigma2/.
+Plugin će automatski ažurirati Enigma2 i aktivirati nove postavke.
+
+5.Zatvaranje
+Pritisnite CRVENI taster (RED) za izlaz iz plugina.
+
+# Napomena
+- Plugin uvek skida najnoviju dostupnu motornu listu sa github.
+- Svima kojima već dostupne verzije nisu bile dovoljne sada imate priliku uraditi svoju verziju.
+- Rezultat: Korisnik sada ima moć da napravi listu po svojim potrebama! 🎯
+
+::.. Uživaj u gledanju! ..::
+..:: ciefpsettings ::..

@@ -1,0 +1,23 @@
+CiefpSettingsStreamrelay 1.2
+
+Plugin je enigma2 python3 verzija
+Plugin je rađen konkretno za moju listu 
+i neće raditi sa listama od drugih autora
+
+Plugin učitava unapred određene bukete i konvertuje ih 
+u unapred određene streamrelay bukete
+
+Satelite koje podržava 28.2E Sky UK i 19.2E Sky DE
+
+Kako se koristi:
+1.pokrenete plugin
+2.selektujete bukete 
+žuto dugme - Astra 19.2E
+plavo dugme - Astra 28.2E
+moguće je slektovanje oba buketa 
+status traka prikazuje šta je selektovano
+3.Start conversion
+pokreće se proces konvertovanja nakon završetka 
+restart enigma2 
+
+..:: ciefpsettings ::..

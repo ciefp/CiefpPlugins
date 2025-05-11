@@ -1,0 +1,23 @@
+CiefpSettingsStreamrelay PY2 1.1
+
+The plugin is enigma2 python2 version
+The plugin was made specifically for my settings
+and will not work with settings from other authors
+
+The plugin loads predefined bouquets and converts them
+into predefined streamrelay bouquets
+
+Satellites supported by 28.2E Sky UK and 19.2E Sky DE
+
+How to use:
+1.run the plugin
+2.select bouquets
+yellow button - Astra 19.2E
+blue button - Astra 28.2E
+it is possible to select both bouquets
+status bar shows what is selected
+3.Start conversion
+the conversion process starts after completion
+restart enigma2
+
+..:: ciefpsettings ::..

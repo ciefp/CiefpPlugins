@@ -1,0 +1,23 @@
+..:: Ciefp Plugins Panel ::..
+
+The Ciefp Plugins Panel is a collection of tools and utilities designed to enhance your Enigma2 experience. 
+This plugin provides easy access to a variety of Ciefp plugins, 
+- offering features such as settings management
+- satellite editing
+- xml editing
+- m3u converter
+- bouquet updates, and more. 
+With a user-friendly interface, you can browse plugin descriptions, 
+switch between Serbian and English languages, and install plugins directly with a confirmation prompt for added safety.
+
+**Usage:**
+- Simple functions move up and down
+- by selecting ok you move to the second part of the screen
+- the second part of the screen can move up and down
+- clicking ok again takes you back to the first part of the screen with icons
+- Red button - Exit
+- Green button - Installation
+- Yellow button - Serbian description of the plugin
+- Blue button - English description of the plugin
+
+..:: CiefpSettings ::..

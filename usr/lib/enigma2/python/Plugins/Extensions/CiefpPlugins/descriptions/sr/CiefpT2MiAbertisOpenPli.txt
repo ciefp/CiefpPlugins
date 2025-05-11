@@ -1,0 +1,35 @@
+CiefpSettings T2MI Abertis OpenPLi 1.1
+
+je prilagođena verzija za OpenPLi-a
+koja omogućava instalaciju i konfiguraciju dodataka potrebnih za korišćenje T2MI i Abertis satelitskih postavki. 
+
+
+Promene u novoj verziji:
+
+Povećan ekran: 
+Promenjena dimenzija ekrana sa 1200x600 na 1600x800,
+prilagođene pozicije i veličine widget-a (info, status, dugmad) i povećana veličina fonta za bolju čitljivost.
+
+Lokalni fajlovi: 
+Uklonio smo preuzimanje fajlova sa interneta (osim za astra-sm)
+i prešao na kopiranje fajlova iz lokalnih direktorijuma (data i data/scripts) koristeći shutil.copy.
+
+
+Plugin automatski instalira:
+Astra-SM: Alat za rukovanje T2MI signalima. (ovaj fajl se preuzima sa interneta)
+Konfiguracione datoteke: astra-sm.conf, astra-sm.lua, i sysctl.conf,SoftCam.Key,abertis skripta (sada se kopiraju iz lokalnog direktorijuma) 
+Integraciju sa oscam-emu.
+Ovaj plugin pojednostavljuje proces instalacije potrebnih komponenti i prilagođen je za korisnike koji žele da brzo i lako konfigurišu OpenPLi za T2MI/Abertis.
+
+Nameserver - DNS podešavanja:
+Da bi mreža ispravno radila kada koristite statičku IP adresu, potrebno je ručno postaviti DNS servere. 
+
+Ovi DNS serveri pripadaju Google-u i omogućavaju pouzdanu rezoluciju imena domena.
+Ovo se obavlja kroz konfiguraciju mreže:
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+Restartovanje mreže: Posle izmena, obavezno restartujte mrežu:
+
+Kada se pravilno konfiguriše, statička IP mreža radi bez problema, a plugin može preuzimati potrebne fajlove sa interneta.
+
+..:: ciefpsettings ::..

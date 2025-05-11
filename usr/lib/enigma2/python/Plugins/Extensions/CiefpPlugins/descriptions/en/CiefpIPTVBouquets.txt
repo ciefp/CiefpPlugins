@@ -1,0 +1,113 @@
+..:: CiefpIPTVBouquets ::..
+CiefpIPTVBouquets is an Enigma2 plugin designed to manage IPTV bouquets on Enigma2 devices.
+It allows users to download, install, edit and delete IPTV bouquets directly from the GitHub repository,
+as well as manage channels within the bouquet. The plugin is useful for users who want to easily organize IPTV content,
+including channels, series and movies, with an intuitive interface.
+
+Main functions:
+
+Download and install IPTV bouquets from GitHub.
+Bouquet editing (selecting, moving, deleting channels).
+Group selection of similar channels (e.g. "HBO 1", "HBO 2", "HBO").
+Management of deleted bouquets (.del files).
+Reload settings after changes.
+Screens and their use
+The plugin has one main screen and four additional screens, each with specific functions.
+Here is a brief description and instructions for using each:
+
+1. ..:: CiefpIPTV ::.. (Main screen)
+Description: This screen allows downloading and installing IPTV bouquets from the GitHub repository.
+Functions:
+- Displays a list of available bouquets from GitHub (left).
+- Allows selecting a bouquet for installation (right).
+- Starts installation of selected bouquets and reloading settings.
+- Provides access to other screens (IPTV Manager, BouquetViewer).
+Usage:
+- OK/Green: Selects/deselects a bouquet from the left list and adds it to the right list.
+- Yellow: Starts installation of selected bouquets (confirmed by a dialog).
+- Red: Opens the IPTV Manager screen.
+- Blue: Opens the BouquetViewer screen.
+- Cancel: Exits the plugin.
+- Up/Down: Navigates through the bouquet list.
+Note: Bouquets are downloaded from GitHub, so an internet connection is required.
+
+2. ..:: BouquetViewer ::..
+Description: Allows preview of the selected bouquet before installation.
+Functions:
+- Displaying the contents of the selected bouquet gives the user the ability to preview the selected bouquet before installation.
+
+3. ..:: IPTV Manager ::..
+Description: Allows management of installed IPTV bouquets, including deleting and editing.
+Functions:
+- Displays a list of installed IPTV bouquets.
+- Allows selection and deletion of bouquets.
+- Provides access to editing bouquets via the IPTV Editor screen.
+Usage:
+- OK/Green: Selects/deselects a bouquet for deletion.
+- Red: Deletes the selected bouquets (confirmed by a dialog).
+- Yellow: Opens the Bouquet Cleaner to delete .del files from etc/enigma2
+- Blue: Opens the IPTV Editor to edit the selected bouquet.
+- Cancel: Returns to the main screen.
+- Up/Down: Navigates through the bouquet list.
+Note: Deleting bouquets removes them from the system, and reloading settings is optional after deletion.
+
+3. ..:: IPTV Editor ::..
+Description: Allows detailed editing of channels within the selected bouquet.
+Functions:
+- Displays the list of channels in the bouquet.
+- Supports selection, group selection of similar channels, moving and deleting channels.
+- Allows saving changes and reloading settings.
+Usage:
+- OK: Selects/deselects an individual channel.
+- Red: Deletes selected channels (confirmed by a dialog).
+- Green: Saves changes in the bouquet (confirmed by a reload dialog).
+- Yellow: Enables/disables "Move Mode" for moving selected channels.
+- Blue: Starts group selection of similar channels (e.g. selecting "HBO 1" means "HBO", "HBO 2", etc.).
+- Up/Down: Navigates through the channel list; in "Move Mode", moves selected channels.
+- Left/Right: Scrolls pages; in "Move Mode", moves channels by multiple positions.
+- Cancel: Exits the screen (warns if there are unsaved changes).
+Note: The "Select Similar" function is optimized for recognizing similar channels (e.g. "HBO", "Cinemax", "Star Wars Episode"),
+including unselecting if all similar channels are already selected.
+
+4. ..:: Bouquet Cleaner ::..
+Description: Manages deleted bouquets (files with the extension .del).
+Functions:
+- Displays a list of .del files in the /etc/enigma2/ directory.
+- Allows selection and permanent deletion of .del files.
+Usage:
+- OK: Selects a single .del file.
+- Green: Selects all .del files.
+- Red: Deletes the selected .del files (confirmed by a dialog).
+- Cancel: Returns to the main screen.
+- Up/Down: Navigates through the file list.
+Note: This is useful for cleaning up old or unnecessary deleted bouquets.
+
+How to use the plugin
+Installing a bouquet:
+Run the plugin and wait for the bouquets to load from GitHub on the main screen.
+Select the desired bouquets (OK/Green) and install them (Yellow).
+Confirm reloading the settings if necessary.
+
+Viewing bouquets:
+Viewing the contents of the selected bouquet before installation
+
+Editing a bouquet:
+From the main screen, go to the IPTV Manager (Red).
+Select a bouquet and open the IPTV Editor (Blue).
+In the IPTV Editor, select channels (OK), group select similar channels (Blue), move them (Yellow + Up/Down), or delete them (Red).
+Save changes (Green) and confirm reloading.
+
+Deleting a bouquet:
+In the IPTV Manager, select bouquets (OK/Green) and delete them (Red).
+Confirm reloading the settings.
+
+Cleaning .del files:
+From the main screen, go to Bouquet Cleaner (Blue).
+Select .del files (OK or Green for all) and delete them (Red).
+
+Conclusion
+CiefpIPTVBouquets is a powerful tool for managing IPTV bouquets, with a focus on simplicity and flexibility.
+The main screen is for installation, IPTV Manager for managing bouquets,
+IPTV Editor for detailed channel editing, and Bouquet Cleaner for cleaning deleted files.
+
+..:: CiefpSettings ::..

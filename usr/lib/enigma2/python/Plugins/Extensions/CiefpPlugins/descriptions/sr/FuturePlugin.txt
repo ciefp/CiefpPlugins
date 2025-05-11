@@ -1,0 +1,24 @@
+
+..:: Ciefp Plugins Panel ::..
+
+Ciefp Plugins Panel je kolekcija alata i dodataka kreiranih za poboljšanje vašeg Enigma2 iskustva. 
+Ovaj plugin omogućava jednostavan pristup raznim Ciefp pluginovima, 
+- uključujući funkcionalnosti poput upravljanja podešavanjima
+- uređivanja satelita
+- uređivanja xml fajlova
+- konvertovanja m3u
+- ažuriranja buketa, i još mnogo toga. 
+Sa intuitivnim interfejsom, možete pregledati opise plugina, 
+menjati jezik između srpskog i engleskog, i instalirati plugine uz potvrdu za veću sigurnost.
+
+**Upotreba:**
+- Jednostavne funkcije za pomeranje gore i dole
+- izborom OK prelazite na drugi deo ekrana
+- drugi deo ekrana može se pomerati gore i dole
+- klikom na OK ponovo se vraćate na prvi deo ekrana sa ikonama
+- Crveno dugme - Izlaz
+- Zeleno dugme - Instalacija
+- Žuto dugme - Opis plugina na srpskom
+- Plavo dugme - Opis plugina na engleskom
+
+..:: CiefpSettings ::..

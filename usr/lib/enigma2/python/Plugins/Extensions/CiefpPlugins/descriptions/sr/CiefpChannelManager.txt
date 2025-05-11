@@ -1,0 +1,50 @@
+**CiefpChannelManager** je moćan plugin za Enigma2 dizajniran za upravljanje TV buketima i kanalima na satelitskim prijemnicima temeljenim na Enigma2.
+Razvijajući se od izvornog plugina `CiefpBouquetUpdater`, nudi napredne funkcije za ažuriranje, organiziranje i uređivanje buketa i kanala,
+uključujući robusnu podršku za IPTV streamove. Dodatak pruža intuitivan interfejs za korisnike kako bi efikasno prilagodili svoje liste kanala.
+
+## Funkcionalne komponente
+
+### 1. Ažuriranje ( CiefpBouquetUpdater )
+Komponenta **Ažuriranje** obrađuje početno stvaranje i ažuriranje buketa na temelju unapred definiranih ili korisnički definiranih lista kanala.
+- **Opcije**:
+  - Uvozi liste kanala s Github stranice (npr. "ciefp-E2-75E-34W").
+  - Podržava ažuriranje jednog ili više buketa,korisnik sam bira šta će se ažurirati.
+  - Koristi OK dugme za selekciju,zeleno dugme za kopiranje i žuto dugme za instalaciju.
+  - Ponovno učitava liste servisa i bukete Enigma2 nakon ažuriranja kako bi se promene primenile bez problema.
+  - Plavo dugme se koristi za prelazak na sledeći ekran uređivač buketa (Editor).
+
+### 2. Uređivač buketa ( CiefpBouquetEditor )
+**Uređivač buketa** omogućuje korisnicima upravljanje strukturom buketa, menjanje pozicija jednog ili više buketa.
+- **Opcije**:
+  - Koristi OK dugme za selekciju jednog ili više buketa,buketi dobiju prefiks „+“.
+  - Žuto dugme aktivira mode pomeranja (Move Mode),buketi za pomeranje dobiju prefiks „>>“.
+  - Koristi tastere gore i dole za pomeranje selektovanih buketa.
+  - Dolaskom na željeno mesto isključujemo opciju (Move Mode) na žuto dugme.
+  - Koristimo zeleno dugme da bismo sačuvali promene u datotekama buketa, čuvajući strukturu za Enigmu2.
+  - Ako želimo da uređujemo kanale unutar buketa pomoću trake za izbor, dolazimo do buketa u kojem se nalaze kanali koje želimo da izmenimo.
+  - Plavo dugme se koristi za prelazak na sledeći ekran uređivač buketa (Channels).
+
+### 3. Uređivač kanala ( CiefpChannelEditor )
+**Uređivač kanala** pruža detaljnu kontrolu nad pojedinačnim kanalima unutar buketa.
+- **Opcije**:
+  - Izbor kanala na dugme OK za uređivanje, označenih prefiksom „+“.
+  - Brisanje odabranih kanala ili grupa (crveno dugme) s trenutnim ažuriranjem liste.
+  - Pomeranje kanala ili grupa gore/dolje (žuto dugme za „Move Mode“) radi reorganizacije liste.
+  - Slekcija cele grupe kanala plavo dugme,selektovanjem markera i koristeći plavo dugme selektuju se svi kanali do sledećeg markera.
+  - Aktiviranjem „Move Mode“ imate mogućnost pomeranje grupe kanala na željeno mesto.
+  - Ako želite da vam sportski kanali budu na vrhu buketa,ova opcija je za vas napravljena.
+  - Podrška za standardne DVB kanale (putem `lamedb`) i IPTV kanale, osiguravajući točno imenovanje i rukovanje.
+  - Čuvanje promena u datoteci buketa, s automatskim generisanjem `#OPISA` za IPTV kanale.
+
+## Ključne karakteristike
+- **Korisnički interfejs**: Intuitivna navigacija s dugmadima u bojama (zelena: Sačuvaj, žuta: Režim premještanja, crvena: Izbriši, plava: Odaberi grupu).
+- **IPTV podrška**: Besprekorno rukovanje IPTV kanalima s ekstrakcijom i filtriranjem odgovarajućih imena.
+- **Evidentiranje grešaka**: Detaljni zapisnici u `/tmp/channel_editor_debug.log` za rešavanje problema.
+- **Robusna obrada grešaka**: Elegantno rukovanje nedostajećim ili nevažećim formatima, s jasnim porukama o statusu.
+
+**CiefpChannelManager** je vrhunski alat za korisnike Enigme2 koji žele potpunu kontrolu nad svojim TV paketima i kanalima,
+kombinovanjem ažuriranja, uređivanja i organiziranja u jedan sveobuhvatni dodatak.
+
+## Zasluge
+Izrađeno od strane **Grok** (pokreće xAI) u suradnji s **CiefpSettings**.
+Posebna zahvala Enigma2 zajednici na inspiraciji i podršci.

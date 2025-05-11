@@ -1,0 +1,50 @@
+ CiefpsettingsPanel Plugin
+
+Kratak opis Ciefpsettings Panel plugina
+ Ciefpsettings Panel je svestran Enigma2 plugin dizajniran za upravljanje i instalaciju različitih dodataka,
+ alata, softcam-ova, skinova i IPTV plugina na Enigma2 uređajima. 
+ Pruža korisnički prijateljski interfejs za selekciju i instalaciju raznovrsnih plugina sa online izvora,
+ olakšavajući prilagođavanje i proširenje funkcionalnosti satelitskih risivera. 
+ Plugin je posebno koristan za korisnike imidža poput OpenPLi, koji možda nemaju ugrađene menadžere za dodatke.
+ 
+ Ključne funkcije:
+1.Centralizovana instalacija plugina: 
+o Omogućava selekciju i instalaciju više plugina 
+o (npr. CiefpSettingsDownloader, AjPanel, X-Streamity, softcam-ovi poput Oscam i Ncam, skinovi poput Metrix-FHD) putem jednostavnog interfejsa.
+o Podržava kategorizaciju plugina (CiefpSettings, Panels, IPTV, Softcams, Skins, Tools) za lakšu navigaciju.
+
+2.Automatska provera i ažuriranje plugina: 
+o Plugin automatski proverava dostupnost novih verzija na definisanom URL-u (VERSION_URL) prilikom pokretanja.
+o Ako je dostupna nova verzija, korisnik može potvrditi ažuriranje,
+o tokom kojeg se sačuva lista instaliranih plugina (ciefp_installed_plugins.txt) putem backup-a i vraća nakon uspešnog ažuriranja,
+o čime se osigurava kontinuitet podataka.
+
+3.Plugin Manager: 
+o Nova funkcionalnost koja omogućava pregled i upravljanje instaliranim pluginima.
+o Korisnici mogu izbrisati odabrane plugine, uz potvrdu, čime se uklanjaju odgovarajući direktorijumi
+o iz /usr/lib/enigma2/python/Plugins/Extensions/ i ažurira lista instaliranih plugina.
+o Interfejs uključuje statusnu traku i dugmad za selekciju (zeleno), brisanje (crveno) i restart Enigma2 (plavo).
+
+4.IPK Installer: 
+o Dodata funkcionalnost za instalaciju .ipk fajlova iz /tmp direktorijuma, slično opciji "Install Local Extensions" u Software Manager-u.
+o Prikazuje listu .ipk fajlova u /tmp, omogućavajući korisnicima da ih selektuju i instaliraju putem opkg install komande.
+o Sadrži statusnu traku za povratne informacije o instalaciji, kao i dugmad za izlaz (crveno), instalaciju (zeleno) i restart Enigma2 (plavo).
+o Posebno korisno za imidže bez ugrađenog menadžera dodataka, poput OpenPLi.
+
+5.Restart Enigma2: 
+o Plavo dugme na svim ekranima (Ciefpsettings Panel, Plugin Manager, IPK Installer) omogućava brzi restart Enigma2 koristeći komandu init 4 && init 3,
+o što je neophodno nakon instalacije ili brisanja plugina.
+
+Prednosti novih funkcija:
+• Plugin Manager olakšava uklanjanje nepotrebnih plugina bez potrebe za ručnim brisanjem fajlova ili korišćenjem terminala.
+• IPK Installer proširuje funkcionalnost plugina, omogućavajući instalaciju lokalnih .ipk fajlova,
+• što je ključno za korisnike koji preuzimaju pakete sa eksternih izvora.
+• Automatski update osigurava da plugin ostane ažuran, uz očuvanje korisničkih podataka (lista instaliranih plugina),
+• smanjujući rizik od gubitka konfiguracije.
+
+Zaključak:
+Ciefpsettings Panel je moćan alat za upravljanje Enigma2 dodacima, sa novim funkcijama koje povećavaju njegovu praktičnost i fleksibilnost.
+Plugin Manager i IPK Installer čine ga sveobuhvatnim rešenjem za instalaciju, uklanjanje i ažuriranje plugina, dok automatski update osigurava dugoročnu pouzdanost.
+Idealno je rešenje za korisnike koji žele jednostavno i efikasno upravljanje svojim satelitskim risiverima.
+
+....::ciefpsettings::......

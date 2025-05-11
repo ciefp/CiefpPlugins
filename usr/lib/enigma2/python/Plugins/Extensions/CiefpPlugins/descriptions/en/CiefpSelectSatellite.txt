@@ -1,0 +1,42 @@
+CiefpSelectSatellite 1.7
+
+Plugin - Description and Use
+What does the plugin do?
+- Enables the selection of satellites from the list of available satellites.
+- Filters thematic bouquets (EX-YU, Sport, Film, Music, Documentaries, etc.) according to the selected satellites.
+- Automatically recognizes satellite markers (#SERVICE 1:64) and adds all channels (#SERVICE 1:0) that belong to them.
+- Searches bouquets and copies only those channels that belong to the selected satellites.
+- Satellite bouquets are copied to predetermined maps and according to selected satellites.
+- IPTV, Radio and DVB.T/T2 bouquets are automatically copied with each list.
+- Installs filtered bouquets in the Enigma2 system and allows users to watch only the desired satellites.
+- It gives the user the opportunity to create his own list according to his needs.
+
+How to use the plugin?
+Starting the plugin
+
+Install and run CiefpSelectSatellite from the Enigma2 plugin menu.
+The plugin will load the list of available satellites from satellites.xml.
+
+# Choice of satellites
+Use the arrows on the remote control to select the satellites you want.
+Press OK to add or remove a satellite from the selection.
+The selected satellites appear on the right side of the screen.
+
+# Copying the bouquet
+Press the GREEN button to filter the bouquets and channels according to the selected satellites.
+The plugin searches the bouquets, keeps only the channels from the selected satellites and deletes the rest.
+
+# Installation of the bouquet
+Press the YELLOW button to install the filtered bouquets in /etc/enigma2/.
+The plugin will automatically update Enigma2 and activate the new settings.
+
+# Closure
+Press the RED button (ROW) to exit the plugin.
+
+# Note
+- The plugin always downloads the latest available motor settings from github.
+- For all those for whom the already available versions were not enough, now you have the opportunity to make your own version.
+- Result: The user now has the power to create a settings according to his needs! 
+
+::.. Enjoy watching! ..::
+..:: ciefpsettings ::..

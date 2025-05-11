@@ -1,0 +1,79 @@
+CiefpE2Converter v1.9
+
+CiefpE2Converter je Enigma2 plugin dizajniran za konverziju M3U plejlista u IPTV bukete koji se mogu koristiti na Enigma2 uređajima. 
+Omogućava korisnicima da lako selektuju grupe ili pojedinačne kanale iz M3U fajlova, definišu naziv buketa i izaberu željeni servisni tip 
+(npr. Gstreamer, Exteplayer3, Streamlink). 
+Plugin generiše odgovarajuće "userbouquet" fajlove i registruje ih u bouquets.tv za trenutnu upotrebu.
+
+Novosti u verziji 1.9:
+Podrška za M3U linkove u formatu playlist.txt:
+Plugin sada podržava učitavanje M3U linkova iz tekstualnih fajlova (playlist.txt). 
+Korisnici mogu selektovati link iz liste, koji se automatski preuzima i parsira za dalju obradu.
+
+Novi ekran za selekciju (ChannelSelectionScreen):
+Dodat je novi ekran za selekciju kanala kada M3U fajl ne sadrži grupe. 
+Ovaj ekran omogućava korisnicima da biraju pojedinačne kanale ili grupe serija, 
+sa automatskim grupisanjem epizoda serija pod jednim nazivom (npr. "The X Files" umesto "The X Files S01 E01").
+
+Novo dugme "Select Similar":
+Implementirano novo dugme "Select Similar" na ekranima GroupSelectionScreen i ChannelSelectionScreen.
+Funkcija: Automatski selektuje sve stavke (grupe ili kanale) koje dele zajednički prefiks sa trenutno označenom stavkom. Na primer:
+Za grupu "Sport TV 1" selektuje sve grupe koje počinju sa "Sport TV " (npr. "Sport TV 2", "Sport TV HD").
+Za kanal "HBO HD" selektuje sve kanale koji počinju sa "HBO " (npr. "HBO 2", "HBO 3").
+Ovo olakšava brzu selekciju sličnih stavki bez potrebe za ručnim označavanjem svake pojedinačno.
+
+Ostale karakteristike:
+Intuitivan interfejs sa mogućnošću pregleda fajlova u /tmp direktorijumu.
+Prilagođavanje naziva buketa preko virtuelne tastature.
+Podrška za različite servisne tipove (Gstreamer, Exteplayer3, DVB, Radio, Streamlink).
+Automatsko registrovanje buketa i opcija za reload postavki nakon konverzije.
+Ovaj plugin je idealan za korisnike koji žele brzo i efikasno da organizuju svoje IPTV sadržaje na Enigma2 platformi, 
+uz dodatnu fleksibilnost zahvaljujući novim funkcionalnostima u verziji 1.7.
+
+Kratko uputstvo za korišćenje plugina CiefpE2Converter v1.7
+
+Pokretanje plugina:
+Pronađite CiefpE2Converter v1.7 u meniju plugina na vašem Enigma2 uređaju i pokrenite ga.
+
+Izbor M3U fajla ili linka:
+Na glavnom ekranu (MainScreen) vidite listu fajlova u /tmp direktorijumu.
+Ako imate M3U fajl: Navigirajte do njega (npr. playlist.m3u) i pritisnite OK.
+Ako imate playlist.txt sa linkovima: Izaberite .txt fajl i pritisnite OK. Otvoriće se PlaylistSelectionScreen:
+Pomerajte se gore/dole i izaberite željeni link (pritisnite OK ili zeleno dugme "Confirm").
+Plugin će preuzeti M3U sa tog linka i nastaviti dalje.
+
+Definisanje naziva buketa:
+Pritisnite žuto dugme "Define Name" da biste otvorili virtuelnu tastaturu.
+Unesite naziv buketa (npr. "Moj IPTV") i potvrdite sa OK. Podrazumevani naziv je "IPTV Mix Bouquet".
+
+Selekcija grupa ili kanala:
+Pritisnite plavo dugme "Select Groups":
+Ako M3U ima grupe: Otvoriće se GroupSelectionScreen. Označite željene grupe:
+OK: Uključuje/uklanja grupu.
+Select All (plavo dugme): Označava sve grupe.
+Select Similar (žuto dugme): Označava grupe sa sličnim prefiksom (npr. "Sport TV 1" -> "Sport TV 2").
+
+Ako M3U nema grupe: Otvoriće se ChannelSelectionScreen. Označite kanale ili serije:
+OK: Uključuje/uklanja kanal/seriju.
+Select All (plavo dugme): Označava sve kanale.
+Select Similar (žuto dugme): Označava kanale sa sličnim prefiksom (npr. "HBO HD" -> "HBO 2").
+Pritisnite zeleno dugme "Confirm" za potvrdu ili crveno dugme "Cancel" za odustajanje.
+
+Konverzija u buket:
+Na glavnom ekranu pritisnite zeleno dugme "Convert".
+Izaberite servisni tip (npr. "Gstreamer (4097:0:1)") iz liste i potvrdite sa OK.
+Plugin kreira buket u /etc/enigma2 i registruje ga u bouquets.tv.
+
+Reload postavki:
+Nakon konverzije, pojaviće se pitanje "Reload settings?". Izaberite Yes za osvežavanje buket liste ili No za izlazak.
+
+Izlazak:
+Pritisnite crveno dugme "Exit" da zatvorite plugin.
+
+Napomena:
+Preuzeti M3U fajlovi se čuvaju u /tmp/m3u_playlist.
+Serije u ChannelSelectionScreen su grupisane (npr. "The X Files" uključuje sve epizode ako je označeno).
+Proverite da li je /tmp dostupan i da ima dovoljno prostora za preuzimanje fajlova.
+Ovo je sve što treba da znate za osnovnu upotrebu plugina!
+
+..:: ciefpsettings ::..

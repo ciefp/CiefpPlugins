@@ -1,0 +1,24 @@
+CiefpBouquetUpdater Plugin (v1.3)
+
+What does the plugin do?
+
+CiefpBouquetUpdater enables easy download and update of channel bouquets from GitHub (ciefp-E2-75E-34W).
+Users can choose which bouquets they want to install — satellite, themed or IPTV — without losing their existing settings.
+
+How is it used?
+
+1. Start the plugin from the Enigma2 receiver menu.
+2. On the left list, choose the bouquets you want (move the arrow up/down, confirm with "OK").
+3. Press the green button ("Copy") for temporary copying or the yellow button ("Install") for installation.
+4. Wait for the installation to finish — the receiver will automatically refresh.
+
+What's special?
+• Selective installation: Install only the bouquets you want, not the entire list.
+• Preserves user bouquets: Your personal bouquets remain intact — old files are only deleted if they overlap with newly selected bouquets.
+• Name display: Instead of technical file names, you see the actual names of the bouquets (eg "•• 16.0 E - Max TV ••") according to the order from bouquets.tv.
+• Quick and easy: Ideal for all users, from beginners to advanced users.
+
+Who is it intended for?
+This plugin is perfect for those who want the flexibility to update specific channel bouquets while keeping their custom lists on Enigma2 receivers.
+
+..:: ciefpsettings :...

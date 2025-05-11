@@ -1,0 +1,79 @@
+CiefpE2Converter v1.9
+
+CiefpE2Converter is an Enigma2 plugin designed to convert M3U playlists into IPTV bouquets that can be used on Enigma2 devices.
+Allows users to easily select groups or individual channels from M3U files, define the name of the bouquet and choose the desired service type
+(eg Gstreamer, Exteplayer3, Streamlink).
+The plugin generates the appropriate "userbouquet" files and registers them in bouquets.tv for immediate use.
+
+News in version 1.9:
+Support for M3U links in playlist.txt format:
+The plugin now supports loading M3U links from text files (playlist.txt).
+Users can select a link from the list, which is automatically downloaded and parsed for further processing.
+
+New selection screen (ChannelSelectionScreen):
+Added a new channel selection screen when the M3U file does not contain groups.
+This screen allows users to select individual channels or groups of series,
+with automatic grouping of series episodes under one name (eg "The X Files" instead of "The X Files S01 E01").
+
+New "Select Similar" button:
+Implemented new "Select Similar" button on GroupSelectionScreen and ChannelSelectionScreen.
+Function: Automatically selects all items (groups or channels) that share a common prefix with the currently marked item. For example:
+For the group "Sport TV 1" selects all groups starting with "Sport TV" (eg "Sport TV 2", "Sport TV HD").
+For the channel "HBO HD" selects all channels starting with "HBO" (eg "HBO 2", "HBO 3").
+This makes it easy to quickly select similar items without having to manually tag each item individually.
+
+Other characteristics:
+Intuitive interface with the ability to view files in the /tmp directory.
+Adjusting the name of the bouquet via the virtual keyboard.
+Support for different service types (Gstreamer, Exteplayer3, DVB, Radio, Streamlink).
+Automatic registration of bouquets and option to reload settings after conversion.
+This plugin is ideal for users who want to quickly and efficiently organize their IPTV content on the Enigma2 platform,
+with additional flexibility thanks to new functionalities in version 1.7.
+
+Short instructions for using the plugin CiefpE2Converter v1.7
+
+Starting the plugin:
+Find CiefpE2Converter v1.7 in the plugins menu on your Enigma2 device and run it.
+
+Selection of M3U file or link:
+On the main screen (MainScreen) you see a list of files in the /tmp directory.
+If you have an M3U file: Navigate to it (eg playlist.m3u) and press OK.
+If you have a playlist.txt with links: Select the .txt file and press OK. The PlaylistSelectionScreen will open:
+Scroll up/down and select the desired link (press OK or the green "Confirm" button).
+The plugin will download the M3U from that link and continue.
+
+Defining the name of the bouquet:
+Press the yellow "Define Name" button to open the virtual keyboard.
+Enter the name of the bouquet (eg "My IPTV") and confirm with OK. The default name is "IPTV Mix Bouquet".
+
+Selection of groups or channels:
+Press the blue "Select Groups" button:
+If the M3U has groups: The GroupSelectionScreen will open. Mark the desired groups:
+OK: Includes/removes a group.
+Select All (blue button): Indicates all groups.
+Select Similar (yellow button): Indicates groups with a similar prefix (eg "Sport TV 1" -> "Sport TV 2").
+
+If the M3U has no groups: The ChannelSelectionScreen will open. Tag channels or series:
+OK: Turns on/off a channel/series.
+Select All (blue button): Indicates all channels.
+Select Similar (yellow button): Indicates channels with a similar prefix (eg "HBO HD" -> "HBO 2").
+Press the green "Confirm" button to confirm or the red "Cancel" button to cancel.
+
+Conversion to a bouquet:
+On the main screen, press the green "Convert" button.
+Select the service type (eg "Gstreamer (4097:0:1)") from the list and confirm with OK.
+The plugin creates a bouquet in /etc/enigma2 and registers it in bouquets.tv.
+
+Reload settings:
+After the conversion, the question "Reload settings?" will appear. Select Yes to refresh the bouquet list or No to exit.
+
+Exit:
+Press the red "Exit" button to close the plugin.
+
+Remark:
+Downloaded M3U files are saved in /tmp/m3u_playlist.
+Series in ChannelSelectionScreen are grouped (eg "The X Files" includes all episodes if checked).
+Check if /tmp is available and has enough space to download files.
+This is all you need to know for basic plugin usage!
+
+..:: ciefpsettings ::..

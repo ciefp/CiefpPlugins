@@ -1,0 +1,113 @@
+..:: CiefpIPTVBouquets 1.4 ::..
+CiefpIPTVBouquets je Enigma2 plugin dizajniran za upravljanje IPTV buketima na Enigma2 uređajima.
+Omogućava korisnicima da preuzimaju, instaliraju, uređuju i brišu IPTV bukete direktno sa GitHub repozitorijuma, 
+kao i da upravljaju kanalima unutar buketa. Plugin je koristan za korisnike koji žele lako organizovati IPTV sadržaj, 
+uključujući kanale, serije i filmove, sa intuitivnim interfejsom.
+
+Glavne funkcije:
+
+Preuzimanje i instalacija IPTV buketa sa GitHub-a.
+Uređivanje buketa (selektovanje, pomeranje, brisanje kanala).
+Grupna selekcija sličnih kanala (npr. "HBO 1", "HBO 2", "HBO").
+Upravljanje obrisanim buketima (.del fajlovi).
+Reloudovanje postavki nakon promena.
+Ekrani i njihovo korišćenje
+Plugin ima jedan glavni ekran i četiri dodatna ekrana, svaki sa specifičnim funkcijama. 
+Evo kratkog opisa i uputstva za korišćenje svakog:
+
+1. ..:: CiefpIPTV ::.. (Glavni ekran)
+Opis: Ovaj ekran omogućava preuzimanje i instalaciju IPTV buketa sa GitHub repozitorijuma.
+Funkcije:
+- Prikazuje listu dostupnih buketa sa GitHub-a (levo).
+- Omogućava selekciju buketa za instalaciju (desno).
+- Pokreće instalaciju selektovanih buketa i reloudovanje postavki.
+- Pruža pristup drugim ekranima (IPTV Manager, BouquetViewer).
+Korišćenje:
+- OK/Zeleno: Selektuje/deselektuje buket sa leve liste i dodaje ga na desnu listu.
+- Žuto: Pokreće instalaciju selektovanih buketa (potvrđuje se dijalogom).
+- Crveno: Otvara ekran IPTV Manager.
+- Plavo: Otvara ekran BouquetViewer.
+- Cancel: Izlazi iz plugina.
+- Gore/Dole: Navigacija kroz listu buketa.
+Napomena: Buketi se preuzimaju sa GitHub-a, pa je potrebna internet konekcija.
+
+2. ..:: BouquetViewer ::..
+Opis: Omogućava pregled selektovanog buketa pre instalacije.
+Funkcije:
+- Prikaz sadržaja selektovanog buketa daje korisniku mogućnost da pregleda selektovani buket pre instalacije.
+
+3. ..:: IPTV Manager ::..
+Opis: Omogućava upravljanje instaliranim IPTV buketima, uključujući brisanje i uređivanje.
+Funkcije:
+- Prikazuje listu instaliranih IPTV buketa.
+- Omogućava selekciju i brisanje buketa.
+- Pruža pristup uređivanju buketa preko IPTV Editor ekrana.
+Korišćenje:
+- OK/Zeleno: Selektuje/deselektuje buket za brisanje.
+- Crveno: Briše selektovane bukete (potvrđuje se dijalogom).
+- Žuto: Otvara Bouquet Cleaner za brisanje .del fajlova iz etc/enigma2
+- Plavo: Otvara IPTV Editor za uređivanje selektovanog buketa.
+- Cancel: Vraća se na glavni ekran.
+- Gore/Dole: Navigacija kroz listu buketa.
+Napomena: Brisanje buketa uklanja ih iz sistema, a reloudovanje postavki je opciono nakon brisanja.
+
+3. ..:: IPTV Editor ::..
+Opis: Omogućava detaljno uređivanje kanala unutar odabranog buketa.
+Funkcije:
+- Prikazuje listu kanala u buketu.
+- Podržava selekciju, grupnu selekciju sličnih kanala, pomeranje i brisanje kanala.
+- Omogućava čuvanje promena i reloudovanje postavki.
+Korišćenje:
+- OK: Selektuje/deselektuje pojedinačni kanal.
+- Crveno: Briše selektovane kanale (potvrđuje se dijalogom).
+- Zeleno: Čuva promene u buketu (potvrđuje se dijalogom za reloudovanje).
+- Žuto: Uključuje/isključuje "Move Mode" za pomeranje selektovanih kanala.
+- Plavo: Pokreće grupnu selekciju sličnih kanala (npr. selektovanje "HBO 1" označava "HBO", "HBO 2", itd.).
+- Gore/Dole: Navigacija kroz listu kanala; u "Move Mode", pomera selektovane kanale.
+- Levo/Desno: Pomeranje po stranicama; u "Move Mode", pomera kanale za više pozicija.
+- Cancel: Izlazi iz ekrana (upozorava ako postoje nesnimljene promene).
+Napomena: Funkcija "Select Similar" je optimizovana za prepoznavanje sličnih kanala (npr. "HBO", "Cinemax", "Star Wars Episode"), 
+uključujući poništavanje selekcije ako su svi slični kanali već označeni.
+
+4. ..:: Bouquet Cleaner ::..
+Opis: Upravlja obrisanim buketima (fajlovi sa ekstenzijom .del).
+Funkcije:
+- Prikazuje listu .del fajlova u /etc/enigma2/ direktorijumu.
+- Omogućava selekciju i trajno brisanje .del fajlova.
+Korišćenje:
+- OK: Selektuje pojedinačni .del fajl.
+- Zeleno: Selektuje sve .del fajlove.
+- Crveno: Briše selektovane .del fajlove (potvrđuje se dijalogom).
+- Cancel: Vraća se na glavni ekran.
+- Gore/Dole: Navigacija kroz listu fajlova.
+Napomena: Ovo je korisno za čišćenje starih ili nepotrebnih obrisanih buketa.
+
+Kako koristiti plugin
+Instalacija buketa:
+Pokreni plugin i sačekaj da se učitaju buketi sa GitHub-a na glavnom ekranu.
+Selektuj željene bukete (OK/Zeleno) i instaliraj ih (Žuto).
+Potvrdi reloudovanje postavki ako je potrebno.
+
+Prikaz buketa:
+Prikaz sadržaja selektovanog buketa pre instalacije
+
+Uređivanje buketa:
+Iz glavnog ekrana, idi na IPTV Manager (Crveno).
+Odaberi buket i otvori IPTV Editor (Plavo).
+U IPTV Editor, selektuj kanale (OK), grupno selektuj slične kanale (Plavo), pomeri ih (Žuto + Gore/Dole), ili obriši (Crveno).
+Sačuvaj promene (Zeleno) i potvrdi reloudovanje.
+
+Brisanje buketa:
+U IPTV Manager, selektuj bukete (OK/Zeleno) i obriši ih (Crveno).
+Potvrdi reloudovanje postavki.
+
+Čišćenje .del fajlova:
+Iz glavnog ekrana, idi na Bouquet Cleaner (Plavo).
+Selektuj .del fajlove (OK ili Zeleno za sve) i obriši ih (Crveno).
+
+Zaključak
+CiefpIPTVBouquets je moćan alat za upravljanje IPTV buketima, sa fokusom na jednostavnost i fleksibilnost. 
+Glavni ekran služi za instalaciju, IPTV Manager za upravljanje buketima, 
+IPTV Editor za detaljno uređivanje kanala, a Bouquet Cleaner za čišćenje obrisanih fajlova. 
+
+..:: CiefpSettings ::..

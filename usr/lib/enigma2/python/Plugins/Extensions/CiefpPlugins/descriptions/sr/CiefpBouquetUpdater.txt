@@ -1,0 +1,24 @@
+CiefpBouquetUpdater Plugin (v1.3)
+
+Šta radi plugin?
+
+CiefpBouquetUpdater omogućava jednostavno preuzimanje i ažuriranje buketa kanala sa GitHub-a (ciefp-E2-75E-34W). 
+Korisnici mogu birati koje bukete žele da instaliraju — satelitske, tematske ili IPTV — bez gubitka svojih postojećih postavki.
+
+Kako se koristi?
+
+1.Pokrenite plugin iz menija Enigma2 risivera.
+2.Na levoj listi izaberite bukete koje želite (pomeranje strelice gore/dole, potvrda sa "OK").
+3.Pritisnite zeleno dugme ("Copy") za privremeno kopiranje ili žuto dugme ("Install") za instalaciju.
+4.Sačekajte da se instalacija završi — risiver će se automatski osvežiti.
+
+Šta je posebno?
+•Selektivna instalacija: Instalirajte samo bukete koje želite, a ne celu listu.
+•Čuva korisničke bukete: Vaši lični buketsi ostaju netaknuti — stari fajlovi se brišu samo ako se preklapaju sa novim izabranim buketima.
+•Prikaz naziva: Umesto tehničkih imena fajlova, vidite stvarne nazive buketa (npr. "•• 16,0 E - Max TV ••") prema redosledu iz bouquets.tv.
+•Brzo i lako: Idealno za sve korisnike, od početnika do naprednih.
+
+Za koga je namenjen?
+Ovaj plugin je savršen za one koji žele fleksibilno ažuriranje određenih buketa kanala uz očuvanje svojih prilagođenih lista na Enigma2 risiverima.
+
+..:: ciefpsettings :...
