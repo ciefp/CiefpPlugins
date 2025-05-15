@@ -1,4 +1,4 @@
-CiefpE2Converter v1.9
+CiefpE2Converter 
 
 CiefpE2Converter je Enigma2 plugin dizajniran za konverziju M3U plejlista u IPTV bukete koji se mogu koristiti na Enigma2 uređajima. 
 Omogućava korisnicima da lako selektuju grupe ili pojedinačne kanale iz M3U fajlova, definišu naziv buketa i izaberu željeni servisni tip 
@@ -30,10 +30,10 @@ Automatsko registrovanje buketa i opcija za reload postavki nakon konverzije.
 Ovaj plugin je idealan za korisnike koji žele brzo i efikasno da organizuju svoje IPTV sadržaje na Enigma2 platformi, 
 uz dodatnu fleksibilnost zahvaljujući novim funkcionalnostima u verziji 1.7.
 
-Kratko uputstvo za korišćenje plugina CiefpE2Converter v1.7
+Kratko uputstvo za korišćenje plugina CiefpE2Converter 
 
 Pokretanje plugina:
-Pronađite CiefpE2Converter v1.7 u meniju plugina na vašem Enigma2 uređaju i pokrenite ga.
+Pronađite CiefpE2Converter  u meniju plugina na vašem Enigma2 uređaju i pokrenite ga.
 
 Izbor M3U fajla ili linka:
 Na glavnom ekranu (MainScreen) vidite listu fajlova u /tmp direktorijumu.

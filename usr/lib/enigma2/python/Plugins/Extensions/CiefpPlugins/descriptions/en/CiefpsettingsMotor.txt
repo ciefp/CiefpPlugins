@@ -1,4 +1,4 @@
-CiefpSettingsMotor Plugin (v2.2)
+CiefpSettingsMotor Plugin 
 
 What does the plugin do?
 CiefpSettingsMotor is a simple tool that downloads, unpacks and installs the latest channel list for motorized satellite dishes

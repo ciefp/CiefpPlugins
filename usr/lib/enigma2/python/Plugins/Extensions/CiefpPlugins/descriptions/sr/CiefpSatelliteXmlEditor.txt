@@ -1,4 +1,4 @@
-CiefpSatellitesXmlEditor 1.0
+CiefpSatellitesXmlEditor 
 
 Služi za pregled i uređivanje satellites.xml fajla , 
 koji se koristi u satelitskim set-top boxevima za definisanje satelita i transpondera.

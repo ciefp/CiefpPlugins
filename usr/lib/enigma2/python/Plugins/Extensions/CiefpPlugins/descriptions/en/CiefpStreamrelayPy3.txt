@@ -1,4 +1,4 @@
-CiefpSettingsStreamrelay 1.2
+CiefpSettingsStreamrelay
 
 The plugin is enigma2 python3 version
 The plugin was made specifically for my settings

@@ -1,4 +1,4 @@
-..:: CiefpIPTVBouquets 1.4 ::..
+..:: CiefpIPTVBouquets  ::..
 CiefpIPTVBouquets je Enigma2 plugin dizajniran za upravljanje IPTV buketima na Enigma2 uređajima.
 Omogućava korisnicima da preuzimaju, instaliraju, uređuju i brišu IPTV bukete direktno sa GitHub repozitorijuma, 
 kao i da upravljaju kanalima unutar buketa. Plugin je koristan za korisnike koji žele lako organizovati IPTV sadržaj, 

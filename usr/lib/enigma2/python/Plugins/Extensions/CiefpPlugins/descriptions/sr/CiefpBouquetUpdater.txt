@@ -1,4 +1,4 @@
-CiefpBouquetUpdater Plugin (v1.3)
+CiefpBouquetUpdater Plugin 
 
 Šta radi plugin?
 

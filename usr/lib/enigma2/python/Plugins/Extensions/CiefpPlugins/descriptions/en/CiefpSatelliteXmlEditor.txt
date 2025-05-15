@@ -1,4 +1,4 @@
-CiefpSatellitesXmlEditor 1.0
+CiefpSatellitesXmlEditor 
 
 It is used to view and edit the satellites.xml file,
 which is used in satellite set-top boxes to define satellites and transponders.

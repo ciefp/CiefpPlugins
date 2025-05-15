@@ -1,4 +1,4 @@
-CiefpE2Converter v1.9
+CiefpE2Converter
 
 CiefpE2Converter is an Enigma2 plugin designed to convert M3U playlists into IPTV bouquets that can be used on Enigma2 devices.
 Allows users to easily select groups or individual channels from M3U files, define the name of the bouquet and choose the desired service type
