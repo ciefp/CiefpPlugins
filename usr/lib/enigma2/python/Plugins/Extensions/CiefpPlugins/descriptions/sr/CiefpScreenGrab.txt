@@ -1,0 +1,107 @@
+CiefpScreenGrab_Usage_Guide_SR.txt
+==================================
+CiefpScreenGrab Plugin - Uputstvo za koriscenje
+==================================
+Verzija: 1.2
+CiefpScreenGrab je Enigma2 plugin za snimanje screenshot-ova sa vaseg
+satelitskog risivera. Omogucava snimanje ekrana putem daljinskog
+upravljaca, minimalistički interfejs, pregled i brisanje snimljenih
+slika, kao i prilagodavanje formata i rezolucije.
+
+Podesavanje
+===========
+1. Otvorite plugin iz menija: Menu -> Plugins -> CiefpScreenGrab.
+2. Podesavanja:
+   - Enable CiefpScreenGrab: Ukljucite plugin (default: True).
+   - Use Minimal Skin: Ukljucite minimalistički interfejs (mali prozor
+     u gornjem desnom uglu, default: True).
+   - Screenshot of: Izaberite sta snimate:
+     * OSD + Video (default)
+     * Samo Video
+     * Samo OSD
+   - Format for screenshots: JPG ili PNG (default: PNG).
+     * Ako je JPG, podesite Quality of jpg picture (10-100, default: 100).
+   - Picture size (width): Rezolucija slike (default: Skin resolution,
+     opcije: 720, 1280, 1920).
+   - Path for screenshots: Gde se cuvaju slike (default:
+     /media/hdd/CiefpScreenGrab, opcije: /media/hdd, /media/usb, /tmp).
+   - Select a button to take a screenshot: Dugme na daljinskom za
+     snimanje (default: None).
+     * Opcije: Mute, Help, Info, Timer, EPG, TV, Radio, Text, Audio,
+       Red, Green, Yellow, Blue.
+     * Za Red, Green, Yellow: Samo dug pritisak radi.
+     * Za ostale: Možete birati kratki ili dugi pritisak (podesite
+       Use the '[button]' button instead of '[button] long').
+   - Timeout for info message: Trajanje obavestenja (default: 3
+     sekunde, opcije: 1, 3, 5, 10, off, no timeout).
+3. Sacuvajte: Zeleno dugme.
+4. Reset na podrazumevane vrednosti: Zuto dugme (potrebna potvrda).
+
+[Napomena]: Proverite da li je odabrani uređaj za cuvanje slika (npr.
+ /media/hdd) dostupan i upisiv. Ako nije, promenite putanju.
+
+Koriscenje
+==========
+Snimanje screenshot-a
+--------------------
+1. Preko dugmeta:
+   - Podesite dugme u podesavanjima (npr. Blue).
+   - Pritisnite odabrano dugme (kratki ili dugi pritisak, zavisno od
+     podesavanja).
+   - Slika se snima i prikazuje odmah u pregledu.
+2. Preko Minimal Skin-a:
+   - Otvorite plugin (ako je Use Minimal Skin ukljucen).
+   - Pritisnite zeleno dugme (Grab).
+   - Slika se snima i prikazuje.
+3. Pregled nakon snimanja:
+   - Nakon snimanja, otvara se ekran sa slikom (1250x750).
+   - Opcije:
+     * Crveno dugme (Exit): Zatvara pregled.
+     * Zuto dugme (Files): Otvara listu snimljenih slika.
+
+Pregled i brisanje slika
+------------------------
+1. Otvorite listu slika:
+   - Iz Minimal Skin-a: Zuto dugme (Files).
+   - Iz podesavanja: Plavo dugme (Files).
+   - Iz pregleda screenshot-a: Zuto dugme (Files).
+2. U FileScreen:
+   - Levo: Lista fajlova (najnoviji na vrhu).
+   - Desno: Pregled odabrane slike (1300x700).
+   - OK dugme: Selektuje/deselektuje fajl (oznaceno sa [X]).
+   - Zeleno dugme (Select All): Selektuje sve fajlove.
+   - Crveno dugme (Delete): Brise selektovane fajlove (potrebna
+     potvrda).
+   - Cancel/Exit: Zatvara ekran.
+
+Minimal Skin
+------------
+- Ako je Use Minimal Skin ukljucen, plugin se otvara kao mali prozor
+  (540x40) u gornjem desnom uglu.
+- Funkcije:
+  * Crveno (Exit): Zatvara prozor.
+  * Zeleno (Grab): Snima screenshot.
+  * Zuto (Files): Otvara listu slika.
+  * Plavo (Settings): Otvara podesavanja.
+
+Preporucena podesavanja
+======================
+- Format: PNG za najbolji kvalitet bez gubitaka.
+- Rezolucija: Skin resolution ili 1280 za balans kvaliteta i
+  performansi.
+- Putanja: /media/hdd za trajno cuvanje.
+- Dugme: Blue ili Red (dugi pritisak) za jednostavno snimanje.
+- Timeout: 3 sekunde za obavestenje uz pregled slike.
+
+Napomene
+========
+- Plugin je testiran na Vu+ risiverima (npr. Zero 4K) sa OpenPLi i
+  OpenATV imidzima.
+- Slike se cuvaju u /media/[hdd/usb/tmp]/CiefpScreenGrab/.
+- Izbegavajte koriscenje dugmadi koja su vec mapirana u sistemu
+  (npr. EPG, Info).
+
+Uzivajte u snimanju screenshot-ova sa CiefpScreenGrab!
+
+..:: CiefpSettings ::..
+============================================================

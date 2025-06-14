@@ -1,0 +1,108 @@
+
+
+CiefpScreenGrab_Usage_Guide_EN.txt
+==================================
+CiefpScreenGrab Plugin - User Guide
+==================================
+Version: 1.2
+CiefpScreenGrab is an Enigma2 plugin for capturing screenshots on your
+satellite receiver. It supports taking screenshots via remote control,
+a minimalist interface, viewing and deleting saved images, and
+customizing format and resolution.
+
+Configuration
+=============
+1. Open the plugin from the menu: Menu -> Plugins -> CiefpScreenGrab.
+2. Settings:
+   - Enable CiefpScreenGrab: Enable the plugin (default: True).
+   - Use Minimal Skin: Enable the minimalist interface (small window
+     in the top-right corner, default: True).
+   - Screenshot of: Choose what to capture:
+     * OSD + Video (default)
+     * Video only
+     * OSD only
+   - Format for screenshots: JPG or PNG (default: PNG).
+     * If JPG, adjust Quality of jpg picture (10-100, default: 100).
+   - Picture size (width): Image resolution (default: Skin resolution,
+     options: 720, 1280, 1920).
+   - Path for screenshots: Where images are saved (default:
+     /media/hdd/CiefpScreenGrab, options: /media/hdd, /media/usb, /tmp).
+   - Select a button to take a screenshot: Remote button for capturing
+     (default: None).
+     * Options: Mute, Help, Info, Timer, EPG, TV, Radio, Text, Audio,
+       Red, Green, Yellow, Blue.
+     * For Red, Green, Yellow: Only long press works.
+     * For others: Choose short or long press (adjust
+       Use the '[button]' button instead of '[button] long').
+   - Timeout for info message: Notification duration (default: 3
+     seconds, options: 1, 3, 5, 10, off, no timeout).
+3. Save: Green button.
+4. Reset to defaults: Yellow button (requires confirmation).
+
+[Note]: Ensure the selected storage device (e.g., /media/hdd) is
+ available and writable. If not, change the path.
+
+Usage
+=====
+Capturing a Screenshot
+----------------------
+1. Via Button:
+   - Set a button in the settings (e.g., Blue).
+   - Press the chosen button (short or long press, depending on
+     settings).
+   - The screenshot is captured and displayed immediately.
+2. Via Minimal Skin:
+   - Open the plugin (if Use Minimal Skin is enabled).
+   - Press the green button (Grab).
+   - The screenshot is captured and displayed.
+3. Preview After Capture:
+   - After capturing, a preview screen opens with the image (1250x750).
+   - Options:
+     * Red button (Exit): Closes the preview.
+     * Yellow button (Files): Opens the list of saved images.
+
+Viewing and Deleting Images
+---------------------------
+1. Open the image list:
+   - From Minimal Skin: Yellow button (Files).
+   - From settings: Blue button (Files).
+   - From screenshot preview: Yellow button (Files).
+2. In FileScreen:
+   - Left: List of files (newest at the top).
+   - Right: Preview of the selected image (1300x700).
+   - OK button: Selects/deselects a file (marked with [X]).
+   - Green button (Select All): Selects all files.
+   - Red button (Delete): Deletes selected files (requires
+     confirmation).
+   - Cancel/Exit: Closes the screen.
+
+Minimal Skin
+------------
+- If Use Minimal Skin is enabled, the plugin opens as a small window
+  (540x40) in the top-right corner.
+- Functions:
+  * Red (Exit): Closes the window.
+  * Green (Grab): Captures a screenshot.
+  * Yellow (Files): Opens the image list.
+  * Blue (Settings): Opens the settings.
+
+Recommended Settings
+====================
+- Format: PNG for the best quality without loss.
+- Resolution: Skin resolution or 1280 for a balance of quality and
+  performance.
+- Path: /media/hdd for permanent storage.
+- Button: Blue or Red (long press) for easy capturing.
+- Timeout: 3 seconds for notifications alongside image preview.
+
+Notes
+=====
+- The plugin has been tested on Vu+ receivers (e.g., Zero 4K) with
+  OpenPLi and OpenATV images.
+- Images are saved in /media/[hdd/usb/tmp]/CiefpScreenGrab/.
+- Avoid using buttons already mapped in the system (e.g., EPG, Info).
+
+Enjoy capturing screenshots with CiefpScreenGrab!
+
+..:: CiefpSettings ::..
+===============================================
