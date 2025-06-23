@@ -42,7 +42,7 @@ PLUGIN_LIST = [
     ("Ciefp Select Satellite", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpSelectSatellite.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSelectSatellite/main/installer.sh -O - | /bin/sh", "CiefpSelectSatellite"),
     ("Ciefp Channel Manager", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpChannelManager.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpChannelManager/main/installer.sh -O - | /bin/sh", "CiefpChannelManager"),
     ("CiefpScreenGrab", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpScreenGrab.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpScreenGrab/main/installer.sh -O - | /bin/sh", "CiefpScreenGrab"),
-    ("CiefpMojTvEPG", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpScreenGrab.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpMojTvEPG/main/installer.sh -O - | /bin/sh", "CiefpScreenGrab"),
+    ("CiefpMojTvEPG", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpMojTvEPG.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpMojTvEPG/main/installer.sh -O - | /bin/sh", "CiefpMojTvEPG"),
     ("Ciefp IPTV Bouquets", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpIPTVBouquets.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpIPTVBouquets/main/installer.sh -O - | /bin/sh", "CiefpIPTVBouquets"),
     ("Ciefp Bouquet Updater", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpBouquetUpdater.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpBouquetUpdater/main/installer.sh -O - | /bin/sh", "CiefpBouquetUpdater"),
     ("Ciefp Whitelist Streamrelay", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpWhitelistStreamrelay.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpWhitelistStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpWhitelistStreamrelay"),
@@ -50,7 +50,7 @@ PLUGIN_LIST = [
     ("Ciefp Streamrelay py3", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpStreamrelayPy3.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpStreamrelayPy3"),
     ("Ciefp T2Mi Abertis", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpT2MiAbertis.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsT2miAbertis/main/installer.sh -O - | /bin/sh", "CiefpT2MiAbertis"),
     ("Ciefp T2Mi Abertis OpenPli", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpT2MiAbertisOpenPli.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsT2miAbertisOpenPLi/main/installer.sh -O - | /bin/sh", "CiefpT2MiAbertisOpenPli"),
-    ("Future Plugin", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/placeholder.png", "", "FuturePlugin"),
+    ("Ciefp Plugins", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/placeholder.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpPlugins/main/installer.sh -O - | /bin/sh", "Ciefp Plugins"),
 ]
 
 class CiefpPluginsPanel(Screen):
