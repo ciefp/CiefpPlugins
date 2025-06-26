@@ -1,0 +1,31 @@
+
+CiefpTvProgram – EPG Viewer Plugin
+Version: 1.0
+Author: Ciefp
+Platform: Enigma2 (Linux STB)
+
+Description:
+CiefpTvProgram is a simple and functional Enigma2 plugin that allows you to browse the Electronic Program Guide (EPG) for a list of selected TV channels. 
+The channel list is displayed on the left, and detailed EPG information appears on the right, including show titles, start times, and descriptions.
+
+Features:
+Displays a customizable list of TV channels (CHANNEL_LIST_DATA).
+Automatically downloads and parses EPG XML files from TVProfil.net.
+Shows channel picons for the currently selected channel.
+Displays plugin logo and additional background graphics.
+Switches between channel view and EPG view (OK button).
+Supports scrolling through both channel list and EPG data (up/down arrows).
+
+Usage:
+Launching the plugin:
+The plugin can be accessed via the Plugin Menu or the Extensions Menu on your Enigma2 device.
+Navigation:
+Up/Down: Navigate through the channel list or EPG entries.
+OK: Switches focus between the channel list and the EPG content view.
+EXIT: Closes the plugin.
+
+Automatic EPG download:
+On first launch, the plugin downloads EPG data and saves it to /tmp/CiefpTvProgram/.
+
+
+..:: CiefpSettings ::..
