@@ -1,0 +1,24 @@
+
+CiefpTvProgramSK
+
+CiefpTvProgramSK je Enigma2 plugin dizajniran za prikaz elektronskog programskog vodiča (EPG) za TV kanale, 
+koristeći podatke preuzete sa adrese https://epgshare01.online/epgshare01/epg_ripper_SK1.xml.gz. 
+Plugin omogućava korisnicima da pregledaju listu kanala i detaljne EPG informacije, uključujući nazive emisija, vreme emitovanja, opise i kategorije.
+Podržava prikaz pikon-a (ikona kanala), logotipa plugina i pozadinskih grafika, uz keširanje podataka za brže učitavanje. 
+Interfejs je intuitivan, sa navigacijom između liste kanala i EPG informacija, i prilagođen je za Enigma2 platformu.
+
+Korišćenje plugina
+
+Navigacija:
+Lista kanala: Na levoj strani ekrana prikazuje se lista dostupnih kanala preuzetih iz XML fajla.
+EPG informacije: Na desnoj strani prikazuju se detalji o programu za izabrani kanal (vreme, naslov, opis, kategorija).
+Koristite tastere Gore/Dole za kretanje kroz listu kanala ili EPG informacije, u zavisnosti od trenutnog fokusa.
+Pritisnite OK za prebacivanje fokusa između liste kanala i EPG informacija.
+Pritisnite Cancel (ili Exit) za izlaz iz plugina.
+Funkcionalnosti:
+Prikaz pikon-a: Ikona izabranog kanala se prikazuje na dnu ekrana ako je dostupna u folderu /usr/lib/enigma2/python/Plugins/Extensions/CiefpTvProgramSK/picon. 
+Ako pikon nije pronađen, koristi se podrazumevana ikona (placeholder.png).
+Keširanje podataka: EPG podaci se keširaju u /tmp/CiefpProgramSK/epg_cache.xml na 24 sata kako bi se smanjilo preuzimanje podataka.
+Logovanje: Plugin beleži aktivnosti i greške u fajl /tmp/ciefp_tvprogramsk.log za dijagnostiku.
+
+..:: CiefpSettings ::..
