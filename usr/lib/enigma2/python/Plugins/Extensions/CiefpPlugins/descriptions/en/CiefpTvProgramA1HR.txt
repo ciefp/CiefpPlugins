@@ -1,0 +1,28 @@
+CiefpTvProgramA1HR
+
+CiefpTvProgramA1HR is an Enigma2 plugin for displaying EPG (Electronic Program Guide) data for TV channels,
+customized for users in Croatia (A1HR). The plugin downloads EPG data from epgshare01.online,
+caches it locally and displays programs for each channel, along with the corresponding pictograms (channel logos).
+The interface allows easy browsing of channels and their programs, with focus on the current or next program.
+
+Display of a list of channels and their EPG data (time, title, category, description).
+Automatic downloading and caching of EPG data (24-hour cache).
+Display of pictograms for channels, with fallback to a placeholder pictogram if the pictogram is missing.
+Intuitive interface with a selection bar that automatically marks the current or next program.
+Support for navigation using the OK, UP, DOWN and EXIT keys.
+Log only critical errors and missing icons in /tmp/ciefp_tvprograma1hr.log.
+
+Interface navigation:
+Channel list: Located on the left side of the screen. Use the UP or DOWN key to scroll through the channel list.
+EPG data: Displayed on the right side of the screen for the selected channel, including time, title, category, and program description.
+
+Selection bar: Automatically highlights the current program (if available) or the next program for the selected day.
+If there are no programs for the current day, it highlights the last available program.
+
+Icons and logos: The icon of the selected channel is displayed at the bottom of the screen (left). If the icon is missing, placeholder.png is used.
+Controls:
+OK: Toggles focus between the channel list and EPG data. When the focus is on channels, it selects a channel; when it is on EPG data, it allows scrolling through programs.
+UP/DOWN: Moves the cursor through the channel list (when the focus is on channels) or through EPG programs (when the focus is on EPG data).
+EXIT: Closes the plugin and returns you to the previous screen.
+
+..:: CiefpSettings ::..
