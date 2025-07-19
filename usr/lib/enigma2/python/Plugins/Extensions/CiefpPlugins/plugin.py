@@ -15,7 +15,7 @@ import logging
 
 
 # Verzija plugina
-PLUGIN_VERSION = "1.6"
+PLUGIN_VERSION = "1.7"
 
 # Setup logging to a file for better debugging
 logging.basicConfig(
@@ -44,6 +44,7 @@ PLUGIN_LIST = [
     ("CiefpScreenGrab", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpScreenGrab.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpScreenGrab/main/installer.sh -O - | /bin/sh", "CiefpScreenGrab"),
     ("CiefpTvProgramSK", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpTvProgramSK.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpTvProgramSK/main/installer.sh -O - | /bin/sh", "CiefpTvProgramSK"),
     ("CiefpTvProgramA1HR", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpTvProgramA1HR.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpTvProgramA1HR/main/installer.sh -O - | /bin/sh", "CiefpTvProgramA1HR"),
+    ("CiefpTvTodayDE", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpTvTodayDE.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpTvTodayDE/main/installer.sh -O - | /bin/sh", "CiefpTvTodayDE"),
     ("CiefpTvProgram", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpTvProgram.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpTvProgram/main/installer.sh -O - | /bin/sh", "CiefpTvProgram"),
     ("CiefpMojTvEPG", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpMojTvEPG.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpMojTvEPG/main/installer.sh -O - | /bin/sh", "CiefpMojTvEPG"),
     ("Ciefp IPTV Bouquets", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpIPTVBouquets.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpIPTVBouquets/main/installer.sh -O - | /bin/sh", "CiefpIPTVBouquets"),

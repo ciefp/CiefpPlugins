@@ -1,0 +1,29 @@
+CiefpTvTodayDE
+
+CiefpTvTodayDE je Enigma2 plugin za prikaz EPG (Electronic Program Guide) podataka za TV kanale, 
+prilagođen za korisnike u Nemačkoj. Plugin preuzima EPG podatke sa adrese epgshare01.online, 
+kešira ih lokalno i prikazuje programe za svaki kanal, zajedno sa odgovarajućim pikonima (logotipima kanala). 
+Interfejs omogućava lako pretraživanje kanala i njihovih programa, sa fokusom na trenutni ili sledeći program. 
+
+
+Prikaz liste kanala i njihovih EPG podataka (vreme, naslov, kategorija, opis).
+Automatsko preuzimanje i keširanje EPG podataka (24-časovni keš).
+Prikaz pikona za kanale, sa fallback-om na placeholder pikon ako pikon nedostaje.
+Intuitivan interfejs sa selekcionom trakom koja automatski označava trenutni ili sledeći program.
+Podrška za navigaciju pomoću tastera OK, UP, DOWN i EXIT.
+Logovanje samo kritičnih grešaka i nedostajućih pikona u /tmp/ciefp_epgshare.log.
+
+Navigacija kroz interfejs:
+Lista kanala: Nalazi se na levoj strani ekrana. Koristite taster UP ili DOWN za pomeranje kroz listu kanala.
+EPG podaci: Prikazuju se na desnoj strani ekrana za izabrani kanal, uključujući vreme, naslov, kategoriju i opis programa.
+
+Selekciona traka: Automatski označava trenutni program (ako je dostupan) ili sledeći program za izabrani dan. 
+Ako nema programa za trenutni dan, označava poslednji dostupni program.
+
+Pikoni i logotipi: Pikon izabranog kanala prikazuje se na dnu ekrana (levo). Ako pikon nedostaje, koristi se placeholder.png.
+Kontrole:
+OK: Menja fokus između liste kanala i EPG podataka. Kada je fokus na kanalima, bira kanal; kada je na EPG podacima, omogućava skrolovanje kroz programe.
+UP/DOWN: Pomeraju kursor kroz listu kanala (kada je fokus na kanalima) ili kroz EPG programe (kada je fokus na EPG podacima).
+EXIT: Zatvara plugin i vraća vas na prethodni ekran.
+
+..:: CiefpSettings ::..
