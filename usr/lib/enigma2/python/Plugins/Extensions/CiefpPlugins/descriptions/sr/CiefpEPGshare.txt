@@ -1,0 +1,38 @@
+
+..:: CiefpEPGshare ::..
+
+Enigma2 plugin za preuzimanje i prikazivanje EPG (Electronic Program Guide) podataka s web lokacije epgshare01.online 
+Omogućava korisnicima odabir XML datoteka s EPG podacima, prikaz kanala i njihovih programa, te prikazivanje picona (ikona kanala). 
+Plugin je optimiziran za performanse, s keširanjem podataka i filtriranjem velikih fajlova, 
+te uključuje prilagođeni korisnički interfejs s logotipima za bolji vizuelni doživljaj.
+
+Odabir XML datoteke:
+Na ekranu XMLSelectionScreen (rezolucija 1280x852) vidiš listu dostupnih .xml.gz datoteka.
+Koristi strelice gore i dolje na daljinskom upravljaču za navigaciju po listi.
+Pritisni OK za odabir datoteke i prelazak na ekran s EPG podacima (CiefpEPGshare).
+
+Pregled EPG podataka:
+Na ekranu CiefpEPGshare (rezolucija 1800x800) vidiš:
+Listu kanala (lijevo): Popis kanala iz odabrane XML datoteke.
+EPG informacije (sredina): Programi za odabrani kanal, sortirani po datumu i vremenu.
+Picon i logotipi: Prikaz ikone kanala (picon), logotipa plugina i pozadinskih slika.
+
+Koristi strelice gore i dolje za navigaciju po kanalima ili EPG podacima.
+Pritisni OK za prebacivanje fokusa između liste kanala i EPG informacija.
+Pritisni Cancel za povratak na prethodni ekran ili izlaz.
+
+Ignoriranje XML datoteka:
+Fajl epg_ripper_ALL_SOURCES1.xml.gz je automatski ignoriran zbog svoje veličine 
+(1.3 GB, 22 miliona redova) kako bi se izbjegli problemi s performansama.
+
+Za dodavanje drugih XML datoteka na ignore listu:
+Na ekranu XMLSelectionScreen, selektuj datoteku koju želiš ignorirati.
+Pritisni crveno dugme na daljinskom upravljaču.
+Datoteka će biti dodana u /tmp/CiefpEPGshare/ignore_list.txt i isključena iz prikaza.
+Ignorirane datoteke se ne pojavljuju u listi dok ih ručno ne ukloniš iz ignore_list.txt (npr. putem SSH-a ili FTP-a).
+
+Logovi i dijagnostika:
+Ako dođe do grešaka (npr. problemi s mrežom ili učitavanjem logotipa), provjeri /tmp/ciefp_epgshare.log za detalje.
+Plugin automatski pokušava instalirati lxml biblioteku ako nedostaje, ili koristi ElementTree kao zamjenu.
+
+..:: CiefpSettings ::..

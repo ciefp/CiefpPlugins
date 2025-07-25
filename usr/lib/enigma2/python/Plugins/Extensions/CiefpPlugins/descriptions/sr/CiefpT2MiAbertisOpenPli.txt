@@ -1,4 +1,4 @@
-CiefpSettings T2MI Abertis OpenPLi
+CiefpSettings T2MI Abertis OpenPLi 1.1
 
 je prilagođena verzija za OpenPLi-a
 koja omogućava instalaciju i konfiguraciju dodataka potrebnih za korišćenje T2MI i Abertis satelitskih postavki. 

@@ -1,4 +1,4 @@
-CiefpSettings T2mi Abertis Plugin 
+CiefpSettings T2mi Abertis Plugin v1.6
 
 Ovaj plugin je namenjen za jednostavnu instalaciju potrebnih konfiguracija i skripti za korišćenje T2MI Abertis funkcionalnosti na Enigma2 uređajima.
 

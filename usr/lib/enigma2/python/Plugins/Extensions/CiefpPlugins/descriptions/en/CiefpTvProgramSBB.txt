@@ -1,0 +1,24 @@
+
+..:: CiefpTvProgramSBB ::..
+
+Enigma2 plugin for displaying TV programs (EPG) for SBB Serbia.
+Downloads EPG data from epgshare01.online in XML format,
+caches it locally and displays it in a user interface with channels,
+programs and pictograms (channel logos).
+
+Supports navigation between the channel list and EPG information, with automatic positioning to the current program.
+
+Usage:
+Installation: The plugin is installed in the Enigma2 environment. The lxml module is required; if not present, the plugin tries to install it automatically.
+Launch: Accessed through the Plugin menu. The screen with the channel list and EPG data is launched.
+
+Navigation:
+Channel list: Displays available channels. Navigation is done with the up/down keys.
+EPG view: Displays programs for the selected channel, organized by date, with time, title, category and description.
+Switch focus: The OK key switches the focus between the channel list and EPG information.
+Exit: The Cancel button closes the plugin.
+Picons: Automatically loads channel logos from the picon directory or uses the default placeholder.png if picons are not available.
+Caching: EPG data is cached in /tmp/CiefpTvProgramSBB for 24 hours for faster loading.
+Note: The plugin requires a stable internet connection to download EPG data and logs errors in /tmp/ciefp_epgshare.log.
+
+..:: CiefpSettings ::..

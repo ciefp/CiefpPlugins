@@ -1,0 +1,38 @@
+CiefpSatellitesXmlEditor 1.0
+
+It is used to view and edit the satellites.xml file,
+which is used in satellite set-top boxes to define satellites and transponders.
+
+Main plugin functionalities:
+Overview of satellites.xml content:
+- Displays a list of all satellites with their positions.
+- Below each satellite displays all its transponders (frequency, polarization, symbol rate, FEC, system, modulation).
+- Additionally displays optional parameters such as Multistream (is_id, pls_code, pls_mode) and T2-MI (t2mi_plp_id, t2mi_pid).
+
+Editing existing transponders:
+- Allows you to change all important transponder parameters via the configuration screen.
+- Updates values directly in the XML structure.
+
+Adding new transponders:
+- Can add a new <transponder> element within the selected satellite.
+
+Deleting elements:
+- The "Delete" button allows you to delete a satellite or transponder from the list.
+
+Saving changes:
+- When the "Save" button is pressed, the changes are written back to the satellites.xml file.
+- The XML file is nicely formatted and contains a comment with the date it was last edited.
+
+User interface:
+Two screens:
+- Reader – for viewing the entire file.
+- Editor – for detailed editing of individual transponders.
+
+Technical implementation:
+The plugin is written in Python for the Enigma2 platform.
+- It uses xml.etree.ElementTree to work with XML.
+- It uses xml.dom.minidom to display XML nicely.
+- Parameters such as polarization, FEC, system, etc. are mapped to human-readable names.
+- Frequency and symbol rate values are automatically multiplied/divided by 1000 for easier manipulation.
+
+..:: CiefpSettings ::..

@@ -1,4 +1,4 @@
-CiefpSelectSatellite
+CiefpSelectSatellite 1.7
 
 Plugin - Opis i Upotreba
 Šta plugin radi?

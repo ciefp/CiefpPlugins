@@ -1,4 +1,4 @@
-CiefpSettingsMotor Plugin 
+CiefpSettingsMotor Plugin (v2.2)
 
 Šta radi plugin?
 CiefpSettingsMotor je jednostavan alat koji preuzima, raspakuje i instalira najnoviju listu kanala za motorne satelitske antene

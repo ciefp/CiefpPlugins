@@ -1,4 +1,4 @@
-CiefpSettingsStreamrelay PY2 
+CiefpSettingsStreamrelay PY2 1.1
 
 Plugin je enigma2 python2 verzija
 Plugin je rađen konkretno za moju listu 
