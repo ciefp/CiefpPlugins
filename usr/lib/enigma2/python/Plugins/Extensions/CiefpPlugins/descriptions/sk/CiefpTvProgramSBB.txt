@@ -1,0 +1,24 @@
+..:: CiefpTvProgramSBB ::..
+
+Plugin Enigma2 na zobrazovanie TV programov (EPG) pre SBB Srbsko.
+
+Sťahuje dáta EPG z epgshare01.online vo formáte XML,
+lokálne ich ukladá do vyrovnávacej pamäte a zobrazuje ich v používateľskom rozhraní s kanálmi,
+programami a piktogramami (logami kanálov).
+
+Podporuje navigáciu medzi zoznamom kanálov a informáciami EPG s automatickým prechodom na aktuálny program.
+
+Použitie:
+Inštalácia: Plugin sa inštaluje v prostredí Enigma2. Vyžaduje sa modul lxml; ak nie je k dispozícii, plugin sa ho automaticky pokúsi nainštalovať.
+Spustenie: Prístup cez ponuku Plugin. Spustí sa obrazovka so zoznamom kanálov a údajmi EPG.
+
+Navigácia:
+Zoznam kanálov: Zobrazuje dostupné kanály. Navigácia sa vykonáva pomocou klávesov hore/dole.
+Zobrazenie EPG: Zobrazuje programy pre vybraný kanál, usporiadané podľa dátumu, času, názvu, kategórie a popisu.
+Prepnúť fokus: Kláves OK prepína fokus medzi zoznamom kanálov a informáciami EPG.
+Ukončiť: Tlačidlo Zrušiť zatvorí plugin.
+Picons: Automaticky načíta logá kanálov z adresára picon alebo použije predvolený zástupný symbol .png, ak picon nie sú k dispozícii.
+Ukladanie do vyrovnávacej pamäte: Dáta EPG sa ukladajú do vyrovnávacej pamäte /tmp/CiefpTvProgramSBB na 24 hodín pre rýchlejšie načítanie.
+Poznámka: Plugin vyžaduje stabilné internetové pripojenie na stiahnutie dát EPG a chyby zaznamenáva do /tmp/ciefp_epgshare.log.
+
+..:: CiefpSettings ::..

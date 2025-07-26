@@ -1,0 +1,49 @@
+..:: CiefpSettingsDownloader ::..
+
+CiefpSettingsDownloader poskytuje používateľom prijímača Enigma2 rýchly a jednoduchý spôsob, ako
+sťahovať, inštalovať a aktualizovať zoznamy satelitných kanálov (nastavenia), ktoré boli starostlivo
+pripravené a pravidelne aktualizované komunitou CiefpSettings.
+
+Plugin sťahuje a inštaluje zoznamy satelitov priamo z repozitára GitHub, automaticky ich
+nasadzuje na príslušné miesta v zariadení a zabezpečuje ich správnu aktiváciu
+bez nutnosti manuálneho zásahu. Podporuje tiež možnosť automatickej aktualizácie na
+najnovšiu verziu pluginu.
+
+Účel:
+Plugin je určený pre používateľov zariadenia Enigma2, ktorí chcú:
+
+1. Jednoduchý prístup k aktuálnym zoznamom kanálov – Stiahnutie najnovších nastavení satelitov
+pre rôzne konfigurácie satelitov, ako sú motorizované nastavenia alebo
+viacerosatelitné antény.
+
+2. Automatizovaná inštalácia – Plugin automaticky nainštaluje zoznamy na príslušné
+umiestnenia v zariadení a aktivuje ich.
+
+3. Prispôsobiteľnosť – Používatelia si môžu vybrať konkrétne zoznamy, ktoré chcú nainštalovať, v závislosti od
+svojej antény a preferencií.
+4. Bezstresové aktualizácie – Možnosť automatickej aktualizácie pluginu zabezpečuje, že
+používateľ má vždy prístup k najnovším funkciám a opravám chýb.
+
+Kľúčové vlastnosti:
+1. Stiahnutie zoznamov satelitov z repozitára komunity CiefpSettings na GitHub.
+2. Automatická inštalácia stiahnutých zoznamov do zariadenia.
+3. Rýchla aktivácia zoznamov pomocou funkcie obnovenia služby.
+4. Automatická kontrola pluginu a aktualizácia na najnovšiu verziu.
+5. Jednoduché rozhranie – Intuitívne menu pre navigáciu, výber a sťahovanie zoznamov.
+6. Prispôsobivosť pre viacero typov zariadení Enigma2 – Kompatibilné s verziami Python2 a Python3.
+
+Príklady použitia:
+- Pre domácich používateľov: Ideálne pre používateľov, ktorí pravidelne aktualizujú svoje zoznamy satelitov,
+aby držali krok so zmenami v rozložení kanálov alebo konfiguráciách transpondérov.
+- Pre technikov a inštalatérov: Jednoduchý spôsob, ako rýchlo nasadiť vhodné zoznamy kanálov
+na viacero zariadení Enigma2.
+- Pre používateľov motorizovaných antén: Stiahnutie a inštalácia motorizovaných nastavení, ktoré
+pokrývajú veľký počet pozícií satelitov.
+
+Výhody:
+- Šetrí čas: Automatická inštalácia eliminuje potrebu manuálneho sťahovania a usporiadania súborov.
+- Intuitívne používateľské rozhranie: Všetky operácie sú dostupné prostredníctvom jednoduchého rozhrania na obrazovke vášho televízora.
+- Pravidelné aktualizácie: Vždy sú k dispozícii najnovšie verzie zoznamu kanálov.
+- Kompatibilita: Plugin automaticky rozpozná systém (Python2/Python3) a nainštaluje príslušné závislosti.
+
+..:: CiefpSettings ::..

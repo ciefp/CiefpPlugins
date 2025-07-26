@@ -1,0 +1,35 @@
+..:: CiefpSettings T2mi Abertis Plugin ::..
+
+Dieses Plugin ermöglicht die einfache Installation der notwendigen Konfigurationen und Skripte für die Nutzung der T2MI Abertis-Funktionalität auf Enigma2-Geräten.
+
+Was macht das Plugin?
+
+- Prüft automatisch die Systemkompatibilität (Python 3 und ARM-Prozessor).
+- Installiert **Astra-SM** über `opkg`.
+- Lädt Konfigurationsdateien herunter und speichert sie:
+- **astra.conf** in `/etc/astra/`.
+- **abertis**-Skript in `/etc/astra/scripts/`.
+- **softcam.key** an zwei Speicherorten: `/etc/tuxbox/config/` und `/etc/tuxbox/config/oscam-emu/`.
+- **sysctl.conf** in `/etc/`.
+- Am Ende der Installation wird eine Übersicht der installierten Dateien angezeigt und ein Systemneustart vorgeschlagen.
+
+Installation erfolgreich! Installierte Dateien:
+- astra-sm
+- astra.conf
+- abertis
+- softcam.key (/etc/tuxbox/config/)
+- softcam.key (/etc/tuxbox/config/oscam-emu/)
+
+Installation abgeschlossen. Bitte starten Sie Ihr System neu.
+
+Warum dieses Plugin?
+
+Automatische Installation und Konfiguration ohne manuelle Eingriffe.
+
+Schnelle und einfache Bereitstellung der Unterstützung für Abertis- und T2MI-Dienste.
+
+Hinweise:
+Diese Version unterstützt nur ARM-Prozessoren und ist für Geräte mit Python 3 vorgesehen.
+Die Installation erfolgt über Telnet mit dem Befehl wget.
+
+..::ciefpsettings::..

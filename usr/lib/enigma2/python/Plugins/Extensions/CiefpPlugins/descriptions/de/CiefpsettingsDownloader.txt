@@ -1,0 +1,33 @@
+..:: CiefpSettingsDownloader ::..
+
+CiefpSettingsDownloader bietet Nutzern von Enigma2-Receivern eine schnelle und einfache Möglichkeit, Satellitenkanallisten (Einstellungen) herunterzuladen, zu installieren und zu aktualisieren. Diese wurden von der CiefpSettings-Community sorgfältig erstellt und regelmäßig aktualisiert.
+
+Das Plugin lädt Satellitenlisten direkt aus dem GitHub-Repository herunter, installiert sie, stellt sie automatisch an den entsprechenden Speicherorten auf dem Gerät bereit und sorgt für ihre korrekte Aktivierung, ohne dass ein manueller Eingriff erforderlich ist. Es unterstützt außerdem die Option eines automatischen Upgrades auf die neueste Version des Plugins.
+
+Zweck:
+Das Plugin richtet sich an Nutzer von Enigma2-Geräten, die Folgendes wünschen:
+1. Einfachen Zugriff auf aktuelle Kanallisten – Laden Sie die neuesten Satelliteneinstellungen für verschiedene Satellitenkonfigurationen herunter, z. B. motorisierte Einstellungen oder Multi-Satelliten-Antennen.
+2. Automatische Installation – Das Plugin installiert die Listen automatisch an den entsprechenden Speicherorten auf dem Gerät und aktiviert sie.
+3. Anpassbarkeit – Nutzer können die Listen je nach Antenne und Präferenzen auswählen.
+4. Problemlose Updates – Die automatische Update-Option des Plugins stellt sicher, dass Nutzer stets Zugriff auf die neuesten Funktionen und Fehlerbehebungen haben.
+
+Hauptfunktionen:
+1. Satellitenlisten aus dem GitHub-Repository der CiefpSettings-Community herunterladen.
+2. Automatische Installation heruntergeladener Listen auf dem Gerät.
+3. Schnelle Aktivierung der Listen durch die Service-Refresh-Funktion.
+4. Automatische Plugin-Prüfung und Aktualisierung auf die neueste Version.
+5. Einfache Benutzeroberfläche – Intuitives Menü für Navigation, Auswahl und Download von Listen.
+6. Anpassbarkeit an verschiedene Enigma2-Gerätetypen – Kompatibel mit Python2- und Python3-Versionen.
+
+Anwendungsbeispiele:
+- Für Heimanwender: Ideal für Nutzer, die ihre Satellitenlisten regelmäßig aktualisieren, um über Änderungen im Kanallayout oder in den Transponderkonfigurationen auf dem Laufenden zu bleiben.
+- Für Techniker und Installateure: Eine einfache Möglichkeit, passende Kanallisten schnell und einfach auf mehreren Enigma2-Geräten bereitzustellen.
+Für Nutzer motorisierter Antennen: Laden Sie motorisierte Einstellungen herunter und installieren Sie sie, die eine große Anzahl von Satellitenpositionen abdecken.
+
+Vorteile:
+- Zeitersparnis: Dank der automatischen Installation entfällt das manuelle Herunterladen und Anordnen von Dateien.
+- Intuitive Benutzererfahrung: Alle Funktionen sind über eine einfache Benutzeroberfläche auf Ihrem Fernsehbildschirm verfügbar.
+- Regelmäßige Updates: Immer die neuesten Versionen der Senderliste verfügbar.
+- Kompatibilität: Das Plugin erkennt das System (Python2/Python3) automatisch und installiert die entsprechenden Abhängigkeiten.
+
+..:: CiefpSettings ::..

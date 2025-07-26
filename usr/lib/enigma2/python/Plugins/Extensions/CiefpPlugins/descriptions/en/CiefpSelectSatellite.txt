@@ -1,4 +1,4 @@
-CiefpSelectSatellite 1.7
+..:: CiefpSelectSatellite ::..
 
 Plugin - Description and Use
 What does the plugin do?

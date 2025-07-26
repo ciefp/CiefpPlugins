@@ -1,0 +1,36 @@
+..:: CiefpEPGshare ::..
+
+Enigma2-Plugin zum Herunterladen und Anzeigen von EPG-Daten (Electronic Program Guide) von der Website epgshare01.online.
+Ermöglicht die Auswahl von XML-Dateien mit EPG-Daten, die Anzeige von Sendern und deren Programmen sowie die Anzeige von Picons (Sendersymbolen).
+Das Plugin ist leistungsoptimiert und bietet Datencaching und Filterung großer Dateien.
+Es verfügt über eine benutzerdefinierte Benutzeroberfläche mit Logos für ein besseres visuelles Erlebnis.
+
+XML-Datei auswählen:
+Auf dem XML-Auswahlbildschirm (Auflösung 1280 x 852) wird eine Liste der verfügbaren XML- und GZ-Dateien angezeigt.
+Navigieren Sie mit den Pfeiltasten auf der Fernbedienung durch die Liste.
+Drücken Sie OK, um eine Datei auszuwählen und zum EPG-Datenbildschirm (CiefpEPGshare) zu gelangen.
+
+EPG-Daten anzeigen:
+Auf dem CiefpEPGshare-Bildschirm (Auflösung 1800 x 800) sehen Sie:
+Senderliste (links): Liste der Sender aus der ausgewählten XML-Datei.
+EPG-Informationen (Mitte): Sendungen des ausgewählten Senders, sortiert nach Datum und Uhrzeit.
+Picon und Logos: Zeigt das Sendersymbol (Picon), das Plugin-Logo und Hintergrundbilder an.
+
+Navigieren Sie mit den Pfeiltasten nach oben und unten durch die Sender oder EPG-Daten.
+Drücken Sie „OK“, um zwischen Senderliste und EPG-Informationen zu wechseln.
+Drücken Sie „Abbrechen“, um zum vorherigen Bildschirm zurückzukehren oder das Fenster zu verlassen.
+
+XML-Dateien ignorieren:
+Die Datei epg_ripper_ALL_SOURCES1.xml.gz wird aufgrund ihrer Größe (1,3 GB, 22 Millionen Zeilen) automatisch ignoriert, um Leistungsprobleme zu vermeiden.
+
+So fügen Sie weitere XML-Dateien zur Ignorierliste hinzu:
+Wählen Sie im XML-Auswahlbildschirm die zu ignorierende Datei aus.
+Drücken Sie die rote Taste auf der Fernbedienung.
+Die Datei wird zu /tmp/CiefpEPGshare/ignore_list.txt hinzugefügt und von der Anzeige ausgeschlossen.
+Ignorierte Dateien erscheinen erst in der Liste, wenn Sie sie manuell aus ignore_list.txt entfernen (z. B. per SSH oder FTP).
+
+Protokolle und Diagnose:
+Bei Fehlern (z. B. Netzwerkproblemen oder Problemen beim Laden des Logos) finden Sie Details in /tmp/ciefp_epgshare.log.
+Das Plugin versucht automatisch, die lxml-Bibliothek zu installieren, falls sie fehlt, oder verwendet ElementTree als Ersatz.
+
+..:: CiefpSettings ::..

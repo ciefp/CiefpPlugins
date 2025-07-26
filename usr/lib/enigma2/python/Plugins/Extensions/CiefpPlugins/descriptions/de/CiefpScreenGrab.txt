@@ -1,0 +1,94 @@
+..:: CiefpScreenGrab ::..
+
+===================================
+CiefpScreenGrab Plugin - Benutzerhandbuch
+===================================
+Version: 1.2
+CiefpScreenGrab ist ein Enigma2-Plugin zum Erstellen von Screenshots auf Ihrem Satellitenempfänger. Es unterstützt die Aufnahme von Screenshots per Fernbedienung, eine minimalistische Benutzeroberfläche, das Anzeigen und Löschen gespeicherter Bilder sowie die Anpassung von Format und Auflösung.
+
+Konfiguration
+==============
+1. Öffnen Sie das Plugin über das Menü: Menü -> Plugins -> CiefpScreenGrab.
+2. Einstellungen:
+- CiefpScreenGrab aktivieren: Aktivieren Sie das Plugin (Standard: True).
+- Minimales Skin verwenden: Aktiviert die minimalistische Oberfläche (kleines Fenster
+in der oberen rechten Ecke, Standard: Wahr).
+- Screenshot von: Auswählen, was aufgenommen werden soll:
+* OSD + Video (Standard)
+* Nur Video
+* Nur OSD
+- Format für Screenshots: JPG oder PNG (Standard: PNG).
+* Bei JPG: Passen Sie die Qualität des JPG-Bildes an (10–100, Standard: 100).
+- Bildgröße (Breite): Bildauflösung (Standard: Skin-Auflösung, Optionen: 720, 1280, 1920).
+- Pfad für Screenshots: Speicherort der Bilder (Standard: /media/hdd/CiefpScreenGrab, Optionen: /media/hdd, /media/usb, /tmp).
+- Schaltfläche zum Aufnehmen eines Screenshots auswählen: Schaltfläche für die Aufnahme auf der Fernbedienung
+(Standard: Keine).
+* Optionen: Stumm, Hilfe, Info, Timer, EPG, TV, Radio, Text, Audio, Rot, Grün, Gelb, Blau.
+* Für Rot, Grün, Gelb: Nur langes Drücken funktioniert.
+* Für andere: Wählen Sie kurzes oder langes Drücken (passen Sie an, ob Sie die Schaltfläche „[Taste]“ anstelle von „[Taste] lang“ verwenden möchten).
+- Timeout für Infomeldung: Benachrichtigungsdauer (Standard: 3 Sekunden, Optionen: 1, 3, 5, 10, aus, kein Timeout).
+3. Speichern: Grüne Schaltfläche.
+4. Auf Standard zurücksetzen: Gelbe Schaltfläche (benötigt Bestätigung).
+
+[Hinweis]: Stellen Sie sicher, dass das ausgewählte Speichergerät (z. B. /media/hdd) verfügbar und beschreibbar ist. Falls nicht, ändern Sie den Pfad.
+
+Verwendung
+=====
+Screenshot erstellen
+----------------------
+1. Per Schaltfläche:
+- Legen Sie in den Einstellungen eine Schaltfläche fest (z. B. Blau).
+- Drücken Sie die gewählte Schaltfläche (kurzer oder langer Druck, je nach
+Einstellungen).
+- Der Screenshot wird erstellt und sofort angezeigt.
+2. Per Minimal Skin:
+- Öffnen Sie das Plugin (sofern „Minimal Skin verwenden“ aktiviert ist).
+- Drücken Sie die grüne Schaltfläche (Erfassen).
+- Der Screenshot wird aufgenommen und angezeigt.
+3. Vorschau nach Aufnahme:
+- Nach der Aufnahme öffnet sich ein Vorschaubildschirm mit dem Bild (1250 x 750).
+- Optionen:
+* Rote Schaltfläche (Beenden): Schließt die Vorschau.
+* Gelbe Schaltfläche (Dateien): Öffnet die Liste der gespeicherten Bilder.
+
+Bilder anzeigen und löschen
+--------------------------
+1. Bilderliste öffnen:
+- Im Minimal-Skin: Gelbe Schaltfläche (Dateien).
+- In den Einstellungen: Blaue Schaltfläche (Dateien).
+- In der Screenshot-Vorschau: Gelbe Schaltfläche (Dateien).
+2. Im Dateibildschirm:
+- Links: Liste der Dateien (neueste oben).
+- Rechts: Vorschau des ausgewählten Bildes (1300 x 700).
+- OK-Schaltfläche: Wählt eine Datei aus/ab (markiert mit [X]).
+- Grüne Schaltfläche (Alle auswählen): Wählt alle Dateien aus.
+- Roter Button (Löschen): Löscht ausgewählte Dateien (erfordert Bestätigung).
+- Abbrechen/Beenden: Schließt den Bildschirm.
+
+Minimal-Skin
+------------
+- Wenn „Minimal-Skin verwenden“ aktiviert ist, öffnet sich das Plugin als kleines Fenster
+(540 x 40) in der oberen rechten Ecke.
+- Funktionen:
+* Reihenfolge (Beenden): Schließt das Fenster.
+* Grün (Erfassen): Erstellt einen Screenshot.
+* Gelb (Dateien): Öffnet die Bilderliste.
+* Blau (Einstellungen): Öffnet die Einstellungen.
+
+Empfohlene Einstellungen
+====================
+- Format: PNG für optimale Qualität ohne Verlust.
+- Auflösung: Skin-Auflösung oder 1280 für ein ausgewogenes Verhältnis von Qualität und Leistung.
+- Pfad: /media/hdd für dauerhafte Speicherung.
+- Button: Blau oder Rot (lang drücken) für einfaches Aufnehmen.
+- Timeout: 3 Sekunden für Benachrichtigungen neben der Bildvorschau.
+
+Hinweise
+=====
+– Das Plugin wurde auf Vu+-Receivern (z. B. Zero 4K) mit OpenPLi- und OpenATV-Bildern getestet.
+– Die Bilder werden unter /media/[hdd/usb/tmp]/CiefpScreenGrab/ gespeichert.
+– Vermeiden Sie die Verwendung bereits im System zugewiesener Schaltflächen (z. B. EPG, Info).
+
+Viel Spaß beim Erstellen von Screenshots mit CiefpScreenGrab!
+
+..:: CiefpSettings ::..

@@ -1,0 +1,32 @@
+..:: CiefpTvTodayDE ::..
+
+CiefpTvTodayDE ist ein Enigma2-Plugin zur Anzeige von EPG-Daten (Electronic Program Guide) für Fernsehsender,
+angepasst für Nutzer in Deutschland. Das Plugin lädt EPG-Daten von epgshare01.online herunter,
+speichert sie lokal und zeigt die Sendungen jedes Senders zusammen mit den dazugehörigen Piktogrammen (Senderlogos) an.
+
+Die Benutzeroberfläche ermöglicht eine einfache Suche nach Sendern und deren Programmen mit Fokus auf die aktuelle oder nächste Sendung.
+
+Anzeige einer Senderliste mit ihren EPG-Daten (Zeit, Titel, Kategorie, Beschreibung).
+Automatisches Herunterladen und Zwischenspeichern der EPG-Daten (24-Stunden-Cache).
+Anzeige von Senderpiktogrammen, mit Fallback auf ein Platzhalterpiktogramm, falls ein Piktogramm fehlt.
+
+Intuitive Benutzeroberfläche mit einer Auswahlleiste, die automatisch die aktuelle oder nächste Sendung markiert.
+
+Navigation mit den Tasten OK, AUF, AB und EXIT.
+Es werden nur kritische Fehler und fehlende Piktogramme in /tmp/ciefp_epgshare.log protokolliert.
+
+Navigation in der Benutzeroberfläche:
+Senderliste: Links im Bildschirm. Mit den Tasten AUF und AB können Sie durch die Senderliste blättern.
+EPG-Daten: Rechts im Bildschirm für den ausgewählten Sender mit Uhrzeit, Titel, Kategorie und Programmbeschreibung.
+
+Auswahlleiste: Markiert automatisch die aktuelle Sendung (falls verfügbar) oder die nächste Sendung für den ausgewählten Tag.
+
+Sind für den aktuellen Tag keine Sendungen verfügbar, wird die letzte verfügbare Sendung markiert.
+
+Symbole und Logos: Das Symbol des ausgewählten Senders wird unten links im Bildschirm angezeigt. Fehlt das Symbol, wird placeholder.png verwendet.
+Bedienelemente:
+OK: Wechselt zwischen Senderliste und EPG-Daten. Bei Sendern wird ein Sender ausgewählt; bei EPG-Daten können Sie durch die Sendungen blättern.
+AUF/AB: Bewegt den Cursor durch die Kanalliste (wenn der Fokus auf Kanälen liegt) oder durch die EPG-Programme (wenn der Fokus auf EPG-Daten liegt).
+BEENDEN: Schließt das Plugin und kehrt zum vorherigen Bildschirm zurück.
+
+..:: CiefpSettings ::..

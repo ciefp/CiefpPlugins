@@ -1,0 +1,38 @@
+..:: CiefpSatellitesXmlEditor ::..
+
+Slúži na zobrazenie a úpravu súboru satellites.xml,
+ktorý sa používa v satelitných set-top boxoch na definovanie satelitov a transpondérov.
+
+Hlavné funkcie pluginu:
+Prehľad obsahu súboru satellites.xml:
+- Zobrazuje zoznam všetkých satelitov s ich pozíciami.
+- Pod každým satelitom sa zobrazujú všetky jeho transpondéry (frekvencia, polarizácia, prenosová rýchlosť, FEC, systém, modulácia).
+- Okrem toho zobrazuje voliteľné parametre, ako napríklad Multistream (is_id, pls_code, pls_mode) a T2-MI (t2mi_plp_id, t2mi_pid).
+
+Úprava existujúcich transpondérov:
+- Umožňuje zmeniť všetky dôležité parametre transpondéra prostredníctvom konfiguračnej obrazovky.
+- Aktualizuje hodnoty priamo v štruktúre XML.
+
+Pridávanie nových transpondérov:
+- Možnosť pridať nový prvok <transponder> v rámci vybraného satelitu.
+
+Mazanie prvkov:
+- Tlačidlo „Mazať“ umožňuje vymazať satelit alebo transpondér zo zoznamu.
+
+Uloženie zmien:
+- Po stlačení tlačidla „Uložiť“ sa zmeny zapíšu späť do súboru satellites.xml.
+- Súbor XML je pekne naformátovaný a obsahuje komentár s dátumom poslednej úpravy.
+
+Používateľské rozhranie:
+Dve obrazovky:
+- Čítačka – na zobrazenie celého súboru.
+- Editor – na detailnú úpravu jednotlivých transpondérov.
+
+Technická implementácia:
+Plugin je napísaný v jazyku Python pre platformu Enigma2.
+- Na prácu s XML používa xml.etree.ElementTree.
+- Na pekné zobrazenie XML používa xml.dom.minidom.
+- Parametre ako polarizácia, FEC, systém atď. sú namapované na čitateľné názvy.
+- Hodnoty frekvencie a prenosovej rýchlosti sa automaticky vynásobia/delia číslom 1000 pre jednoduchšiu manipuláciu.
+
+..:: CiefpSettings ::..

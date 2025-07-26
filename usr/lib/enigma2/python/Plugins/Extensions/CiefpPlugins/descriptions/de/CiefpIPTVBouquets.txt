@@ -1,0 +1,118 @@
+..:: CiefpIPTVBouquets ::..
+
+CiefpIPTVBouquets ist ein Enigma2-Plugin zur Verwaltung von IPTV-Bouquets auf Enigma2-Geräten.
+Es ermöglicht Nutzern, IPTV-Bouquets direkt aus dem GitHub-Repository herunterzuladen, zu installieren,
+zu bearbeiten und zu löschen sowie Kanäle innerhalb des Bouquets zu verwalten. 
+Das Plugin ist nützlich für Nutzer, die IPTV-Inhalte, wie Kanäle, Serien und Filme, einfach und intuitiv organisieren möchten.
+
+Hauptfunktionen:
+
+IPTV-Bouquets von GitHub herunterladen und installieren.
+Bouquet-Bearbeitung (Kanäle auswählen, verschieben, löschen).
+Gruppenauswahl ähnlicher Kanäle (z. B. „HBO 1“, „HBO 2“, „HBO“).
+Verwaltung gelöschter Bouquets (.del-Dateien).
+Einstellungen nach Änderungen neu laden.
+Bildschirme und ihre Verwendung
+Das Plugin verfügt über einen Hauptbildschirm und vier weitere Bildschirme mit jeweils spezifischen Funktionen.
+Hier finden Sie eine kurze Beschreibung und Anleitung zur Verwendung:
+
+1. ..:: CiefpIPTV ::.. (Hauptbildschirm)
+Beschreibung: Dieser Bildschirm ermöglicht das Herunterladen und Installieren von IPTV-Bouquets aus dem GitHub-Repository.
+Funktionen:
+– Zeigt eine Liste der verfügbaren Bouquets von GitHub an (links).
+– Ermöglicht die Auswahl eines Bouquets zur Installation (rechts).
+– Startet die Installation der ausgewählten Bouquets und lädt die Einstellungen neu.
+– Bietet Zugriff auf andere Bildschirme (IPTV-Manager, BouquetViewer).
+
+Verwendung:
+– OK/Grün: Wählt ein Bouquet in der linken Liste aus/ab und fügt es der rechten Liste hinzu.
+– Gelb: Startet die Installation der ausgewählten Bouquets (Bestätigung durch ein Dialogfeld).
+– Rot: Öffnet den IPTV-Manager-Bildschirm.
+– Blau: Öffnet den BouquetViewer-Bildschirm.
+– Abbrechen: Beendet das Plugin.
+– Auf/Ab: Navigiert durch die Bouquet-Liste.
+Hinweis: Bouquets werden von GitHub heruntergeladen, daher ist eine Internetverbindung erforderlich.
+
+2. ..:: BouquetViewer ::..
+Beschreibung: Ermöglicht die Vorschau des ausgewählten Bouquets vor der Installation.
+Funktionen:
+- Die Anzeige des Inhalts des ausgewählten Bouquets ermöglicht dem Benutzer eine Vorschau des ausgewählten Bouquets vor der Installation.
+
+3. ..:: IPTV Manager ::..
+Beschreibung: Ermöglicht die Verwaltung installierter IPTV-Bouquets, einschließlich Löschen und Bearbeiten.
+Funktionen:
+- Zeigt eine Liste der installierten IPTV-Bouquets an.
+- Ermöglicht das Auswählen und Löschen von Bouquets.
+- Ermöglicht die Bearbeitung von Bouquets über den IPTV-Editor.
+Verwendung:
+- OK/Grün: Wählt ein Bouquet zum Löschen aus/ab.
+- Rot: Löscht die ausgewählten Bouquets (Bestätigung durch ein Dialogfeld).
+- Gelb: Öffnet den Bouquet Cleaner zum Löschen von .del-Dateien aus etc/enigma2.
+- Blau: Öffnet den IPTV-Editor zum Bearbeiten des ausgewählten Bouquets.
+- Abbrechen: Kehrt zum Hauptbildschirm zurück.
+- Auf/Ab: Navigiert durch die Bouquet-Liste.
+Hinweis: Durch das Löschen von Bouquets werden diese aus dem System entfernt. Das Neuladen der Einstellungen ist nach dem Löschen optional.
+
+3. ..:: IPTV Editor ::..
+Beschreibung: Ermöglicht die detaillierte Bearbeitung von Sendern im ausgewählten Bouquet.
+Funktionen:
+- Zeigt die Senderliste im Bouquet an.
+- Unterstützt die Auswahl, Gruppenauswahl ähnlicher Sender sowie das Verschieben und Löschen von Sendern.
+- Ermöglicht das Speichern von Änderungen und Neuladen von Einstellungen.
+Verwendung:
+- OK: Wählt einen einzelnen Sender aus/ab.
+- Rot: Löscht ausgewählte Sender (Bestätigung durch einen Dialog).
+- Grün: Speichert Änderungen im Bouquet (Bestätigung durch einen Neuladedialog).
+- Gelb: Aktiviert/deaktiviert den Verschiebemodus zum Verschieben ausgewählter Sender.
+- Blau: Startet die Gruppenauswahl ähnlicher Sender (z. B. bedeutet die Auswahl von „HBO 1“ „HBO“, „HBO 2“ usw.).
+- Auf/Ab: Navigiert durch die Senderliste; verschiebt im Verschiebemodus ausgewählte Sender.
+- Links/Rechts: Blättert durch die Seiten; verschiebt im Verschiebemodus Sender um mehrere Positionen.
+- Abbrechen: Verlässt den Bildschirm (Warnung bei nicht gespeicherten Änderungen).
+Hinweis: Die Funktion „Ähnliche auswählen“ ist für die Erkennung ähnlicher Sender (z. B. „HBO“, „Cinemax“, „Star Wars Episode“) 
+optimiert und ermöglicht die Aufhebung der Auswahl, wenn alle ähnlichen Sender bereits ausgewählt sind.
+
+4. ..:: Bouquet Cleaner ::..
+Beschreibung: Verwaltet gelöschte Bouquets (Dateien mit der Erweiterung .del).
+Funktionen:
+- Zeigt eine Liste der .del-Dateien im Verzeichnis /etc/enigma2/ an.
+- Ermöglicht die Auswahl und das endgültige Löschen von .del-Dateien.
+Verwendung:
+- OK: Wählt eine einzelne .del-Datei aus.
+- Grün: Wählt alle .del-Dateien aus.
+- Rot: Löscht die ausgewählten DEL-Dateien (Bestätigung durch ein Dialogfeld).
+- Abbrechen: Kehrt zum Hauptbildschirm zurück.
+- Auf/Ab: Navigieren durch die Dateiliste.
+Hinweis: Dies ist nützlich, um alte oder unnötig gelöschte Bouquets zu bereinigen.
+
+So verwenden Sie das Plugin:
+Bouquets installieren:
+Starten Sie das Plugin und warten Sie, bis die Bouquets von GitHub auf dem Hauptbildschirm geladen sind.
+
+Wählen Sie die gewünschten Bouquets aus (OK/Grün) und installieren Sie sie (Gelb).
+
+Bestätigen Sie gegebenenfalls das erneute Laden der Einstellungen.
+
+Bouquets anzeigen:
+Sehen Sie sich den Inhalt des ausgewählten Bouquets vor der Installation an.
+
+Bouquets bearbeiten:
+Gehen Sie vom Hauptbildschirm zum IPTV-Manager (Rot).
+Wählen Sie ein Bouquet aus und öffnen Sie den IPTV-Editor (Blau).
+Wählen Sie im IPTV-Editor Kanäle aus (OK), gruppieren Sie ähnliche Kanäle (Blau), verschieben Sie sie (Gelb + Auf/Ab) oder löschen Sie sie (Rot).
+Speichern Sie die Änderungen (Grün) und bestätigen Sie das erneute Laden.
+
+Bouquets löschen:
+Im IPTV-Manager Bouquets auswählen (OK/Grün) und löschen (Rot).
+Einstellungen neu laden bestätigen.
+
+.del-Dateien bereinigen:
+Im Hauptbildschirm zu Bouquet Cleaner (Blau) wechseln.
+.del-Dateien auswählen (OK oder Grün für alle) und löschen (Rot).
+
+Fazit
+CiefpIPTVBouquets ist ein leistungsstarkes Tool zur Verwaltung von IPTV-Bouquets, das auf Einfachheit und Flexibilität setzt.
+
+Der Hauptbildschirm dient zur Installation, der IPTV-Manager zur Verwaltung von Bouquets, 
+der IPTV-Editor zur detaillierten Kanalbearbeitung und der Bouquet Cleaner zum Bereinigen gelöschter Dateien.
+
+..:: CiefpSettings ::..

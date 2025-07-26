@@ -1,10 +1,9 @@
-CiefpSettingsMotor Plugin (v2.2)
+..:: CiefpSettingsMotor Plugin ::..
 
 Šta radi plugin?
 CiefpSettingsMotor je jednostavan alat koji preuzima, raspakuje i instalira najnoviju listu kanala za motorne satelitske antene
 direktno sa GitHub-a (ciefp-E2-75E-34W). Ova lista uključuje satelitske bukete (npr.19.2E, 16.0E, 13.0E....),
 tematske bukete (sport, filmovi, muzika), IPTV kanale i markere, prilagođene za širok spektar satelitskih pozicija.
-
 Kako se koristi?
 1.Pokrenite plugin iz menija Enigma2 risivera.
 2.Pritisnite "OK" na daljinskom upravljaču.

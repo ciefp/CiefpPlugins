@@ -1,0 +1,22 @@
+..:: CiefpBouquetUpdater-Plugin ::..
+
+Was leistet die Erweiterung?
+Mit CiefpBouquetUpdater können Sie Senderpakete einfach von GitHub (ciefp-E2-75E-34W) herunterladen und aktualisieren.
+Nutzer können auswählen, welche Pakete sie installieren möchten – Satellit, Themen oder IPTV – ohne bestehende Einstellungen zu verlieren.
+
+So nutzen Sie es:
+1. Laden Sie das Plugin über das Menü des Enigma2-Receivers herunter.
+2. Wählen Sie die gewünschten Pakete in der linken Liste aus (Pfeil nach oben/unten, bestätigen Sie mit „OK“).
+3. Drücken Sie die grüne Schaltfläche („Kopieren“) vor dem temporären Kopieren oder die gelbe Schaltfläche („Installieren“) vor der Installation.
+4. Warten Sie, bis die Installation abgeschlossen ist – der Receiver aktualisiert sich automatisch.
+
+Was ist das Besondere?
+• Selektive Installation: Installieren Sie nur die benötigten Pakete, nicht die gesamte Liste.
+• Gespeicherte Senderliste: Ihre persönlichen Senderlisten bleiben erhalten – alte Dateien werden nur gelöscht, wenn sie sich mit neu ausgewählten Senderlisten überschneiden.
+• Namensanzeige: Anstelle technischer Dateinamen werden die tatsächlichen Namen der Senderlisten angezeigt (z. B. „•• 16.0 E - Max TV ••“) gemäß bouquets.tv.
+• Schnell und einfach: Ideal für alle Nutzer, vom Anfänger bis zum Fortgeschrittenen.
+
+Für wen ist es gedacht?
+Dieses Plugin ist ideal für alle, die Senderlisten flexibel aktualisieren und gleichzeitig ihre benutzerdefinierten Listen in Enigma2-Receivern speichern möchten.
+
+..:: ciefpsettings :...

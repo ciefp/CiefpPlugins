@@ -1,0 +1,23 @@
+..:: CiefpMojTvEPG ::..
+
+CiefpMojTvEPG ist ein Enigma2-Plugin, das die Anzeige eines elektronischen Programmführers (EPG) für eine Vielzahl von Fernsehsendern mithilfe von Daten der MojTV-Website ermöglicht.
+Das Plugin ruft Informationen zum Fernsehprogramm ab und zeigt diese an, darunter Sendezeit, Sendungstitel und -beschreibung sowie Senderlogos.
+Unterstützt regionale Sender (RTS, HRT, Nova, Pink usw.) und internationale Sender wie HBO, Cinemax und Discovery.
+
+Anwendung:
+
+Installation: Installieren Sie das Plugin auf Ihrem Enigma2-Gerät und prüfen Sie, ob das Paket „python3-requests“ installiert ist.
+Start: Suchen Sie das Plugin im Plugin-Menü (Plugin-Browser) und starten Sie es.
+
+Navigation:
+Senderliste: Wählen Sie links im Bildschirm mit den Auf-/Ab-Tasten einen Sender aus.
+EPG-Daten: Rechts werden das Programm des ausgewählten Senders (Zeit, Titel, Beschreibung) angezeigt.
+Fokus wechseln: Drücken Sie „OK“, um zwischen der Senderliste und der EPG-Liste zu wechseln.
+Beenden: Drücken Sie „Abbrechen“, um das Plugin zu beenden.
+Logos: Das Plugin ruft automatisch Senderlogos ab und zeigt sie am unteren Bildschirmrand an. Falls das Logo nicht verfügbar ist, wird ein Platzhaltersymbol verwendet.
+Caching: EPG-Daten werden für einen schnelleren Zugriff in /tmp/CiefpMojTvEPG zwischengespeichert (stündliche Aktualisierung).
+
+Hinweise:
+Für den ordnungsgemäßen Betrieb ist eine Internetverbindung erforderlich. Bei Fehlern überprüfen Sie die Protokolldatei in /tmp/ciefp_mojtv_epg.log.
+
+..:: CiefpSettings ::..

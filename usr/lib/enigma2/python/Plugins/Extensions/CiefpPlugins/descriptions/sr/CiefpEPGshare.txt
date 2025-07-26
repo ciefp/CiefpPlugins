@@ -1,4 +1,3 @@
-
 ..:: CiefpEPGshare ::..
 
 Enigma2 plugin za preuzimanje i prikazivanje EPG (Electronic Program Guide) podataka s web lokacije epgshare01.online 

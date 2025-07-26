@@ -1,4 +1,4 @@
-CiefpTvTodayDE
+..:: CiefpTvTodayDE ::..
 
 CiefpTvTodayDE is an Enigma2 plugin for displaying EPG (Electronic Program Guide) data for TV channels,
 customized for users in Germany. The plugin downloads EPG data from epgshare01.online,
@@ -21,7 +21,8 @@ If there are no programs for the current day, it highlights the last available p
 
 Icons and Logos: The icon of the selected channel is displayed at the bottom of the screen (left). If the icon is missing, placeholder.png is used.
 Controls:
-OK: Toggles focus between the channel list and EPG data. When the focus is on channels, it selects a channel; when it is on EPG data, it allows scrolling through programs.
+OK: Toggles focus between the channel list and EPG data. When the focus is on channels, it selects a channel; 
+when it is on EPG data, it allows scrolling through programs.
 UP/DOWN: Moves the cursor through the channel list (when the focus is on channels) or through EPG programs (when the focus is on EPG data).
 EXIT: Closes the plugin and returns you to the previous screen.
 

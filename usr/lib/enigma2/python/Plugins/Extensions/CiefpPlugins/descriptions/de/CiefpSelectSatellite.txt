@@ -1,0 +1,42 @@
+..:: CiefpSelectSatellite ::..
+
+Plugin – Beschreibung und Verwendung
+Was macht das Plugin?
+– Ermöglicht die Auswahl von Satelliten aus der Liste der verfügbaren Satelliten.
+– Filtert thematische Bouquets (EX-YU, Sport, Film, Musik, Dokumentationen usw.) entsprechend den ausgewählten Satelliten.
+– Erkennt automatisch Satellitenmarkierungen (#SERVICE 1:64) und fügt alle zugehörigen Sender (#SERVICE 1:0) hinzu.
+– Durchsucht Bouquets und kopiert nur die Sender, die zu den ausgewählten Satelliten gehören.
+– Satellitenbouquets werden in vordefinierte Ordner und entsprechend den ausgewählten Satelliten kopiert.
+– IPTV-, Radio- und DVB-T/T2-Bouquets werden automatisch mit jeder Liste kopiert.
+– Installiert gefilterte Bouquets im Enigma2-System und ermöglicht es Nutzern, nur die gewünschten Satelliten zu empfangen.
+– Ermöglicht dem Nutzer, eine eigene Liste nach seinen Bedürfnissen zu erstellen.
+
+# Wie verwende ich das Plugin?
+
+1. Plugin starten
+Installieren und starten Sie CiefpSelectSatellite über das Enigma2-Plugin-Menü.
+Das Plugin lädt die Liste der verfügbaren Satelliten aus der Datei satellites.xml.
+
+2. Satelliten auswählen
+Wählen Sie mit den Pfeiltasten auf der Fernbedienung die gewünschten Satelliten aus.
+Drücken Sie OK, um einen Satelliten zur Auswahl hinzuzufügen oder daraus zu entfernen.
+Die ausgewählten Satelliten werden auf der rechten Bildschirmseite angezeigt.
+
+3. Bouquets kopieren
+Drücken Sie die GRÜNE Taste, um Bouquets und Sender nach den ausgewählten Satelliten zu filtern.
+Das Plugin durchsucht die Bouquets, behält nur die Sender der ausgewählten Satelliten bei und löscht den Rest.
+
+4. Bouquets installieren
+Drücken Sie die GELBE Taste, um die gefilterten Bouquets in /etc/enigma2/ zu installieren.
+Das Plugin aktualisiert Enigma2 automatisch und aktiviert die neuen Einstellungen.
+
+5. Beenden
+Drücken Sie die ROTE Taste, um das Plugin zu beenden.
+
+# Hinweis
+- Das Plugin lädt immer die aktuellste verfügbare Engine-Liste von GitHub herunter.
+- Wer mit den bereits verfügbaren Versionen nicht zufrieden war, kann jetzt seine eigene Version erstellen.
+- Ergebnis: Der Nutzer kann nun seine Liste nach seinen Bedürfnissen erstellen! 🎯
+
+::.. Viel Spaß beim Anschauen! ..::
+..:: ciefpsettings ::..

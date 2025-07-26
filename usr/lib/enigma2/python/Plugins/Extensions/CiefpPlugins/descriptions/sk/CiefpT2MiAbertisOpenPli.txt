@@ -1,0 +1,34 @@
+..:: CiefpSettings T2MI Abertis OpenPLi ::..
+
+je prispôsobená verzia OpenPLi,
+ktorá umožňuje inštaláciu a konfiguráciu pluginov potrebných na používanie nastavení satelitov T2MI a Abertis.
+
+Zmeny v novej verzii:
+
+Zväčšená obrazovka:
+Veľkosť obrazovky zmenená z 1200x600 na 1600x800,
+upravené pozície a veľkosti widgetov (informácie, stav, tlačidlá) a zväčšená veľkosť písma pre lepšiu čitateľnosť.
+
+Lokálne súbory:
+Odstránili sme sťahovanie súborov z internetu (okrem astra-sm)
+a prešli sme na kopírovanie súborov z lokálnych adresárov (dáta a dáta/skripty) pomocou shutil.copy.
+
+Plugin automaticky nainštaluje:
+Astra-SM: Nástroj na spracovanie signálov T2MI. (tento súbor je stiahnutý z internetu)
+Konfiguračné súbory: astra-sm.conf, astra-sm.lua a sysctl.conf, SoftCam.Key, skript abertis (teraz skopírovaný z lokálneho adresára)
+Integrácia s oscam-emu.
+Tento plugin zjednodušuje proces inštalácie požadovaných komponentov a je prispôsobený pre používateľov, 
+ktorí chcú rýchlo a jednoducho nakonfigurovať OpenPLi pre T2MI/Abertis.
+
+Nameserver - nastavenia DNS:
+Aby sieť správne fungovala pri použití statickej IP adresy, je potrebné manuálne nastaviť DNS servery.
+
+Tieto DNS servery patria spoločnosti Google a umožňujú spoľahlivé rozpoznávanie doménových mien.
+Toto sa vykonáva prostredníctvom konfigurácie siete:
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+Reštartovanie siete: Po zmenách nezabudnite reštartovať sieť:
+
+Pri správnej konfigurácii funguje statická IP sieť bez problémov a plugin dokáže stiahnuť potrebné súbory z internetu.
+
+..:: CiefpSettings ::..

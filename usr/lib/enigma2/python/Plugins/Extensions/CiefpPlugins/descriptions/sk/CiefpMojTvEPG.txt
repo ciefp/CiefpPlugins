@@ -1,0 +1,24 @@
+..:: CiefpMojTvEPG ::..
+
+CiefpMojTvEPG je plugin Enigma2, ktorý umožňuje zobrazenie elektronického programového sprievodcu (EPG) pre veľký počet televíznych kanálov pomocou údajov z webovej stránky MojTV.
+Plugin načítava zobrazuje informácie o televíznom programe vrátane vysielacieho času, názvu a popisu relácie spolu s logami kanálov.
+Podporuje regionálne kanály (RTS, HRT, Nova, Pink atď.) a medzinárodné kanály ako HBO, Cinemax a Discovery.
+
+Použitie:
+
+Inštalácia: Nainštalujte si plugin do zariadenia Enigma2 a skontrolujte, či je nainštalovaný balík python3-requests.
+Spustenie: Vyhľadajte plugin v ponuke pluginov (Prehliadač pluginov) a spustite ho.
+
+Navigácia:
+
+Zoznam kanálov: Na ľavej strane obrazovky vyberte kanál pomocou klávesov hore/dole.
+Údaje EPG: Na pravej strane sa zobrazuje program pre vybraný kanál (čas, názov, popis).
+Prepnúť fokus: Stlačením tlačidla „OK“ prepínate medzi zoznamom kanálov a zoznamom EPG.
+Ukončiť: Stlačením tlačidla „Zrušiť“ ukončíte plugin.
+Logá: Plugin automaticky načíta logá kanálov a zobrazí ich v dolnej časti obrazovky. Ak logo nie je k dispozícii, použije sa zástupná ikona.
+Ukladanie do vyrovnávacej pamäte: Údaje EPG sa ukladajú do vyrovnávacej pamäte /tmp/CiefpMojTvEPG pre rýchlejší prístup (obnovujú sa každú hodinu).
+
+Poznámky:
+Pre správnu funkciu je potrebné internetové pripojenie. Ak sa vyskytne chyba, skontrolujte súbor denníka v /tmp/ciefp_mojtv_epg.log.
+
+..:: CiefpSettings ::..

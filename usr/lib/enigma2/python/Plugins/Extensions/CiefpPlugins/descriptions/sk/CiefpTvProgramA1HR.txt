@@ -1,0 +1,29 @@
+..:: CiefpTvProgramA1HR ::..
+
+CiefpTvProgramA1HR je plugin Enigma2 na zobrazovanie údajov EPG (elektronický programový sprievodca) pre televízne kanály,
+prispôsobený pre používateľov v Chorvátsku (A1HR). Plugin sťahuje údaje EPG z epgshare01.online,
+lokálne ich ukladá do vyrovnávacej pamäte a zobrazuje programy pre každý kanál spolu s príslušnými piktogramami (logami kanálov).
+
+Rozhranie umožňuje jednoduché prehliadanie kanálov a ich programov so zameraním na aktuálny alebo nasledujúci program.
+
+Zobrazenie zoznamu kanálov a ich údajov EPG (čas, názov, kategória, popis).
+Automatické sťahovanie a ukladanie údajov EPG do vyrovnávacej pamäte (24-hodinová vyrovnávacia pamäť).
+Zobrazenie piktogramov pre kanály s možnosťou návratu k zástupnému piktogramu, ak piktogram chýba.
+Intuitívne rozhranie s výberovým panelom, ktorý automaticky označuje aktuálny alebo nasledujúci program.
+Podpora navigácie pomocou klávesov OK, HORE, DOLE a EXIT.
+Do súboru /tmp/ciefp_tvprograma1hr.log zaznamenávať iba kritické chyby a chýbajúce ikony.
+
+Navigácia v rozhraní:
+Zoznam kanálov: Nachádza sa na ľavej strane obrazovky. Na prechádzanie zoznamom kanálov použite kláves HORE alebo DOLE.
+Dáta EPG: Zobrazujú sa na pravej strane obrazovky pre vybraný kanál vrátane času, názvu, kategórie a popisu programu.
+Výberový panel: Automaticky zvýrazní aktuálny program (ak je k dispozícii) alebo nasledujúci program pre vybraný deň.
+Ak pre aktuálny deň nie sú k dispozícii žiadne programy, zvýrazní sa posledný dostupný program.
+
+Ikony a logá: Ikona vybraného kanála sa zobrazí v dolnej časti obrazovky (vľavo). Ak ikona chýba, použije sa súbor placeholder.png.
+Ovládacie prvky:
+OK: Prepína medzi zoznamom kanálov a údajmi EPG. Keď je zameranie na kanáloch, vyberie kanál; keď je na údajoch EPG, umožňuje prechádzať programami.
+HORE/DOLE: Posúva kurzor v zozname kanálov (keď je fokus na kanáloch) alebo v programoch EPG (keď je fokus na údajoch EPG).
+
+KONIEC: Zatvorí doplnok a vráti vás na predchádzajúcu obrazovku.
+
+..:: CiefpSettings ::..

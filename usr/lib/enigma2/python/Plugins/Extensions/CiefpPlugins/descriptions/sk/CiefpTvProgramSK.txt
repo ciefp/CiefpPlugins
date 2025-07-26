@@ -1,0 +1,28 @@
+..:: CiefpTvProgramSK ::..
+
+CiefpTvProgramSK je plugin Enigma2 určený na zobrazenie elektronického programového sprievodcu (EPG) pre televízne kanály,
+pomocou údajov stiahnutých z https://epgshare01.online/epgshare01/epg_ripper_SK1.xml.gz.
+Plugin umožňuje používateľom zobraziť zoznam kanálov a podrobné informácie o EPG vrátane názvov relácií, časov vysielania, popisov a kategórií.
+Podporuje zobrazenie ikon kanálov, log pluginov a grafiky na pozadí s ukladaním údajov do vyrovnávacej pamäte pre rýchlejšie načítanie.
+Rozhranie je intuitívne, s navigáciou medzi zoznamom kanálov a informáciami o EPG a je prispôsobené pre platformu Enigma2.
+
+Používanie pluginu
+
+Navigácia:
+Zoznam kanálov: Na ľavej strane obrazovky sa zobrazuje zoznam dostupných kanálov stiahnutých zo súboru XML.
+Informácie o EPG: Na pravej strane sa zobrazujú podrobnosti o programe pre vybraný kanál (čas, názov, popis, kategória).
+Pomocou tlačidiel Hore/Dole sa môžete pohybovať v zozname kanálov alebo informáciách o EPG v závislosti od aktuálneho zamerania.
+Stlačením tlačidla OK prepnete zameranie medzi zoznamom kanálov a informáciami EPG.
+Stlačením tlačidla Zrušiť (alebo Ukončiť) ukončíte plugin.
+Funkcie:
+Zobrazenie ikony: Ikona vybraného kanála sa zobrazí v dolnej časti obrazovky, ak je k dispozícii v priečinku 
+/usr/lib/enigma2/python/Plugins/Extensions/CiefpTvProgramSK/picon.
+
+Ak sa ikona nenájde, použije sa predvolená ikona (zástupný súbor.png).
+
+Ukladanie údajov do vyrovnávacej pamäte: Údaje EPG sa ukladajú do vyrovnávacej pamäte /tmp/CiefpProgramSK/epg_cache.xml na 24 hodín, 
+aby sa znížilo sťahovanie údajov.
+
+Zaznamenávanie: Plugin zaznamenáva aktivity a chyby do súboru /tmp/ciefp_tvprogramsk.log na diagnostické účely.
+
+..:: CiefpSettings ::..

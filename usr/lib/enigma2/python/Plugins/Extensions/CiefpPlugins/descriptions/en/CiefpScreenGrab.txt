@@ -1,6 +1,5 @@
+..:: CiefpScreenGrab ::..
 
-
-CiefpScreenGrab_Usage_Guide_EN.txt
 ==================================
 CiefpScreenGrab Plugin - User Guide
 ==================================

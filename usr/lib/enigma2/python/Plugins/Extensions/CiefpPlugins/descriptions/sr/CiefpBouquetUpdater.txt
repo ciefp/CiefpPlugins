@@ -1,4 +1,4 @@
-CiefpBouquetUpdater Plugin (v1.3)
+..:: CiefpBouquetUpdater ::..
 
 Šta radi plugin?
 
@@ -6,7 +6,6 @@ CiefpBouquetUpdater omogućava jednostavno preuzimanje i ažuriranje buketa kana
 Korisnici mogu birati koje bukete žele da instaliraju — satelitske, tematske ili IPTV — bez gubitka svojih postojećih postavki.
 
 Kako se koristi?
-
 1.Pokrenite plugin iz menija Enigma2 risivera.
 2.Na levoj listi izaberite bukete koje želite (pomeranje strelice gore/dole, potvrda sa "OK").
 3.Pritisnite zeleno dugme ("Copy") za privremeno kopiranje ili žuto dugme ("Install") za instalaciju.

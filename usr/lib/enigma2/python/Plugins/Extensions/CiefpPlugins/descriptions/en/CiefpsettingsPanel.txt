@@ -1,4 +1,4 @@
- CiefpsettingsPanel Plugin
+..:: CiefpsettingsPanel Plugin ::..
  
 Short description of Ciefpsettings Panel plugin
  Ciefpsettings Panel is a versatile Enigma2 plugin designed to manage and install various plugins,
@@ -44,7 +44,8 @@ Advantages of new functions:
 
 Conclusion:
 Ciefpsettings Panel is a powerful tool for managing Enigma2 plugins, with new functions that increase its practicality and flexibility.
-Plugin Manager and IPK Installer make it a comprehensive solution for installing, removing and updating plugins, while automatic update ensures long-term reliability.
+Plugin Manager and IPK Installer make it a comprehensive solution for installing, removing and updating plugins, 
+while automatic update ensures long-term reliability.
 It is an ideal solution for users who want simple and efficient management of their satellite receivers.
 
 ....::ciefpsettings::......

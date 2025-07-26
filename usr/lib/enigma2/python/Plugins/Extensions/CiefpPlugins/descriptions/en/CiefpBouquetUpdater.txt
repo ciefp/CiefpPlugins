@@ -1,5 +1,5 @@
-CiefpBouquetUpdater Plugin (v1.3)
-
+..:: CiefpBouquetUpdater ::..
+ 
 What does the plugin do?
 
 CiefpBouquetUpdater enables easy download and update of channel bouquets from GitHub (ciefp-E2-75E-34W).

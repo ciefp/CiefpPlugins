@@ -1,0 +1,66 @@
+.:: Ciefp Plugins Panel ::..
+
+Doplnky Ciefp sú doplnky Enigma2, ktoré poskytujú používateľské rozhranie na prezeranie, inštaláciu a správu kolekcie doplnkov Ciefp.
+Umožňuje používateľom jednoducho inštalovať doplnky, ako napríklad Ciefpsettings Motor, Ciefp IPTV Bouquets, Ciefp EPGshare a ďalšie, 
+zobrazovať ich popisy vo viacerých jazykoch, zobrazovať súvisiace obrázky a kontrolovať aktualizácie.
+Doplnok je navrhnutý pre jednoduchú navigáciu so zameraním na funkčnosť a čistý vzhľad.
+
+Ako používať
+Spustenie doplnku:
+V ponuke Enigma2 v časti Doplnky nájdite doplnky Ciefp a spustite ich.
+Otvorí sa obrazovka panela doplnkov CiefpPluginsPanel so zoznamom doplnkov vľavo, popisom vpravo a farebnými tlačidlami v dolnej časti.
+
+Navigácia:
+Ľavá strana (zoznam doplnkov): Na navigáciu v zozname doplnkov použite šípky nahor/nadol. Každý doplnok má ikonu a názov.
+Pravá strana (popis): Zobrazuje podrobný popis vybraného pluginu v aktuálnom jazyku (napr. Názov: Ciefpsettings Engine a text popisu).
+
+Zameranie: Stlačením tlačidla OK prepnete zameranie medzi zoznamom pluginov a popisom (popis sa bude posúvať pomocou šípok).
+
+Funkcie tlačidiel:
+
+Červené (Ukončiť): Ukončí plugin.
+Zelené (Inštalovať): Nainštaluje vybraný plugin. Inštaláciu potvrďte prostredníctvom dialógového okna.
+Žlté (Jazyk): Zmení jazyk popisu pluginu (napr. medzi en, sr, el, de, sk).
+Modré (Prehliadač obrázkov): Otvorí obrazovku prehliadača obrázkov na zobrazenie obrázkov priradených k vybranému pluginu 
+(ak obrázky existujú v /usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/pictures/).
+
+Prehliadač obrázkov:
+Modré tlačidlo otvorí obrazovku prehliadača obrázkov pluginu.
+Na navigáciu medzi obrázkami použite zelené (Predchádzajúci), modré (Ďalší) alebo šípky doľava/doprava.
+Červená alebo Zrušiť sa vráti na hlavnú obrazovku.
+
+Stavové hlásenia:
+Stavové hlásenia (napr. „Kontrolujú sa aktualizácie“, „Prebieha inštalácia“, „Inštalácia úspešná“) 
+sa zobrazujú v pravej dolnej časti obrazovky, vedľa farebných tlačidiel, vo widgete status_label.
+
+Automatická kontrola aktualizácií:
+Pri spustení plugin automaticky skontroluje, či je na adrese VERSION_URL k dispozícii nová verzia.
+
+Ak existuje (napr. verzia 2.0), zobrazí sa otázka, či chcete aktualizovať. Aktualizácia zahŕňa zálohu zoznamu nainštalovaných pluginov a reštart Enigmy2.
+
+Čo je nové vo verzii 1.9
+Podpora jazykov (en, sr, el, de, sk):
+Plugin dynamicky načítava jazyky z priečinka v /usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/descriptions/.
+Podporované jazyky sú en (angličtina), sr (srbčina), el (gréčtina), de (nemčina) a sk (slovenčina) 
+s možnosťou pridania ďalších jazykov vytvorením nových priečinkov.
+
+Popisy pluginov sa načítavajú vo vybranom jazyku, pričom predvolená hodnota je en, ak jazyk nie je k dispozícii.
+Zmena jazyka sa vykonáva žltým tlačidlom s veľkým začiatočným písmenom názvu jazyka (napr. Sr pre srbčinu).
+
+Automatická kontrola aktualizácií:
+Plugin pri spustení kontroluje dostupnosť novej verzie pomocou VERSION_URL.
+Ak je k dispozícii nová verzia, ponúka možnosť aktualizácie so zálohou zoznamu nainštalovaných pluginov (INSTALLED_PLUGINS_FILE) 
+v súbore /tmp/ciefp_plugins_backup.txt.
+
+Stavové správy v status_label:
+Novo pridané: Stavové správy (napr. „Kontrola aktualizácií“, „Inštalácia úspešná“, „Aktualizácia zlyhala“) 
+sa zobrazujú v samostatnom widgete napravo od modrého tlačidla, namiesto toho, aby zakrývali popis pluginu.
+Toto zlepšuje používateľskú skúsenosť, pretože popis pluginu zostáva počas prevádzky viditeľný.
+
+Zoznam pluginov: Zobrazuje 23 pluginov (napr. Ciefpsettings Motor, Ciefp IPTV Bouquets, Ciefp EPGshare) s ikonami a popismi.
+Viacjazyčná podpora: Automaticky načítava jazyky z priečinka descriptions/ s aktuálnou podporou pre en, sr, el, de, sk.
+Prehliadač obrázkov: Umožňuje zobrazenie obrázkov pluginu na samostatnej obrazovke.
+Inštalácia pluginu: Jednoduchá inštalácia pomocou skriptov z GitHubu.
+Automatické aktualizácie: Kontroluje a inštaluje nové verzie pluginov.
+
+..:: CiefpSettings ::..

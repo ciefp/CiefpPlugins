@@ -1,0 +1,42 @@
+..:: CiefpSelectSatellite ::..
+
+Plugin - Popis a použitie
+Čo robí plugin?
+- Umožňuje výber satelitov zo zoznamu dostupných satelitov.
+- Filtruje tematické balíčky (EX-YU, Šport, Film, Hudba, Dokumenty atď.) podľa vybraných satelitov.
+- Automaticky rozpoznáva značky satelitov (#SERVICE 1:64) a pridáva všetky kanály (#SERVICE 1:0), ktoré k nim patria.
+- Vyhľadáva balíčky a kopíruje iba tie kanály, ktoré patria k vybraným satelitom.
+- Satelitné balíčky sa kopírujú do preddefinovaných priečinkov a podľa vybraných satelitov.
+- Balíčky IPTV, Rádia a DVB.T/T2 sa automaticky kopírujú s každým zoznamom.
+- Inštaluje filtrované balíčky do systému Enigma2 a umožňuje používateľom sledovať iba požadované satelity.
+- Dáva používateľovi možnosť vytvoriť si vlastný zoznam podľa svojich potrieb.
+
+# Ako používať plugin?
+
+1. Spustenie pluginu
+Nainštalujte a spustite CiefpSelectSatellite z ponuky pluginu Enigma2.
+Plugin načíta zoznam dostupných satelitov zo súboru satellites.xml.
+
+2. Výber satelitov
+Použite šípky na diaľkovom ovládači na výber požadovaných satelitov.
+Stlačením tlačidla OK pridáte alebo odstránite satelit z výberu.
+Vybrané satelity sa zobrazia na pravej strane obrazovky.
+
+3. Kopírovanie kanálov
+Stlačte ZELENÉ tlačidlo na filtrovanie kanálov a kanálov podľa vybraných satelitov.
+Plugin prehľadá kanály, ponechá iba kanály z vybraných satelitov a zvyšok odstráni.
+
+4. Inštalácia kanálov
+Stlačte ŽLTÉ tlačidlo na inštaláciu filtrovaných kanálov do /etc/enigma2/.
+Plugin automaticky aktualizuje Enigma2 a aktivuje nové nastavenia.
+
+5. Ukončenie
+Stlačte ČERVENÉ tlačidlo na ukončenie pluginu.
+
+# Poznámka
+- Plugin vždy stiahne najnovší dostupný zoznam vyhľadávacích nástrojov z githubu.
+- Pre všetkých, ktorí neboli spokojní s už dostupnými verziami, máte teraz možnosť vytvoriť si vlastnú verziu.
+- Výsledok: Používateľ má teraz možnosť vytvoriť si zoznam podľa svojich potrieb! 🎯
+
+::.. Prajem príjemné sledovanie! ..::
+..:: ciefpsettings ::..

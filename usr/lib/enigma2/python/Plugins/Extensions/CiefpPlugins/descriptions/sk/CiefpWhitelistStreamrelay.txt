@@ -1,0 +1,26 @@
+..:: CiefpWhitelistStreamrelay ::..
+
+CiefpWhitelistStreamrelay je plugin pre prijímače Enigma2, určený na automatické generovanie súboru `whitelist_streamrelay` 
+s použitím údajov z preddefinovaných súborov userbouquet.
+
+Hlavné funkcie:
+1. Generovanie súboru whitelist_streamrelay:
+- Plugin spracováva údaje z vybraných súborov bouquet (userbouquet) a extrahuje platné riadky obsahujúce
+informácie o streamoch.
+- Vytvára alebo aktualizuje súbor `whitelist_streamrelay` v adresári `/etc/enigma2`.
+- Podporované balíky SKYDE 19.0E - SKYUK 28.2E.
+
+2. Zobrazenie informácií používateľovi:
+- Zobrazuje počet riadkov pridaných do súboru `whitelist_streamrelay`, čím poskytuje používateľovi prehľad o výsledkoch spracovania.
+
+3. Reštart Enigma2:
+- Po dokončení generovania súboru má používateľ možnosť potvrdiť reštart Enigma2, aby sa načítali nové nastavenia.
+- Reštart sa vykoná až po stlačení tlačidla OK používateľom na diaľkovom ovládači.
+
+Prečo používať tento plugin?
+- Je vhodný pre používateľov, ktorí často aktualizujú svoje zoznamy streamrelay a chcú automatizovaný proces bez manuálnej úpravy súborov.
+- Jednoduché a intuitívne rozhranie umožňuje prezeranie vygenerovaných riadkov a kontrolu nad reštartom systému.
+- Tento plugin je praktickým nástrojom pre pokročilých používateľov systému Enigma2, ktorí chcú lepšiu správu a organizáciu konfigurácií streamrelay.
+Tento plugin bol vytvorený špeciálne pre moje nastavenia, nebude fungovať s inými nastaveniami.
+
+..::ciefpsettings::..

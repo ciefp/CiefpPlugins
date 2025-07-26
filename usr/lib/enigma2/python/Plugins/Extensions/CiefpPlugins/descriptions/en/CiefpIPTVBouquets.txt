@@ -1,4 +1,5 @@
 ..:: CiefpIPTVBouquets ::..
+
 CiefpIPTVBouquets is an Enigma2 plugin designed to manage IPTV bouquets on Enigma2 devices.
 It allows users to download, install, edit and delete IPTV bouquets directly from the GitHub repository,
 as well as manage channels within the bouquet. The plugin is useful for users who want to easily organize IPTV content,

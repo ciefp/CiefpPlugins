@@ -1,0 +1,95 @@
+..:: CiefpScreenGrab ::..
+
+==================================
+Doplnok CiefpScreenGrab - Používateľská príručka
+==================================
+Verzia: 1.2
+CiefpScreenGrab je doplnok Enigma2 na zachytávanie snímok obrazovky na vašom
+satelitnom prijímači. Podporuje vytváranie snímok obrazovky pomocou diaľkového ovládania,
+minimalistické rozhranie, prezeranie a mazanie uložených obrázkov a
+prispôsobenie formátu a rozlíšenia.
+
+Konfigurácia
+=============
+1. Otvorte doplnok z ponuky: Menu -> Doplnky -> CiefpScreenGrab.
+2. Nastavenia:
+- Povoliť CiefpScreenGrab: Povoliť doplnok (predvolené: True).
+
+- Použiť minimalistický vzhľad: Povolí minimalistické rozhranie (malé okno v pravom hornom rohu, predvolené: True).
+- Snímka obrazovky: Vyberte, čo sa má zachytiť:
+* OSD + Video (predvolené)
+* Iba video
+* Iba OSD
+- Formát snímok obrazovky: JPG alebo PNG (predvolené: PNG).
+* Ak je JPG, upravte kvalitu obrázka jpg (10-100, predvolené: 100).
+- Veľkosť obrázka (šírka): Rozlíšenie obrázka (predvolené: Rozlíšenie vzhľadu, možnosti: 720, 1280, 1920).
+- Cesta k snímkam obrazovky: Kam sa ukladajú obrázky (predvolené: /media/hdd/CiefpScreenGrab, možnosti: /media/hdd, /media/usb, /tmp).
+- Vyberte tlačidlo na vytvorenie snímky obrazovky: Tlačidlo diaľkového ovládača na zachytenie (predvolené: Žiadne).
+* Možnosti: Stlmiť, Pomocník, Informácie, Časovač, EPG, TV, Rádio, Text, Zvuk, Červená, Zelená, Žltá, Modrá.
+* Pre červenú, zelenú, žltú: Funguje iba dlhé stlačenie.
+* Pre ostatné: Vyberte krátke alebo dlhé stlačenie (upravte
+Použite tlačidlo „[tlačidlo]“ namiesto „[tlačidlo] dlhé“).
+- Časový limit pre informačnú správu: Trvanie upozornenia (predvolené: 3 sekundy, možnosti: 1, 3, 5, 10, vypnuté, bez časového limitu).
+3. Uložiť: Zelené tlačidlo.
+4. Obnoviť na predvolené nastavenia: Žlté tlačidlo (vyžaduje potvrdenie).
+
+[Poznámka]: Uistite sa, že vybrané úložné zariadenie (napr. /media/hdd) je dostupné a zapisovateľné. Ak nie je, zmeňte cestu.
+
+Použitie
+=====
+Zachytenie snímky obrazovky
+----------------------
+1. Prostredníctvom tlačidla:
+- Nastavte tlačidlo v nastaveniach (napr. modré).
+- Stlačte vybrané tlačidlo (krátke alebo dlhé stlačenie, v závislosti od nastavení).
+- Snímka obrazovky sa zachytí a zobrazí okamžite.
+2. Cez Minimálny vzhľad:
+- Otvorte doplnok (ak je povolená možnosť Použiť minimalistický vzhľad).
+- Stlačte zelené tlačidlo (Získať).
+- Snímka obrazovky sa nasníma a zobrazí.
+3. Náhľad po nasnímaní:
+- Po nasnímaní sa otvorí obrazovka s náhľadom s obrázkom (1250x750).
+- Možnosti:
+* Červené tlačidlo (Ukončiť): Zatvorí náhľad.
+* Žlté tlačidlo (Súbory): Otvorí zoznam uložených obrázkov.
+
+Zobrazenie a mazanie obrázkov
+-------------------------
+1. Otvorte zoznam obrázkov:
+- Z Minimálneho vzhľadu: Žlté tlačidlo (Súbory).
+- Z nastavení: Modré tlačidlo (Súbory).
+- Z náhľadu snímky obrazovky: Žlté tlačidlo (Súbory).
+2. Na obrazovke súborov:
+- Vľavo: Zoznam súborov (najnovšie hore).
+- Vpravo: Náhľad vybratého obrázka (1300x700).
+- Tlačidlo OK: Vyberie/zruší výber súboru (označený [X]).
+- Zelené tlačidlo (Vybrať všetko): Vyberie všetky súbory.
+- Červené tlačidlo (Odstrániť): Odstráni vybraté súbory (vyžaduje potvrdenie).
+- Zrušiť/Ukončiť: Zatvorí obrazovku.
+
+Minimálny vzhľad
+------------
+- Ak je povolená možnosť Použiť minimalistický vzhľad, doplnok sa otvorí ako malé okno (540x40) v pravom hornom rohu.
+- Funkcie:
+* Poradie (Ukončiť): Zatvorí okno.
+* Zelené (Získať): Nasníma snímku obrazovky.
+* Žlté (Súbory): Otvorí zoznam obrázkov.
+* Modré (Nastavenia): Otvorí nastavenia.
+
+Odporúčané nastavenia
+=====================
+- Formát: PNG pre najlepšiu kvalitu bez straty.
+- Rozlíšenie: Rozlíšenie vzhľadu alebo 1280 pre rovnováhu medzi kvalitou a výkonom.
+- Cesta: /media/hdd pre trvalé uloženie.
+- Tlačidlo: Modré alebo červené (dlhé stlačenie) pre jednoduché nasnímanie.
+- Časový limit: 3 sekundy pre upozornenia popri náhľade obrázka.
+
+Poznámky
+=====
+- Plugin bol testovaný na prijímačoch Vu+ (napr. Zero 4K) s obrázkami OpenPLi a OpenATV.
+- Obrázky sa ukladajú do /media/[hdd/usb/tmp]/CiefpScreenGrab/.
+- Nepoužívajte tlačidlá, ktoré sú už namapované v systéme (napr. EPG, Info).
+
+Užite si zachytávanie snímok obrazovky pomocou CiefpScreenGrab!
+
+..:: CiefpSettings ::..

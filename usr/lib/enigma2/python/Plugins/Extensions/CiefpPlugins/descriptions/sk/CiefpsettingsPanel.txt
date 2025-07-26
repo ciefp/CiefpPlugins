@@ -1,0 +1,54 @@
+..:: CiefpsettingsPanel ::..
+
+Stručný popis doplnku Ciefpsettings Panel
+Ciefpsettings Panel je všestranný doplnok Enigma2 určený na správu a inštaláciu rôznych doplnkov, nástrojov, softcamov, 
+skinov a IPTV doplnkov na zariadeniach Enigma2.
+Poskytuje užívateľsky prívetivé rozhranie na výber a inštaláciu rôznych doplnkov z online zdrojov,
+čo uľahčuje prispôsobenie a rozšírenie funkčnosti satelitných prijímačov.
+
+Doplnok je obzvlášť užitočný pre používateľov obrázkov ako OpenPLi, ktoré nemusia mať vstavaných správcov doplnkov.
+
+Kľúčové vlastnosti:
+1. Centralizovaná inštalácia doplnkov:
+o Umožňuje výber a inštaláciu viacerých doplnkov
+o (napr. CiefpSettingsDownloader, AjPanel, X-Streamity, softcamy ako Oscam a Ncam, skiny ako Metrix-FHD) prostredníctvom jednoduchého rozhrania.
+o Podporuje kategorizáciu doplnkov (CiefpSettings, Panely, IPTV, Softcamy, Skiny, Nástroje) pre jednoduchšiu navigáciu.
+
+2. Automatická kontrola a aktualizácia pluginov:
+o Plugin automaticky kontroluje dostupnosť nových verzií na definovanej URL adrese (VERSION_URL) pri spustení.
+o Ak je k dispozícii nová verzia, používateľ môže potvrdiť aktualizáciu,
+o počas ktorej sa zoznam nainštalovaných pluginov (ciefp_installed_plugins.txt) uloží prostredníctvom zálohy a obnoví sa po úspešnej aktualizácii,
+o zabezpečí sa kontinuita údajov.
+
+3. Správca pluginov:
+o Nová funkcia, ktorá umožňuje prezeranie a správu nainštalovaných pluginov.
+o Používatelia môžu odstrániť vybrané pluginy s potvrdením, ktoré odstráni príslušné adresáre
+o z /usr/lib/enigma2/python/Plugins/Extensions/ a aktualizuje sa zoznam nainštalovaných pluginov.
+o Rozhranie obsahuje stavový riadok a tlačidlá pre výber (zelené), odstránenie (červené) a reštartovanie Enigmy2 (modré).
+
+4. Inštalátor IPK:
+o Pridaná funkcia pre inštaláciu súborov .ipk z adresára /tmp, podobne ako možnosť „Inštalovať lokálne rozšírenia“ v Správcovi softvéru.
+
+o Zobrazuje zoznam súborov .ipk v priečinku /tmp, čo umožňuje používateľom vybrať a nainštalovať ich pomocou príkazu opkg install.
+o Obsahuje stavový riadok pre spätnú väzbu o inštalácii, ako aj tlačidlá pre ukončenie (červená), inštaláciu (zelená) a reštart Enigmy2 (modrá).
+o Obzvlášť užitočné pre obrazy bez vstavaného správcu doplnkov, ako napríklad OpenPLi.
+
+5. Reštart Enigmy2:
+o Modré tlačidlo na všetkých obrazovkách (Panel Ciefpsettings, Správca doplnkov, Inštalátor IPK) umožňuje rýchly reštart Enigmy2 pomocou príkazu init 4 && init 3,
+o ktorý je potrebný po inštalácii alebo odstránení doplnkov.
+
+Výhody nových funkcií:
+• Správca doplnkov uľahčuje odstránenie nepotrebných doplnkov bez nutnosti manuálneho mazania súborov alebo používania terminálu.
+• Inštalátor IPK rozširuje funkčnosť doplnkov a umožňuje inštaláciu lokálnych súborov .ipk,
+• čo je kľúčové pre používateľov, ktorí sťahujú balíky z externých zdrojov.
+
+• Automatická aktualizácia zabezpečuje, že plugin zostane aktuálny a zároveň zachová používateľské údaje (zoznam nainštalovaných pluginov),
+• znižuje riziko straty konfigurácie.
+
+Záver:
+Ciefpsettings Panel je výkonný nástroj na správu pluginov Enigma2 s novými funkciami, ktoré zvyšujú jeho praktickosť a flexibilitu.
+Správca pluginov a inštalátor IPK z neho robia komplexné riešenie na inštaláciu, odstraňovanie a aktualizáciu pluginov, 
+zatiaľ čo automatická aktualizácia zabezpečuje dlhodobú spoľahlivosť.
+Je to ideálne riešenie pre používateľov, ktorí chcú jednoduchú a efektívnu správu svojich satelitných prijímačov.
+
+..:: CiefpSettings ::..

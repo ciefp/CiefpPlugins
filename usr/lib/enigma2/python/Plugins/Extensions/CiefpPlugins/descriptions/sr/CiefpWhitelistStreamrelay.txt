@@ -1,4 +1,4 @@
-CiefpWhitelistStreamrelay
+..:: CiefpWhitelistStreamrelay ::..
 
 CiefpWhitelistStreamrelay je plugin za Enigma2 prijemnike, dizajniran za automatizovano generisanje fajla 
 `whitelist_streamrelay` koristeći podatke iz unapred definisanih userbouquet fajlova.

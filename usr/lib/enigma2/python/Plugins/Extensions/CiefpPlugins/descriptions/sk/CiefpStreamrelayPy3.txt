@@ -1,0 +1,23 @@
+..:: CiefpStreamrelayPy3 ::..
+
+Plugin je verzia enigma2 python3
+Plugin bol vytvorený špeciálne pre môj zoznam
+a nebude fungovať so zoznamami od iných autorov
+
+Plugin načíta preddefinované kytice a konvertuje ich
+na vopred definované kytice Streamrelay
+
+Satelity podporované 28.2E Sky UK a 19.2E Sky DE
+
+Ako používať:
+1. spustite plugin
+2. vyberte kytice
+žlté tlačidlo - Astra 19.2E
+modré tlačidlo - Astra 28.2E
+je možné vybrať obe kytice
+stavový riadok zobrazuje, čo je vybrané
+3. Spustiť konverziu
+proces konverzie sa spustí po dokončení
+reštartujte enigma2
+
+..:: ciefpsettings ::..

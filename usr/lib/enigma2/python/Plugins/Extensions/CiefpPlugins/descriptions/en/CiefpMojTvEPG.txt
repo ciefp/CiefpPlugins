@@ -1,5 +1,4 @@
-
-CiefpMojTvEPG (version 1.0)
+..:: CiefpMojTvEPG ::..
 
 CiefpMojTvEPG is an Enigma2 plugin that enables the display of an electronic program guide (EPG)
 for a large number of TV channels using data from the MojTV website.

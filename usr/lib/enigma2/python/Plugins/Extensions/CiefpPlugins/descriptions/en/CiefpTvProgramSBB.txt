@@ -1,4 +1,3 @@
-
 ..:: CiefpTvProgramSBB ::..
 
 Enigma2 plugin for displaying TV programs (EPG) for SBB Serbia.

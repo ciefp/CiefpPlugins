@@ -1,0 +1,51 @@
+..:: CiefpsettingsPanel-Plugin ::..
+
+Kurzbeschreibung des Ciefpsettings Panel-Plugins
+Ciefpsettings Panel ist ein vielseitiges Enigma2-Plugin zur Verwaltung und Installation verschiedener Plugins, Tools, Softcams, Skins und IPTV-Plugins auf Enigma2-Geräten.
+Es bietet eine benutzerfreundliche Oberfläche zur Auswahl und Installation verschiedener Plugins aus Online-Quellen.
+So können Sie die Funktionalität von Satellitenreceivern einfach anpassen und erweitern.
+Das Plugin ist besonders nützlich für Nutzer von Image-Anwendungen wie OpenPLi, die möglicherweise keinen integrierten Plugin-Manager haben.
+
+Hauptfunktionen:
+1. Zentralisierte Plugin-Installation:
+o Ermöglicht die Auswahl und Installation mehrerer Plugins
+o (z. B. CiefpSettingsDownloader, AjPanel, X-Streamity, Softcams wie Oscam und Ncam, Skins wie Metrix-FHD) über eine einfache Oberfläche.
+o Unterstützt die Plugin-Kategorisierung (CiefpSettings, Panels, IPTV, Softcams, Skins, Tools) für eine einfachere Navigation.
+
+2. Automatische Plugin-Prüfung und -Aktualisierung:
+o Das Plugin prüft beim Start automatisch, ob neue Versionen unter der definierten URL (VERSION_URL) verfügbar sind.
+o Ist eine neue Version verfügbar, kann der Benutzer das Update bestätigen.
+o Dabei wird die Liste der installierten Plugins (ciefp_installed_plugins.txt) per Backup gesichert und nach erfolgreichem Update wiederhergestellt.
+o Datenkontinuität wird gewährleistet.
+
+3. Plugin-Manager:
+o Neue Funktion zum Anzeigen und Verwalten installierter Plugins.
+o Benutzer können ausgewählte Plugins mit Bestätigung löschen. Dadurch werden die entsprechenden Verzeichnisse
+o aus /usr/lib/enigma2/python/Plugins/Extensions/ entfernt und die Liste der installierten Plugins aktualisiert.
+o Die Benutzeroberfläche enthält eine Statusleiste und Schaltflächen zum Auswählen (grün), Löschen (rot) und Neustarten von Enigma2 (blau).
+
+4. IPK-Installer:
+o Funktion zur Installation von IPK-Dateien aus dem Verzeichnis /tmp hinzugefügt, ähnlich der Option „Lokale Erweiterungen installieren“ im Software-Manager.
+o Zeigt eine Liste der IPK-Dateien in /tmp an, sodass Benutzer diese über den Befehl „opkg install“ auswählen und installieren können.
+o Enthält eine Statusleiste mit Installationsfeedback sowie Schaltflächen zum Beenden (rot), Installieren (grün) und Neustarten von Enigma2 (blau).
+o Besonders nützlich für Images ohne integrierten Plugin-Manager, wie z. B. OpenPLi.
+
+5. Enigma2 neu starten:
+o Die blaue Schaltfläche auf allen Bildschirmen (Ciefpsettings Panel, Plugin-Manager, IPK-Installer) ermöglicht einen schnellen Neustart von Enigma2 mit dem Befehl „init 4 && init 3“,
+o der nach der Installation oder Löschung von Plugins erforderlich ist.
+
+Vorteile der neuen Funktionen:
+• Der Plugin-Manager erleichtert das Entfernen unnötiger Plugins, ohne Dateien manuell löschen oder das Terminal verwenden zu müssen.
+• Der IPK-Installer erweitert die Plugin-Funktionalität und ermöglicht die Installation lokaler .ipk-Dateien.
+• Dies ist besonders wichtig für Nutzer, die Pakete von externen Quellen herunterladen.
+• Automatische Updates sorgen dafür, dass das Plugin stets aktuell ist und gleichzeitig die Benutzerdaten (Liste der installierten Plugins) erhalten bleiben.
+• Das Risiko eines Konfigurationsverlusts wird reduziert.
+
+Fazit:
+Ciefpsettings Panel ist ein leistungsstarkes Tool zur Verwaltung von Enigma2-Plugins mit neuen Funktionen, die die Funktionalität und Flexibilität erhöhen.
+
+Plugin Manager und IPK-Installer machen es zu einer umfassenden Lösung für die Installation, Entfernung und Aktualisierung von Plugins. Automatische Updates gewährleisten langfristige Zuverlässigkeit.
+
+Die ideale Lösung für Nutzer, die ihre Satellitenreceiver einfach und effizient verwalten möchten.
+
+..:: CiefpSettings ::..

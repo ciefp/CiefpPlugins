@@ -1,0 +1,22 @@
+..:: CiefpBouquetUpdater ::..
+
+Čo robí doplnok?
+CiefpBouquetUpdater vám umožňuje jednoducho sťahovať a aktualizovať balíčky kanálov z GitHubu (ciefp-E2-75E-34W).
+Používatelia si môžu vybrať, ktoré balíčky chcú nainštalovať – satelitné, tematické alebo IPTV – bez straty existujúcich nastavení.
+
+Ako ho používať?
+1. Spustite doplnok z ponuky prijímača Enigma2.
+2. Vyberte požadované balíčky v ľavom zozname (šípka hore/dole, potvrďte tlačidlom „OK“).
+3. Stlačte zelené tlačidlo („Kopírovať“) pre dočasné kopírovanie alebo žlté tlačidlo („Inštalovať“) pre inštaláciu.
+4. Počkajte na dokončenie inštalácie – prijímač sa automaticky obnoví.
+
+Čo je špeciálne?
+• Selektívna inštalácia: Nainštalujte iba požadované balíčky, nie celý zoznam.
+• Zachováva používateľské zoznamy kanálov: Vaše osobné zoznamy kanálov zostávajú nedotknuté – staré súbory sa vymažú iba v prípade, že sa prekrývajú s novovybranými zoznamami kanálov.
+• Zobrazenie názvu: Namiesto technických názvov súborov vidíte skutočné názvy zoznamov kanálov (napr. „•• 16,0 E - Max TV ••“) v poradí z bouquets.tv.
+• Rýchle a jednoduché: Ideálne pre všetkých používateľov, od začiatočníkov až po pokročilých.
+
+Pre koho je určený?
+Tento plugin je ideálny pre tých, ktorí chcú flexibilne aktualizovať zoznamy kanálov a zároveň zachovať svoje prispôsobené zoznamy v prijímačoch Enigma2.
+
+..:: ciefpsettings :...

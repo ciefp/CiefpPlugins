@@ -1,24 +1,60 @@
-
 ..:: Ciefp Plugins Panel ::..
 
-Ciefp Plugins Panel je kolekcija alata i dodataka kreiranih za poboljšanje vašeg Enigma2 iskustva. 
-Ovaj plugin omogućava jednostavan pristup raznim Ciefp pluginovima, 
-- uključujući funkcionalnosti poput upravljanja podešavanjima
-- uređivanja satelita
-- uređivanja xml fajlova
-- konvertovanja m3u
-- ažuriranja buketa, i još mnogo toga. 
-Sa intuitivnim interfejsom, možete pregledati opise plugina, 
-menjati jezik između srpskog i engleskog, i instalirati plugine uz potvrdu za veću sigurnost.
+Ciefp Plugins je Enigma2 plug-in koji pruža korisnički interfejs za pregled, instalaciju i upravljanje kolekcijom plugina autora Ciefp-a. 
+Omogućava korisnicima da lako instaliraju plugine poput Ciefpsettings Motor, Ciefp IPTV Bouquets, Ciefp EPGshare i drugih, 
+pregledaju njihove opise na više jezika, gledaju povezane slike i proveravaju dostupnost ažuriranja. 
+Plug-in je dizajniran za jednostavnu navigaciju, sa fokusom na funkcionalnost i čist izgled.
 
-**Upotreba:**
-- Jednostavne funkcije za pomeranje gore i dole
-- izborom OK prelazite na drugi deo ekrana
-- drugi deo ekrana može se pomerati gore i dole
-- klikom na OK ponovo se vraćate na prvi deo ekrana sa ikonama
-- Crveno dugme - Izlaz
-- Zeleno dugme - Instalacija
-- Žuto dugme - Opis plugina na srpskom
-- Plavo dugme - Opis plugina na engleskom
+Kako se koristi
+Pokretanje plugina:
+Pronađite Ciefp Plugins u Enigma2 meniju pod Plugins i pokrenite ga.
+Otvoriće se ekran CiefpPluginsPanel sa listom plugina na levoj strani, opisom na desnoj i obojenim dugmadima na dnu.
+
+Navigacija:
+Leva strana (lista plugina): Koristite strelice gore/dole za kretanje kroz listu plugina. Svaki plug-in ima ikonu i naziv.
+Desna strana (opis): Prikazuje detaljan opis izabranog plugina na trenutnom jeziku (npr. Name: Ciefpsettings Motor i tekst opisa).
+Fokus: Pritisnite OK za prebacivanje fokusa između liste plugina i opisa (za skrolovanje opisa strelicama).
+
+Funkcije dugmadi:
+Crveno (Exit): Izlaz iz plugina.
+Zeleno (Install): Instalira izabrani plug-in. Potvrđujete instalaciju preko dijaloga.
+Žuto (Language): Menja jezik opisa plugina (npr. između en, sr, el, de, sk).
+Plavo (Image Viewer): Otvara ImageViewerScreen za pregled slika povezanih sa izabranim plug-inom 
+(ako slike postoje u /usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/pictures/).
+
+Image Viewer:
+Na plavom dugmetu otvara se ekran za pregled slika plugina.
+Koristite zeleno (Previous), plavo (Next) ili strelice levo/desno za navigaciju kroz slike.
+Crveno ili Cancel vraća na glavni ekran.
+
+Statusne poruke:
+Statusne poruke (npr. „Checking for updates“, „Installation in progress“, „Installation successful“) 
+prikazuju se u donjem desnom delu ekrana, pored obojenih dugmadi, u status_label widget-u.
+
+Automatska provera ažuriranja:
+Pri pokretanju, plug-in automatski proverava da li postoji nova verzija na VERSION_URL.
+Ako je dostupna (npr. verzija 2.0), pita vas da li želite da ažurirate. Ažuriranje uključuje backup liste instaliranih plugina i restart Enigma2.
+
+Šta je novo u verziji 1.9
+Podrška za jezike (en, sr, el, de, sk):
+Plug-in dinamički učitava jezike iz foldera u /usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/descriptions/. 
+Podržani su jezici en (engleski), sr (srpski), el (grčki), de (nemački), i sk (slovački), uz mogućnost dodavanja drugih jezika kreiranjem novih foldera.
+
+Opisi plugina se učitavaju na izabranom jeziku, uz podrazumevani en ako jezik nije dostupan.
+Promena jezika vrši se žutim dugmetom, sa kapitalizovanim prikazom imena jezika (npr. Sr za srpski).
+
+Automatska provera ažuriranja:
+Plug-in proverava dostupnost nove verzije pri startu koristeći VERSION_URL.
+Ako je nova verzija dostupna, nudi opciju za ažuriranje uz backup liste instaliranih plugina (INSTALLED_PLUGINS_FILE) u /tmp/ciefp_plugins_backup.txt.
+Statusne poruke u status_label:
+Novo dodato: Statusne poruke (npr. „Checking for updates“, „Installation successful“, „Update failed“) 
+prikazuju se u zasebnom widget-u desno od plavog dugmeta, umesto da prekrivaju opis plugina.
+Ovo poboljšava korisničko iskustvo jer opis plugina ostaje vidljiv tokom operacija.
+
+Lista plugina: Prikazuje 23 plugina (npr. Ciefpsettings Motor, Ciefp IPTV Bouquets, Ciefp EPGshare) sa ikonama i opisima.
+Višejezična podrška: Automatski učitava jezike iz descriptions/ foldera, sa trenutnom podrškom za en, sr, el, de, sk.
+Image Viewer: Omogućava pregled slika plugina u zasebnom ekranu.
+Instalacija plugina: Jednostavna instalacija preko skripti sa GitHub-a.
+Automatsko ažuriranje: Provera i instalacija novih verzija plugina.
 
 ..:: CiefpSettings ::..

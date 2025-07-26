@@ -1,6 +1,6 @@
+..:: CiefpTvProgram ::..
 
-CiefpTvProgram – Plugin za prikaz EPG-a
-Verzija: 1.0
+Plugin za prikaz EPG-a
 Autor: Ciefp
 Platforma: Enigma2 (Linux STB)
 

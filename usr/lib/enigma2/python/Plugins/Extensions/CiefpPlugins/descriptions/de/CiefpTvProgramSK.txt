@@ -1,0 +1,28 @@
+..:: CiefpTvProgramSK ::..
+
+CiefpTvProgramSK ist ein Enigma2-Plugin zur Anzeige des elektronischen Programmführers (EPG) für Fernsehsender. Es verwendet Daten von https://epgshare01.online/epgshare01/epg_ripper_SK1.xml.gz.
+Das Plugin ermöglicht die Anzeige der Senderliste und detaillierter EPG-Informationen, einschließlich Sendungsnamen, Sendezeiten, Beschreibungen und Kategorien.
+Es unterstützt die Anzeige von Picons (Sendersymbolen), Plugin-Logos und Hintergrundgrafiken und bietet Datencaching für schnelleres Laden.
+Die intuitive Benutzeroberfläche ermöglicht die Navigation zwischen Senderliste und EPG-Informationen und ist an die Enigma2-Plattform angepasst.
+
+Bedienung des Plugins
+
+Navigation:
+Senderliste: Auf der linken Bildschirmseite wird eine Liste der verfügbaren Sender angezeigt, die aus einer XML-Datei heruntergeladen wurde.
+EPG-Informationen: Auf der rechten Seite werden Programmdetails zum ausgewählten Sender angezeigt (Zeit, Titel, Beschreibung, Kategorie).
+Navigieren Sie je nach Fokus mit den Auf-/Ab-Tasten durch die Senderliste oder die EPG-Informationen.
+
+Drücken Sie OK, um zwischen Senderliste und EPG-Informationen zu wechseln.
+
+Drücken Sie Abbrechen (oder Beenden), um das Plugin zu beenden.
+
+Funktionen:
+Picon-Anzeige: Das Symbol des ausgewählten Senders wird unten auf dem Bildschirm angezeigt, sofern es im Ordner /usr/lib/enigma2/python/Plugins/Extensions/CiefpTvProgramSK/picon verfügbar ist.
+
+Wird das Symbol nicht gefunden, wird das Standardsymbol (placeholder.png) verwendet.
+
+Daten-Caching: EPG-Daten werden 24 Stunden lang in /tmp/CiefpProgramSK/epg_cache.xml zwischengespeichert, um Datendownloads zu reduzieren.
+
+Logging: Das Plugin protokolliert Aktivitäten und Fehler zur Diagnose in der Datei /tmp/ciefp_tvprogramsk.log.
+
+..:: CiefpSettings ::..

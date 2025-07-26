@@ -1,0 +1,67 @@
+..:: Ciefp Plugins Panel ::..
+
+Ciefp Plugins ist ein Enigma2-Plugin, das eine Benutzeroberfläche zum Anzeigen, Installieren und Verwalten der Ciefp-Plugin-Sammlung bietet.
+Es ermöglicht Nutzern die einfache Installation von Plugins wie Ciefpsettings Motor, Ciefp IPTV Bouquets, Ciefp EPGshare und anderen,
+deren Beschreibungen in mehreren Sprachen anzuzeigen, zugehörige Bilder anzuzeigen und nach Updates zu suchen.
+Das Plugin ist auf einfache Navigation ausgelegt und legt den Fokus auf Funktionalität und ein klares Erscheinungsbild.
+
+Bedienung
+Plugin starten:
+Suchen Sie Ciefp Plugins im Enigma2-Menü unter „Plugins“ und starten Sie es.
+Das CiefpPluginsPanel öffnet sich mit einer Liste der Plugins auf der linken Seite, 
+einer Beschreibung auf der rechten Seite und farbigen Schaltflächen am unteren Rand.
+
+Navigation:
+Linke Seite (Plugin-Liste): Navigieren Sie mit den Auf-/Ab-Pfeilen durch die Plugin-Liste. Jedes Plugin hat ein Symbol und einen Namen.
+Rechte Seite (Beschreibung): Zeigt eine detaillierte Beschreibung des ausgewählten Plugins in der aktuellen Sprache 
+an (z. B. Name: Ciefpsettings Engine und Beschreibungstext).
+
+Fokus: Drücken Sie OK, um zwischen der Plugin-Liste und der Beschreibung zu wechseln (mit den Pfeilen durch die Beschreibung scrollen).
+
+Schaltflächenfunktionen:
+Rot (Beenden): Beendet das Plugin.
+Grün (Installieren): Installiert das ausgewählte Plugin. Die Installation wird in einem Dialogfenster bestätigt.
+Gelb (Sprache): Ändert die Sprache der Plugin-Beschreibung (z. B. zwischen en, sr, el, de, sk).
+Blau (Bildbetrachter): Öffnet den Bildbetrachter-Bildschirm, um die mit dem ausgewählten Plugin verknüpften Bilder anzuzeigen 
+(sofern Bilder in /usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/pictures/ vorhanden sind).
+
+Bildbetrachter:
+Die blaue Schaltfläche öffnet den Bildbetrachter-Bildschirm des Plugins.
+Navigieren Sie mit den grünen (Zurück), blauen (Weiter) oder den Pfeilen nach links/rechts durch die Bilder.
+Rot oder Abbrechen kehren zum Hauptbildschirm zurück.
+
+Statusmeldungen:
+Statusmeldungen (z. B. „Nach Updates suchen“, „Installation läuft“, „Installation erfolgreich“)
+werden unten rechts im Bildschirm neben den farbigen Schaltflächen im Widget „status_label“ angezeigt.
+
+Automatische Update-Prüfung:
+Beim Start prüft das Plugin automatisch, ob unter VERSION_URL eine neue Version verfügbar ist.
+
+Sollte eine neue Version verfügbar sein (z. B. Version 2.0), werden Sie gefragt, ob Sie ein Update durchführen möchten. 
+Das Update umfasst eine Sicherung der Liste der installierten Plugins und einen Neustart von Enigma2.
+
+Neu in Version 1.9
+Sprachunterstützung (en, sr, el, de, sk):
+Das Plugin lädt Sprachen dynamisch aus dem Ordner /usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/descriptions/.
+Unterstützte Sprachen sind en (Englisch), sr (Serbisch), el (Griechisch), de (Deutsch) und sk (Slowakisch). 
+Weitere Sprachen können durch Anlegen neuer Ordner hinzugefügt werden.
+
+Plugin-Beschreibungen werden in der gewählten Sprache geladen. Standardmäßig wird en verwendet, falls die Sprache nicht verfügbar ist.
+Die Sprachänderung erfolgt über den gelben Button, wobei der Sprachname großgeschrieben wird (z. B. Sr für Serbisch).
+
+Automatische Update-Prüfung:
+Das Plugin prüft beim Start mithilfe der VERSION_URL, ob eine neue Version verfügbar ist.
+Ist eine neue Version verfügbar, bietet es die Möglichkeit, ein Update mit einer Sicherungskopie der Liste der installierten Plugins 
+(INSTALLED_PLUGINS_FILE) in der Datei /tmp/ciefp_plugins_backup.txt durchzuführen.
+Statusmeldungen in status_label:
+Neu hinzugefügt: Statusmeldungen (z. B. „Nach Updates suchen“, „Installation erfolgreich“, „Update fehlgeschlagen“) 
+werden in einem separaten Widget rechts neben dem blauen Button angezeigt, anstatt die Plugin-Beschreibung zu überdecken. 
+Dies verbessert die Benutzerfreundlichkeit, da die Plugin-Beschreibung während des Betriebs sichtbar bleibt.
+
+Plugin-Liste: Zeigt 23 Plugins (z. B. Ciefpsettings Motor, Ciefp IPTV Bouquets, Ciefp EPGshare) mit Symbolen und Beschreibungen an.
+Mehrsprachigkeit: Lädt automatisch Sprachen aus dem Ordner „descriptions/“ und unterstützt aktuell en, sr, el, de und sk.
+Bildbetrachter: Ermöglicht die Anzeige von Plugin-Bildern in einem separaten Fenster.
+Plugin-Installation: Einfache Installation über Skripte von GitHub.
+Automatische Updates: Sucht nach neuen Plugin-Versionen und installiert diese.
+
+..:: CiefpSettings ::..

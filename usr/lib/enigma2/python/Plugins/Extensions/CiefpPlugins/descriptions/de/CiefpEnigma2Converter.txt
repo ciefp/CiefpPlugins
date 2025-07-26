@@ -1,0 +1,80 @@
+..:: CiefpE2Converter ::..
+
+CiefpE2Converter ist ein Enigma2-Plugin zum Konvertieren von M3U-Wiedergabelisten in IPTV-Bouquets für Enigma2-Geräte.
+Nutzer können damit ganz einfach Gruppen oder einzelne Kanäle aus M3U-Dateien auswählen, 
+den Bouquet-Namen festlegen und den gewünschten Diensttyp (z. B. Gstreamer, Exteplayer3, Streamlink) auswählen.
+Das Plugin generiert entsprechende „Userbouquet“-Dateien und registriert diese in bouquets.tv zur sofortigen Verwendung.
+
+Neu in Version 1.9:
+Unterstützung für M3U-Links im Format playlist.txt:
+Das Plugin unterstützt jetzt das Laden von M3U-Links aus Textdateien (playlist.txt).
+Nutzer können einen Link aus der Liste auswählen, der automatisch heruntergeladen und zur weiteren Verarbeitung analysiert wird.
+
+Neuer Auswahlbildschirm (ChannelSelectionScreen):
+Ein neuer Kanalauswahlbildschirm wurde hinzugefügt, wenn die M3U-Datei keine Gruppen enthält.
+Dieser Bildschirm ermöglicht die Auswahl einzelner Sender oder Seriengruppen. 
+Die Serienepisoden werden automatisch unter einem Namen gruppiert (z. B. „Akte X“ statt „Akte X S01 E01“).
+
+Neue Schaltfläche „Ähnliche auswählen“:
+In den Bildschirmen „Gruppenauswahl“ und „Kanalauswahl“ wurde eine neue Schaltfläche „Ähnliche auswählen“ implementiert.
+Funktion: Wählt automatisch alle Elemente (Gruppen oder Sender) aus, die ein gemeinsames Präfix mit dem aktuell ausgewählten Element haben. Beispiel:
+Für die Gruppe „Sport TV 1“ werden alle Gruppen ausgewählt, die mit „Sport TV“ beginnen (z. B. „Sport TV 2“, „Sport TV HD“).
+Für den Sender „HBO HD“ werden alle Sender ausgewählt, die mit „HBO“ beginnen (z. B. „HBO 2“, „HBO 3“).
+Dies ermöglicht die schnelle Auswahl ähnlicher Elemente, ohne jedes Element einzeln auswählen zu müssen.
+
+Weitere Funktionen:
+Intuitive Benutzeroberfläche mit der Möglichkeit, Dateien im Verzeichnis /tmp zu durchsuchen.
+Bouquet-Namen lassen sich über die virtuelle Tastatur anpassen. Unterstützung verschiedener Diensttypen (Gstreamer, Exteplayer3, DVB, Radio, Streamlink).
+Automatische Bouquet-Registrierung und Möglichkeit zum Neuladen der Einstellungen nach der Konvertierung.
+Dieses Plugin ist ideal für Nutzer, die ihre IPTV-Inhalte schnell und effizient auf der Enigma2-Plattform organisieren möchten.
+
+Mit zusätzlichen Funktionen in Version 1.7 bietet es zusätzliche Flexibilität.
+
+Kurzanleitung zur Verwendung des CiefpE2Converter v1.7-Plugins
+
+Plugin starten:
+Suchen Sie CiefpE2Converter v1.7 im Plugin-Menü Ihres Enigma2-Geräts und starten Sie es.
+
+M3U-Datei oder Link auswählen:
+Auf dem Hauptbildschirm (MainScreen) sehen Sie eine Liste der Dateien im Verzeichnis /tmp.
+Wenn Sie eine M3U-Datei haben: Navigieren Sie zu dieser (z. B. playlist.m3u) und drücken Sie OK.
+Wenn Sie eine playlist.txt mit Links haben: Wählen Sie die .txt-Datei aus und drücken Sie OK. Der Playlist-Auswahlbildschirm öffnet sich:
+Scrollen Sie nach oben/unten und wählen Sie den gewünschten Link aus (drücken Sie OK oder die grüne Schaltfläche „Bestätigen“).
+Das Plugin lädt die M3U von diesem Link herunter und fährt fort.
+
+Bouquet-Name festlegen:
+Drücken Sie die gelbe Schaltfläche „Name festlegen“, um die virtuelle Tastatur zu öffnen.
+Geben Sie den Bouquet-Namen ein (z. B. „Mein IPTV“) und bestätigen Sie mit OK. Der Standardname lautet „IPTV Mix Bouquet“.
+
+Gruppen oder Kanäle auswählen:
+Drücken Sie die blaue Schaltfläche „Gruppen auswählen“:
+Wenn die M3U Gruppen hat: Der Gruppenauswahlbildschirm öffnet sich. Wählen Sie die gewünschten Gruppen aus:
+OK: Aktiviert/deaktiviert die Gruppe.
+Alle auswählen (blaue Schaltfläche): Wählt alle Gruppen aus.
+Ähnliche auswählen (gelbe Schaltfläche): Wählt Gruppen mit einem ähnlichen Präfix aus (z. B. „Sport TV 1“ -> „Sport TV 2“).
+
+Wenn die M3U keine Gruppen hat: Der Kanalauswahlbildschirm öffnet sich. Wählen Sie Kanäle oder Serien aus:
+OK: Aktiviert/deaktiviert den Kanal/die Serie.
+Alle auswählen (blaue Schaltfläche): Wählt alle Sender aus.
+Ähnliche auswählen (gelbe Schaltfläche): Wählt Sender mit ähnlichem Präfix aus (z. B. „HBO HD“ -> „HBO 2“).
+Drücken Sie die grüne Schaltfläche „Bestätigen“ zum Bestätigen oder die rote Schaltfläche „Abbrechen“ zum Abbrechen.
+
+In Bouquet konvertieren:
+Drücken Sie im Hauptbildschirm die grüne Schaltfläche „Konvertieren“.
+Wählen Sie den Diensttyp (z. B. „Gstreamer (4097:0:1)“) aus der Liste und bestätigen Sie mit „OK“.
+Das Plugin erstellt ein Bouquet in /etc/enigma2 und registriert es bei bouquets.tv.
+
+Einstellungen neu laden:
+Nach der Konvertierung erscheint die Frage „Einstellungen neu laden?“. Wählen Sie „Ja“, 
+um die Bouquet-Liste zu aktualisieren, oder „Nein“, um das Plugin zu beenden.
+
+Beenden:
+Drücken Sie die rote Schaltfläche „Beenden“, um das Plugin zu schließen.
+
+Hinweis:
+Heruntergeladene M3U-Dateien werden in /tmp/m3u_playlist gespeichert.
+Serien im ChannelSelectionScreen werden gruppiert (z. B. enthält „Akte X“ alle Folgen, wenn aktiviert).
+Überprüfen Sie, ob /tmp verfügbar ist und genügend Speicherplatz zum Herunterladen von Dateien bietet.
+Das ist alles, was Sie für die grundlegende Nutzung des Plugins wissen müssen!
+
+..:: ciefpsettings ::..

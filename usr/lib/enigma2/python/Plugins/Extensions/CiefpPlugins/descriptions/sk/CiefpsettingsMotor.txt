@@ -1,0 +1,25 @@
+..:: CiefpSettingsMotor ::..
+
+Čo robí doplnok?
+CiefpSettingsMotor je jednoduchý nástroj, ktorý sťahuje, rozbaľuje a inštaluje najnovší zoznam kanálov pre motorizované satelitné antény 
+priamo z GitHubu (ciefp-E2-75E-34W). Tento zoznam obsahuje satelitné balíčky (napr. 19,2E, 16,0E, 13,0E...), 
+tematické balíčky (šport, filmy, hudba), IPTV kanály a značky, prispôsobené pre širokú škálu satelitných pozícií.
+
+Ako ho používať?
+1. Spustite doplnok z ponuky prijímača Enigma2.
+2. Stlačte tlačidlo „OK“ na diaľkovom ovládači.
+3. Počkajte, kým sa zoznam stiahne a nainštaluje – proces je automatický a trvá len niekoľko okamihov.
+4. Po inštalácii sa prijímač automaticky obnoví a nový zoznam bude aktívny.
+
+Čo je nové vo verzii 2.2?
+• Uchováva používateľské kanály: Vaše osobne vytvorené kanály (napr. userbouquet.moje_favorite.tv) nebudú vymazané. 
+  Plugin ich uchováva a umiestňuje na koniec zoznamu v bouquets.tv, zatiaľ čo nové satelitné, tematické a IPTV kanály sa pridávajú na začiatok.
+• Úplná inštalácia: Všetky súbory zo zoznamu (lamedb, .tv, .radio) sa skopírujú do /etc/enigma2/ a satellites.xml do /etc/tuxbox/, 
+  čím sa zabezpečí ich úplná aktuálnosť.
+• Jednoduchosť: Žiadne zložité nastavenia – všetko funguje jedným kliknutím.
+
+Pre koho je určený?
+Tento plugin je ideálny pre používateľov s motorizovanými anténami, ktorí chcú aktualizovaný zoznam kanálov bez straty svojich prispôsobených nastavení. 
+Či už ste začiatočník alebo skúsený používateľ, inštalácia je rýchla a jednoduchá.
+
+..:: ciefpsettings ::..

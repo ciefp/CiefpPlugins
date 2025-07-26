@@ -1,0 +1,18 @@
+..:: CiefpStreamrelayPy3 ::..
+
+Das Plugin ist die Enigma2 Python3-Version. Es wurde speziell für meine Liste entwickelt und funktioniert nicht mit Listen anderer Autoren.
+Das Plugin lädt vordefinierte Bouquets und konvertiert sie in vordefinierte Streamrelay-Bouquets.
+Die Satelliten werden von Sky UK (28,2° Ost) und Sky DE (19,2° Ost) unterstützt.
+
+Bedienung:
+1. Plugin starten.
+2. Bouquets auswählen.
+Gelber Button – Astra 19,2° Ost.
+Blauer Button – Astra 28,2° Ost.
+Es können beide Bouquets ausgewählt werden.
+Die Statusleiste zeigt die Auswahl an.
+3. Konvertierung starten.
+Der Konvertierungsprozess beginnt nach Abschluss.
+Enigma2 neu starten.
+
+..:: ciefpsettings ::..

@@ -1,5 +1,4 @@
-######################################################################################################################################
-CiefpTvTodayDE
+..:: CiefpTvTodayDE ::..
 
 CiefpTvTodayDE je Enigma2 plugin za prikaz EPG (Electronic Program Guide) podataka za TV kanale, 
 prilagođen za korisnike u Nemačkoj. Plugin preuzima EPG podatke sa adrese epgshare01.online, 

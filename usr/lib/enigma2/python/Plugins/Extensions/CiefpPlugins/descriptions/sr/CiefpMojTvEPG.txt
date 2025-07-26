@@ -1,5 +1,4 @@
-
-CiefpMojTvEPG (verzija 1.0)
+..:: CiefpMojTvEPG ::..
 
 CiefpMojTvEPG je Enigma2 plugin koji omogućava prikaz elektronskog programskog vodiča (EPG)
 za veliki broj TV kanala koristeći podatke sa sajta MojTV. 

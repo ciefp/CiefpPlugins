@@ -1,4 +1,6 @@
-**CiefpChannelManager** je moćan plugin za Enigma2 dizajniran za upravljanje TV buketima i kanalima na satelitskim prijemnicima temeljenim na Enigma2.
+..:: CiefpChannelManager ::..
+
+je moćan plugin za Enigma2 dizajniran za upravljanje TV buketima i kanalima na satelitskim prijemnicima temeljenim na Enigma2.
 Razvijajući se od izvornog plugina `CiefpBouquetUpdater`, nudi napredne funkcije za ažuriranje, organiziranje i uređivanje buketa i kanala,
 uključujući robusnu podršku za IPTV streamove. Dodatak pruža intuitivan interfejs za korisnike kako bi efikasno prilagodili svoje liste kanala.
 

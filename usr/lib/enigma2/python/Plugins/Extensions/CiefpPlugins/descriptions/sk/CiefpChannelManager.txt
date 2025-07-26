@@ -1,0 +1,54 @@
+..:: CiefpChannelManager ::..
+
+je výkonný doplnok pre Enigma2 určený na správu televíznych balíčkov a kanálov na satelitných prijímačoch založených na Enigma2.
+Vyvíja sa z pôvodného doplnku `CiefpBouquetUpdater` a ponúka pokročilé funkcie na aktualizáciu, 
+organizáciu a úpravu balíčkov a kanálov vrátane robustnej podpory pre IPTV streamy. 
+Doplnok poskytuje intuitívne rozhranie pre používateľov na efektívne prispôsobenie ich zoznamov kanálov.
+
+## Funkčné komponenty
+
+### 1. Aktualizácia (CiefpBouquetUpdater)
+Komponent **Aktualizácia** spracováva počiatočné vytváranie a aktualizáciu balíčkov na základe preddefinovaných alebo používateľom definovaných zoznamov kanálov.
+- **Možnosti**:
+- Importuje zoznamy kanálov z Githubu (napr. "ciefp-E2-75E-34W").
+- Podporuje aktualizáciu jedného alebo viacerých balíčkov, používateľ si vyberie, čo chce aktualizovať.
+- Používa tlačidlo OK pre výber, zelené tlačidlo pre kopírovanie a žlté tlačidlo pre inštaláciu.
+- Po aktualizácii znova načíta zoznamy služieb a kytíc Enigma2, aby sa zmeny aplikovali hladko.
+- Modré tlačidlo sa používa na presun na ďalšiu obrazovku editora kytíc (Editor).
+
+### 2. Editor kytíc (CiefpBouquetEditor)
+**Editor kytíc** umožňuje používateľom spravovať štruktúru kytíc a meniť polohy jednej alebo viacerých kytíc.
+- **Možnosti**:
+- Pomocou tlačidla OK vyberte jednu alebo viac kytíc, kytice majú predponu „+“.
+- Žlté tlačidlo aktivuje režim presunu (Move Mode), kytice, ktoré sa majú presunúť, majú predponu „>>“.
+- Pomocou klávesov hore a dole presuňte vybrané kytice.
+- Keď dosiahnete požadované miesto, vypnite možnosť (Move Mode) na žltom tlačidle.
+- Pomocou zeleného tlačidla uložte zmeny do súborov kytíc a uložte štruktúru pre Enigma2.
+- Ak chcete upravovať kanály v kytici pomocou výberového panela, dostanete sa k kytici, ktorá obsahuje kanály, ktoré chcete upraviť.
+- Modré tlačidlo sa používa na presun na ďalšiu obrazovku editora kanálov (Kanály).
+
+### 3. Editor kanálov (CiefpChannelEditor)
+**Editor kanálov** poskytuje podrobnú kontrolu nad jednotlivými kanálmi v rámci kanála.
+- **Možnosti**:
+- Vyberte kanály tlačidlom OK na úpravu, označené predponou "+".
+- Odstráňte vybrané kanály alebo skupiny (červené tlačidlo) s okamžitou aktualizáciou zoznamu.
+- Presuňte kanály alebo skupiny nahor/nadol (žlté tlačidlo pre "Režim presunutia") pre reorganizáciu zoznamu.
+- Vyberte celú skupinu kanálov modrým tlačidlom, výberom značky a použitím modrého tlačidla sa vyberú všetky kanály až po ďalšiu značku.
+- Aktiváciou "Režimu presunutia" máte možnosť presunúť skupinu kanálov na požadovanú pozíciu.
+- Ak chcete, aby vaše športové kanály boli na vrchole kanála, táto možnosť je pre vás ako stvorená.
+- Podpora štandardných DVB kanálov (prostredníctvom `lamedb`) a IPTV kanálov, čo zabezpečuje správne pomenovanie a manipuláciu.
+- Ukladanie zmien do súboru bouquet s automatickým generovaním `#DESCRIPTION` pre IPTV kanály.
+
+## Kľúčové vlastnosti
+- **Používateľské rozhranie**: Intuitívna navigácia s farebne odlíšenými tlačidlami 
+(zelená: Uložiť, žltá: Režim presunutia, červená: Odstrániť, modrá: Vybrať skupinu).
+- **Podpora IPTV**: Bezproblémová správa IPTV kanálov s extrakciou a filtrovaním zhodných názvov.
+- **Záznam chýb**: Podrobné záznamy v `/tmp/channel_editor_debug.log` pre riešenie problémov.
+- **Robustná správa chýb**: Elegantná správa chýbajúcich alebo neplatných formátov s jasnými stavovými správami.
+
+**CiefpChannelManager** je dokonalý nástroj pre používateľov Enigma2, ktorí chcú mať plnú kontrolu nad svojimi televíznymi balíčkami a kanálmi,
+kombinujúci aktualizáciu, úpravu a organizáciu do jedného komplexného pluginu.
+
+## Výhody
+Vytvorené spoločnosťou **Grok** (powered by xAI) v spolupráci s **CiefpSettings**.
+Špeciálne poďakovanie patrí komunite Enigma2 za ich inšpiráciu a podporu.

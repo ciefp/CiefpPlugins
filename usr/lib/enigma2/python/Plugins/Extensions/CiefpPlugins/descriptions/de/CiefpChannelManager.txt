@@ -1,0 +1,59 @@
+..:: CiefpChannelManager ::..
+
+ist ein leistungsstarkes Enigma2-Plugin zur Verwaltung von TV-Bouquets und Sendern auf Enigma2-basierten Satellitenreceivern.
+
+Weiterentwicklung des ursprünglichen CiefpBouquetUpdater-Plugins bietet es erweiterte Funktionen zum Aktualisieren, 
+Organisieren und Bearbeiten von Bouquets und Sendern,
+einschließlich robuster Unterstützung für IPTV-Streams. Das Plugin bietet eine intuitive Benutzeroberfläche zur effizienten Anpassung der Senderlisten.
+
+## Funktionale Komponenten
+
+### 1. Update (CiefpBouquetUpdater)
+Die Update-Komponente übernimmt die Erstellung und Aktualisierung von Bouquets basierend auf vordefinierten oder benutzerdefinierten Senderlisten.
+- **Optionen**:
+- Importiert Senderlisten von GitHub (z. B. „ciefp-E2-75E-34W“).
+- Unterstützt die Aktualisierung eines oder mehrerer Bouquets. Der Benutzer wählt aus, welche aktualisiert werden sollen.
+- Verwendet die OK-Schaltfläche zur Auswahl, die grüne Schaltfläche zum Kopieren und die gelbe Schaltfläche zum Installieren.
+Lädt Enigma2-Dienstlisten und Bouquets nach einem Update neu, damit Änderungen reibungslos übernommen werden.
+
+
+Mit der blauen Schaltfläche gelangen Sie zum nächsten Bouquet-Editor-Bildschirm (Editor).
+
+
+### 2. Bouquet-Editor (CiefpBouquetEditor)
+Mit dem Bouquet-Editor können Sie die Bouquet-Struktur verwalten und die Positionen einzelner oder mehrerer Bouquets ändern.
+Optionen:
+Mit der OK-Schaltfläche wählen Sie ein oder mehrere Bouquets aus. Bouquets sind mit einem „+“ gekennzeichnet.
+Mit der gelben Schaltfläche aktivieren Sie den Verschiebemodus (Verschiebemodus). Zu verschiebende Bouquets sind mit einem „>>“ gekennzeichnet.
+Mit den Auf- und Ab-Tasten verschieben Sie die ausgewählten Bouquets.
+An der gewünschten Position deaktivieren Sie die Option (Verschiebemodus) auf der gelben Schaltfläche.
+Mit der grünen Schaltfläche speichern Sie die Änderungen an den Bouquet-Dateien und sichern so die Struktur für Enigma2.
+Wenn Sie Kanäle innerhalb eines Bouquets bearbeiten möchten, gelangen Sie über die Auswahlleiste zu dem Bouquet, das die gewünschten Kanäle enthält.
+– Mit der blauen Schaltfläche gelangen Sie zum nächsten Bildschirm des Bouquet-Editors (Kanäle).
+
+### 3. Kanal-Editor (CiefpChannelEditor)
+**Der Kanal-Editor** bietet detaillierte Kontrolle über einzelne Kanäle innerhalb des Bouquets.
+– **Optionen**:
+– Wählen Sie Kanäle mit der OK-Schaltfläche zum Bearbeiten aus (gekennzeichnet mit einem „+“).
+– Löschen Sie ausgewählte Kanäle oder Gruppen (rote Schaltfläche) mit sofortiger Aktualisierung der Liste.
+– Verschieben Sie Kanäle oder Gruppen nach oben/unten (gelbe Schaltfläche für „Verschiebemodus“), um die Liste neu zu organisieren.
+– Wählen Sie eine ganze Kanalgruppe mit der blauen Schaltfläche aus. 
+  Durch Auswählen einer Markierung und Verwenden der blauen Schaltfläche werden alle Kanäle bis zur nächsten Markierung ausgewählt.
+– Durch Aktivieren des „Verschiebemodus“ können Sie eine Kanalgruppe an die gewünschte Position verschieben.
+– Wenn Sie möchten, dass Ihre Sportkanäle ganz oben im Bouquet angezeigt werden, ist diese Option genau das Richtige für Sie.
+– Unterstützung für Standard-DVB-Kanäle (über „lamedb“) und IPTV-Kanäle, wodurch die korrekte Benennung und Handhabung gewährleistet wird.
+- Speichern von Änderungen in der Bouquet-Datei mit automatischer Generierung von „#DESCRIPTION“ für IPTV-Kanäle.
+
+## Hauptfunktionen
+- **Benutzeroberfläche**: Intuitive Navigation mit farbcodierten Schaltflächen (grün: Speichern, gelb: Verschieben, rot: Löschen, blau: Gruppe auswählen).
+- **IPTV-Unterstützung**: Nahtlose Verwaltung von IPTV-Kanälen mit Extraktion und Filterung übereinstimmender Namen.
+- **Fehlerprotokollierung**: Detaillierte Protokolle in „/tmp/channel_editor_debug.log“ zur Fehlerbehebung.
+- **Robuste Fehlerbehandlung**: Elegante Behandlung fehlender oder ungültiger Formate mit klaren Statusmeldungen.
+
+**CiefpChannelManager** ist das ultimative Tool für Enigma2-Nutzer, die die volle Kontrolle über ihre TV-Pakete und Kanäle haben möchten.
+
+Aktualisieren, Bearbeiten und Organisieren in einem umfassenden Plugin.
+
+## Vorteile
+Entwickelt von **Grok** (powered by xAI) in Zusammenarbeit mit **CiefpSettings**.
+Besonderer Dank gilt der Enigma2-Community für ihre Inspiration und Unterstützung.

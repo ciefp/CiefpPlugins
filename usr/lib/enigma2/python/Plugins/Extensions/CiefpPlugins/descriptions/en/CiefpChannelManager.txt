@@ -1,4 +1,6 @@
-**CiefpChannelManager** is a powerful Enigma2 plugin designed for managing TV bouquets and channels on Enigma2-based satellite receivers.
+..:: CiefpChannelManager ::..
+
+is a powerful Enigma2 plugin designed for managing TV bouquets and channels on Enigma2-based satellite receivers.
 Evolving from the original `CiefpBouquetUpdater`, it offers advanced features for updating, organizing, and editing bouquets and channels,
 including robust support for IPTV streams. The plugin provides an intuitive interface for users to customize their channel lists efficiently.
 

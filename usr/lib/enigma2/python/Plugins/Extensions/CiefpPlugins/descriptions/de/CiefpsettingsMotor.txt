@@ -1,0 +1,28 @@
+..:: CiefpSettingsMotor Plugin ::..
+
+Was macht das Plugin?
+CiefpSettingsMotor ist ein einfaches Tool, das die aktuelle Senderliste für motorisierte Satellitenschüsseln direkt von GitHub (ciefp-E2-75E-34W) herunterlädt, entpackt und installiert. Die Liste enthält Satellitenbouquets (z. B. 19,2° Ost, 16,0° Ost, 13,0° Ost...), thematische Bouquets (Sport, Filme, Musik), IPTV-Kanäle und Marker, angepasst an eine Vielzahl von Satellitenpositionen.
+
+Wie benutzt man das Plugin?
+1. Starten Sie das Plugin über das Menü des Enigma2-Receivers.
+2. Drücken Sie „OK“ auf der Fernbedienung.
+3. Warten Sie, bis die Liste heruntergeladen und installiert wurde – der Vorgang erfolgt automatisch und dauert nur wenige Augenblicke.
+4. Nach der Installation wird der Receiver automatisch aktualisiert und die neue Liste ist aktiv.
+
+Was ist neu in Version 2.2?
+• Behält Benutzerbouquets: Ihre persönlich erstellten Bouquets (z. B. userbouquet.moje_favorite.tv) werden nicht gelöscht.
+
+Das Plugin behält sie und platziert sie am Ende der Liste in bouquets.tv, während neue Satelliten-, Themen- und IPTV-Bouquets oben hinzugefügt werden.
+
+• Vollständige Installation: Alle Dateien der Liste (lamedb, .tv, .radio) werden nach /etc/enigma2/ kopiert,
+und satellites.xml nach /etc/tuxbox/, um die Aktualität zu gewährleisten.
+
+• Einfach: Keine komplizierten Einstellungen – alles funktioniert mit einem Klick.
+
+Für wen ist es geeignet?
+
+Dieses Plugin ist ideal für Nutzer mit motorisierten Antennen, die eine aktuelle Senderliste wünschen, ohne ihre benutzerdefinierten Einstellungen zu verlieren.
+
+Ob Anfänger oder erfahrener Nutzer, die Installation ist schnell und einfach.
+
+..:: ciefpsettings ::..

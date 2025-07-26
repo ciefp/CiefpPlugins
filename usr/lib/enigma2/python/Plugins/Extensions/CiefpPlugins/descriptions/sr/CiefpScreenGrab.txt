@@ -1,4 +1,5 @@
-CiefpScreenGrab_Usage_Guide_SR.txt
+..:: CiefpScreenGrab ::..
+
 ==================================
 CiefpScreenGrab Plugin - Uputstvo za koriscenje
 ==================================
@@ -104,4 +105,3 @@ Napomene
 Uzivajte u snimanju screenshot-ova sa CiefpScreenGrab!
 
 ..:: CiefpSettings ::..
-============================================================

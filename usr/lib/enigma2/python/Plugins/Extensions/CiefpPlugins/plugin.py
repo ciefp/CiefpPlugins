@@ -9,6 +9,7 @@ from Components.Sources.List import List
 from Components.config import config, ConfigSubsection, ConfigSelection
 from Components.MultiContent import MultiContentEntryPixmapAlphaTest, MultiContentEntryText
 from Tools.LoadPixmap import LoadPixmap
+from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 import os
 import subprocess
 import logging
@@ -16,7 +17,7 @@ import glob
 import shutil
 
 # Verzija plugina
-PLUGIN_VERSION = "1.9.2"  # Povećana verzija zbog ispravke
+PLUGIN_VERSION = "1.9"  # Vraćeno na stabilnu verziju
 
 # Setup logging to a file for better debugging
 logging.basicConfig(
@@ -89,7 +90,7 @@ config.plugins.CiefpPlugins.language.choices = language_choices
 
 class ImageViewerScreen(Screen):
     skin = """
-    <screen name="ImageViewerScreen" position="center,center" size="1600,850" title="Image Viewer">
+    <screen name="ImageViewerScreen" position="center,center" size="1600,850" title="..:: Image Viewer ::..">
         <widget name="image" position="50,100" size="1500,680" zPosition="1" alphatest="on" scale="1" />
         <widget name="image_label" position="50,780" size="1500,40" font="Regular;24" halign="center" foregroundColor="#FFFFFF" />
         <eLabel text="Exit" position="50,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F0000" />
@@ -150,18 +151,18 @@ class ImageViewerScreen(Screen):
 
 class CiefpPluginsPanel(Screen):
     skin = """
-    <screen name="CiefpPluginsPanel" position="center,center" size="1600,850" title="..:: Ciefp Plugins ::..">
+    <screen name="CiefpPluginsPanel" position="center,center" size="1600,850" title="..:: Ciefp Plugins ::.. (Version {version})">
         <!-- Title -->
         <widget name="title" position="0,0" size="1600,100" font="Regular;60" halign="center" foregroundColor="#FFFFFF" backgroundColor="#000000" />
         <!-- Icons and Names (Left Side) -->
         <widget source="pluginlist" render="Listbox" position="50,100" size="400,680" scrollbarMode="showOnDemand" enableWrapAround="1">
             <convert type="TemplatedMultiContent">
-                {"template": [
+                {{"template": [
                     MultiContentEntryPixmapAlphaTest(pos=(10,10), size=(150,150), png=0, flags=1),
                     MultiContentEntryText(pos=(170,10), size=(220,150), font=0, text=1, flags=RT_VALIGN_CENTER|RT_WRAP),
                 ],
                 "fonts": [gFont("Regular", 24)],
-                "itemHeight": 170}
+                "itemHeight": 170}}
             </convert>
         </widget>
         <!-- Description (Right Side) -->
@@ -171,7 +172,9 @@ class CiefpPluginsPanel(Screen):
         <eLabel text="Install" position="210,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#003F00" />
         <eLabel text="Language" position="370,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F3F00" />
         <eLabel text="Image Viewer" position="530,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#00003F" />
-    </screen>"""
+        <!-- Status Label -->
+        <widget name="status_label" position="690,800" size="900,40" font="Regular;22" foregroundColor="#FFFFFF" halign="left" transparent="1" />
+    </screen>""".format(version=PLUGIN_VERSION)
 
     def __init__(self, session):
         Screen.__init__(self, session)
@@ -186,28 +189,29 @@ class CiefpPluginsPanel(Screen):
         self.pluginList = []
         for name, icon, install_cmd, desc_file in PLUGIN_LIST:
             pixmap = None
-            if os.path.exists(icon):
-                pixmap = LoadPixmap(icon)
+            icon_path = resolveFilename(SCOPE_PLUGINS, icon.replace("/usr/lib/enigma2/python/Plugins/", ""))
+            default_icon = resolveFilename(SCOPE_PLUGINS, "Extensions/CiefpPlugins/icons/placeholder.png")
+            if os.path.exists(icon_path):
+                pixmap = LoadPixmap(icon_path)
                 if pixmap:
-                    logger.debug(f"Successfully loaded icon: {icon}")
+                    logger.debug(f"Successfully loaded icon: {icon_path}")
                 else:
-                    logger.warning(f"Failed to load pixmap for icon: {icon}")
+                    logger.warning(f"Failed to load pixmap for icon: {icon_path}")
+            elif os.path.exists(default_icon):
+                pixmap = LoadPixmap(default_icon)
+                if pixmap:
+                    logger.debug(f"Successfully loaded default icon: {default_icon}")
+                else:
+                    logger.warning(f"Failed to load pixmap for default icon: {default_icon}")
             else:
-                default_icon = "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/placeholder.png"
-                if os.path.exists(default_icon):
-                    pixmap = LoadPixmap(default_icon)
-                    if pixmap:
-                        logger.debug(f"Successfully loaded default icon: {default_icon}")
-                    else:
-                        logger.warning(f"Failed to load pixmap for default icon: {default_icon}")
-                else:
-                    logger.warning(f"Icon not found: {icon}, default icon also missing: {default_icon}")
+                logger.warning(f"Icon not found: {icon_path}, default icon also missing: {default_icon}")
             
             self.pluginList.append((pixmap, name, install_cmd, desc_file))
 
         # Components
         self["pluginlist"] = List(self.pluginList)
         self["description"] = ScrollLabel("")
+        self["status_label"] = Label("")
         self["title"] = Label(f"..:: Ciefp Plugins ::.. (Version {PLUGIN_VERSION})")
         self["actions"] = ActionMap(["OkCancelActions", "ColorActions", "DirectionActions"], {
             "cancel": self.exit,
@@ -279,15 +283,17 @@ class CiefpPluginsPanel(Screen):
         if current:
             name, install_cmd, desc_file = current[1:4]
             desc_path = f"/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/descriptions/{self.language}/{desc_file}.txt"
+            content = ""
             if os.path.exists(desc_path):
                 with open(desc_path, "r", encoding="utf-8") as f:
                     content = f.read()
                     content = ''.join(char for char in content if ord(char) < 0x10000)
-                    self["description"].setText(f"Name: {name}\n\n{content}")
                     logger.debug(f"Loaded description: {desc_path}")
             else:
-                self["description"].setText(f"Name: {name}\n\nDescription not available: File {desc_path} does not exist.")
+                content = "Description not available."
                 logger.warning(f"Description file not found: {desc_path}")
+            self["description"].setText(f"Name: {name}\n\n{content}")
+            logger.debug(f"Updated description for plugin: {name}")
         else:
             self["description"].setText("No plugin available at this position.")
             logger.debug("No plugin available at this position.")
@@ -344,17 +350,18 @@ class CiefpPluginsPanel(Screen):
             current = self["pluginlist"].getCurrent()
             if current:
                 install_cmd = current[2]
-                self["description"].setText("Installation in progress...\n")
+                self["status_label"].setText("Installation in progress...")
                 try:
                     subprocess.run(install_cmd, shell=True, check=True)
-                    self["description"].setText(self["description"].getText() + "Installation successful!")
+                    self["status_label"].setText("Installation successful!")
                     logger.debug(f"Installation successful for command: {install_cmd}")
                     self.log_installed_plugin(current[1])  # Loguj instalirani plugin
+                    self.updateDescription()  # Osveži opis nakon instalacije
                 except subprocess.CalledProcessError as e:
-                    self["description"].setText(self["description"].getText() + f"Error during installation: {str(e)}")
+                    self["status_label"].setText(f"Error during installation: {str(e)}")
                     logger.error(f"Installation failed: {str(e)}")
         else:
-            self["description"].setText("Installation cancelled.")
+            self["status_label"].setText("Installation cancelled.")
             logger.debug("Installation cancelled by user")
 
     def log_installed_plugin(self, plugin_name):
@@ -375,19 +382,19 @@ class CiefpPluginsPanel(Screen):
                 logger.debug(f"Logged plugin {plugin_name} to {INSTALLED_PLUGINS_FILE}")
         except Exception as e:
             logger.error(f"Error logging plugin {plugin_name}: {str(e)}")
-            self["description"].setText(f"Error logging plugin {plugin_name}: {str(e)}")
+            self["status_label"].setText(f"Error logging plugin {plugin_name}: {str(e)}")
 
     def check_for_updates(self):
         try:
             if self.version_check_in_progress:
                 return
             self.version_check_in_progress = True
-            self["description"].setText("Checking for updates...")
+            self["status_label"].setText("Checking for updates...")
             self.version_buffer = b''
             self.container.execute(f"wget -q -O - {VERSION_URL}")
         except Exception as e:
             self.version_check_in_progress = False
-            self["description"].setText(f"Update error: {str(e)}")
+            self["status_label"].setText(f"Update error: {str(e)}")
             logger.error(f"Error checking for updates: {str(e)}")
 
     def version_data_avail(self, data):
@@ -412,28 +419,28 @@ class CiefpPluginsPanel(Screen):
                         MessageBox.TYPE_YESNO
                     )
                 else:
-                    self["description"].setText("Plugin is up to date.")
+                    self["status_label"].setText("Plugin is up to date.")
             except Exception as e:
-                self["description"].setText(f"Update check failed: {str(e)}")
+                self["status_label"].setText(f"Update check failed: {str(e)}")
                 logger.error(f"Error decoding version data: {str(e)}")
         else:
-            self["description"].setText("Update check failed.")
+            self["status_label"].setText("Update check failed.")
             logger.error(f"Version check failed with return value: {retval}")
 
     def start_update(self, answer):
         if answer:
             try:
-                self["description"].setText("Backing up installed plugins list...")
+                self["status_label"].setText("Backing up installed plugins list...")
                 if os.path.exists(INSTALLED_PLUGINS_FILE):
                     shutil.copy2(INSTALLED_PLUGINS_FILE, BACKUP_PLUGINS_FILE)
                     logger.debug(f"Backed up {INSTALLED_PLUGINS_FILE} to {BACKUP_PLUGINS_FILE}")
                 else:
                     logger.debug(f"No {INSTALLED_PLUGINS_FILE} found for backup")
 
-                self["description"].setText("Updating plugin...")
+                self["status_label"].setText("Updating plugin...")
                 self.container.execute(UPDATE_COMMAND)
             except Exception as e:
-                self["description"].setText(f"Backup error: {str(e)}")
+                self["status_label"].setText(f"Backup error: {str(e)}")
                 logger.error(f"Error during backup: {str(e)}")
 
     def update_completed(self, retval):
@@ -450,13 +457,13 @@ class CiefpPluginsPanel(Screen):
                 logger.debug(f"No backup file {BACKUP_PLUGINS_FILE} found for restoration")
 
             if retval == 0:
-                self["description"].setText("Update successful. Restarting...")
+                self["status_label"].setText("Update successful. Restarting...")
                 self.container.execute("init 4 && init 3")
             else:
-                self["description"].setText("Update failed.")
+                self["status_label"].setText("Update failed.")
                 logger.error(f"Update failed with return value: {retval}")
         except Exception as e:
-            self["description"].setText(f"Restore error: {str(e)}")
+            self["status_label"].setText(f"Restore error: {str(e)}")
             logger.error(f"Error during restore: {str(e)}")
 
     def exit(self):

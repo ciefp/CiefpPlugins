@@ -1,4 +1,4 @@
-CiefpTvProgramA1HR
+..:: CiefpTvProgramA1HR ::..
 
 CiefpTvProgramA1HR je Enigma2 plugin za prikaz EPG (Electronic Program Guide) podataka za TV kanale, 
 prilagođen za korisnike u Hrvatskoj (A1HR). Plugin preuzima EPG podatke sa adrese epgshare01.online, 

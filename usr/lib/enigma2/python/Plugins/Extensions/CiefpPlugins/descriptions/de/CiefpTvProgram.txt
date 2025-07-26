@@ -1,0 +1,29 @@
+..:: CiefpTvProgram ::..
+
+EPG-Anzeige-Plugin
+Autor: Ciefp
+Plattform: Enigma2 (Linux STB)
+
+Beschreibung:
+CiefpTvProgram ist ein einfaches und funktionales Enigma2-Plugin, das die Anzeige des elektronischen Programmführers (EPG) für ausgewählte Fernsehsender ermöglicht.
+Die Senderliste wird links angezeigt, der detaillierte EPG mit Sendungstiteln, Startzeiten und Beschreibungen rechts.
+
+Funktionen:
+Anzeige der Senderliste (definiert in CHANNEL_LIST_DATA).
+Automatischer Download und Analyse von EPG-XML-Dateien von TVProfil.net.
+Anzeige von Piktogrammen (Picons) für den aktuell ausgewählten Sender.
+Anzeige des Plugin-Logos und zusätzlicher Hintergründe.
+Umschalten zwischen Sender- und EPG-Inhaltsansicht (OK-Taste).
+Scrollen in der Senderliste und im EPG-Inhalt (Pfeile nach oben/unten).
+
+Verwendung:
+Start:
+Das Plugin kann über das Plugin-Menü oder das Erweiterungsmenü auf dem Enigma2-Gerät gestartet werden. Navigation:
+Auf/Ab: Bewegt die Auswahl durch die Senderliste oder die EPG-Einträge.
+OK: Wechselt den Fokus zwischen der Senderliste und der EPG-Anzeige.
+EXIT: Beendet das Plugin.
+
+Automatischer EPG-Download:
+Beim ersten Start lädt das Plugin die EPG-Daten herunter und speichert sie unter /tmp/CiefpTvProgram/.
+
+..:: CiefpSettings ::..

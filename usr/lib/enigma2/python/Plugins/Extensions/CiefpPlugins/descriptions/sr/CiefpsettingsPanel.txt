@@ -1,4 +1,4 @@
- CiefpsettingsPanel Plugin
+..:: CiefpsettingsPanel Plugin ::..
 
 Kratak opis Ciefpsettings Panel plugina
  Ciefpsettings Panel je svestran Enigma2 plugin dizajniran za upravljanje i instalaciju različitih dodataka,
@@ -44,7 +44,8 @@ Prednosti novih funkcija:
 
 Zaključak:
 Ciefpsettings Panel je moćan alat za upravljanje Enigma2 dodacima, sa novim funkcijama koje povećavaju njegovu praktičnost i fleksibilnost.
-Plugin Manager i IPK Installer čine ga sveobuhvatnim rešenjem za instalaciju, uklanjanje i ažuriranje plugina, dok automatski update osigurava dugoročnu pouzdanost.
+Plugin Manager i IPK Installer čine ga sveobuhvatnim rešenjem za instalaciju, uklanjanje i ažuriranje plugina, 
+dok automatski update osigurava dugoročnu pouzdanost.
 Idealno je rešenje za korisnike koji žele jednostavno i efikasno upravljanje svojim satelitskim risiverima.
 
 ....::ciefpsettings::......

@@ -1,0 +1,37 @@
+..:: CiefpEPGshare ::..
+
+Plugin Enigma2 na sťahovanie a zobrazovanie údajov EPG (elektronický programový sprievodca) z webovej stránky epgshare01.online
+Umožňuje používateľom vybrať súbory XML s údajmi EPG, zobraziť kanály a ich programy a zobraziť pikony (ikony kanálov).
+
+Plugin je optimalizovaný pre výkon, s ukladaním údajov do vyrovnávacej pamäte a filtrovaním veľkých súborov
+a obsahuje vlastné používateľské rozhranie s logami pre lepší vizuálny zážitok.
+
+Výber súboru XML:
+Na obrazovke výberu XML (rozlíšenie 1280x852) sa zobrazí zoznam dostupných súborov .xml.gz.
+Na navigáciu v zozname použite šípky nahor a nadol na diaľkovom ovládači.
+Stlačením tlačidla OK vyberte súbor a prejdite na obrazovku s údajmi EPG (CiefpEPGshare).
+
+Zobrazenie údajov EPG:
+Na obrazovke CiefpEPGshare (rozlíšenie 1800x800) sa zobrazí:
+Zoznam kanálov (vľavo): Zoznam kanálov z vybraného súboru XML.
+Informácie EPG (v strede): Programy pre vybraný kanál, zoradené podľa dátumu a času.
+Ikona a logá: Zobrazuje ikonu kanála (ikonu), logo pluginu a obrázky na pozadí.
+
+Na navigáciu medzi kanálmi alebo údajmi EPG použite šípky hore a dole.
+Stlačením tlačidla OK prepnete fokus medzi zoznamom kanálov a informáciami EPG.
+Stlačením tlačidla Zrušiť sa vrátite na predchádzajúcu obrazovku alebo ukončíte ponuku.
+
+Ignorovanie súborov XML:
+Súbor epg_ripper_ALL_SOURCES1.xml.gz sa automaticky ignoruje kvôli svojej veľkosti (1,3 GB, 22 miliónov riadkov), aby sa predišlo problémom s výkonom.
+
+Pridanie ďalších súborov XML do zoznamu ignorovaných:
+Na obrazovke výberu XML vyberte súbor, ktorý chcete ignorovať.
+Stlačte červené tlačidlo na diaľkovom ovládači.
+Súbor bude pridaný do /tmp/CiefpEPGshare/ignore_list.txt a vylúčený zo zobrazenia.
+Ignorované súbory sa v zozname nezobrazia, kým ich manuálne neodstránite zo súboru ignore_list.txt (napr. cez SSH alebo FTP).
+
+Záznamy a diagnostika:
+Ak sa vyskytnú chyby (napr. problémy so sieťou alebo načítaním loga), podrobnosti nájdete v súbore /tmp/ciefp_epgshare.log.
+Plugin sa automaticky pokúsi nainštalovať knižnicu lxml, ak chýba, alebo použije ElementTree ako náhradu.
+
+..:: CiefpSettings ::..

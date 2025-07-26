@@ -1,0 +1,116 @@
+..:: CiefpIPTVBouquets ::..
+
+CiefpIPTVBouquets je plugin pre Enigma2 určený na správu IPTV balíčkov na zariadeniach Enigma2.
+Umožňuje používateľom sťahovať, inštalovať, upravovať a mazať IPTV balíčky priamo z repozitára GitHub,
+ako aj spravovať kanály v balíčku. Plugin je užitočný pre používateľov, ktorí chcú jednoducho organizovať IPTV obsah,
+vrátane kanálov, seriálov a filmov, pomocou intuitívneho rozhrania.
+
+Hlavné funkcie:
+
+Sťahovanie a inštalácia IPTV balíčkov z GitHub.
+Úprava balíčka (výber, presúvanie, mazanie kanálov).
+Skupinový výber podobných kanálov (napr. „HBO 1“, „HBO 2“, „HBO“).
+Správa odstránených balíčkov (súbory .del).
+Obnovenie nastavení po zmenách.
+Obrazovky a ich použitie
+Plugin má jednu hlavnú obrazovku a štyri ďalšie obrazovky, každá so špecifickými funkciami.
+Tu je stručný popis a pokyny na používanie každého z nich:
+
+1. ..:: CiefpIPTV ::.. (Hlavná obrazovka)
+Popis: Táto obrazovka umožňuje sťahovanie a inštaláciu IPTV balíčkov z repozitára GitHub.
+Funkcie:
+- Zobrazuje zoznam dostupných balíčkov z GitHub (vľavo).
+- Umožňuje výber balíčka na inštaláciu (vpravo).
+- Spúšťa inštaláciu vybraných balíčkov a opätovné načítanie nastavení.
+- Poskytuje prístup k ďalším obrazovkám (IPTV Manager, BouquetViewer).
+Použitie:
+- OK/Zelená: Vyberie/zruší výber balíčka z ľavého zoznamu a pridá ho do pravého zoznamu.
+- Žltá: Spustí inštaláciu vybraných balíčkov (potvrdené dialógovým oknom).
+- Červená: Otvorí obrazovku IPTV Manager.
+- Modrá: Otvorí obrazovku BouquetViewer.
+- Zrušiť: Ukončí plugin.
+- Hore/Dole: Prechádza zoznamom balíčkov.
+Poznámka: Balíčky sa sťahujú z GitHub, takže je potrebné internetové pripojenie.
+
+2. ..:: BouquetViewer ::..
+Popis: Umožňuje zobraziť ukážku vybranej kytice pred inštaláciou.
+Funkcie:
+- Zobrazenie obsahu vybranej kytice umožňuje používateľovi zobraziť ukážku vybranej kytice pred inštaláciou.
+
+3. ..:: IPTV Manager ::..
+Popis: Umožňuje správu nainštalovaných IPTV kytic vrátane ich mazania a úpravy.
+Funkcie:
+- Zobrazuje zoznam nainštalovaných IPTV kytic.
+- Umožňuje výber a mazanie kytic.
+- Poskytuje prístup k úprave kytic prostredníctvom obrazovky IPTV Editor.
+Použitie:
+- OK/Zelená: Vyberie/zruší výber kytice na odstránenie.
+- Červená: Vymaže vybrané kytice (potvrdené dialógovým oknom).
+- Žltá: Otvorí čistič kytic na odstránenie súborov .del z etc/enigma2.
+- Modrá: Otvorí IPTV Editor na úpravu vybranej kytice.
+- Zrušiť: Návrat na hlavnú obrazovku.
+- Hore/Dole: Navigácia v zozname kytic.
+Poznámka: Odstránením blokov sa odstránia zo systému a opätovné načítanie nastavení je po odstránení voliteľné.
+
+3. ..:: IPTV Editor ::..
+Popis: Umožňuje podrobnú úpravu kanálov vo vybranom bloku.
+Funkcie:
+- Zobrazuje zoznam kanálov v bloku.
+- Podporuje výber, skupinový výber podobných kanálov, presúvanie a odstraňovanie kanálov.
+- Umožňuje ukladanie zmien a opätovné načítanie nastavení.
+Použitie:
+- OK: Vyberie/zruší výber jednotlivého kanála.
+- Červená: Odstráni vybrané kanály (potvrdené dialógovým oknom).
+- Zelená: Uloží zmeny v bloku (potvrdené dialógovým oknom pre opätovné načítanie).
+- Žltá: Povolí/zakáže „Režim presunu“ na presúvanie vybraných kanálov.
+- Modrá: Spustí skupinový výber podobných kanálov (napr. výber „HBO 1“ znamená „HBO“, „HBO 2“ atď.).
+- Hore/Dole: Navigácia v zozname kanálov; v „Režime presunu“ presúva vybrané kanály.
+- Doľava/Doprava: Posúva stránky; V režime „Presun“ presunie kanály o viacero pozícií.
+- Zrušiť: Opustí obrazovku (upozorní, ak existujú neuložené zmeny).
+Poznámka: Funkcia „Vybrať podobné“ je optimalizovaná na rozpoznávanie podobných kanálov (napr. „HBO“, „Cinemax“, „Epizóda Star Wars“)
+ vrátane zrušenia výberu, ak sú už všetky podobné kanály vybraté.
+
+4. ..:: Čistič bouquetov ::..
+Popis: Spravuje odstránené bouquety (súbory s príponou .del).
+Funkcie:
+- Zobrazuje zoznam súborov .del v adresári /etc/enigma2/.
+- Umožňuje výber a trvalé odstránenie súborov .del.
+Použitie:
+- OK: Vyberie jeden súbor .del.
+- Zelená: Vyberie všetky súbory .del.
+- Červená: Vymaže vybraté súbory .del (potvrdené dialógovým oknom).
+- Zrušiť: Návrat na hlavnú obrazovku.
+- Hore/Dole: Navigácia v zozname súborov.
+Poznámka: Toto je užitočné na vyčistenie starých alebo nepotrebných odstránených bouquetov.
+
+Ako používať plugin
+Inštalácia bouquetov:
+Spustite plugin a počkajte, kým sa bouquety načítajú z GitHubu na hlavnej obrazovke.
+Vyberte požadované bouquety (OK/Zelená) a nainštalujte ich (Žltá).
+V prípade potreby potvrďte opätovné načítanie nastavení.
+
+Zobrazenie bouquetov:
+Pred inštaláciou si pozrite obsah vybratého bouquetu.
+
+Úprava bouquetov:
+Na hlavnej obrazovke prejdite na Správcu IPTV (Červená).
+Vyberte bouquet a otvorte Editor IPTV (Modrá).
+V Editore IPTV vyberte kanály (OK), zoskupte a vyberte podobné kanály (Modrá), presuňte ich (Žltá + Hore/Dole) alebo ich vymažte (Červená).
+
+Uložte zmeny (Zelená) a potvrďte opätovné načítanie.
+
+Vymazanie bouquetov:
+V Správcovi IPTV vyberte bouquety (OK/Zelená) a vymažte ich (Červená).
+Potvrďte opätovné načítanie nastavení.
+
+Vyčistenie súborov .del:
+Na hlavnej obrazovke prejdite na Čistič bouquetov (Modrá).
+Vyberte súbory .del (OK alebo zelená pre všetky) a vymažte ich (červená).
+
+Záver
+CiefpIPTVBouquets je výkonný nástroj na správu IPTV kanálov so zameraním na jednoduchosť a flexibilitu.
+
+Hlavná obrazovka je určená pre inštaláciu, IPTV Manager pre správu kanálov, IPTV Editor pre detailnú úpravu kanálov a 
+Bouquet Cleaner pre čistenie vymazaných súborov.
+
+..:: CiefpSettings ::..

@@ -1,0 +1,32 @@
+..:: CiefpTvProgram ::..
+
+plugin pre zobrazenie EPG
+Autor: Ciefp
+Platforma: Enigma2 (Linux STB)
+
+Popis:
+CiefpTvProgram je jednoduchý a funkčný plugin Enigma2, ktorý umožňuje zobrazenie elektronického programového sprievodcu (EPG) pre vybrané televízne kanály.
+Zoznam kanálov sa zobrazuje vľavo a podrobný EPG vpravo, vrátane názvov relácií, časov začiatku a popisov.
+
+Funkcie:
+Zobrazenie zoznamu kanálov (definovaného v CHANNEL_LIST_DATA).
+Automatické sťahovanie a parsovanie súborov EPG XML z TVProfil.net.
+Zobrazenie piktogramov (pikonov) pre aktuálne vybraný kanál.
+Zobrazenie loga pluginu a dodatočného pozadia.
+Prepínanie medzi zobrazením kanálov a zobrazením obsahu EPG (tlačidlo OK).
+Posúvanie zoznamu kanálov a obsahu EPG (šípky hore/dole).
+
+Použitie:
+Spustenie:
+Plugin je možné spustiť z ponuky Plugin alebo ponuky Rozšírenia na zariadení Enigma2.
+Navigácia:
+Hore/Dole: Presúva výber v zozname kanálov alebo položkách EPG.
+
+OK: Prepína fokus medzi zoznamom kanálov a zobrazením obsahu EPG.
+
+UKONČIŤ: Ukončí plugin.
+
+Automatické sťahovanie EPG:
+Pri prvom spustení plugin stiahne údaje EPG a uloží ich do /tmp/CiefpTvProgram/.
+
+..:: CiefpSettings ::..

@@ -1,0 +1,84 @@
+..:: CiefpE2Converter ::..
+
+CiefpE2Converter je plugin Enigma2 určený na konverziu playlistov M3U do IPTV balíčkov, ktoré je možné použiť na zariadeniach Enigma2.
+
+Umožňuje používateľom jednoducho vybrať skupiny alebo jednotlivé kanály zo súborov M3U, definovať názov balíčka a vybrať požadovaný typ služby 
+(napr. Gstreamer, Exteplayer3, Streamlink).
+
+Plugin generuje príslušné súbory „userbouquet“ a zaregistruje ich na bouquets.tv pre okamžité použitie.
+
+Čo je nové vo verzii 1.9:
+Podpora pre odkazy M3U vo formáte playlist.txt:
+Plugin teraz podporuje načítanie odkazov M3U z textových súborov (playlist.txt).
+
+Používatelia si môžu vybrať odkaz zo zoznamu, ktorý sa automaticky stiahne a analyzuje na ďalšie spracovanie.
+
+Nová obrazovka výberu (ChannelSelectionScreen):
+Bola pridaná nová obrazovka výberu kanála, keď súbor M3U neobsahuje skupiny.
+
+Táto obrazovka umožňuje používateľom vybrať jednotlivé kanály alebo skupiny seriálov s automatickým zoskupovaním epizód seriálov pod jedným názvom 
+(napr. „Akty X“ namiesto „Akty X S01 E01“).
+
+Nové tlačidlo „Vybrať podobné“:
+Na obrazovkách Výber skupiny a Výber kanála bolo implementované nové tlačidlo „Vybrať podobné“.
+
+Funkcia: Automaticky vyberie všetky položky (skupiny alebo kanály), ktoré zdieľajú spoločnú predponu s aktuálne vybranou položkou. Napríklad:
+Pre skupinu „Športová TV 1“ vyberie všetky skupiny, ktoré začínajú na „Športová TV“ (napr. „Športová TV 2“, „Športová TV HD“).
+Pre kanál „HBO HD“ vyberie všetky kanály, ktoré začínajú na „HBO“ (napr. „HBO 2“, „HBO 3“).
+To umožňuje rýchly výber podobných položiek bez nutnosti manuálneho výberu každej z nich jednotlivo.
+
+Ďalšie funkcie:
+Intuitívne rozhranie s možnosťou prehliadania súborov v adresári /tmp.
+Prispôsobenie názvov zväzkov pomocou virtuálnej klávesnice.
+Podpora rôznych typov služieb (Gstreamer, Exteplayer3, DVB, Radio, Streamlink).
+Automatická registrácia balíčka a možnosť opätovného načítania nastavení po konverzii.
+Tento plugin je ideálny pre používateľov, ktorí chcú rýchlo a efektívne organizovať svoj IPTV obsah na platforme Enigma2, 
+s dodatočnou flexibilitou vďaka novým funkciám vo verzii 1.7.
+
+Stručný návod na používanie pluginu CiefpE2Converter v1.7
+
+Spustenie pluginu:
+V ponuke pluginov na vašom zariadení Enigma2 nájdite CiefpE2Converter v1.7 a spustite ho.
+
+Výber súboru M3U alebo odkazu:
+Na hlavnej obrazovke (MainScreen) sa zobrazí zoznam súborov v adresári /tmp.
+Ak máte súbor M3U: Prejdite naň (napr. playlist.m3u) a stlačte OK.
+Ak máte súbor playlist.txt s odkazmi: Vyberte súbor .txt a stlačte OK. Otvorí sa obrazovka výberu zoznamu skladieb:
+Posuňte sa hore/dole a vyberte požadovaný odkaz (stlačte OK alebo zelené tlačidlo „Potvrdiť“).
+Plugin stiahne M3U z tohto odkazu a bude pokračovať.
+
+Definovanie názvu skupiny:
+Stlačte žlté tlačidlo „Definovať názov“ a otvorte virtuálnu klávesnicu.
+Zadajte názov skupiny (napr. „Moja IPTV“) a potvrďte tlačidlom OK. Predvolený názov je „IPTV Mix Bouquet“.
+
+Vyberte skupiny alebo kanály:
+Stlačte modré tlačidlo „Vybrať skupiny“:
+Ak M3U obsahuje skupiny: Otvorí sa obrazovka výberu skupiny. Vyberte požadované skupiny:
+OK: Povolí/zakáže skupinu.
+Vybrať všetko (modré tlačidlo): Vyberie všetky skupiny.
+Vybrať podobné (žlté tlačidlo): Vyberie skupiny s podobnou predponou (napr. „Športová TV 1“ -> „Športová TV 2“).
+
+Ak M3U nemá žiadne skupiny: Otvorí sa obrazovka výberu kanálov. Vyberte kanály alebo seriál:
+OK: Povolí/zakáže kanál/seriál.
+Vybrať všetko (modré tlačidlo): Vyberie všetky kanály.
+Vybrať podobné (žlté tlačidlo): Vyberie kanály s podobným predponou (napr. „HBO HD“ -> „HBO 2“).
+Stlačte zelené tlačidlo „Potvrdiť“ pre potvrdenie alebo červené tlačidlo „Zrušiť“ pre zrušenie.
+
+Konvertovať na bouquet:
+Na hlavnej obrazovke stlačte zelené tlačidlo „Konvertovať“.
+Vyberte typ služby (napr. „Gstreamer (4097:0:1)“) zo zoznamu a potvrďte tlačidlom OK.
+Plugin vytvorí bouquet v súbore /etc/enigma2 a zaregistruje ho na bouquets.tv.
+
+Obnoviť nastavenia:
+Po konverzii sa zobrazí otázka „Obnoviť nastavenia?“. Vyberte Áno pre obnovenie zoznamu bouquet alebo Nie pre ukončenie.
+
+Ukončiť:
+Stlačte červené tlačidlo „Ukončiť“ pre zatvorenie pluginu.
+
+Poznámka:
+Stiahnuté súbory M3U sú uložené v súbore /tmp/m3u_playlist.
+Seriály na obrazovke ChannelSelectionScreen sú zoskupené (napr. „Akty X“ zahŕňajú všetky epizódy, ak je začiarknuté).
+Skontrolujte, či je k dispozícii priečinok /tmp a či má dostatok miesta na stiahnutie súborov.
+To je všetko, čo potrebujete vedieť pre základné používanie pluginu!
+
+..:: ciefpsettings ::..

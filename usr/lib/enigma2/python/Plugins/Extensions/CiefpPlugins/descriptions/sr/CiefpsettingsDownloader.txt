@@ -1,4 +1,4 @@
-CiefpSettingsDownloader
+..:: CiefpSettingsDownloader ::..
 
 CiefpSettingsDownloader omogućava korisnicima Enigma2 risivera brz i jednostavan način za 
 preuzimanje, instalaciju i ažuriranje satelitskih lista kanala (settings) koje su pažljivo 
