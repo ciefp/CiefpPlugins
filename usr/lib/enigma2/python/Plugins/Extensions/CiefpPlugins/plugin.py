@@ -1,6 +1,7 @@
 from enigma import eTimer, getDesktop, gFont, eConsoleAppContainer
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
+from Screens.ChoiceBox import ChoiceBox
 from Components.ActionMap import ActionMap
 from Components.Pixmap import Pixmap
 from Components.Label import Label
@@ -15,39 +16,69 @@ import subprocess
 import logging
 import glob
 import shutil
+import urllib.request
+import uuid
 
-# Verzija plugina
-PLUGIN_VERSION = "1.9"  # Vraćeno na stabilnu verziju
+# Plugin version
+PLUGIN_VERSION = "2.0"  # Updated version for fixes
 
-# Setup logging to a file for better debugging
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('/tmp/ciefp_plugin.log'),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger(__name__)
+# Setup logging
+LOG_FILE = "/tmp/ciefp_plugin.log"
+FALLBACK_LOG_FILE = "/tmp/ciefp_plugin_fallback.log"
 
-# URL za proveru verzije
+def setup_logging():
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    
+    # Clear any existing handlers
+    logger.handlers = []
+    
+    # Try primary log file
+    try:
+        file_handler = logging.FileHandler(LOG_FILE, mode='a')
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+    except Exception as e:
+        # Fallback to secondary log file
+        try:
+            fallback_handler = logging.FileHandler(FALLBACK_LOG_FILE, mode='a')
+            fallback_handler.setFormatter(formatter)
+            logger.addHandler(fallback_handler)
+            logger.error(f"Failed to set up primary log file {LOG_FILE}: {str(e)}. Using fallback {FALLBACK_LOG_FILE}")
+        except Exception as e2:
+            logger.error(f"Failed to set up fallback log file {FALLBACK_LOG_FILE}: {str(e2)}")
+    
+    # Add stream handler for console output
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+    logger.addHandler(stream_handler)
+    
+    # Test log message
+    logger.info("Logging initialized for CiefpPlugins")
+    return logger
+
+logger = setup_logging()
+
+# URLs and paths
 VERSION_URL = "https://raw.githubusercontent.com/ciefp/CiefpPlugins/refs/heads/main/version.txt"
-
-# Komanda za ažuriranje plugina
 UPDATE_COMMAND = "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpPlugins/main/installer.sh -O - | /bin/sh"
-
-# Fajl za čuvanje instaliranih plugina
 INSTALLED_PLUGINS_FILE = "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/installed_plugins.txt"
-
-# Privremena lokacija za backup fajla
 BACKUP_PLUGINS_FILE = "/tmp/ciefp_plugins_backup.txt"
+PICTURES_DIR = "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/pictures/"
+LANGUAGE_FILE = "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/selected_language.txt"
+PICTURES_FILE_PATHS = [
+    "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/pictures.txt",
+    "/tmp/pictures.txt",
+    "/usr/share/enigma2/pictures.txt"
+]
 
 # Plugin configuration
 config.plugins.CiefpPlugins = ConfigSubsection()
-language_choices = [("en", "English")]  # Defaultni jezik
+language_choices = [("en", "English - en")]
 config.plugins.CiefpPlugins.language = ConfigSelection(default="en", choices=language_choices)
 
-# Plugin list with normalized file names
+# Plugin list
 PLUGIN_LIST = [
     ("Ciefpsettings Motor", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpsettingsMotor.png", "wget https://raw.githubusercontent.com/ciefp/CiefpsettingsMotor/main/installer.sh -O - | /bin/sh", "CiefpsettingsMotor"),
     ("Ciefpsettings Panel", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpsettingsPanel.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpsettingsPanel/main/installer.sh -O - | /bin/sh", "CiefpsettingsPanel"),
@@ -74,16 +105,89 @@ PLUGIN_LIST = [
     ("Ciefp Plugins", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpPlugins.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpPlugins/main/installer.sh -O - | /bin/sh", "CiefpPlugins"),
 ]
 
-# Dinamički popuni listu jezika na osnovu foldera u descriptions
+# Load pictures.txt for image URLs
+def load_pictures_map():
+    pictures_map = {}
+    found_file = False
+    for path in PICTURES_FILE_PATHS:
+        logger.info(f"Checking for pictures.txt at {path}")
+        try:
+            # Log directory contents
+            dir_path = os.path.dirname(path)
+            if os.path.exists(dir_path):
+                dir_contents = os.listdir(dir_path)
+                logger.debug(f"Contents of {dir_path}: {dir_contents}")
+            else:
+                logger.warning(f"Directory does not exist: {dir_path}")
+            
+            if os.path.exists(path):
+                found_file = True
+                logger.info(f"Found pictures.txt at {path}")
+                try:
+                    with open(path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                        logger.debug(f"pictures.txt content: {content}")
+                        current_plugin = None
+                        for line in content.splitlines():
+                            line = line.strip()
+                            if not line:
+                                continue
+                            if line.endswith(":"):
+                                current_plugin = line[:-1].strip()
+                                pictures_map[current_plugin.lower()] = []
+                                logger.debug(f"Found plugin entry: {current_plugin}")
+                            elif current_plugin and line.startswith("https://"):
+                                pictures_map[current_plugin.lower()].append(line)
+                                logger.debug(f"Added image URL for {current_plugin}: {line}")
+                    logger.info(f"Successfully loaded pictures map from {path}: {pictures_map}")
+                    break
+                except Exception as e:
+                    logger.error(f"Error parsing pictures.txt at {path}: {str(e)}")
+            else:
+                logger.warning(f"pictures.txt not found at {path}")
+        except Exception as e:
+            logger.error(f"Error accessing {path}: {str(e)}")
+    
+    if not found_file:
+        logger.error(f"pictures.txt not found in any of: {PICTURES_FILE_PATHS}")
+    return pictures_map
+
+PICTURES_MAP = load_pictures_map()
+
+# Load selected language from file
+def load_selected_language(available_languages):
+    logger.info(f"Attempting to load language from {LANGUAGE_FILE}")
+    if os.path.exists(LANGUAGE_FILE):
+        try:
+            with open(LANGUAGE_FILE, "r", encoding="utf-8") as f:
+                line = f.readline().strip()
+                if line:
+                    # Expect format like "Srpski - sr"
+                    lang_code = line.split("-")[-1].strip()
+                    if lang_code in available_languages:
+                        logger.debug(f"Loaded language from file: {lang_code}")
+                        return lang_code
+                    else:
+                        logger.warning(f"Invalid language code in {LANGUAGE_FILE}: {lang_code}")
+        except Exception as e:
+            logger.error(f"Error reading {LANGUAGE_FILE}: {str(e)}")
+    else:
+        logger.debug(f"No language file found at {LANGUAGE_FILE}")
+    return None
+
+# Get available languages
 def getAvailableLanguages():
     desc_path = "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/descriptions/"
+    logger.info(f"Checking for languages in {desc_path}")
     if os.path.exists(desc_path):
         folders = [f for f in os.listdir(desc_path) if os.path.isdir(os.path.join(desc_path, f))]
-        language_choices = [(f, f.capitalize()) for f in folders]
+        language_choices = [(f, f"{f.capitalize()} - {f}") for f in folders]
         if not language_choices:
-            language_choices = [("en", "English")]
+            language_choices = [("en", "English - en")]
+        logger.debug(f"Available languages: {language_choices}")
         return language_choices
-    return [("en", "English")]
+    logger.warning(f"Descriptions path not found: {desc_path}")
+    return [("en", "English - en")]
 
 language_choices = getAvailableLanguages()
 config.plugins.CiefpPlugins.language.choices = language_choices
@@ -98,12 +202,13 @@ class ImageViewerScreen(Screen):
         <eLabel text="Next" position="370,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#00003F" />
     </screen>"""
 
-    def __init__(self, session, images, plugin_name):
+    def __init__(self, session, image_urls, plugin_name):
         Screen.__init__(self, session)
         self.session = session
-        self.images = images
+        self.image_urls = image_urls
         self.current_index = 0
         self.plugin_name = plugin_name
+        self.temp_files = []
 
         self["image"] = Pixmap()
         self["image_label"] = Label()
@@ -118,43 +223,69 @@ class ImageViewerScreen(Screen):
 
         self.onLayoutFinish.append(self.showImage)
 
-    def showImage(self):
-        if self.images:
-            image_path = self.images[self.current_index]
-            pixmap = LoadPixmap(image_path)
-            if pixmap:
-                self["image"].instance.setPixmap(pixmap)
-                self["image_label"].setText(f"Image {self.current_index + 1}/{len(self.images)}: {os.path.basename(image_path)}")
-                logger.debug(f"Showing image: {image_path}")
+    def download_image(self, url):
+        temp_file = f"/tmp/ciefp_image_{uuid.uuid4().hex}.jpg"
+        logger.debug(f"Attempting to download image: {url} to {temp_file}")
+        try:
+            urllib.request.urlretrieve(url, temp_file)
+            if os.path.exists(temp_file):
+                self.temp_files.append(temp_file)
+                logger.debug(f"Downloaded image to {temp_file}")
+                return temp_file
             else:
-                self["image_label"].setText(f"Error loading image: {os.path.basename(image_path)}")
-                logger.error(f"Failed to load image: {image_path}")
+                logger.error(f"Failed to download image: {url}")
+                return None
+        except Exception as e:
+            logger.error(f"Error downloading image {url}: {str(e)}")
+            return None
+
+    def showImage(self):
+        if self.image_urls:
+            image_url = self.image_urls[self.current_index]
+            temp_file = self.download_image(image_url)
+            if temp_file:
+                pixmap = LoadPixmap(temp_file)
+                if pixmap:
+                    self["image"].instance.setPixmap(pixmap)
+                    self["image_label"].setText(f"Image {self.current_index + 1}/{len(self.image_urls)}: {os.path.basename(image_url)}")
+                    logger.debug(f"Showing image: {image_url}")
+                else:
+                    self["image_label"].setText(f"Error loading image: {os.path.basename(image_url)}")
+                    logger.error(f"Failed to load pixmap for: {temp_file}")
+            else:
+                self["image_label"].setText(f"Error downloading image: {os.path.basename(image_url)}")
+                logger.error(f"Failed to download image: {image_url}")
         else:
             self["image_label"].setText(f"No images available for {self.plugin_name}")
             logger.debug(f"No images available for {self.plugin_name}")
 
     def nextImage(self):
-        if self.images:
-            self.current_index = (self.current_index + 1) % len(self.images)
+        if self.image_urls:
+            self.current_index = (self.current_index + 1) % len(self.image_urls)
             self.showImage()
             logger.debug(f"Moved to next image: {self.current_index}")
 
     def prevImage(self):
-        if self.images:
-            self.current_index = (self.current_index - 1) % len(self.images)
+        if self.image_urls:
+            self.current_index = (self.current_index - 1) % len(self.image_urls)
             self.showImage()
             logger.debug(f"Moved to previous image: {self.current_index}")
 
     def exit(self):
+        for temp_file in self.temp_files:
+            try:
+                if os.path.exists(temp_file):
+                    os.remove(temp_file)
+                    logger.debug(f"Removed temporary file: {temp_file}")
+            except Exception as e:
+                logger.error(f"Error removing temporary file {temp_file}: {str(e)}")
         self.close()
         logger.debug("Exiting ImageViewerScreen")
 
 class CiefpPluginsPanel(Screen):
     skin = """
     <screen name="CiefpPluginsPanel" position="center,center" size="1600,850" title="..:: Ciefp Plugins ::.. (Version {version})">
-        <!-- Title -->
         <widget name="title" position="0,0" size="1600,100" font="Regular;60" halign="center" foregroundColor="#FFFFFF" backgroundColor="#000000" />
-        <!-- Icons and Names (Left Side) -->
         <widget source="pluginlist" render="Listbox" position="50,100" size="400,680" scrollbarMode="showOnDemand" enableWrapAround="1">
             <convert type="TemplatedMultiContent">
                 {{"template": [
@@ -165,27 +296,52 @@ class CiefpPluginsPanel(Screen):
                 "itemHeight": 170}}
             </convert>
         </widget>
-        <!-- Description (Right Side) -->
         <widget name="description" position="470,100" size="1100,680" font="Regular;26" scrollbarMode="showOnDemand" />
-        <!-- Colored Buttons -->
         <eLabel text="Exit" position="50,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F0000" />
         <eLabel text="Install" position="210,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#003F00" />
         <eLabel text="Language" position="370,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F3F00" />
         <eLabel text="Image Viewer" position="530,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#00003F" />
-        <!-- Status Label -->
         <widget name="status_label" position="690,800" size="900,40" font="Regular;22" foregroundColor="#FFFFFF" halign="left" transparent="1" />
     </screen>""".format(version=PLUGIN_VERSION)
 
     def __init__(self, session):
         Screen.__init__(self, session)
         self.session = session
-        self.language = config.plugins.CiefpPlugins.language.value
-        self.focusOnDescription = False  # Default focus is on plugin list
         self.available_languages = [choice[0] for choice in getAvailableLanguages()]
+        
+        # Load language from file or config
+        self.language = load_selected_language(self.available_languages)
+        if not self.language:
+            self.language = config.plugins.CiefpPlugins.language.value or "en"
+        logger.info(f"Initialized with language: {self.language}")
+
+        self.focusOnDescription = False
         self.version_check_in_progress = False
         self.version_buffer = b''
 
-        # Plugin list with one item per row (icon + name)
+        # Delete pictures folder if it exists
+        try:
+            if os.path.exists(PICTURES_DIR):
+                shutil.rmtree(PICTURES_DIR)
+                logger.debug(f"Deleted pictures folder: {PICTURES_DIR}")
+            else:
+                logger.debug(f"Pictures folder does not exist: {PICTURES_DIR}")
+        except Exception as e:
+            logger.error(f"Error deleting pictures folder {PICTURES_DIR}: {str(e)}")
+            self["status_label"] = Label(f"Error deleting pictures folder: {str(e)}")
+
+        # Check if pictures.txt exists and update status
+        found_pictures = False
+        for path in PICTURES_FILE_PATHS:
+            if os.path.exists(path):
+                found_pictures = True
+                break
+        if not found_pictures:
+            error_msg = f"pictures.txt not found in any of: {', '.join(PICTURES_FILE_PATHS)}"
+            self["status_label"] = Label(error_msg)
+            logger.error(error_msg)
+
+        # Plugin list
         self.pluginList = []
         for name, icon, install_cmd, desc_file in PLUGIN_LIST:
             pixmap = None
@@ -231,8 +387,6 @@ class CiefpPluginsPanel(Screen):
         self.container.dataAvail.append(self.version_data_avail)
 
         self.onLayoutFinish.append(self.updateDescription)
-
-        # Automatska provera verzije pri pokretanju
         self.check_version_timer = eTimer()
         self.check_version_timer.callback.append(self.check_for_updates)
         self.check_version_timer.start(1000, True)
@@ -299,29 +453,46 @@ class CiefpPluginsPanel(Screen):
             logger.debug("No plugin available at this position.")
 
     def changeLanguage(self):
-        if self.available_languages:
-            current_idx = self.available_languages.index(self.language) if self.language in self.available_languages else 0
-            next_idx = (current_idx + 1) % len(self.available_languages)
-            self.language = self.available_languages[next_idx]
-            config.plugins.CiefpPlugins.language.value = self.language
-            config.plugins.CiefpPlugins.language.save()
-            self.updateDescription()
-            logger.debug(f"Language changed to: {self.language}")
+        choices = [(lang[1], lang[0]) for lang in getAvailableLanguages()]
+        self.session.openWithCallback(self.languageSelected, ChoiceBox, title="Select Language", list=choices)
+        logger.debug("Opened language selection ChoiceBox")
+
+    def languageSelected(self, choice):
+        if choice:
+            selected_lang = choice[1]
+            display_lang = choice[0]
+            if selected_lang in self.available_languages:
+                self.language = selected_lang
+                config.plugins.CiefpPlugins.language.value = self.language
+                config.plugins.CiefpPlugins.language.save()
+                # Save to selected_language.txt
+                try:
+                    with open(LANGUAGE_FILE, "w", encoding="utf-8") as f:
+                        f.write(f"{display_lang}\n")
+                    logger.debug(f"Saved language to {LANGUAGE_FILE}: {display_lang}")
+                except Exception as e:
+                    logger.error(f"Error writing to {LANGUAGE_FILE}: {str(e)}")
+                    self["status_label"].setText(f"Error saving language: {str(e)}")
+                self.updateDescription()
+                logger.debug(f"Language set to: {self.language}")
+            else:
+                logger.warning(f"Selected language {selected_lang} not in available languages")
 
     def openImageViewer(self):
         current = self["pluginlist"].getCurrent()
         if current:
             name, install_cmd, desc_file = current[1:4]
-            image_prefix = desc_file.lower().replace(" ", "_")
-            pictures_path = "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/pictures/"
-            images = glob.glob(f"{pictures_path}{image_prefix}_*.jpg") + glob.glob(f"{pictures_path}{image_prefix}_*.png")
-            images.sort()
-            if images:
-                self.session.open(ImageViewerScreen, images, name)
-                logger.debug(f"Opening ImageViewerScreen with {len(images)} images for {name}")
+            logger.debug(f"Looking up images for desc_file: {desc_file}, normalized: {desc_file.lower()}")
+            image_urls = PICTURES_MAP.get(desc_file.lower(), [])
+            logger.debug(f"Found image URLs: {image_urls}")
+            if image_urls:
+                self.session.open(ImageViewerScreen, image_urls, name)
+                logger.debug(f"Opening ImageViewerScreen with {len(image_urls)} images for {name}")
             else:
-                self["description"].setText(f"No images found for {name} in {pictures_path}")
-                logger.warning(f"No images found for {name} in {pictures_path}")
+                error_msg = f"No images found for {name} in pictures.txt"
+                self["description"].setText(error_msg)
+                self["status_label"].setText(f"Check pictures.txt for {desc_file}")
+                logger.warning(f"No images found for {name} in pictures.txt (desc_file: {desc_file})")
         else:
             self["description"].setText("No plugin selected.")
             logger.debug("No plugin selected for image viewer")
@@ -355,8 +526,8 @@ class CiefpPluginsPanel(Screen):
                     subprocess.run(install_cmd, shell=True, check=True)
                     self["status_label"].setText("Installation successful!")
                     logger.debug(f"Installation successful for command: {install_cmd}")
-                    self.log_installed_plugin(current[1])  # Loguj instalirani plugin
-                    self.updateDescription()  # Osveži opis nakon instalacije
+                    self.log_installed_plugin(current[1])
+                    self.updateDescription()
                 except subprocess.CalledProcessError as e:
                     self["status_label"].setText(f"Error during installation: {str(e)}")
                     logger.error(f"Installation failed: {str(e)}")
