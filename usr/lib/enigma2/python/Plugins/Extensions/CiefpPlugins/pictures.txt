@@ -1,6 +1,8 @@
 CiefpBouquetUpdater:
 https://i.postimg.cc/C5p67SLF/ciefpbouquetupdater-1.jpg
 https://i.postimg.cc/YqksmrsR/ciefpbouquetupdater-2.jpg
+https://i.postimg.cc/zvMXP0wx/ciefpbouquetupdater-3.jpg
+https://i.postimg.cc/yxW0ZpYj/ciefpbouquetupdater-4.jpg
 
 CiefpChannelManager:
 https://i.postimg.cc/90B1B9np/ciefpchannelmanager-1.jpg
@@ -49,6 +51,8 @@ https://i.postimg.cc/TYy2sXxr/ciefpplugins-1.jpg
 https://i.postimg.cc/R0GzFP9S/ciefpplugins-2.jpg
 https://i.postimg.cc/SsJNp08F/ciefpplugins-3.jpg
 https://i.postimg.cc/nrpRDx1N/ciefpplugins-4.jpg
+https://i.postimg.cc/Twkt6y34/ciefpplugins-5.jpg
+https://i.postimg.cc/63QhY9fL/ciefpplugins-6.jpg
 
 CiefpSatellitesXmlEditor:
 https://i.postimg.cc/76DMBVT2/ciefpsatellitesxmleditor-1.jpg
@@ -121,3 +125,19 @@ https://i.postimg.cc/tgR30z5Q/ciefptvtodayde-3.jpg
 
 CiefpWhitelistStreamrelay:
 https://i.postimg.cc/X7wdpP16/ciefpwhiteliststreamrelay-1.jpg
+
+CiefpOscamEditor:
+https://i.postimg.cc/65D7ppsy/ciefposcameditor-1.jpg
+https://i.postimg.cc/fLTyr3dg/ciefposcameditor-2.jpg
+https://i.postimg.cc/SQPRgxxD/ciefposcameditor-3.jpg
+https://i.postimg.cc/VNzkJSKL/ciefposcameditor-4.jpg
+https://i.postimg.cc/zDyKzML2/ciefposcameditor-5.jpg
+https://i.postimg.cc/c4qgsJG6/ciefposcameditor-6.jpg
+https://i.postimg.cc/XYsYyjmf/ciefposcameditor-7.jpg
+https://i.postimg.cc/XvvX2Gd1/ciefposcameditor-8.jpg
+https://i.postimg.cc/NFvsw52c/ciefposcameditor-9.jpg
+https://i.postimg.cc/qvvk0fqz/ciefposcameditor-10.jpg
+https://i.postimg.cc/SKwqWJrM/ciefposcameditor-11.jpg
+https://i.postimg.cc/wvVf9r7j/ciefposcameditor-12.jpg
+https://i.postimg.cc/Yqjnwbkt/ciefposcameditor-13.jpg
+https://i.postimg.cc/T2N0QgbF/ciefposcameditor-14.jpg

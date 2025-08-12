@@ -1,0 +1,118 @@
+..:: Ciefp Oscam Editor ::..
+
+Ciefp Oscam Editor je plugin pre Enigma2 určený na úpravu súborov oscam.dvbapi a oscam.server priamo z rozhrania Enigma2.
+Umožňuje používateľom jednoducho spravovať konfiguráciu OSCAM pre DVB-API a servery a zároveň zobrazovať informácie o aktuálnom kanáli a údajoch ECM.
+Plugin je prispôsobený pre používateľov, ktorí chcú nastaviť priority, ignorovať, mapovať alebo pridávať riadky v konfigurácii OSCAM, ako aj spravovať čítačky pre server OSCAM.
+
+Funkcie pluginu
+
+Zobrazenie informácií o kanáli:
+Zobrazuje podrobnosti o aktuálne sledovanom kanáli vrátane:
+Názov kanála
+ID služby
+CAID (so zvýraznenými aktívnymi CAID)
+ECM PID
+Poskytovateľ
+CHID, čítačka, protokol, skoky a čas ECM (z /tmp/ecm.info).
+
+Úprava súboru oscam.dvbapi:
+Pridávanie liniek: Umožňuje pridávanie rôznych typov liniek:
+P: (Priorita) na nastavenie priority CAID a poskytovateľov.
+I: (Ignorovať) na ignorovanie konkrétnych CAID alebo poskytovateľov.
+J: (Spojiť) na spojenie dvoch CAID/poskytovateľov s ECM PID.
+M: (Mapovať) na mapovanie jedného poskytovateľa na druhého.
+A: (Pridať) na pridanie konkrétnych hodnôt NS, SID a ECM PID.
+Možnosť pridať komentár s názvom kanála.
+Možnosť obmedziť linku na konkrétny kanál (ID služby).
+Zobraziť a odstrániť existujúce linky v oscam.dvbapi.
+
+Úprava súboru oscam.server:
+Pridávanie čítačiek: Nakonfigurujte nové čítačky s parametrami ako:
+Označenie, protokol (napr. CCCam), adresa/port, používateľ, heslo.
+Časový limit nečinnosti, cacheex, skupina, EMM cache, verzia CCC atď.
+
+Zobraziť existujúce čítačky v oscam.server.
+Odstrániť vybrané čítačky s potvrdením.
+
+Nastavenia:
+Vyberte cestu k súboru oscam.dvbapi (napr. /etc/tuxbox/config/oscam.dvbapi alebo varianty pre oscam-emu, oscam-master atď.).
+
+Vyberte jazyk (angličtina alebo srbčina) pre používateľské rozhranie.
+
+Podpora prekladov:
+Plugin podporuje viacjazyčné rozhranie (momentálne angličtina a srbčina) pre všetky texty vrátane nadpisov, popisov tlačidiel a správ.
+
+Používateľské rozhranie:
+Intuitívne grafické rozhranie s obrazovkami pre hlavné zobrazenie, pridávanie riadkov, prezeranie súborov, pridávanie čítačiek a nastavenia.
+
+Podpora navigácie (hore/dole) a akcií pomocou farebných tlačidiel (červené, zelené, žlté, modré).
+
+Záver
+Plugin je užitočný nástroj pre používateľov OSCAM na zariadeniach Enigma2, ktorý umožňuje jednoduchú správu konfigurácie bez potreby manuálnej úpravy súborov.
+Je vhodný pre používateľov, ktorí chcú rýchlo nastaviť priority, ignorovať alebo mapovať CAID, ako aj spravovať čítačky s pridanou flexibilitou viacjazyčného rozhrania.
+
+..:: Editor Ciefp Oscam ::..
+zobraziť informácie o ecm
+- kanál
+- ID služby
+- caid
+- caid (aktívny)
+- ecm pid
+- poskytovateľ
+- dieťa
+- čítačka
+- od
+- protokol
+- skoky
+- ecm čas
+červené tlačidlo - ukončiť
+zelené tlačidlo - Pridať dvbapi - otvorí obrazovku - Pridať riadok dvbapi
+žlté tlačidlo - nastavenia - otvorí obrazovku - Nastavenia editora Ciefp Oscam
+modré tlačidlo - oscam.server - otvorí obrazovku - Náhľad oscam.dvbapi
+
+..:: Nastavenia editora Ciefp Oscam ::..
+Cesta k oscam.dvbapi:
+predvolené - etc/tuxbox/config/oscam.dvbapi
+oscam-emu - etc/tuxbox/config/oscam-emu/oscam.dvbapi
+oscam-master - etc/tuxbox/config/oscam-master/oscam.dvbapi
+oscam-smod - etc/tuxbox/config/oscam-smod/oscam.dvbapi
+Jazyk: Srbčina - Angličtina
+
+..:: Pridať riadok dvbapi ::..
+zobraziť viacero textových vstupných tabuliek:
+- Priorita (P:) caid:provider:sid
+- Ignorovať (I:) caid:provider:sid
+- Pripojiť (J:) caid1:provider1:sid:ecmpid caid2:provider2:ecmpid2
+- Mapa (M:) caid:oldprovider:sid caid2:newprovider:sid2
+- Pridať (A:) ns:sid:ecmpid:caid:provider:
+červené tlačidlo - zrušiť
+zelené tlačidlo - Pridať - pridá zadaný riadok do oscam.dvbapi
+žlté tlačidlo - Náhľad - otvorí obrazovku - Náhľad oscam.dvbapi
+modré tlačidlo - Budúcnosť - ľavé tlačidlo pre budúcu funkciu
+
+..:: Náhľad oscam.dvbapi ::..
+- zobraziť obsah oscam.dvbapi súbor
+červené tlačidlo - ukončiť
+zelené tlačidlo - uložiť
+modré tlačidlo - odstrániť - vymaže riadok zo súboru oscam.dvbapi
+
+..:: oscam.server Náhľad ::..
+- zobrazí obsah súboru oscam.server
+červené tlačidlo - ukončiť
+zelené tlačidlo - uložiť
+žlté tlačidlo - pridať čítačku - otvorí obrazovku - pridať čítačku do súboru oscam.server
+modré tlačidlo - odstrániť - otvorí obrazovku - vybrať čítačku na odstránenie
+
+..:: pridať čítačku do súboru oscam.server ::..
+- zobrazí tabuľku zadávania údajov do súboru oscam.server
+červené tlačidlo - zrušiť
+zelené tlačidlo - uložiť
+
+..:: vybrať čítačku na odstránenie ::..
+- zobrazí názov jednej alebo viacerých čítačiek
+výber pomocou tlačidla odstrániť vymaže všetky riadky súvisiace s vybranou čítačkou
+Celá čítačka sa vymaže.
+červené tlačidlo - odstrániť
+zelené tlačidlo - uložiť
+
+..:: CiefpSettings ::..

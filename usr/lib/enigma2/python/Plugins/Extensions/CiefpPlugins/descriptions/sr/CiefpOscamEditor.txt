@@ -1,0 +1,120 @@
+
+..:: Ciefp Oscam Editor ::..
+
+Ciefp Oscam Editor je Enigma2 plugin dizajniran za uređivanje oscam.dvbapi i oscam.server fajlova direktno iz Enigma2 interfejsa. 
+Omogućava korisnicima da lako upravljaju OSCAM konfiguracijom za DVB-API i servere, uz prikaz informacija o trenutnom kanalu i ECM podacima. 
+Plugin je prilagođen korisnicima koji žele da podese prioritete, ignorisanje, 
+mapiranje ili dodavanje linija u OSCAM konfiguraciji, kao i upravljanje čitačima (readers) za OSCAM server.
+
+Funkcije plugina
+
+Prikaz informacija o kanalu:
+Prikazuje detalje o trenutno gledanom kanalu, uključujući:
+Ime kanala
+Service ID
+CAID-ove (sa označenim aktivnim CAID-om)
+ECM PID
+Provajder
+CHID, čitač, protokol, hops i ECM vreme (iz /tmp/ecm.info).
+
+Uređivanje oscam.dvbapi fajla:
+Dodavanje linija: Omogućava dodavanje različitih tipova linija:
+P: (Priority) za postavljanje prioriteta CAID-a i provajdera.
+I: (Ignore) za ignorisanje određenih CAID-ova ili provajdera.
+J: (Join) za spajanje dva CAID-a/provajdera sa ECM PID-ovima.
+M: (Map) za mapiranje jednog provajdera na drugi.
+A: (Add) za dodavanje specifičnih NS, SID i ECM PID vrednosti.
+Mogućnost dodavanja komentara sa imenom kanala.
+Opcija za ograničavanje linije na specifičan kanal (Service ID).
+Pregled i brisanje postojećih linija u oscam.dvbapi.
+
+Uređivanje oscam.server fajla:
+Dodavanje čitača: Konfiguracija novih čitača sa parametrima kao što su:
+Label, protokol (npr. CCCam), adresa/port, korisnik, lozinka.
+Inactivity timeout, cacheex, grupa, EMM cache, CCC verzija, itd.
+
+Pregled postojećih čitača u oscam.server.
+Brisanje selektovanih čitača uz potvrdu.
+
+Podešavanja:
+Izbor putanje do oscam.dvbapi fajla (npr. /etc/tuxbox/config/oscam.dvbapi ili varijante za oscam-emu, oscam-master, itd.).
+Izbor jezika (engleski ili srpski) za korisnički interfejs.
+
+Podrška za prevode:
+Plugin podržava višejezični interfejs (trenutno engleski i srpski) za sve tekstove, uključujući naslove, labele dugmadi i poruke.
+
+Korisnički interfejs:
+Intuitivan GUI sa ekranima za glavni prikaz, dodavanje linija, pregled fajlova, dodavanje čitača i podešavanja.
+Podrška za navigaciju (gore/dole) i akcije putem obojenih dugmadi (crveno, zeleno, žuto, plavo).
+
+Zaključak
+Plugin je koristan alat za korisnike OSCAM-a na Enigma2 uređajima, omogućavajući jednostavno upravljanje konfiguracijom bez potrebe za ručnim uređivanjem fajlova. 
+Pogodan je za korisnike koji žele brzo da podese prioritete, ignorisanje ili mapiranje CAID-ova, 
+kao i za upravljanje čitačima, uz dodatnu fleksibilnost višejezičnog interfejsa.
+
+
+..:: Ciefp Oscam editor ::..
+prikaz ecm info 
+- channel
+- service id
+- caid
+- caid(Active)
+- ecm pid
+- provider
+- chid
+- reader
+- from
+- protocol
+- hops
+- ecm time
+crveno dugme - exit
+zeleno dugme - Add dvbapi - otvara ekran - Add dvbapi Line
+žuto dugme - settings - otvara ekran - Ciefp Oscam Editor Settings
+plavo dugme - oscam.server - otvara ekran - oscam.dvbapi Preview
+
+..:: Ciefp Oscam Editor Settings ::..
+Putanja do oscam.dvbapi:
+default - etc/tuxbox/config/oscam.dvbapi
+osccam-emu - etc/tuxbox/config/osccam-emu/oscam.dvbapi
+oscam-master - etc/tuxbox/config/osccam-master/oscam.dvbapi
+oscam-smod -  etc/tuxbox/config/osccam-smod/oscam.dvbapi
+Jezik:Srpski - Engleski
+
+..:: Add dvbapi Line ::..
+prikaz više tabela za unos teksta:
+- Priority (P:) caid:provider:sid
+- Ignore  (I:) caid:provider:sid
+- Join (J:) caid1:provider1:sid:ecmpid caid2:provider2:ecmpid2
+- Map (M:) caid:stariprovajder:sid caid2:noviprovajder:sid2
+- Add (A:) ns:sid:ecmpid:caid:provajder:
+crveno dugme - cancel
+zeleno dugme - Dodaj - dodaje upisanu liniju u oscam.dvbapi
+žuto dugme - Pregled - otvara ekran - oscam.dvbapi Preview
+plavo dugme - Future - ostavljeno dugme za buduću funkciju
+
+..:: oscam.dvbapi Preview ::..
+- prikaz sadržaja oscam.dvbapi fajla
+crveno dugme - exit
+zeleno dugme - Save
+plavo dugme - Delete - briše liniju iz oscam.dvbapi
+
+..:: oscam.server Preview ::..
+- prikaz sadržaja oscam.server fajla
+crveno dugme - exit
+zeleno dugme - Save
+žuto dugme - Add reader - otvara ekran - Add Reader to oscam.server
+plavo dugme - Delete - otvara ekran - Select Reader to Delete
+
+..:: Add Reader to oscam.server ::..
+- prikaz tabela unos podataka u oscam.server
+crveno dugme - cancel
+zeleno dugme - Save
+
+..:: Select Reader to Delete ::..
+- prikaz naziva readera jednog ili više njih 
+selekciom sa delete se brišu sve linije vezane za selektovan reader
+Briše se kompletan reader.
+crveno dugme - delete
+zeleno dugme - Save
+
+..:: CiefpSettings ::..

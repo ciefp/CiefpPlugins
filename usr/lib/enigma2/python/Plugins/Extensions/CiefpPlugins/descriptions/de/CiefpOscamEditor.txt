@@ -1,0 +1,116 @@
+..:: Ciefp Oscam Editor ::..
+
+Ciefp Oscam Editor ist ein Enigma2-Plugin zum Bearbeiten von oscam.dvbapi- und oscam.server-Dateien direkt über die Enigma2-Oberfläche.
+Es ermöglicht Nutzern die einfache Verwaltung der OSCAM-Konfiguration für DVB-API und Server und zeigt gleichzeitig Informationen zum aktuellen Kanal und den ECM-Daten an.
+Das Plugin ist speziell für Nutzer konzipiert, die Prioritäten setzen, Zeilen ignorieren, zuordnen oder hinzufügen sowie Reader für den OSCAM-Server verwalten möchten.
+
+Plugin-Funktionen
+
+Kanalinformationen anzeigen:
+Zeigt Details zum aktuell angezeigten Kanal an, darunter:
+Kanalname
+Service-ID
+CAIDs (aktive CAIDs werden hervorgehoben),
+ECM-PID
+Provider
+CHID, Reader, Protokoll, Hops und ECM-Zeit (aus /tmp/ecm.info).
+
+Bearbeiten der Datei oscam.dvbapi:
+Zeilen hinzufügen: Ermöglicht das Hinzufügen verschiedener Zeilentypen:
+P: (Priorität) zum Festlegen der Priorität von CAIDs und Providern.
+I: (Ignorieren) zum Ignorieren bestimmter CAIDs oder Provider.
+J: (Verbinden) zum Verbinden zweier CAIDs/Provider mit ECM-PIDs.
+M: (Zuordnen) zum Zuordnen eines Providers zu einem anderen.
+A: (Hinzufügen) zum Hinzufügen bestimmter NS-, SID- und ECM-PID-Werte.
+Möglichkeit, einen Kommentar mit dem Kanalnamen hinzuzufügen.
+Option zum Beschränken der Zeile auf einen bestimmten Kanal (Service-ID).
+Anzeigen und Löschen vorhandener Zeilen in oscam.dvbapi.
+
+Bearbeiten der Datei oscam.server:
+Reader hinzufügen: Konfigurieren Sie neue Reader mit Parametern wie:
+Label, Protokoll (z. B. CCCam), Adresse/Port, Benutzer, Passwort.
+Inaktivitäts-Timeout, Cacheex, Gruppe, EMM-Cache, CCC-Version usw.
+
+Vorhandene Reader in oscam.server anzeigen.
+Ausgewählte Reader mit Bestätigung löschen.
+
+Einstellungen:
+Wählen Sie den Pfad zur Datei oscam.dvbapi (z. B. /etc/tuxbox/config/oscam.dvbapi oder Varianten für oscam-emu, oscam-master usw.).
+Wählen Sie die Sprache (Englisch oder Serbisch) für die Benutzeroberfläche.
+
+Übersetzungsunterstützung:
+Das Plugin unterstützt eine mehrsprachige Benutzeroberfläche (derzeit Englisch und Serbisch) für alle Texte, einschließlich Titel, Schaltflächenbeschriftungen und Nachrichten.
+
+Benutzeroberfläche:
+Intuitive Benutzeroberfläche mit Bildschirmen für die Hauptansicht, das Hinzufügen von Zeilen, das Anzeigen von Dateien, das Hinzufügen von Readern und Einstellungen.
+Unterstützung für Navigation (oben/unten) und Aktionen über farbige Schaltflächen (rot, grün, gelb, blau).
+
+Fazit:
+Das Plugin ist ein nützliches Tool für OSCAM-Nutzer auf Enigma2-Geräten und ermöglicht eine einfache Konfigurationsverwaltung ohne manuelle Dateibearbeitung.
+Es eignet sich für Nutzer, die schnell Prioritäten setzen, CAIDs ignorieren oder zuordnen sowie Leser verwalten möchten – mit der zusätzlichen Flexibilität einer mehrsprachigen Benutzeroberfläche.
+
+..:: Ciefp Oscam Editor ::..
+ECM-Informationen anzeigen
+- Kanal
+- Service-ID
+- CAID
+- CAID (Aktiv)
+- ECM-PID
+- Anbieter
+- CHID
+- Leser
+- Von
+- Protokoll
+- Hops
+- ECM-Zeit
+Rote Schaltfläche - Beenden
+Grüne Schaltfläche - DVBAPI hinzufügen - Öffnet Bildschirm - DVBAPI-Leitung hinzufügen
+Gelbe Schaltfläche - Einstellungen - Öffnet Bildschirm - Ciefp Oscam Editor-Einstellungen
+Blaue Schaltfläche - oscam.server - Öffnet Bildschirm - oscam.dvbapi-Vorschau
+
+..:: Ciefp Oscam Editor-Einstellungen ::..
+Pfad zu oscam.dvbapi:
+Standard - etc/tuxbox/config/oscam.dvbapi
+osccam-emu - etc/tuxbox/config/osccam-emu/oscam.dvbapi
+oscam-master - etc/tuxbox/config/oscam-master/oscam.dvbapi
+oscam-smod - etc/tuxbox/config/oscam-smod/oscam.dvbapi
+Sprache: Serbisch - Englisch
+
+..:: Dvbapi-Zeile hinzufügen ::..
+Mehrere Texteingabetabellen anzeigen:
+- Priorität (P:) caid:provider:sid
+- Ignorieren (I:) caid:provider:sid
+- Verbinden (J:) caid1:provider1:sid:ecmpid caid2:provider2:ecmpid2
+- Map (M:) caid:oldprovider:sid caid2:newprovider:sid2
+- Hinzufügen (A:) ns:sid:ecmpid:caid:provider:
+Roter Button - Abbrechen
+Grüner Button - Hinzufügen - fügt die eingegebene Zeile zu oscam.dvbapi hinzu
+Gelber Button - Vorschau - öffnet den Bildschirm - oscam.dvbapi Vorschau
+Blauer Button - Zukunft - Linke Taste für zukünftige Funktionen
+
+..:: oscam.dvbapi Vorschau ::..
+- Zeigt die oscam.dvbapi-Datei an
+Rote Taste - Beenden
+Grüne Taste - Speichern
+Blaue Taste - Löschen - Löscht eine Zeile aus oscam.dvbapi
+
+..:: oscam.server Vorschau ::..
+- Zeigt den Inhalt der oscam.server-Datei an
+Rote Taste - Beenden
+Grüne Taste - Speichern
+Gelbe Taste - Reader hinzufügen - Öffnet den Bildschirm - Reader zu oscam.server hinzufügen
+Blaue Taste - Löschen - Öffnet den Bildschirm - Reader zum Löschen auswählen
+
+..:: Reader zu oscam.server hinzufügen ::..
+- Zeigt die Tabelle der Dateneingaben in oscam.server an
+Rote Taste - Abbrechen
+Grüne Taste - Speichern
+
+..:: Reader zum Löschen auswählen ::..
+- Zeigt den Namen eines oder mehrerer Reader an
+Die Auswahl mit Löschen löscht alle Zeilen des ausgewählten Readers.
+Der gesamte Reader wird gelöscht.
+Rote Schaltfläche – Löschen
+Grüne Schaltfläche – Speichern
+
+..:: CiefpSettings ::..
