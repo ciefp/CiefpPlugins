@@ -40,6 +40,8 @@ https://i.postimg.cc/C1vMWPXn/ciefpiptvbouquets-4.jpg
 https://i.postimg.cc/3xMr5DS1/ciefpiptvbouquets-5.jpg
 https://i.postimg.cc/yNj7ZpVp/ciefpiptvbouquets-6.jpg
 https://i.postimg.cc/ZKNZc5bd/ciefpiptvbouquets-7.jpg
+https://i.postimg.cc/4d2Yw4Rr/ciefpiptvbouquets-8.jpg
+https://i.postimg.cc/MTHTckft/ciefpiptvbouquets-9.jpg
 
 CiefpMojTvEPG:
 https://i.postimg.cc/dQbDvXDG/ciefpmojtvepg-1.jpg
@@ -53,6 +55,7 @@ https://i.postimg.cc/SsJNp08F/ciefpplugins-3.jpg
 https://i.postimg.cc/nrpRDx1N/ciefpplugins-4.jpg
 https://i.postimg.cc/Twkt6y34/ciefpplugins-5.jpg
 https://i.postimg.cc/63QhY9fL/ciefpplugins-6.jpg
+https://i.postimg.cc/VvfG8RJx/ciefpplugins-7.jpg
 
 CiefpSatellitesXmlEditor:
 https://i.postimg.cc/76DMBVT2/ciefpsatellitesxmleditor-1.jpg
@@ -76,15 +79,18 @@ https://i.postimg.cc/1XYDqg6f/ciefpselectsatellite-2.jpg
 
 CiefpSettingsDownloader:
 https://i.postimg.cc/sDdt4FT6/ciefpsettingsdownloader-1.jpg
+https://i.postimg.cc/mZMPGjbz/ciefpsettingsdownloader-2.jpg
 
 CiefpSettingsMotor:
 https://i.postimg.cc/NMtHxjrG/ciefpsettingsmotor-1.jpg
+https://i.postimg.cc/hGhst6j1/ciefpsettingsmotor-2.jpg
 
 CiefpSettingsPanel:
 https://i.postimg.cc/W1rzfPVd/ciefpsettingspanel-1.jpg
 https://i.postimg.cc/g26sSrr3/ciefpsettingspanel-2.jpg
 https://i.postimg.cc/85sj4fzS/ciefpsettingspanel-3.jpg
 https://i.postimg.cc/Dw2L9gvQ/ciefpsettingspanel-4.jpg
+https://i.postimg.cc/mZz1dRzs/ciefpsettingspanel-5.jpg
 
 CiefpStreamrelayPy2:
 https://i.postimg.cc/sDng29P4/ciefpstreamrelaypy2-1.jpg
