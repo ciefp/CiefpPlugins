@@ -1,0 +1,46 @@
+..:: CiefpSatelliteAnalyzer ::..
+
+CiefpSatelliteAnalyzer ist ein Plugin für die Enigma2-Plattform, das detaillierte Informationen zum aktuellen Fernsehsender und Satellitensignal anzeigt.
+Es richtet sich an Nutzer, die umfassende technische Daten zur Sendung, einschließlich Signalparametern und Kanalspezifikationen, in einer benutzerfreundlichen Oberfläche benötigen.
+
+Was im Plugin-Bildschirm angezeigt werden kann:
+
+### Grundlegende Informationen (linker Bildschirmbereich): ###
+
+Sendername und -anbieter.
+Satellit (Name und Orbitalposition, z. B. 19,2E).
+Frequenz (in MHz), Polarisation (H/V/L/R), Symbolrate (in kS/s).
+FEC (Vorwärtsfehlerkorrektur),
+Modulation (z. B. QPSK, 8PSK),
+System (DVB-S/S2, DVB-T/T2, DVB-C/C2).
+PLS-Modus und -Code, T2MI PLP-ID und PID (falls vorhanden).
+Video-PID, Audio-PID, PCR-PID, PMT-PID, Teletext-PID.
+Für DVB-T/T2: Bandbreite, Coderate (HP/LP),
+Konstellation, Übertragungsmodus, Schutzintervall, Hierarchie.
+
+### Erweiterte Informationen (Bildschirmmitte): ###
+
+Kodierungsstatus: Liste der CAIDs (z. B. Viaccess, Nagravision) mit aktivem CAID-Flag.
+Signalinformationen:
+Signalstärke (%),
+SNR (in dB),
+BER (Bitfehlerrate),
+AGC (Automatische Verstärkungsregelung).
+SI/TS/ONID:
+SID (Service-ID),
+TSID (Transportstrom-ID),
+ONID (Original-Netzwerk-ID)
+im Hexadezimalformat.
+
+### Signalbalken (unterer Bildschirmrand): ###
+
+SNR-Balken: Zeigt die Signalqualität in Prozent an.
+
+AGC-Balken: Zeigt die Signalstärke in Prozent an.
+
+### Zusätzliche Funktionen: ###
+Zeit: Zeigt die aktuelle Uhrzeit an, die jede Sekunde aktualisiert wird.
+Interaktive Optionen: Zurück-Schaltflächen (rot) zum Beenden und Aktualisieren-Schaltflächen (grün) zum Aktualisieren der Daten.
+Datenaktualisierung: Automatische Aktualisierung der Signalinformationen alle 5 Sekunden.
+
+..:: CiefpSettings ::..

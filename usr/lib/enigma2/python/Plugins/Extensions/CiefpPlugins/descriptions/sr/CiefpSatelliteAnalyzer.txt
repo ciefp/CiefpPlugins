@@ -1,0 +1,48 @@
+
+..:: CiefpSatelliteAnalyzer ::..
+
+CiefpSatelliteAnalyzer je dodatak za Enigma2 platformu koji pruža detaljan prikaz informacija o trenutnom TV kanalu i satelitskom signalu.
+Dizajniran je za korisnike koji žele sveobuhvatne tehničke podatke o emitovanju, uključujući parametre signala i specifikacije kanala, 
+u korisnički prijateljskom interfejsu.
+
+Šta je moguće pratiti na ekranu plugina:
+
+### Osnovne informacije (levi deo ekrana): ###
+
+Naziv kanala i provajdera.
+Satelit (ime i orbitalna pozicija, npr. 19.2E).
+Frekvencija (u MHz), polarizacija (H/V/L/R), simbolna stopa (u kS/s).
+FEC (Forward Error Correction), 
+modulacija (npr. QPSK, 8PSK), 
+sistem (DVB-S/S2, DVB-T/T2, DVB-C/C2).
+PLS mod i kod, T2MI PLP ID i PID (ako su prisutni).
+Video PID, Audio PID, PCR PID, PMT PID, teletekst PID.
+Za DVB-T/T2: širina pojasa, kodna stopa (HP/LP), 
+konstelacija, režim prenosa, zaštitni interval, hijerarhija.
+
+
+### Napredne informacije (srednji deo ekrana): ###
+
+Status kodiranja: Lista CAID-ova (npr. Viaccess, Nagravision) sa oznakom aktivnog CAID-a.
+Informacije o signalu: 
+Jačina signala (%), 
+SNR (u dB), 
+BER (Bit Error Rate), 
+AGC (Automatic Gain Control).
+SI/TS/ONID: 
+SID (Service ID), 
+TSID (Transport Stream ID), 
+ONID (Original Network ID) 
+u heksadecimalnom formatu.
+
+### Trake signala (donji deo ekrana): ###
+
+SNR traka: Prikazuje kvalitet signala u procentima.
+AGC traka: Prikazuje jačinu signala u procentima.
+
+### Dodatne funkcije: ###
+Vreme: Prikaz trenutnog vremena, ažurirano svake sekunde.
+Interaktivne opcije: Dugmad „Nazad“ (crveno) za izlaz i „Ažuriraj“ (zeleno) za osvežavanje podataka.
+Ažuriranje podataka: Automatsko osvežavanje informacija o signalu svakih 5 sekundi.
+
+..:: CiefpSettings ::..

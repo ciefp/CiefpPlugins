@@ -20,7 +20,7 @@ import urllib.request
 import uuid
 
 # Plugin version
-PLUGIN_VERSION = "2.2"  # Updated version for fixes
+PLUGIN_VERSION = "2.3"  # Updated version for fixes
 
 # Setup logging
 LOG_FILE = "/tmp/ciefp_plugin.log"
@@ -98,6 +98,7 @@ PLUGIN_LIST = [
     ("Ciefp IPTV Bouquets", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpIPTVBouquets.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpIPTVBouquets/main/installer.sh -O - | /bin/sh", "CiefpIPTVBouquets"),
     ("Ciefp Bouquet Updater", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpBouquetUpdater.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpBouquetUpdater/main/installer.sh -O - | /bin/sh", "CiefpBouquetUpdater"),
     ("CiefpOscamEditor", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpOscamEditor.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpOscamEditor/main/installer.sh -O - | /bin/sh", "CiefpOscamEditor"),
+    ("CiefpSatelliteAnalyzer", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpSatelliteAnalyzer.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSatelliteAnalyzer/main/installer.sh -O - | /bin/sh", "CiefpSatelliteAnalyzer"),
     ("Ciefp Whitelist Streamrelay", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpWhitelistStreamrelay.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpWhitelistStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpWhitelistStreamrelay"),
     ("Ciefp Streamrelay py2", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpStreamrelayPy2.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsStreamrelayPY2/main/installer.sh -O - | /bin/sh", "CiefpStreamrelayPy2"),
     ("Ciefp Streamrelay py3", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpStreamrelayPy3.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpStreamrelayPy3"),

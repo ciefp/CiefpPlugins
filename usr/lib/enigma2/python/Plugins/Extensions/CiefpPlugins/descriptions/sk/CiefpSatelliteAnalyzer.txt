@@ -1,0 +1,47 @@
+..:: CiefpSatelliteAnalyzer ::..
+
+CiefpSatelliteAnalyzer je plugin pre platformu Enigma2, ktorý poskytuje podrobné zobrazenie informácií o aktuálnom televíznom kanáli a satelitnom signáli.
+Je určený pre používateľov, ktorí chcú komplexné technické údaje o vysielaní vrátane parametrov signálu a špecifikácií kanálov v užívateľsky prívetivom rozhraní.
+
+Čo je možné sledovať na obrazovke pluginu:
+
+### Základné informácie (ľavá časť obrazovky): ###
+
+Názov kanála a poskytovateľ.
+Satelit (názov a orbitálna pozícia, napr. 19,2E).
+Frekvencia (v MHz), polarizácia (H/V/L/R), symbolová rýchlosť (v kS/s).
+FEC (Forward Error Correction),
+modulácia (napr. QPSK, 8PSK),
+systém (DVB-S/S2, DVB-T/T2, DVB-C/C2).
+Režim a kód PLS, T2MI PLP ID a PID (ak je k dispozícii).
+Video PID, Audio PID, PCR PID, PMT PID, Teletext PID.
+Pre DVB-T/T2: Šírka pásma, Kódová rýchlosť (HP/LP),
+Konštelácia, Režim prenosu, Ochranný interval, Hierarchia.
+
+### Rozšírené informácie (stred obrazovky): ###
+
+Stav kódovania: Zoznam CAID (napr. Viaccess, Nagravision) s aktívnym príznakom CAID.
+Informácie o signáli:
+Sila signálu (%),
+SNR (v dB),
+BER (bitová chybovosť),
+AGC (automatické riadenie zisku).
+
+SI/TS/ONID:
+SID (ID služby),
+TSID (ID transportného streamu),
+ONID (ID pôvodnej siete)
+v hexadecimálnom formáte.
+
+### Signálne čiary (dolná časť obrazovky): ###
+
+SNR čiara: Zobrazuje kvalitu signálu v percentách.
+
+AGC čiara: Zobrazuje silu signálu v percentách.
+
+### Ďalšie funkcie: ###
+Čas: Zobrazuje aktuálny čas, aktualizuje sa každú sekundu.
+Interaktívne možnosti: Tlačidlo Späť (červené) na ukončenie a tlačidlo Obnoviť (zelené) na obnovenie údajov.
+Aktualizácia údajov: Automaticky obnovuje informácie o signáli každých 5 sekúnd.
+
+..:: CiefpSettings ::..
