@@ -1,0 +1,18 @@
+..:: WebCamE2PrenjSF ::..
+
+Podpora py2 a py3
+WebCamE2PrenjSF je jednoduchý plugin Enigma2, ktorý umožňuje rýchle stiahnutie
+a inštaláciu najnovšieho používateľského balíka s webkamerami priamo z repozitára GitHub.
+
+- Automaticky kontroluje verziu balíka a stiahne najnovšiu, ak existuje novšia ako nainštalovaná.
+
+- Nainštalovaný balík je uložený v /etc/enigma2/ a registrovaný v bouquets.tv.
+
+- Po inštalácii ponúka možnosť automatického opätovného načítania zoznamu kanálov.
+- Je veľmi jednoduchý na používanie – spustite plugin a stlačte OK.
+
+Plugin je určený pre všetkých, ktorí chcú mať vždy aktualizovaný zoznam webkamier
+na svojom prijímači Enigma2 bez manuálneho kopírovania súborov.
+Plugin bol vytvorený spoločným úsilím Prenj a Ciefp Satellite Forum (SF)
+
+..:: CiefpSettings ::..

@@ -1,0 +1,17 @@
+..:: WebCamE2PrenjSF ::..
+
+py2- und py3-Unterstützung
+WebCamE2PrenjSF ist ein einfaches Enigma2-Plugin, das den schnellen Download
+und die Installation des neuesten Benutzer-Bouquets mit Webcams direkt aus dem GitHub-Repository ermöglicht.
+
+– Überprüft automatisch die Bouquet-Version und lädt die neueste herunter, falls eine neuere als die installierte vorhanden ist.
+
+– Das installierte Bouquet wird in /etc/enigma2/ gespeichert und in bouquets.tv registriert.
+
+– Nach der Installation bietet es die Möglichkeit, die Kanalliste automatisch neu zu laden.
+– Die Bedienung ist kinderleicht: Starten Sie das Plugin und drücken Sie OK.
+
+Das Plugin ist für alle gedacht, die stets eine aktuelle Webcam-Liste auf ihrem Enigma2-Receiver haben möchten, ohne Dateien manuell kopieren zu müssen.
+Das Plugin wurde in Zusammenarbeit von Prenj und dem Ciefp Satellite Forum (SF) entwickelt.
+
+..:: CiefpSettings ::..
