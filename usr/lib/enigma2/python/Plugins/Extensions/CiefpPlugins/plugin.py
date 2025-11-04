@@ -20,41 +20,41 @@ import urllib.request
 import uuid
 
 # Plugin version
-PLUGIN_VERSION = "2.4"  # Updated version for fixes
+PLUGIN_VERSION = "2.5" 
 
 # Setup logging
 LOG_FILE = "/tmp/ciefp_plugin.log"
 FALLBACK_LOG_FILE = "/tmp/ciefp_plugin_fallback.log"
 
 def setup_logging():
-    logger = logging.getLogger(__name__)
-    logger.setLevel(logging.DEBUG)
+    logger = logging.getLogger("CiefpPlugins")
+    logger.propagate = False
+    if logger.handlers:
+        logger.handlers.clear()
+
+    logger.setLevel(logging.INFO)  # <--- samo INFO i više (nema DEBUG)
+
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    
-    # Clear any existing handlers
-    logger.handlers = []
-    
-    # Try primary log file
+
+    # Log fajl
     try:
-        file_handler = logging.FileHandler(LOG_FILE, mode='a')
-        file_handler.setFormatter(formatter)
-        logger.addHandler(file_handler)
+        handler = logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
     except Exception as e:
-        # Fallback to secondary log file
         try:
-            fallback_handler = logging.FileHandler(FALLBACK_LOG_FILE, mode='a')
-            fallback_handler.setFormatter(formatter)
-            logger.addHandler(fallback_handler)
-            logger.error(f"Failed to set up primary log file {LOG_FILE}: {str(e)}. Using fallback {FALLBACK_LOG_FILE}")
-        except Exception as e2:
-            logger.error(f"Failed to set up fallback log file {FALLBACK_LOG_FILE}: {str(e2)}")
-    
-    # Add stream handler for console output
-    stream_handler = logging.StreamHandler()
-    stream_handler.setFormatter(formatter)
-    logger.addHandler(stream_handler)
-    
-    # Test log message
+            fallback = logging.FileHandler(FALLBACK_LOG_FILE, mode='a', encoding='utf-8')
+            fallback.setFormatter(formatter)
+            logger.addHandler(fallback)
+            logger.error(f"Primary log failed, using fallback: {str(e)}")
+        except:
+            pass  # tiho pada ako ni fallback ne radi
+
+    # Opcionalno: konzola (ako ti treba za debug preko telneta)
+    stream = logging.StreamHandler()
+    stream.setFormatter(formatter)
+    logger.addHandler(stream)
+
     logger.info("Logging initialized for CiefpPlugins")
     return logger
 
@@ -99,6 +99,7 @@ PLUGIN_LIST = [
     ("Ciefp Bouquet Updater", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpBouquetUpdater.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpBouquetUpdater/main/installer.sh -O - | /bin/sh", "CiefpBouquetUpdater"),
     ("CiefpOscamEditor", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpOscamEditor.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpOscamEditor/main/installer.sh -O - | /bin/sh", "CiefpOscamEditor"),
     ("CiefpSatelliteAnalyzer", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpSatelliteAnalyzer.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSatelliteAnalyzer/main/installer.sh -O - | /bin/sh", "CiefpSatelliteAnalyzer"),
+    ("CiefpOpenDirectories", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpOpenDirectories.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpOpenDirectories/main/installer.sh -O - | /bin/sh", "CiefpOpenDirectories"),
     ("Ciefp Whitelist Streamrelay", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpWhitelistStreamrelay.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpWhitelistStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpWhitelistStreamrelay"),
     ("Ciefp Streamrelay py2", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpStreamrelayPy2.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsStreamrelayPY2/main/installer.sh -O - | /bin/sh", "CiefpStreamrelayPy2"),
     ("Ciefp Streamrelay py3", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpStreamrelayPy3.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpStreamrelayPy3"),
@@ -108,51 +109,27 @@ PLUGIN_LIST = [
     ("Ciefp Plugins", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpPlugins.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpPlugins/main/installer.sh -O - | /bin/sh", "CiefpPlugins"),
 ]
 
-# Load pictures.txt for image URLs
 def load_pictures_map():
     pictures_map = {}
-    found_file = False
     for path in PICTURES_FILE_PATHS:
-        logger.info(f"Checking for pictures.txt at {path}")
-        try:
-            # Log directory contents
-            dir_path = os.path.dirname(path)
-            if os.path.exists(dir_path):
-                dir_contents = os.listdir(dir_path)
-                logger.debug(f"Contents of {dir_path}: {dir_contents}")
-            else:
-                logger.warning(f"Directory does not exist: {dir_path}")
-            
-            if os.path.exists(path):
-                found_file = True
-                logger.info(f"Found pictures.txt at {path}")
-                try:
-                    with open(path, "r", encoding="utf-8") as f:
-                        content = f.read()
-                        logger.debug(f"pictures.txt content: {content}")
-                        current_plugin = None
-                        for line in content.splitlines():
-                            line = line.strip()
-                            if not line:
-                                continue
-                            if line.endswith(":"):
-                                current_plugin = line[:-1].strip()
-                                pictures_map[current_plugin.lower()] = []
-                                logger.debug(f"Found plugin entry: {current_plugin}")
-                            elif current_plugin and line.startswith("https://"):
-                                pictures_map[current_plugin.lower()].append(line)
-                                logger.debug(f"Added image URL for {current_plugin}: {line}")
-                    logger.info(f"Successfully loaded pictures map from {path}: {pictures_map}")
-                    break
-                except Exception as e:
-                    logger.error(f"Error parsing pictures.txt at {path}: {str(e)}")
-            else:
-                logger.warning(f"pictures.txt not found at {path}")
-        except Exception as e:
-            logger.error(f"Error accessing {path}: {str(e)}")
-    
-    if not found_file:
-        logger.error(f"pictures.txt not found in any of: {PICTURES_FILE_PATHS}")
+        if os.path.exists(path):
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    current_plugin = None
+                    for line in f.read().splitlines():
+                        line = line.strip()
+                        if not line:
+                            continue
+                        if line.endswith(":"):
+                            current_plugin = line[:-1].strip().lower()
+                            pictures_map[current_plugin] = []
+                        elif current_plugin and line.startswith("https://"):
+                            pictures_map[current_plugin].append(line)
+                    logger.info(f"Loaded images for {len(pictures_map)} plugins from pictures.txt")
+                    return pictures_map
+            except Exception as e:
+                logger.error(f"Error reading pictures.txt at {path}: {str(e)}")
+    logger.warning("pictures.txt not found in any expected location.")
     return pictures_map
 
 PICTURES_MAP = load_pictures_map()
@@ -225,42 +202,37 @@ class ImageViewerScreen(Screen):
         }, -2)
 
         self.onLayoutFinish.append(self.showImage)
-
+        
     def download_image(self, url):
         temp_file = f"/tmp/ciefp_image_{uuid.uuid4().hex}.jpg"
-        logger.debug(f"Attempting to download image: {url} to {temp_file}")
         try:
             urllib.request.urlretrieve(url, temp_file)
             if os.path.exists(temp_file):
                 self.temp_files.append(temp_file)
                 logger.debug(f"Downloaded image to {temp_file}")
                 return temp_file
-            else:
-                logger.error(f"Failed to download image: {url}")
-                return None
         except Exception as e:
             logger.error(f"Error downloading image {url}: {str(e)}")
             return None
 
     def showImage(self):
-        if self.image_urls:
-            image_url = self.image_urls[self.current_index]
-            temp_file = self.download_image(image_url)
-            if temp_file:
-                pixmap = LoadPixmap(temp_file)
-                if pixmap:
-                    self["image"].instance.setPixmap(pixmap)
-                    self["image_label"].setText(f"Image {self.current_index + 1}/{len(self.image_urls)}: {os.path.basename(image_url)}")
-                    logger.debug(f"Showing image: {image_url}")
-                else:
-                    self["image_label"].setText(f"Error loading image: {os.path.basename(image_url)}")
-                    logger.error(f"Failed to load pixmap for: {temp_file}")
-            else:
-                self["image_label"].setText(f"Error downloading image: {os.path.basename(image_url)}")
-                logger.error(f"Failed to download image: {image_url}")
-        else:
+        if not self.image_urls:
             self["image_label"].setText(f"No images available for {self.plugin_name}")
-            logger.debug(f"No images available for {self.plugin_name}")
+            return
+
+        image_url = self.image_urls[self.current_index]
+        temp_file = self.download_image(image_url)
+        if temp_file and os.path.exists(temp_file):
+            pixmap = LoadPixmap(temp_file)
+            if pixmap:
+                self["image"].instance.setPixmap(pixmap)
+                self["image_label"].setText(f"Image {self.current_index + 1}/{len(self.image_urls)}")
+            else:
+                self["image_label"].setText("Failed to load image.")
+                logger.error(f"LoadPixmap failed for: {temp_file}")
+        else:
+            self["image_label"].setText("Failed to download image.")
+            logger.error(f"Download failed for: {image_url}")
 
     def nextImage(self):
         if self.image_urls:

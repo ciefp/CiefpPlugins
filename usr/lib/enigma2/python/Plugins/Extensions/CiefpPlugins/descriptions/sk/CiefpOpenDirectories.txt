@@ -1,0 +1,34 @@
+..:: CiefpOpenDirectories ::..
+
+je plugin pre Enigma2 na prehliadanie otvorených adresárov (Open Directories) na webe.
+
+### Umožňuje: ####
+Načítanie URL adries zo súboru opendirectories.txt.
+Navigáciu v priečinkoch a výber mediálnych súborov (video: MP4, MKV, AVI, TS; audio: MP3, FLAC).
+Vytváranie playlistov M3U pre prehrávač médií.
+Generovanie používateľských balíčkov Enigma2 so správnymi typmi SERVICE (4097:0:1 pre video, 4097:0:2 pre audio s rádiovým plagátom).
+Podpora HTTPS/HTTP, ochrana pred časovým limitom a automatické opätovné načítanie balíčkov.
+
+Ideálne na rýchle vytváranie IPTV mixov z obsahu otvoreného adresára. Verzia 1.0 – jednoduchá, rýchla a spoľahlivá!
+
+### Ako používať ###
+- Spustite plugin, vyberte adresu
+- Zelené tlačidlo alebo OK navigácia v priečinkoch
+- navigácia hore a dole pomocou šípok
+- výber súboru pomocou OK
+- žlté tlačidlo vytvorenie súboru m3u alebo userbouquet
+- modré tlačidlo výber všetkých súborov z priečinka
+
+Z jednej adresy je možné zlúčiť viacero priečinkov
+do jedného finálneho súboru m3u alebo userbouquet
+po dokončení pridávania súborov
+žlté tlačidlo na vytvorenie súboru m3u alebo userbouquet
+kliknutím na žlté tlačidlo sa zobrazí virtuálna klávesnica
+tu máte možnosť zmeniť názov alebo
+ak chcete ponechať vygenerovaný názov súboru
+kliknutím na zelené tlačidlo sa vytvorí vybraný súbor
+
+súbory m3u sa ukladajú do /tmp/CiefpOpenDirectories
+userbuket sa inštaluje do etc/enigma2, nie je potrebný reštart
+
+..:: CiefpSettings ::..

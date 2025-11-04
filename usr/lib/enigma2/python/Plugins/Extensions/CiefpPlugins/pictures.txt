@@ -56,6 +56,9 @@ https://i.postimg.cc/nrpRDx1N/ciefpplugins-4.jpg
 https://i.postimg.cc/Twkt6y34/ciefpplugins-5.jpg
 https://i.postimg.cc/63QhY9fL/ciefpplugins-6.jpg
 https://i.postimg.cc/VvfG8RJx/ciefpplugins-7.jpg
+https://i.postimg.cc/7YvLpYj9/ciefpplugins-8.jpg
+https://i.postimg.cc/W4fNS2M3/ciefpplugins-9.jpg
+https://i.postimg.cc/wTd6w4s2/ciefpplugins-10.jpg
 
 CiefpSatellitesXmlEditor:
 https://i.postimg.cc/76DMBVT2/ciefpsatellitesxmleditor-1.jpg
@@ -167,6 +170,13 @@ https://i.postimg.cc/T2Zn70Np/ciefpsatelliteanalyzer-12.jpg
 https://i.postimg.cc/nc49dJQP/ciefpsatelliteanalyzer-13.jpg
 https://i.postimg.cc/mrDc21pv/ciefpsatelliteanalyzer-14.jpg
 https://i.postimg.cc/8PmsRm28/ciefpsatelliteanalyzer-15.jpg
+
+CiefpOpenDirectories:
+https://i.postimg.cc/D0nqgdQz/ciefpopendirectories-1.jpg
+https://i.postimg.cc/mgt78r9n/ciefpopendirectories-2.jpg
+https://i.postimg.cc/PrFwpk7X/ciefpopendirectories-3.jpg
+https://i.postimg.cc/PfSL9jTW/ciefpopendirectories-4.jpg
+https://i.postimg.cc/ZRVqG8tN/ciefpopendirectories-5.jpg
 
 WebCamE2PrenjSF:
 https://i.postimg.cc/X7wzNpT7/webcamprenjsf-1.jpg

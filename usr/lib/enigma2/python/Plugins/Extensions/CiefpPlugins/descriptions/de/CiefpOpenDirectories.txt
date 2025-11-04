@@ -1,0 +1,39 @@
+..:: CiefpOpenDirectories ::..
+
+ist ein Enigma2-Plugin zum Durchsuchen offener Verzeichnisse (Open Directories) im Web.
+
+### Funktionen: ####
+Laden von URLs aus der Datei opendirectories.txt.
+Ordnernavigation und Auswahl von Mediendateien (Video: MP4, MKV, AVI, TS; Audio: MP3, FLAC).
+Erstellen von M3U-Playlists für den Media Player.
+Generieren von Enigma2-Benutzer-Bouquets mit den korrekten Diensttypen (4097:0:1 für Video, 4097:0:2 für Audio mit Radioposter).
+HTTPS/HTTP-Unterstützung, Timeout-Schutz und automatisches Neuladen von Bouquets.
+
+Ideal zum schnellen Erstellen von IPTV-Mixen aus Open-Directories-Inhalten. Version 1.0 – einfach, schnell und zuverlässig!
+
+### Verwendung ###
+- Plugin starten, Adresse auswählen
+
+- Grüne Schaltfläche oder OK: Navigation durch Ordner
+
+- Navigation nach oben und unten mit den Pfeiltasten
+
+- Datei mit OK auswählen
+
+- Gelbe Schaltfläche: Erstellen einer m3u- oder Benutzerbouquet-Datei
+
+- Blaue Schaltfläche: Auswählen aller Dateien eines Ordners
+
+Mehrere Ordner einer Adresse können zu einer m3u- oder Benutzerbouquet-Datei kombiniert werden
+
+Nachdem Sie alle Dateien hinzugefügt haben,
+klicken Sie auf die gelbe Schaltfläche, um eine m3u- oder Benutzerbouquet-Datei zu erstellen
+Durch Klicken auf die gelbe Schaltfläche erscheint eine virtuelle Tastatur
+Hier können Sie den Namen ändern oder
+den generierten Dateinamen beibehalten
+durch Klicken auf die grüne Schaltfläche wird die ausgewählte Datei erstellt
+
+m3u-Dateien werden in /tmp/CiefpOpenDirectories gespeichert
+Benutzerbouquets werden in etc/enigma2 installiert. Ein Neustart ist nicht erforderlich
+
+..:: CiefpSettings ::..
