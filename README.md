@@ -1,6 +1,8 @@
 
 # Ciefp Plugins Panel
 
+![Ciefp Plugins Panel](https://github.com/ciefp/CiefpPlugins/blob/main/preview.jpg)
+
 **Version:** `2.5`  
 **Author:** [@ciefp](https://github.com/ciefp)  
 **License:** Free for personal use  
