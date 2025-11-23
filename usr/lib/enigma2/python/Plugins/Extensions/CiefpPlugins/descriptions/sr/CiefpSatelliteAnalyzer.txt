@@ -1,48 +1,177 @@
 
+**Ciefp Satellite Analyzer – Release Notes v1.5**  
+*(nadogradnja sa GitHub verzije 1.4)*
+
+Nove funkcije i najvažnije izmene:
+
+1. Potpuna Abertis podrška  
+   - Poseban ekran za Abertis analizu  
+   - Direktna analiza preko 37 najčešćih Abertis PID-ova  
+   - Automatsko kreiranje/ažuriranje buketa userbouquet.buket_abertis.tv  
+   - Brisanje i pregled Abertis logova
+
+2. Novi konfigurator za astra.conf (bez ručnog editovanja)  
+   - Dodaj T2MI decap blok – sve preko grafičkog interfejsa (Green → Astra.conf → Add T2MI decap block)  
+   - Pregled i editovanje celog astra.conf fajla u pluginu  
+   - Kreiranje blank astra.conf fajla jednim klikom  
+   - Automatska zamena localhost → 127.0.0.1 u URL-ovima
+
+3. Pametno čuvanje logova  
+   - T2MI logovi: t2mi_Provider_Satelit_Datum_PID.log  
+   - Abertis logovi: abertis_Provider_Satelit_Datum_PID.log  
+   - Automatsko dodavanje broja ako fajl već postoji
+
+4. Poboljšanja buketa  
+   - Kreira se userbouquet.buket_t2mi.tv i userbouquet.buket_abertis.tv  
+   - Automatsko dodavanje lepog markera sa providerom, satelitom i PID-om  
+   - Ispravno enkodovanje URL-ova za Abertis  
+   - Automatski reload buketa nakon kreiranja
+
+5. Bolje čišćenje i stabilnost  
+   - Sigurno zaustavljanje astra procesa (žuto dugme ili izlaz)  
+   - Restart streamrelay-a i astra-sm servisa posle analize  
+   - Reset tunera i oslobađanje resursa
+
+6. Sitna poboljšanja  
+   - Prikaz trenutnog sata u glavnom ekranu  
+   - Bolji prikaz PLS Mode/Code i T2MI info  
+   - Reboot sistema sa potvrdom posle čuvanja astra.conf  
+   - Ispravci bagova iz verzije 1.4
+
+Plugin je sada znatno lakši za korišćenje – posebno za sve koji koriste T2MI i Abertis feedove na Astra-SM.
+
+Hvala svima na podršci!  
+Ciefp – novembar 2025.
+..:: CiefpSettings ::..
+
 ..:: CiefpSatelliteAnalyzer ::..
 
-CiefpSatelliteAnalyzer je dodatak za Enigma2 platformu koji pruža detaljan prikaz informacija o trenutnom TV kanalu i satelitskom signalu.
-Dizajniran je za korisnike koji žele sveobuhvatne tehničke podatke o emitovanju, uključujući parametre signala i specifikacije kanala, 
-u korisnički prijateljskom interfejsu.
+CiefpSatelliteAnalyzer je Enigma2 plugin dizajniran za analizu satelitskih signala i obradu T2MI (T2-MI) i Abertis streamova na satelitskim prijemnicima. 
+Ovaj plugin pruža detaljne informacije o signalu, omogućava analizu streamova putem alata astra-sm, 
+te kreira i upravlja buketima (listama kanala) na osnovu rezultata analize. Namijenjen je naprednim korisnicima koji žele detaljan uvid u tehničke parametre 
+satelitskih usluga i automatizaciju upravljanja kanalima.
 
-Šta je moguće pratiti na ekranu plugina:
+---- Glavne funkcije plugina: ----
 
-### Osnovne informacije (levi deo ekrana): ###
+### Analiza satelitskih signala: ###
+Prikazuje osnovne informacije o trenutnom servisu (kanalu): naziv, provajder, satelit, frekvencija, polarizacija, simbol rate, FEC, modulacija, itd.
+Prikazuje napredne informacije: enkripcija (CAID), SNR, AGC, BER, SID, TSID, ONID, te referenca servisa.
+Vizualizira SNR i AGC vrijednosti kroz progresne trake u realnom vremenu.
 
-Naziv kanala i provajdera.
-Satelit (ime i orbitalna pozicija, npr. 19.2E).
-Frekvencija (u MHz), polarizacija (H/V/L/R), simbolna stopa (u kS/s).
-FEC (Forward Error Correction), 
-modulacija (npr. QPSK, 8PSK), 
-sistem (DVB-S/S2, DVB-T/T2, DVB-C/C2).
-PLS mod i kod, T2MI PLP ID i PID (ako su prisutni).
-Video PID, Audio PID, PCR PID, PMT PID, teletekst PID.
-Za DVB-T/T2: širina pojasa, kodna stopa (HP/LP), 
-konstelacija, režim prenosa, zaštitni interval, hijerarhija.
+#### Astra-SM analiza (T2MI): ###
+Omogućava pokretanje analize T2MI streamova koristeći astra-sm alat.
+Podržava različite T2MI PID-ove (npr. 4095, 4096, 4097, itd.) definirane u opcijama.
+Prikazuje rezultate analize u zasebnom ekranu (AstraAnalyzeScreen) i omogućava spremanje rezultata u log datoteku (npr. /tmp/CiefpSatelliteAnalyzer/astra_analyze_*.log).
+
+### Abertis analiza: ###
+Slično kao T2MI analiza, ali specifično za Abertis streamove.
+Podržava širok raspon PID-ova (npr. 301, 702, 8000, itd.).
+Rezultati se prikazuju u zasebnom ekranu (AbertisAnalyzeScreen) i mogu se spremiti u log datoteku.
+
+### Kreiranje buketa: ###
+Omogućava kreiranje ili ažuriranje buketa (TV ili radio) na osnovu rezultata analize iz log datoteka.
+Kanali se grupiraju po PID-ovima, s podrškom za automatsko razlikovanje TV i radio kanala.
+Buketi se spremaju u /etc/enigma2/userbouquet.buket_t2mi.tv ili /etc/enigma2/userbouquet.buket_abertis.tv i automatski se dodaju u bouquets.tv za integraciju s Enigma2 sistemom.
+
+### Upravljanje resursima: ###
+Automatski upravlja tunerom i stream resursima (npr. zaustavljanje i ponovno pokretanje streamrelay i astra-sm servisa).
+Osigurava pravilno čišćenje nakon analize kako bi se izbjegli konflikti s drugim procesima.
+
+### Korisnički interfejs: ###
+Intuitivan GUI s tri ekrana: glavni (SatelliteAnalyzer), T2MI analiza (AstraAnalyzeScreen) i Abertis analiza (AbertisAnalyzeScreen).
+Podržava navigaciju (gore/dolje), zatvaranje, spremanje rezultata i prekid analize putem obojenih tipki (crvena, zelena, žuta, plava).
+
+### Podrška za napredne funkcionalnosti: ###
+Parsira astra.conf za ekstrakciju T2MI i Abertis konfiguracija.
+Prilagođava imena satelita iz /etc/tuxbox/satellites.xml i formatira orbitalne pozicije (npr. 19.2E, 13.0W).
+Podržava različite vrste enkripcije (Viaccess, Nagravision, Irdeto, itd.) i prikazuje detalje o CAID-ovima.
+
+### Primjena: ###
+Plugin je posebno koristan za korisnike koji žele detaljno analizirati satelitske signale, posebno T2MI i Abertis streamove, 
+te automatizirati proces kreiranja buketa za specifične satelitske usluge (npr. španski Abertis DTT kanali). 
+Pogodan je za tehnički orijentirane korisnike i entuzijaste koji koriste Enigma2 prijemnike.
+
+### Napomena: ###
+Zahtijeva instaliran astra-sm alat (/usr/bin/astra) i ispravnu konfiguraciju satelitskog prijemnika.
+Log datoteke se spremaju u /tmp/CiefpSatelliteAnalyzer/ za daljnju obradu.
+Plugin je optimiziran za rad na Enigma2 platformi i koristi specifične Enigma2 komponente (eDVBDB, eConsoleAppContainer, itd.).
+
+Kako se koristi :
+iz liste kanala pokrenete data kanal 
+astra 23,5E
+service_krrt
+Service 801
+eutelsat 16.0E
+11401V SID 0xfa1
+astra 4a 4.8E
+MX
+Service 801
+eutelsat 5w
+12606v sid 0x320
+pratite u markeru piše koji je pid treba izabrati 4095,4096,4097
+odaberete pid kliknete na žuto dugme 
+pokreće se proces analize 
+analiza traje oko 20 sekundi zavisi od risivera 
+ovde možete da sačuvate pretragu u tmp folder
+potrebno je zaustaviti proces analize
+na žuto dugme se zaustavlja proces analize
+
+### Abertis analiza ####
+Omogućava detaljnu analizu streama pomoću astra-sm alata.
+Opcije uključuju različite Abertis PID-ove (npr. 2025, 801, 701, 8006...).
+Rezultati se prikazuju u zasebnom prozoru (AbertisAnalyzeScreen), 
+sa mogućnošću čuvanja u datoteku (/tmp/CiefpSatelliteAnalyzer/astra_analyze_[datum]_[pid].log).
+
+Kako se koristi:
+Iz liste kanala izaberete neki abertis pid 
+primer Abertis PID 8006
+kliknete na plavo dugme Abertis scan
+Ispis loga se pojavljuje na Ciefp Abertis Analyzer ekranu
+analiza može da traje i do 60 sekundi zavisi od pida 
+pretragu možete sačuvati u (/tmp/CiefpSatelliteAnalyzer/astra_analyze_[datum]_[pid].log)
+potrebno je zaustaviti proces analize
+na žuto dugme se zaustavlja proces analize
+
+Uputstvo za korišćenje
+
+Prebacite se na željeni satelit i pokrene data kanal ili sid kanal
+
+Pokrenete plugin 
+pritisnete žuto dugme - Astra Analyze
+ostavite ga jedno vreme pratite dešavanja na ekranu 
+možete se kretati strelicama gore dole za bolji pregled
+kada na ekranu izađu INFO SDT: ovaj deo sadrži nazive kanala
+
+kliknete na zeleno dugme - Save to File 
+dugme exit povratak na ekran skeniranja 
+prekinete analizu ovo je jako bitno da se odradi
+
+Prekid analize na žuto dugme - Stop Analiysis 
+( Jako bitno zaustaviti analizu )
+( ako slučajno zaboravite stopirati pokrenete ponovo analizu i stopirate )
+( Samo u slučaju kada zaboravite stopirati analizu restart enigme je potreban )
+( ako se pridržavate pravila restart nije potreban ni u jednom slučaju ) 
+
+Sada kada smo odskenirali i sačuvali reuzultate u log fajl 
+potrebno je napraviti buke
+
+Zeleno dugme - Create Bouquet 
+Otvara se izbor sa spiskom logova 
+izaberete log fajl koji ste skenirali i sačuvali
+astra_analyze_Dasto_Semtel_16.0E_20250920_pid4095.log
 
 
-### Napredne informacije (srednji deo ekrana): ###
+otvara se novi izbor blocka iz astra.conf fajla 
+Blokovi su deo astra.conf fajla koji sadrže decap i make channel za svaki kanal
+potrebno je izabrati pravi obično nazivi su isti ili slični nazivima data kanala 
+Recimo :
+Dasto Semtel - 11401V T2-MI PLP0 (pid 4095)
+KRRT 23.5E - Service_800 T2-MI PLP0 (pid 4096),Service_801 T2-MI PLP0 (pid 4097)
+KRRT 4.8E - KRRT MX-800 (pid 4096),KRRT MX-801 (pid 4097)
+RAI 5.0W - 12606V SID 0x320 T2-MI PLP0 (pid 4096)
 
-Status kodiranja: Lista CAID-ova (npr. Viaccess, Nagravision) sa oznakom aktivnog CAID-a.
-Informacije o signalu: 
-Jačina signala (%), 
-SNR (u dB), 
-BER (Bit Error Rate), 
-AGC (Automatic Gain Control).
-SI/TS/ONID: 
-SID (Service ID), 
-TSID (Transport Stream ID), 
-ONID (Original Network ID) 
-u heksadecimalnom formatu.
-
-### Trake signala (donji deo ekrana): ###
-
-SNR traka: Prikazuje kvalitet signala u procentima.
-AGC traka: Prikazuje jačinu signala u procentima.
-
-### Dodatne funkcije: ###
-Vreme: Prikaz trenutnog vremena, ažurirano svake sekunde.
-Interaktivne opcije: Dugmad „Nazad“ (crveno) za izlaz i „Ažuriraj“ (zeleno) za osvežavanje podataka.
-Ažuriranje podataka: Automatsko osvežavanje informacija o signalu svakih 5 sekundi.
+kada izaberete blok ceo proces je vrlo brzo gotov
+Ako buket ne postoji u listi,kreira se novi buket a naziv mu je ##( T2MI Channels )##
+Pošto su t2mi kanali na više satelita svako novo kreiranje se samo dopisuje u već postojeći buket.
 
 ..:: CiefpSettings ::..

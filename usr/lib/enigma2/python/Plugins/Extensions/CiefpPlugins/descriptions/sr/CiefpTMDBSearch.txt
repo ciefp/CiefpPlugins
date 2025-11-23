@@ -1,0 +1,63 @@
+
+..:: CiefpTMDBSearch v1.0 ::..
+
+Pretraga filmova i serija preko TMDB-a sa posterima, opisima, glumcima i ocenama – na 14 jezika!
+Potreban je samo besplatan TMDB API ključ (upiše se jednom preko žutog dugmeta).
+
+# OSNOVNE FUNKCIJE #
+Pretraga filmova (GREEN) i serija (YELLOW)
+Prikaz detalja: naslov, godina, trajanje, ocena, žanr, režiser/kreator, glumci, opis
+Preuzimanje postera (omota) sa TMDB-a
+Podrška za više jezika (opis, naslovi)
+Keširanje postera (brži pristup, manje internetskog prometa)
+Ručno postavljanje TMDB API ključa
+
+# INSTALACIJA I POSTAVKA #
+1. API Ključ (OBVEZNO)
+Registruj se na themoviedb.org i nabavi API ključ
+U pluginu pritisni PLAVO → Settings → YELLOW (API Key)
+Unesi svoj API ključ preko virtualne tastature
+
+2.Apiključ se čuva u tmdbapikey.txt 
+Možete upisati ključ u tekst fajl tmdbapikey.txt
+i prebaciti ga u plugin folder 
+prilikom pokretanja plugin će ga očitati.
+
+# KORIŠĆENJE #
+Glavni meni:
+GREEN → Pretraga filmova
+YELLOW → Pretraga serija
+BLUE → Postavke
+RED → Izlaz
+
+Primer pretrage:
+Pritisni GREEN za filmove
+Unesi naziv filma (npr. "Inception")
+Plugin prikazuje:
+Naslov, godinu, trajanje
+Ocenu (npr. 8.3/10 ★)
+Žanr, režisera
+Kratak opis radnje
+Glavne glumce
+Poster (ako je dostupan)
+
+# POSTAVKE (BLUE) #
+API Key (YELLOW) - postavi svoj ključ
+Language (BLUE) - promeni jezik
+Download Posters - uključi/isključi preuzimanje postera
+Clear Cache (MENU) - obriši sve sačuvane postere
+Save (GREEN) - sačuvaj promene
+
+# KEŠIRANJE #
+Posteri se automatski čuvaju u /tmp/CiefpTMDBSearch/
+Štedi internet promet pri ponovnim pretragama
+Možeš isključiti u postavkama ako želiš
+
+# PODRŽANI JEZICI #
+Engleski, Srpski, Hrvatski, Bosanski, Slovački, Nemački, Španski, 
+Francuski, Italijanski, Ruski, Portugalski, Poljski, Turski, Arapski, Kineski.
+
+Testirano i radi savršeno na:
+OpenATV · OpenBH · OpenPLI · Pure2 · Egami · OpenVision
+
+..:: CiefpSettings ::..

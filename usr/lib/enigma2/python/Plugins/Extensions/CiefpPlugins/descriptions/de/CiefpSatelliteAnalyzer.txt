@@ -1,46 +1,180 @@
+
+**Ciefp Satellite Analyzer – Release Notes v1.5**
+*(upgrade to GitHub version 1.4)*
+
+New functions and most important changes:
+
+1. Potpuna Abertis support 
+- Special screen for Abertis analysis 
+- Direct analysis via the 37 most common Abertis PIDs 
+- Automatic creation/update of bouquet userbouquet.buket_abertis.tv 
+- Brisanje i pregled Abertis logova
+
+2. New configurator for astra.conf (without manual editing) 
+- Add T2MI decap block – everything via the graphical interface (Green → Astra.conf → Add T2MI decap block) 
+- Viewing and editing of the entire astra.conf file in the plugin 
+- Creating a blank astra.conf file with one click 
+- Automatic replacement of localhost → 127.0.0.1 in URLs
+
+3. Smart storage of the logo 
+- T2MI logo: t2mi_Provider_Satellit_Datum_PID.log 
+- Abertis log: abertis_Provider_Satelit_Datum_PID.log 
+- Automatic addition of the number as a file already exists
+
+4. Improvement of the bouquet 
+- Userbouquet.buket_t2mi.tv and userbouquet.buket_abertis.tv are being created 
+- Automatic addition of lepog marker with provider, satellite and PID 
+- Ispravno enkodovanje URL for Abertis 
+- Automatic reload of the bouquet after creation
+
+5. Better cleaning and stability 
+- Safe stopping of the astra process (yellow button or exit) 
+- Restart streamrelay and astra-sm service after analysis 
+- Tuner reset and resource release
+
+6. Fine improvements 
+- Displaying the current sat on the main screen 
+- Better display of PLS ​​Mode/Code and T2MI info 
+- Reboot the system with a confirmation after astra.conf 
+- Bug fixes from the version 1.4
+
+The plugin is much easier to use - especially for those who use T2MI and Abertis feeds on Astra-SM.
+
+Thanks everyone for your support!
+Ciefp – November 2025.
+..:: CiefpSettings ::..
+
+
 ..:: CiefpSatelliteAnalyzer ::..
 
-CiefpSatelliteAnalyzer ist ein Plugin für die Enigma2-Plattform, das detaillierte Informationen zum aktuellen Fernsehsender und Satellitensignal anzeigt.
-Es richtet sich an Nutzer, die umfassende technische Daten zur Sendung, einschließlich Signalparametern und Kanalspezifikationen, in einer benutzerfreundlichen Oberfläche benötigen.
+CiefpSatelliteAnalyzer is an Enigma2 plugin designed for satellite signal analysis and processing of T2MI (T2-MI) and Abertis streams on satellite receivers.
+This plugin provides detailed signal information, enables stream analysis via the astra-sm tool,
+and creates and manages bouquets (channel lists) based on the analysis results. It is intended for advanced users who want detailed insight into the technical parameters of
+satellite services and automation of channel management.
 
-Was im Plugin-Bildschirm angezeigt werden kann:
+---- Main plugin functions: ----
 
-### Grundlegende Informationen (linker Bildschirmbereich): ###
+### Satellite signal analysis: ###
+Displays basic information about the current service (channel): name, provider, satellite, frequency, polarization, symbol rate, FEC, modulation, etc.
+Displays advanced information: encryption (CAID), SNR, AGC, BER, SID, TSID, ONID, and service reference.
+Visualizes SNR and AGC values ​​through progress bars in real time.
 
-Sendername und -anbieter.
-Satellit (Name und Orbitalposition, z. B. 19,2E).
-Frequenz (in MHz), Polarisation (H/V/L/R), Symbolrate (in kS/s).
-FEC (Vorwärtsfehlerkorrektur),
-Modulation (z. B. QPSK, 8PSK),
-System (DVB-S/S2, DVB-T/T2, DVB-C/C2).
-PLS-Modus und -Code, T2MI PLP-ID und PID (falls vorhanden).
-Video-PID, Audio-PID, PCR-PID, PMT-PID, Teletext-PID.
-Für DVB-T/T2: Bandbreite, Coderate (HP/LP),
-Konstellation, Übertragungsmodus, Schutzintervall, Hierarchie.
+#### Astra-SM Analysis (T2MI): ###
+Allows you to run analysis of T2MI streams using the astra-sm tool.
+Supports different T2MI PIDs (e.g. 4095, 4096, 4097, etc.) defined in the options.
+Displays the analysis results in a separate screen (AstraAnalyzeScreen) and allows saving the results to a log file (e.g. /tmp/CiefpSatelliteAnalyzer/astra_analyze_*.log).
 
-### Erweiterte Informationen (Bildschirmmitte): ###
+### Abertis Analysis: ###
+Similar to T2MI analysis, but specific to Abertis streams.
+Supports a wide range of PIDs (e.g. 301, 702, 8000, etc.).
+Results are displayed in a separate screen (AbertisAnalyzeScreen) and can be saved to a log file.
 
-Kodierungsstatus: Liste der CAIDs (z. B. Viaccess, Nagravision) mit aktivem CAID-Flag.
-Signalinformationen:
-Signalstärke (%),
-SNR (in dB),
-BER (Bitfehlerrate),
-AGC (Automatische Verstärkungsregelung).
-SI/TS/ONID:
-SID (Service-ID),
-TSID (Transportstrom-ID),
-ONID (Original-Netzwerk-ID)
-im Hexadezimalformat.
+### Bouquet Creation: ###
+Allows you to create or update a bouquet (TV or radio) based on the analysis results from the log files.
+Channels are grouped by PID, with support for automatic TV and radio channel differentiation.
+Bouquets are saved in /etc/enigma2/userbouquet.buket_t2mi.tv or /etc/enigma2/userbouquet.buket_abertis.tv and are automatically added to bouquets.tv for integration with the Enigma2 system.
 
-### Signalbalken (unterer Bildschirmrand): ###
+### Resource Management: ###
+Automatically manages tuner and stream resources (e.g. stopping and restarting streamrelay and astra-sm services).
+Ensures proper cleanup after analysis to avoid conflicts with other processes.
 
-SNR-Balken: Zeigt die Signalqualität in Prozent an.
+### User Interface: ###
+Intuitive GUI with three screens: main (SatelliteAnalyzer), T2MI analysis (AstraAnalyzeScreen) and Abertis analysis (AbertisAnalyzeScreen).
+Supports navigation (up/down), closing, saving results and stopping analysis via colored buttons (red, green, yellow, blue).
 
-AGC-Balken: Zeigt die Signalstärke in Prozent an.
+### Support for advanced features: ###
+Parses astra.conf to extract T2MI and Abertis configurations.
+Adapts satellite names from /etc/tuxbox/satellites.xml and formats orbital positions (e.g. 19.2E, 13.0W).
+Supports different encryption types (Viaccess, Nagravision, Irdeto, etc.) and displays CAID details.
 
-### Zusätzliche Funktionen: ###
-Zeit: Zeigt die aktuelle Uhrzeit an, die jede Sekunde aktualisiert wird.
-Interaktive Optionen: Zurück-Schaltflächen (rot) zum Beenden und Aktualisieren-Schaltflächen (grün) zum Aktualisieren der Daten.
-Datenaktualisierung: Automatische Aktualisierung der Signalinformationen alle 5 Sekunden.
+### Applications: ###
+The plugin is particularly useful for users who want to analyze satellite signals in detail, especially T2MI and Abertis streams,
+and automate the process of creating bouquets for specific satellite services (e.g. Spanish Abertis DTT channels).
+Suitable for technically oriented users and enthusiasts using Enigma2 receivers.
+
+### Note: ###
+Requires the astra-sm tool (/usr/bin/astra) to be installed and the satellite receiver to be properly configured.
+Log files are saved in /tmp/CiefpSatelliteAnalyzer/ for further processing.
+The plugin is optimized to work on the Enigma2 platform and uses specific Enigma2 components (eDVBDB, eConsoleAppContainer, etc.).
+
+
+How to use:
+from the channel list, start the data channel
+astra 23.5E
+service_krrt
+Service 801
+eutelsat 16.0E
+11401V SID 0xfa1
+astra 4a 4.8E
+MX
+Service 801
+eutelsat 5w
+12606v sid 0x320
+follow the marker, it says which pid to choose 4095,4096,4097
+choose the pid, click the yellow button
+the analysis process starts
+the analysis takes about 20 seconds, depending on the receiver
+here you can save the search to the tmp folder
+you need to stop the analysis process
+the yellow button stops the analysis process
+
+### Abertis Analysis ####
+Allows detailed stream analysis using the astra-sm tool.
+Options include different Abertis PIDs (e.g. 2025, 801, 701, 8006...).
+Results are displayed in a separate window (AbertisAnalyzeScreen),
+with the option to save to a file (/tmp/CiefpSatelliteAnalyzer/astra_analyze_[datum]_[pid].log).
+
+How to use:
+Select an abertis pid from the channel list
+example Abertis PID 8006
+click on the blue Abertis scan button
+A printout of the log appears on the Ciefp Abertis Analyzer screen
+the analysis can take up to 60 seconds depending on the pid
+you can save the search in (/tmp/CiefpSatelliteAnalyzer/astra_analyze_[datum]_[pid].log)
+you need to stop the analysis process
+click on the yellow button to stop the analysis process
+
+
+Instructions for use
+
+Switch to the desired satellite and start the data channel or sid channel
+
+Start the plugin
+press the yellow button - Astra Analyze
+leave it for a while and follow the events on the screen
+you can move up and down with the arrows for a better view
+when the INFO SDT appears on the screen: this part contains the channel names
+
+click on the green button - Save to File
+exit button return to the scanning screen
+stop the analysis this is very important to do
+
+Stop the analysis on the yellow button - Stop Analiysis
+(Very important to stop the analysis)
+(if you accidentally forget to stop, start the analysis again and stop)
+(Only in case you forget to stop the analysis, restart the enigma is required)
+(if you follow the rules, restart is not required in any case)
+
+Now that we have scanned and saved the results in the log file
+it is necessary to create a bouquet
+
+Green button - Create Bouquet
+A selection with a list of logs opens
+select the log file you scanned and saved
+astra_analyze_Dasto_Semtel_16.0E_20250920_pid4095.log
+
+
+a new selection of blocks from the astra.conf file opens
+The blocks are part of the astra.conf file that contain the decap and make channel for each channel
+it is necessary to choose the right one, usually the names are the same or similar to the names of the data channels
+Let's say:
+Dasto Semtel - 11401V T2-MI PLP0 (pid 4095)
+KRRT 23.5E - Service_800 T2-MI PLP0 (pid 4096), Service_801 T2-MI PLP0 (pid 4097)
+KRRT 4.8E - KRRT MX-800 (pid 4096),KRRT MX-801 (pid 4097)
+RAI 5.0W - 12606V SID 0x320 T2-MI PLP0 (pid 4096)
+
+when you select a block the whole process is finished very quickly
+If the bouquet does not exist in the list, a new bouquet is created and its name is ##( T2MI Channels )##
+Since t2mi channels are on multiple satellites, each new creation is just added to the already existing bouquet.
 
 ..:: CiefpSettings ::..

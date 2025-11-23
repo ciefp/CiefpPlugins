@@ -1,0 +1,64 @@
+..:: CiefpTMDBSearch v1.0 ::..
+
+Vyhľadávajte filmy a seriály cez TMDB s plagátmi, popismi, hercami a hodnoteniami – v 14 jazykoch!
+
+Všetko, čo potrebujete, je bezplatný kľúč TMDB API (zadajte raz pomocou žltého tlačidla).
+
+# ZÁKLADNÉ FUNKCIE #
+Vyhľadávanie filmov (ZELENÁ) a seriálov (ŽLTÁ)
+Zobraziť podrobnosti: názov, rok, trvanie, hodnotenie, žáner, režisér/tvorca, herci, popis
+Stiahnutie plagátov (obalov) z TMDB
+Podpora viacerých jazykov (popis, názvy)
+Ukladanie plagátov do vyrovnávacej pamäte (rýchlejší prístup, menej internetovej prevádzky)
+Manuálne nastavenie kľúča API TMDB
+
+# INŠTALÁCIA A NASTAVENIE #
+
+1. Kľúč API (POVINNÉ)
+Zaregistrujte sa na themoviedb.org a získajte kľúč API
+V plugine stlačte MODRÉ → Nastavenia → ŽLTÉ (Kľúč API)
+Zadajte svoj kľúč API pomocou virtuálnej klávesnice
+
+2. Kľúč API je uložený v súbore tmdbapikey.txt
+Kľúč môžete zapísať do textového súboru tmdbapikey.txt
+a presunúť ho do priečinka pluginu
+pri spustení ho plugin prečíta.
+
+# POUŽITIE #
+Hlavná ponuka:
+ZELENÁ → Vyhľadávanie filmov
+ŽLTÁ → Vyhľadávanie seriálov
+MODRÁ → Nastavenia
+ČERVENÁ → Ukončiť
+
+Príklad vyhľadávania:
+Stlačte ZELENÉ tlačidlo pre filmy
+Zadajte názov filmu (napr. "Inception")
+Plugin zobrazí:
+Názov, rok, trvanie
+Hodnotenie (napr. 8,3/10 ★)
+Žáner, režisér
+Stručný popis deja
+Hlavní herci
+Plagát (ak je k dispozícii)
+
+# NASTAVENIA (MODRÁ) #
+Kľúč API (ŽLTÁ) - nastavte si kľúč
+Jazyk (MODRÁ) - zmena jazyka
+Stiahnutie plagátov - povolenie/zakázanie sťahovania plagátov
+Vymazať vyrovnávaciu pamäť (MENU) - odstránenie všetkých uložených plagátov
+Uložiť (ZELENÁ) - uloženie zmien
+
+# VYROVNÁVACIA PAMÄŤ #
+Plagáty sa automaticky ukladajú do /tmp/CiefpTMDBSearch/
+Ušetrí internetovú prevádzku pri opätovnom vyhľadávaní
+Ak ​​chcete, môžete to vypnúť v nastaveniach
+
+# PODPOROVANÉ JAZYKY #
+Angličtina, srbčina, chorvátčina, bosniančina, slovenčina, nemčina, španielčina,
+francúzština, taliančina, Ruština, portugalčina, poľština, turečtina, arabčina, čínština.
+
+Testované a funguje perfektne na:
+OpenATV · OpenBH · OpenPLI · Pure2 · Egami · OpenVision
+
+..:: CiefpSettings ::..

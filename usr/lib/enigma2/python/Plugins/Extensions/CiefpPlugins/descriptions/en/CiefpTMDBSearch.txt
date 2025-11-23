@@ -1,0 +1,64 @@
+
+..:: CiefpTMDBSearch v1.0 ::..
+
+Search for movies and series via TMDB with posters, descriptions, actors and ratings – in 14 languages!
+All you need is a free TMDB API key (enter once via the yellow button).
+
+# BASIC FUNCTIONS #
+Search for movies (GREEN) and series (YELLOW)
+Show details: title, year, duration, rating, genre, director/creator, actors, description
+Download posters (covers) from TMDB
+Support for multiple languages ​​(description, titles)
+Caching posters (faster access, less internet traffic)
+Manually set TMDB API key
+
+# INSTALLATION AND SETUP #
+
+1. API Key (MANDATORY)
+Register at themoviedb.org and get an API key
+In the plugin, press BLUE → Settings → YELLOW (API Key)
+Enter your API key via the virtual keyboard
+
+2. The API key is stored in tmdbapikey.txt
+You can write the key in the text file tmdbapikey.txt
+and move it to the plugin folder
+when you start the plugin will read it.
+
+# USAGE #
+Main menu:
+GREEN → Search movies
+YELLOW → Search series
+BLUE → Settings
+RED → Exit
+
+Search example:
+Press GREEN for movies
+Enter movie name (e.g. "Inception")
+The plugin displays:
+Title, year, duration
+Rating (e.g. 8.3/10 ★)
+Genre, director
+Short plot description
+Main actors
+Poster (if available)
+
+# SETTINGS (BLUE) #
+API Key (YELLOW) - set your key
+Language (BLUE) - change language
+Download Posters - enable/disable downloading posters
+Clear Cache (MENU) - delete all saved posters
+Save (GREEN) - save changes
+
+# CACHE #
+Posters are automatically saved in /tmp/CiefpTMDBSearch/
+Saves internet traffic when searching again
+You can disable it in settings if you want
+
+# SUPPORTED LANGUAGES #
+English, Serbian, Croatian, Bosnian, Slovak, German, Spanish,
+French, Italian, Russian, Portuguese, Polish, Turkish, Arabic, Chinese.
+
+Tested and works perfectly on:
+OpenATV · OpenBH · OpenPLI · Pure2 · Egami · OpenVision
+
+..:: CiefpSettings ::..

@@ -1,0 +1,63 @@
+..:: CiefpTMDBSearch v1.0 ::..
+
+Suchen Sie Filme und Serien über TMDB mit Postern, Beschreibungen, Schauspielern und Bewertungen – in 14 Sprachen! Sie benötigen lediglich einen kostenlosen TMDB-API-Schlüssel (einmalig über den gelben Button eingeben).
+
+# GRUNDFUNKTIONEN #
+Filme (GRÜN) und Serien (GELB) suchen
+Details anzeigen: Titel, Jahr, Dauer, Bewertung, Genre, Regisseur/Schöpfer, Schauspieler, Beschreibung
+Poster (Cover) von TMDB herunterladen
+Mehrsprachige Unterstützung (Beschreibung, Titel)
+Poster zwischenspeichern (schnellerer Zugriff, weniger Datenverkehr)
+TMDB-API-Schlüssel manuell festlegen
+
+# INSTALLATION UND EINRICHTUNG #
+
+1. API-Schlüssel (ERFORDERLICH)
+Registrieren Sie sich auf themoviedb.org und erhalten Sie einen API-Schlüssel.
+
+Im Plugin auf BLAU → Einstellungen → GELB (API-Schlüssel) klicken.
+
+Geben Sie Ihren API-Schlüssel über die virtuelle Tastatur ein.
+
+2. Der API-Schlüssel wird in der Datei tmdbapikey.txt gespeichert.
+
+Sie können den Schlüssel in die Textdatei tmdbapikey.txt schreiben
+und diese in den Plugin-Ordner verschieben.
+
+Beim Start des Plugins wird er automatisch eingelesen.
+
+# ANWENDUNG #
+Hauptmenü:
+GRÜN → Filme suchen
+GELB → Serien suchen
+BLAU → Einstellungen
+ROT → Beenden
+
+Suchbeispiel:
+GRÜN für Filme drücken
+Filmtitel eingeben (z. B. „Inception“)
+Das Plugin zeigt Folgendes an:
+Titel, Jahr, Dauer
+Bewertung (z. B. 8,3/10 ★)
+Genre, Regisseur
+Kurze Inhaltsangabe
+Hauptdarsteller
+Poster (falls verfügbar)
+
+# EINSTELLUNGEN (BLAU) #
+API-Schlüssel (GELB) – Schlüssel festlegen
+Sprache (BLAU) – Sprache ändern
+Poster herunterladen – Poster-Download aktivieren/deaktivieren
+Cache leeren (MENÜ) – Alle gespeicherten Poster löschen
+Speichern (GRÜN) – Änderungen speichern
+
+# CACHE #
+Poster werden automatisch in /tmp/CiefpTMDBSearch/ gespeichert. Spart Datenvolumen bei erneuter Suche. Kann bei Bedarf in den Einstellungen deaktiviert werden.
+
+# UNTERSTÜTZTE SPRACHEN # Englisch, Serbisch, Kroatisch, Bosnisch, Slowakisch, Deutsch, Spanisch,
+Französisch, Italienisch, Russisch, Portugiesisch, Polnisch, Türkisch, Arabisch, Chinesisch
+
+Getestet und funktioniert einwandfrei auf:
+OpenATV · OpenBH · OpenPLI · Pure2 · Egami · OpenVision
+
+..:: CiefpSettings ::..
