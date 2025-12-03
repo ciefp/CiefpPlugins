@@ -1,0 +1,22 @@
+
+..:: CiefpVibes v1.0  ::..
+- Enigma2 Muzički Jukebox Plugin
+
+### Opis: 
+CiefpVibes je super muzički plejer plugin za Enigma2 bokseve. 
+Pušta lokalne ili online plejliste (.m3u/.tv) sa repeat, shuffle, 
+prilagođenim pozadinama i integracijom sa GitHub-om za sveže pesme. 
+Podržani formati mp3 i flac.
+Idealno za non-stop vibe-ove!
+
+### Korišćenje:
+Pokreni iz Plugins menija.
+Zeleno: Učitaj lokalni fajl. 
+Plavo: Online sa GitHub-a. 
+Žuto: Podešavanja. 
+Crveno: Izlaz.
+Naviguj plejlistu, OK za puštanje. 
+Automatski čuva poslednju sesiju.
+
+Oseti dobru vibraciju uz CiefpVibes enigma2 plugin
+..:: CiefpSettings ::..

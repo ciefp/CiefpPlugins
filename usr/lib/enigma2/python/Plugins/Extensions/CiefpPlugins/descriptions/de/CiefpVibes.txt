@@ -1,0 +1,23 @@
+..:: CiefpVibes v1.0 ::..
+- Enigma2 Musik-Jukebox-Plugin
+### Beschreibung:
+CiefpVibes ist ein cooles Musikplayer-Plugin für Enigma2-Boxen.
+Spiele lokale oder Online-Playlists (.m3u/.tv) mit Wiederholung,
+Zufallswiedergabe, benutzerdefinierten Hintergründen und GitHub-Integration für neue Tracks ab.
+Unterstützte Formate sind MP3 und FLAC.
+Perfekt für durchgehend gute Vibes!
+
+### Verwendung:
+Starte das Plugin über das Menü „Plugins“.
+
+Grün: Lokale Datei laden.
+Blau: Online von GitHub.
+Gelb: Einstellungen.
+Rot: Beenden.
+
+Durchsuche die Playlist, OK zum Abspielen.
+Speichert die letzte Sitzung automatisch.
+
+Genieße die guten Vibes mit dem CiefpVibes Enigma2-Plugin.
+
+..:: CiefpSettings ::..

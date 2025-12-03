@@ -1,0 +1,20 @@
+..:: CiefpVibes v1.0 ::..
+- Doplnok Enigma2 Music Jukebox
+### Popis:
+CiefpVibes je skvelý doplnok pre hudobný prehrávač pre zariadenia Enigma2.
+Prehrávajte lokálne alebo online zoznamy skladieb (.m3u/.tv) s opakovaním, 
+náhodným prehrávaním, vlastným pozadím a integráciou GitHub pre nové skladby.
+Podporované formáty sú mp3 a flac.
+Ideálne pre nepretržitú atmosféru!
+
+### Použitie:
+Spustiť z ponuky Pluginy.
+Zelená: Načítať lokálny súbor.
+Modrá: Online z GitHub.
+Žltá: Nastavenia.
+Červená: Ukončiť.
+Navigácia v zozname skladieb, OK pre prehrávanie.
+Automaticky uloží poslednú reláciu.
+
+Zažite dobrú atmosféru s doplnkom CiefpVibes enigma2
+..:: CiefpSettings ::..
