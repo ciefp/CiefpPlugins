@@ -1,20 +1,232 @@
 ..:: CiefpVibes v1.0 ::..
 - Doplnok Enigma2 Music Jukebox
+
 ### Popis:
 CiefpVibes je skvelý doplnok pre hudobný prehrávač pre zariadenia Enigma2.
-Prehrávajte lokálne alebo online zoznamy skladieb (.m3u/.tv) s opakovaním, 
-náhodným prehrávaním, vlastným pozadím a integráciou GitHub pre nové skladby.
-Podporované formáty sú mp3 a flac.
+
+Prehráva lokálne alebo online zoznamy skladieb (.m3u/.tv) s opakovaním, náhodným prehrávaním, vlastným pozadím a integráciou s GitHubom pre nové skladby.
+
+Podporované formáty mp3 a flac.
 Ideálne pre nepretržitú atmosféru!
 
 ### Použitie:
-Spustiť z ponuky Pluginy.
-Zelená: Načítať lokálny súbor.
-Modrá: Online z GitHub.
+Spustite z ponuky Doplnky.
+Zelená: Načítanie lokálneho súboru.
+Modrá: Online z GitHubu.
 Žltá: Nastavenia.
-Červená: Ukončiť.
-Navigácia v zozname skladieb, OK pre prehrávanie.
+Červená: Ukončenie.
+Prechádzajte zoznamom skladieb, kliknite na OK pre prehrávanie.
+
 Automaticky uloží poslednú reláciu.
 
-Zažite dobrú atmosféru s doplnkom CiefpVibes enigma2
+Zažite dobrú atmosféru s pluginom CiefpVibes enigma2
+..:: CiefpSettings ::..
+
+# CiefpVibes v1.1
+Plugin Enigma2 Music Jukebox
+
+### 🆕 Nové funkcie vo verzii 1.1:
+
+Online rádio - podpora online rozhlasových staníc, možnosť sťahovania hotových zoznamov skladieb z githubu
+Jeden adresár vyrovnávacej pamäte - Všetky dočasné súbory (zoznamy a plagáty) sú teraz uložené v /tmp/ciefvibes_cache
+Vymazať vyrovnávaciu pamäť - Nová možnosť v nastaveniach na vymazanie všetkých súborov uložených vo vyrovnávacej pamäti
+Zobraziť veľkosť vyrovnávacej pamäte - Pred vymazaním zobraziť, koľko miesta zaberá vyrovnávacia pamäť
+Optimalizovaná správa súborov - Individuálna štruktúra pre jednoduchšiu údržbu
+
+### 🎯 Ako používať:
+Základné funkcie:
+🟢 ZELENÁ - Zobrazenie súborov (lokálne)
+🔵 MODRÁ - Online zoznamy (M3U, TV, RÁDIO)
+🟡 ŽLTÁ - Nastavenia
+🔴 ČERVENÁ - Ukončenie aplikácie
+
+### Nová možnosť - RÁDIO
+Stlačte 🔵 MODRÉ - Online zoznamy
+Vyberte RÁDIO, možnosť výberu rôznych playlistov
+
+Pridaná GITHUB_RADIO_URL a podpora pre súbory .radio (pri analýze, prehliadači súborov a sťahovaní z GitHubu).
+Vylepšené spracovanie súborov .tv/.radio: Rozšírená detekcia zvukových streamov
+(indikátory ako .mp3, .flac, /stream, rtmp://), s výnimkou video formátov (.ts, .mp4 atď.).
+Lepšie spracovanie metadát: parseArtistTitle() na rozdelenie formátu „interpret - názov“,
+podpora pre metadáta ICY, automatická aktualizácia textu práve prehrávaného obsahu a plagátov.
+
+### Nová možnosť - Vymazať vyrovnávaciu pamäť:
+Stlačte 🟡 ŽLTÉ (Nastavenia)
+Vyberte "🧹 Vymazať vyrovnávaciu pamäť"
+Potvrďte vymazanie v dialógovom okne
+Vyrovnávacia pamäť bude vymazaná (plagáty + zoznamy)
+
+### Vylepšenia vizuálu a prehrávania:
+- Pridané dynamické zobrazenie plagátov (showPoster(), showDefaultPoster())
+s automatickým sťahovaním obalu albumu z iTunes API (fetchAlbumCover()).
+- Dva indikátory priebehu: "progress_real" (presný priebeh) a "progress_vibe" (pulzujúci zelený indikátor pre efekt "vibrácie").
+- Detekcia offline: Označenie pre "offline_status" (napr. "Streamovať offline"),
+časovač pre kontrolu streamu (checkStreamStatus()), reset stavu pri prehrávaní.
+- Viac možností vzhľadu: Až 10 pozadí, plagátov a informačných panelov (vo verzii 1.0 iba až 5).
+- Automatické prehrávanie prvej skladby v uvítacom zozname skladieb.
+
+### Ďalšie možnosti v nastaveniach:
+▶ Prehrávanie - Opakovanie, náhodné poradie
+🌐 Sieť - Časové limity, načítanie URL
+🎨 Tapeta - 10 tapiet
+🖼️ Plagát - 10 plagátov
+📊 Informačný panel - 10 informačných panelov
+💾 Uložiť a načítať - Uložiť nastavenia
+
+### 💾 Čo sa ukladá:
+Plagáty - Obal albumov (uložené vo vyrovnávacej pamäti)
+Zoznamy - Stiahnutie súborov .m3u/.tv/.radio
+Nastavenia - Konfigurácia v /etc/enigma2/ciefvibes.cfg
+Posledný zoznam - V /etc/enigma2/ciefvibes_last.txt
+
+### ⚡ Výhody novej verzie:
+✅ Čistejší systém - Jeden adresár namiesto dvoch
+✅ Lepšia správa pamäte - Môžete zobraziť a vymazať vyrovnávaciu pamäť
+✅ Profesionálne zobrazenie - Ukazovateľ priebehu s pulzujúcou animáciou
+✅ Stabilnejšie - Detekcia offline stavu pre streamy
+
+### 🎵 Podporované formáty:
+.m3u / .m3u8 - Štandardné zoznamy skladieb
+.tv - IPTV zoznamy (Enigma2)
+.radio - Zoznamy rádií (Enigma2)
+URL - Priame načítanie z internetu
+
+### 🔍 Automatické funkcie:
+Automatické načítanie posledného zoznamu pri spustení
+Detekcia metadát (interpret - Názov)
+Automatické sťahovanie obalov albumov
+Indikácia offline pre streamy
+
+Plugin je ideálny na počúvanie hudby z lokálnych súborov a internetových rádií! 🎧
+Zažite dobrú náladu s CiefpVibes Jukebox
+
+..:: CiefpSettings ::..
+
+..:: CiefpVibes ::..
+📋 HLAVNÉ ROZDIELY MEDZI VERZIAMI 1.1 a 1.3
+
+✅ NOVÉ FUNKCIE VO VERZII 1.3:
+KOMPLETNÁ PODPORA SIETE - Pripojenie k notebookom a zdieľaným priečinkom
+PRIAME PREHRÁVANIE ZVUKOVÝCH SÚBOROV - MP3, FLAC, M4A, AAC (nie je potrebný .m3u)
+HIERARCHICKÉ NAČÍTANIE PRIEČINKOV - Načítava celé priečinky s hudbou
+INTELIGENTNEJŠÍ PREHLIADAČ SÚBOROV - Viac možností a lepšia organizácia
+AUTOMATICKÉ SKENOVANIE SIETE - Automatická detekcia zariadení SMB
+POZNÁMKA V MENU - Nové tlačidlo „Menu“ pre možnosti siete
+
+🔧 TECHNICKÉ ROZDIELY:
+Verzia 1.1 Verzia 1.3
+Iba .tv/.radio/.m3u + MP3/FLAC/M4A/AAC priamo
+Žiadna podpora siete Plná podpora siete SMB/NFS
+Jednoduchý prehliadač súborov Pokročilý prehliadač súborov s možnosťou priečinka
+Iba online zoznamy skladieb + Lokálne a sieťové súbory
+Verzia: 1.2 Verzia: 1.3
+
+📁 NOVÉ TRIEDY VO VERZII 1.3:
+Kompletné sieťové metódy (mountSMBShare, mountNFSShare, autoScanNetwork)
+Vylepšený prehliadač súborov s možnosťou priečinka
+Systém na čítanie značiek ID3/FLAC/MP4
+
+🔗 POKYNY NA VYTVORENIE SIEŤOVÉHO PRIPOJENIA
+1. ČO JE POTREBNÉ UROBIŤ NA NOTEBOOKU/POČÍTAČI:
+
+Pre Windows:
+bash
+1. Kliknite pravým tlačidlom myši na priečinok → "Vlastnosti"
+2. Karta "Zdieľanie" → "Rozšírené zdieľanie"
+3. ✅ Zdieľať tento priečinok
+4. „Povolenia“ → Pridať „Všetci“ → Úplná kontrola
+5. Odstrániť všetky požiadavky na heslo
+6. Centrum sietí a zdieľania → Vypnúť zdieľanie chránené heslom
+
+Pre Linux/Mac:
+bash
+# Nainštalovať Sambu, ak nie je nainštalovaná
+sudo apt install samba
+sudo nano /etc/samba/smb.conf
+
+# Pridať na koniec:
+[Hudba]
+cesta = /cesta/k/priečinku
+prehliadateľné = áno
+iba na čítanie = áno
+hosť ok = áno
+vynútiť používateľa = nikto
+
+# Reštartovať Sambu
+sudo systemctl restart smbd
+
+2. PROBLÉMY S PRIPOJENÍM A RIEŠENIA:
+Riešenie problému
+„Prístup odmietnutý“ Odstrániť zdieľanie chránené heslom
+„Sieťová cesta sa nenašla“ Skontrolujte firewall a IP adresu
+„Chyba pripojenia“ Používa možnosť hosť namiesto používateľa/hesla
+Pomalé pripojenie Znížiť časový limit v nastaveniach doplnku
+
+3. NAJČASTEJŠIE POUŽÍVANÁ CESTA:
+bash
+//192.168.1.100/Hudba # Windows bez overenia
+//192.168.1.100/ # Koreňový priečinok
+//namelaptopa/Public # Verejný priečinok
+
+4. NASTAVENIA PLUGÍNU PRE SIEŤ:
+Tlačidlo Menu → Možnosti siete
+Automatické skenovanie → automaticky vyhľadá zariadenia
+Režim hosťa SMB → používa hosťa bez hesla
+
+🎯 STRUČNÝ POPIS VERZIE 1.3:
+„CiefpVibes 1.3“ je kompletný zoznam skladieb pre zvuk, ktorý podporuje:
+
+✅ Priame prehrávanie súborov MP3, FLAC, M4A, AAC
+✅ Pripojenie k sieťovým priečinkom (SMB/NFS bez hesla)
+✅ Automatické sťahovanie obalov albumov
+✅ Čítanie značiek ID3/FLAC/MP4
+✅ Offline detekcia streamov
+✅ 10 tapiet, 10 informačných panelov, 10 plagátov
+✅ Online zoznamy skladieb z GitHubu
+
+Hlavná výhoda oproti verzii 1.1: Už nie je potrebný žiadny súbor .m3u! Môžete priamo otvoriť ľubovoľný zvukový súbor alebo celý priečinok s hudbou.
+
+🚀 KROKY NA PRIPOJENIE K NOTEBOOKU:
+Na notebooku: Odstráňte zdieľanie chránené heslom
+Na zariadení E2: Otvorte CiefpVibes → tlačidlo Menu → „Pripojiť k notebooku“
+Zadajte IP adresu (napr. 192.168.1.100)
+Zadajte názov zdieľaného priečinka (alebo prázdne pre predvolenú hodnotu)
+Prístup k priečinku s hudbou
+Typ Pro:
+Použite automatické skenovanie, aby plugin našiel všetky dostupné zariadenia v sieti!
+
+⚠️ DÔLEŽITÁ POZNÁMKA:
+Verzia 1.3 je spätne kompatibilná – všetko, čo funguje v 1.1, funguje aj v 1.3 a navyše máte k dispozícii všetky nové funkcie.
+
+Ak máte problémy s pripojením k sieti, môžete sa kedykoľvek vrátiť k „Online súborom“ alebo lokálnym zoznamom skladieb .m3u ako v starej verzii.
+
+..:: CiefpSettings ::..
+
+CiefpVibes v1.4 – Zoznam zmien
+Dátum vydania: 13. decembra 2025.
+Kľúčové vylepšenia:
+
+Systém automatických aktualizácií: Pridaná kontrola verzie prostredníctvom súboru version.txt na GitHub.
+
+Plugin teraz automaticky detekuje nové verzie, zobrazuje stav na obrazovke (napr. „Aktualizované ✓“ alebo „Aktualizácia v1.5 k dispozícii!“)
+a ponúka inštaláciu prostredníctvom MessageBoxu. Zahŕňa zálohovanie a obnovu konfiguračných súborov pre bezpečné aktualizácie.
+
+Vylepšené zobrazenie plagátov: Výrazne vylepšené parsovanie názvov skladieb z názvov súborov
+(ignoruje sériové čísla ako „01 - “, roky ako „(1993)“, značky remixov atď.).
+
+Lepšie vyhľadávanie v iTunes API s návratom k interpretovi, keď nie sú k dispozícii žiadne zhody pre danú skladbu.
+
+Opravený mechanizmus „škrtenia“ na okamžité zobrazenie stiahnutých plagátov, skrátený čas zobrazenia predvoleného plagátu.
+
+Presnejšie zhodovanie vyrovnávacej pamäte a odstránené blikanie počas prehrávania.
+
+Ďalšie vylepšenia a opravy:
+
+Lepšie spracovanie online playlistov .tv a lokálnych súborov MP3.
+Podrobnejšie logy ladenia pre jednoduchšiu detekciu chýb.
+Vylepšenia v práci so sieťovými pripojeniami pre pripojenie k notebooku.
+
+Ako aktualizovať: Spustite doplnok - automaticky skontroluje a ponúkne inštaláciu, ak je na GitHub k dispozícii nová verzia.
+Ďakujeme všetkým, ktorí používajú a testujú CiefpVibes - užite si hudbu! 🎶🖼️
+
 ..:: CiefpSettings ::..

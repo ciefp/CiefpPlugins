@@ -1,35 +1,34 @@
 ..:: CiefpTMDBSearch v1.0 ::..
 
-Vyhľadávajte filmy a seriály cez TMDB s plagátmi, popismi, hercami a hodnoteniami – v 14 jazykoch!
+Vyhľadávajte filmy a seriály cez TMDB s plagátmi, popismi, hercami a hodnoteniami - v 14 jazykoch!
 
-Všetko, čo potrebujete, je bezplatný kľúč TMDB API (zadajte raz pomocou žltého tlačidla).
+Vyžaduje sa iba bezplatný kľúč TMDB API (zadá sa raz pomocou žltého tlačidla).
 
 # ZÁKLADNÉ FUNKCIE #
 Vyhľadávanie filmov (ZELENÁ) a seriálov (ŽLTÁ)
-Zobraziť podrobnosti: názov, rok, trvanie, hodnotenie, žáner, režisér/tvorca, herci, popis
-Stiahnutie plagátov (obalov) z TMDB
+Zobrazenie podrobností: názov, rok, trvanie, hodnotenie, žáner, režisér/tvorca, herci, popis
+Stiahnutie plagátu (obalu) z TMDB
 Podpora viacerých jazykov (popis, názvy)
 Ukladanie plagátov do vyrovnávacej pamäte (rýchlejší prístup, menej internetovej prevádzky)
 Manuálne nastavenie kľúča API TMDB
 
 # INŠTALÁCIA A NASTAVENIE #
-
 1. Kľúč API (POVINNÉ)
 Zaregistrujte sa na themoviedb.org a získajte kľúč API
 V plugine stlačte MODRÉ → Nastavenia → ŽLTÉ (Kľúč API)
 Zadajte svoj kľúč API pomocou virtuálnej klávesnice
 
 2. Kľúč API je uložený v súbore tmdbapikey.txt
-Kľúč môžete zapísať do textového súboru tmdbapikey.txt
-a presunúť ho do priečinka pluginu
-pri spustení ho plugin prečíta.
+Kľúč môžete zadať v textovom súbore tmdbapikey.txt
+a preniesť ho do priečinka pluginu
+pri spustení ho plugin načíta.
 
 # POUŽITIE #
 Hlavná ponuka:
 ZELENÁ → Vyhľadávanie filmov
 ŽLTÁ → Vyhľadávanie seriálov
 MODRÁ → Nastavenia
-ČERVENÁ → Ukončiť
+RIADOK → Ukončiť
 
 Príklad vyhľadávania:
 Stlačte ZELENÉ tlačidlo pre filmy
@@ -44,21 +43,264 @@ Plagát (ak je k dispozícii)
 
 # NASTAVENIA (MODRÁ) #
 Kľúč API (ŽLTÁ) - nastavte si kľúč
-Jazyk (MODRÁ) - zmena jazyka
-Stiahnutie plagátov - povolenie/zakázanie sťahovania plagátov
-Vymazať vyrovnávaciu pamäť (MENU) - odstránenie všetkých uložených plagátov
-Uložiť (ZELENÁ) - uloženie zmien
+Jazyk (MODRÁ) - zmeňte jazyk
+Stiahnuť plagáty - povoliť/zakázať sťahovanie plagátov
+Vymazať vyrovnávaciu pamäť (MENU) - vymazať všetky uložené plagáty
+Uložiť (ZELENÁ) - uložiť zmeny
 
-# VYROVNÁVACIA PAMÄŤ #
+# UKLADANIE DO VYRAMOVACIEJ PAMÄTE #
 Plagáty sa automaticky ukladajú do /tmp/CiefpTMDBSearch/
-Ušetrí internetovú prevádzku pri opätovnom vyhľadávaní
-Ak ​​chcete, môžete to vypnúť v nastaveniach
+Ukladá internetovú prevádzku počas opakovaného vyhľadávania
+Ak chcete, môžete to vypnúť v nastaveniach
 
 # PODPOROVANÉ JAZYKY #
 Angličtina, srbčina, chorvátčina, bosniančina, slovenčina, nemčina, španielčina,
-francúzština, taliančina, Ruština, portugalčina, poľština, turečtina, arabčina, čínština.
+Francúzština, taliančina, ruština, portugalčina, poľština, turečtina, arabčina, čínština.
 
 Testované a funguje perfektne na:
 OpenATV · OpenBH · OpenPLI · Pure2 · Egami · OpenVision
+
+..:: CiefpSettings ::..
+
+..:: CiefpTMDBSearch v1.2 ::..
+
+Najlepší TMDB info plugin pre Enigma2
+Teraz s automatickým vyhľadávaním EPG!
+Získajte všetky informácie o filme/seriáli (plagát, hodnotenie, obsadenie, dej atď.) hneď teraz.
+priamo na vašom prijímači Enigma2 - nie je potrebný telefón ani počítač!
+Čo je nové vo verzii 1.2
+
+Automatické vyhľadávanie EPG (MODRÉ tlačidlo) – stačí stlačiť MODRÉ tlačidlo počas sledovania ľubovoľného kanála
+a plugin automaticky stiahne aktuálny názov/rok programu z EPG a prehľadá TMDB!
+Inteligentné čistenie titulkov (odstraňuje [HD], (2024), Film: atď.)
+Skúša film → seriál aj seriál → film, kým nenájde správny výsledok
+Oveľa lepšia detekcia roku z popisu EPG
+Rýchlejšie a spoľahlivejšie sťahovanie a ukladanie plagátov do vyrovnávacej pamäte
+Podporovaných 15 jazykov (vrátane srbčiny, chorvátčiny, bosniančiny, angličtiny, nemčiny atď.)
+
+Charakteristika
+
+Krásny veľký plagát (500×750) + všetky podrobnosti na jednej obrazovke
+Kompletný zoznam hercov s menami postáv
+Režisér / Tvorcovia, Žánre, Dĺžka, Hodnotenie ★
+Ukladanie plagátov do vyrovnávacej pamäte (/tmp alebo HDD) - bleskovo rýchle po prvom stiahnutí
+Možnosť vymazania vyrovnávacej pamäte + informácie o vyrovnávacej pamäti
+Funguje perfektne na všetkých moderných obrázkoch Enigma2 (OpenATV, OpenBH, VTI, BlackHole, Egami atď.)
+
+Ako používať
+
+Inštalácia pluginu
+Prvé spustenie → stlačte MENU → Nastavenia → ŽLTÉ tlačidlo → zadajte svoj bezplatný kľúč TMDB API
+(stiahnete si ho za 10 sekúnd tu: https://www.themoviedb.org/settings/api)
+Spustite doplnok z ponuky
+
+Tlačidlá
+
+ZELENÁ – Manuálne vyhľadávanie filmov
+ŽLTÁ – Manuálne vyhľadávanie seriálov
+MODRÁ – Automatické vyhľadávanie aktuálnej udalosti EPG ← NOVÉ A ÚŽASNÉ!
+PONUKA – Nastavenia (jazyk, priečinok vyrovnávacej pamäte, odstránenie plagátu…)
+
+Veľká vďaka a uznanie
+Špeciálne veľké poďakovanie patrí Hamdymu Ahmedovi – bez jeho pomoci a skvelých nápadov by nová funkcia automatického EPG a mnoho vylepšení vo verzii 1.2 nikdy neboli realizované!
+Doplnok vytvorený a spravovaný spoločnosťou Ciefp
+Užite si skutočný pocit z kina doma – stačí stlačiť MODRÉ tlačidlo a relaxovať!
+
+Akákoľvek spätná väzba, hlásenia o chybách alebo ponuky na kávu – vždy vítané!
+
+..:: CiefpSettings ::..
+
+..:: CiefpTMDBSearch 1.4 ::..
+
+Okrem hodnotenia TMDB
+Pridané hodnotenie IMDB
+Vyžaduje sa aj API kľúč
+Zadajte API kľúč pre omdb cez nastavenia
+Kľúč je uložený v súbore omdbapikey.txt
+podobne ako tmdbapikey.txt
+Apikey si môžete bezplatne stiahnuť z:
+https://www.omdbapi.com
+Vyplňte svoj e-mail, meno a priezvisko
+pomocou ľubovoľného textu
+napríklad: CiefpTMDBSearch na enigma2
+dostanete e-mailom odkaz na aktiváciu API kľúča.
+
+Pridal som aj podporu pre plagát na pozadí
+Plagát sa aktivuje stlačením tlačidla OK
+Automatické vyhľadávanie:
+modré tlačidlo: popis vľavo, plagát vpravo (klasické zobrazenie)
+Tlačidlo OK: zobrazí obrázok na pozadí a plagát
+Tlačidlo OK: ďalšie stlačenie tlačidla OK je krok späť do (klasické zobrazenie)
+Tlačidlo Ukončiť ukončí plugin
+
+Zelené tlačidlo: Vyhľadávanie filmov
+otvorí virtuálne tetovanie s názvom Zanusos
+zelené tlačidlo spustí vyhľadávanie a otvorí
+obrazovka vľavo s popisom, plagát vpravo
+Tlačidlo OK: zobrazí obrázok na pozadí a plagát
+Tlačidlo OK: ďalšie stlačenie tlačidla OK je krok späť do (klasické zobrazenie)
+Tlačidlo Ukončiť ukončí plugin
+
+Žlté tlačidlo: Vyhľadávanie seriálov
+otvorí virtuálne tetovanie s názvom Zanusos
+zelené tlačidlo spustí vyhľadávanie a otvorí
+obrazovka vľavo s popisom, plagát vpravo
+Tlačidlo OK: zobrazí obrázok na pozadí a plagát
+Tlačidlo OK: ďalšie stlačenie tlačidla OK je krok späť do (klasické zobrazenie)
+Tlačidlo Ukončiť ukončí plugin
+
+Automatická aktualizácia, ktorú som pridal vo verzii 1.3
+Teraz by sa mala začať inštalácia nových verzií
+
+..::CiefpSettings ::..
+
+🎬 CiefpTMDBSearch v1.6 - Nová verzia!
+
+📋 Čo je NOVÉ vo verzii 1.6:
+🚀 Hlavné vylepšenia:
+🎯 AUTOMATICKÝ PREHĽAD HERCOV (Žlté tlačidlo)
+
+Automaticky zobrazuje režiséra a hlavných hercov z aktuálneho filmu/seriálu
+Jedným kliknutím si môžete vyhľadať kohokoľvek z hercov
+Rýchle prepínanie medzi profilmi hercov a režisérov
+
+📊 UŽITOČNEJŠIE ZOBRAZENIE PROFILU
+Nezrozumiteľné skóre „Popularita“ bolo nahradené užitočnými informáciami:
+Roky kariéry (napr. „50+ rokov“)
+Počet filmov a televíznych projektov (napr. „86 filmov, 31 TV“)
+Lepšie triedenie sekcie „Známy pre“ - zobrazuje najpopulárnejšie diela
+
+🎨 VYLEPŠENÉ POUŽÍVATEĽSKÉ ROZHRANIE
+Lepšie formátovanie textu
+Optimalizované rozloženie informácií
+Čitateľnejšie zobrazenie na všetkých obrazovkách
+
+🔧 Technické vylepšenia:
+Vylepšené triedenie filmografie podľa skutočnej popularity
+Lepšie spracovanie údajov z TMDB API
+Optimalizované sťahovanie obrázkov
+Vylepšená chyba načítavania
+
+🎮 Krátke Návod na použitie:
+1. AUTOMATICKÉ vyhľadávanie EPG (🔵 Modré tlačidlo)
+Kliknite počas sledovania televízie - automaticky sa nájde film/seriál z EPG
+Výsledok: Kompletné podrobnosti o filme/seriáli
+
+2. PRIESKUMNÍK OBSADENÍ (🟡 Žlté tlačidlo) ← NOVINKA!
+Najprv: Načítanie filmu/seriálu (prostredníctvom automatického EPG alebo manuálneho vyhľadávania)
+Potom: Kliknite na žlté tlačidlo pre zoznam hercov a režisérov
+Vyberte: Vyberte kohokoľvek pre okamžitý profil
+Výsledok: Automatické zobrazenie kompletného profilu vybranej osoby
+
+3. POKROČILÉ VYHĽADÁVANIE (Zelené tlačidlo)
+Manuálne vyhľadávanie filmov, seriálov, hercov, režisérov
+Možnosti ponuky: Vyhľadávanie filmov, Vyhľadávanie televíznych seriálov, Vyhľadávanie hercov, Vyhľadávanie režisérov
+
+4. POZOBRAZENIE POZADIA (tlačidlo OK)
+Prepína medzi klasickým a obrázkovým zobrazením
+Klasické: Textové informácie + plagát
+Pozadie: Veľký obrázok pozadia + plagát
+
+5. NASTAVENIA (tlačidlo PONUKA)
+Nastavenie kľúčov API (TMDB, OMDb)
+Výber jazyka pre popisy
+Správa vyrovnávacej pamäte
+
+Kontrola aktualizácií
+
+💡 Tipy na použitie:
+Najrýchlejší spôsob: Modrá → Žltá = Okamžité informácie o všetkých vo filme!
+Pre výskum: Zelené tlačidlo pre podrobné vyhľadávanie kohokoľvek/čoho
+Pre atmosféru: Tlačidlo OK pre prepnutie na pekné obrázky pozadia
+Pre presnejšie hodnotenia: Kľúč OMDb API pre hodnotenie IMDB (voliteľné)
+
+🎉 Prečo je v1.6 fantastická:
+✅ Rýchlejšia - Menej kliknutí, viac informácií
+✅ Inteligentnejšia - Automatické prepojenie ľudí a projektov
+✅ Užitočnejšia - Skutočné informácie namiesto nepochopiteľných čísel
+✅ Zábavnejšia - Ako skúmanie histórie filmu!
+
+Teraz je skúmanie filmov a seriálov zábavnejšie ako kedykoľvek predtým! 🍿🎥
+Dostali sme sa do štádia, kedy je zábavnejšie skúmať možnosti pluginov
+od sledovania samotného filmu, ale neustále ho objavujete.
+
+..:: CiefpSettings ::..
+
+..:: CiefpTMDBSearch 1.7 ::..
+
+Čo je nové vo verzii 1.7
+Do ponuky Rozšírené vyhľadávanie boli pridané štyri nové možnosti:
+
+Hľadať populárne filmy
+– Zobrazuje 20 najpopulárnejších filmov, ktoré sú momentálne na TMDB (dlhodobá popularita).
+– Zoznam obsahuje: názov filmu, rok vydania, hodnotenie TMDB a hviezdičky.
+- Kliknutím na film sa otvorí úplné zobrazenie s plagátom, popisom, hercami atď.
+Hľadať populárne seriály
+– Zobrazuje 20 najpopulárnejších seriálov, ktoré sú momentálne na TMDB.
+– Zobraziť: názov seriálu, rok vydania, hodnotenie a hviezdičky.
+– Výber otvorí podrobné zobrazenie seriálu.
+Hľadať populárne osoby
+– Zobrazuje 20 najpopulárnejších osôb (herci, režiséri atď.).
+– Zobraziť: meno osoby, oblasť (napr. herectvo/réžia), krátky zoznam slávnych filmov/seriálov, popularita u hviezd.
+- Kliknutím otvoríte profil osoby s biografiou, filmografiou a plagátom.
+Vyhľadávanie trendov Všetky (denne)
+– Zobrazuje 20 najaktuálnejších titulov a osôb za deň (zmiešane – filmy, seriály a osoby),
+rovnako ako sekcia „Trendy“ na domovskej stránke TMDB.
+– Aktualizuje sa denne a zobrazuje, čo je aktuálne o najzaujímavejšie (nové hity, virálne seriály, súčasní herci).
+
+– Zobrazenie:
+• Filmy: [Mov] Názov (rok) ★★★★★ 7.8
+• Seriál: [Ser] Názov (rok) ★★★★★ 8.5
+• Osoby: [Osoba] Meno Priezvisko • Herecké výkony ★★★★ 45.2
+– Výber otvorí príslušné podrobné zobrazenie (profil filmu/seriálu/osoby).
+
+Ostatné
+
+Všetky zobrazenia sú obmedzené na 20 výsledkov kvôli rýchlosti a prehľadnosti (ako na stránke TMDB - prvá strana).
+
+Hodnotenia sú zobrazené s hviezdičkami pre rýchlejšie prezeranie.
+Výber jazyka popisu je podporovaný (prostredníctvom nastavení pluginu).
+Inštalácia online prostredníctvom pluginu
+
+..:: CiefpSettings ::..
+
+📊 CiefpTMDBSearch 2.1
+Nové:
+Série a epizódy, plugin seriálu teraz dokáže zobraziť všetky série a ich epizódy.
+Plugin má teraz aj galériu na zobrazenie všetkých dostupných plagátov a obrázkov na pozadí.
+
+Plugin teraz obsahuje:
+✅ Automatické vyhľadávanie EPG - automatická detekcia aktuálneho programu
+✅ Rozšírené vyhľadávanie - filmy, seriály, herci, režiséri
+✅ Zoznamy populárnych/trendových - čo je momentálne populárne
+✅ Prieskumník hercov - prieskum hercov
+✅ Sezóny a epizódy - podrobný prehľad televíznych seriálov a epizód
+✅ Hodnotenia TMDB a IMDB - ďalšie informácie
+✅ Galéria pozadí - náhľad obrázka na pozadí
+✅ Galéria plagátov - náhľad plagátu
+✅ Nastavenia - kľúče API, jazyk, vyrovnávacia pamäť
+
+🖼️ Stručný návod: Ako používať prehliadač plagátov a pozadí
+Nová galéria sa ľahko používa. Tu je stručný návod:
+
+Prístup do galérie:
+Po načítaní informácií o filme alebo seriáli stlačte tlačidlo MENU na diaľkovom ovládači.
+V ponuke vyberte možnosť 🖼️ Galéria pozadí alebo 🎬 Galéria plagátov.
+
+Navigácia v galérii:
+Na navigáciu medzi obrázkami použite ŽLTÉ a MODRÉ tlačidlo (alebo šípky doľava/doprava).
+
+ZELENÉ tlačidlo vás vráti na domovskú obrazovku alebo prepína medzi galériou pozadia a plagátov (ak je to možné).
+
+Stavový riadok v hornej časti zobrazuje, z ktorého obrázka sa nachádzate a koľko z celkového počtu (napr. „6/185“).
+
+Zatvorenie galérie:
+Stlačením ČERVENÉHO tlačidla alebo OK/Ukončiť sa vrátite na hlavnú obrazovku pluginu.
+
+💡 Tipy a poznámky
+Ukladanie do vyrovnávacej pamäte: Obrázky sa automaticky sťahujú a ukladajú do vybraného priečinka vyrovnávacej pamäte (nastaveného v Nastaveniach). Toto zrýchli zobrazenie pri ďalšom otvorení.
+Nastavenie jazyka: V Nastaveniach môžete zmeniť jazyk popisov. Toto ovplyvní aj jazyk údajov, ktoré prijímate z databázy TMDB.
+Výkon: Ak plugin začne pracovať pomalšie kvôli plnej vyrovnávacej pamäti, môžete ju vymazať cez MENU > Ďalšie možnosti > 🗑️ Vymazať vyrovnávaciu pamäť.
+Nová galéria je skvelým doplnkom, ktorý poskytuje používateľom plnohodnotný zážitok zo sledovania vizuálneho obsahu filmu alebo seriálu.
 
 ..:: CiefpSettings ::..

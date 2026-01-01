@@ -1,0 +1,89 @@
+🎬 CiefpOpenSubtitles Plugin v1.1
+Plugin zum Suchen und Herunterladen von Untertiteln für Enigma2-basierte Set-Top-Boxen (OpenATV, PurE2, OpenPLi usw.)
+
+— Unterstützt OpenSubtitles.com und OpenSubtitles.org.
+
+✅ Hauptfunktionen:
+🔍 Untertitel für Filme und Serien anhand des Titels suchen
+🌐 Unterstützung für zwei Websites:
+OpenSubtitles.com (über einen kostenlosen API-Schlüssel – empfohlen)
+OpenSubtitles.org (über Benutzername/Passwort-Anmeldung)
+🗣️ Mehrsprachige Unterstützung: Sprachcodes eingeben (z. B. sr, hr, en oder srp, hrv, eng)
+⬇️ Automatischer Download und Speicherung in einem benutzerdefinierten Verzeichnis
+🔄 Mehrsprachiger Download-Modus – Untertitel in allen konfigurierten Sprachen für einen bestimmten Titel abrufen
+
+🛠️ Vollständig konfigurierbar über die Einstellungen:
+Speicherort
+Download-Verzögerung (um die API-Ratenbegrenzungen einzuhalten)
+Sprachpriorität (erster Treffer vs. alle Sprachen)
+Automatische Umbenennung passend zu Videodateien (z. B. Filmname.sr.srt)
+
+📱 Anwendung:
+Das Plugin über das Menü „Erweiterungen“ starten.
+
+Wählen Sie „Filme suchen“ oder „Serien suchen“.
+
+Drücken Sie GELB, um die virtuelle Tastatur zu öffnen und den Titel einzugeben.
+
+Drücken Sie GRÜN, um die Suche zu starten.
+
+Navigieren Sie mit den Pfeiltasten durch die Ergebnisse.
+
+Drücken Sie BLAU oder OK, um die ausgewählten Untertitel herunterzuladen.
+
+Untertitel werden automatisch gespeichert (Standard: /media/hdd/subtitles/).
+
+💡 Hinweis: Für OpenSubtitles.com benötigen Sie einen kostenlosen API-Schlüssel.
+
+(Registrierung unter https://www.opensubtitles.com)
+
+🛠️ v1.1 – Neuerungen:
+Auswahl der Website hinzugefügt: .com (API) vs. .org (Login)
+Verbesserte Ergebnissortierung (nach Jahr ↓, dann Downloads ↓)
+Unterstützung für mehrsprachige Downloads
+Automatische Zuordnung heruntergeladener Untertitel zu vorhandenen Videodateien
+Benutzeroberfläche optimiert für 16:9-Bildschirme (1600×800)
+Verbesserte Lesbarkeit und Kompatibilität mit dem MetrixHD-Skin
+
+Warum CiefpOpenSubtitles verwenden?
+
+⭐ Die beste Seriensuche – genauere Ergebnisse als andere Plugins.
+
+🌐 Unterstützung für OpenSubtitles.com (API-Schlüssel) und OpenSubtitles.org (Login).
+
+🎬 Automatische Zuordnung von Untertiteln zu Videodateien.
+
+🛠️ Vollständig konfigurierbar – Sprachen, Pfad, Verzögerung, Priorität.
+
+📱 Benutzerfreundlich – einfache Oberfläche, schnelle Suche.
+
+🛠️ API-Schlüssel, Benutzername und Passwort speichern
+Wählen Sie im Hauptmenü des Plugins „API-Schlüssel / Login“ (blau/OK).
+
+Für .com (empfohlen – schneller und besser):
+Klicken Sie auf GRÜN (API-Schlüssel bearbeiten).
+
+Geben Sie den API-Schlüssel von opensubtitles.com ein (kostenloses Konto > API-Tab > Neuen Schlüssel erstellen).
+
+Dieser wird automatisch in der Datei /etc/enigma2/ciefpopensubtitles/opensubtitles_apikey.txt gespeichert.
+
+(Format: apikey=xxxxxxxxxxxxxxx).
+
+Für .org (älteres System):
+Klicken Sie auf GELB (Login bearbeiten).
+
+Geben Sie Ihren Benutzernamen und Ihr Passwort von opensubtitles.org ein.
+
+Diese werden automatisch in der Datei /etc/enigma2/ciefpopensubtitles/opensubtitles_login.txt gespeichert.
+
+(Format: Benutzername=IhrBenutzername, Passwort=IhrPasswort).
+
+🇬🇧 So erhalten Sie einen API-Schlüssel (OpenSubtitles.com)
+Gehen Sie zu https://www.opensubtitles.com
+Klicken Sie auf „Anmelden“ (oder „Registrieren“, falls Sie noch kein Konto haben).
+Nach der Anmeldung gehen Sie zu: Konto → API
+Klicken Sie auf „API-Token generieren“.
+Kopieren Sie den generierten API-Token (z. B. abc123xyz456).
+Geben Sie ihn im Plugin ein:
+Erweiterungen → OpenSubtitles → Einstellungen → API/Anmeldung → API-Token
+🔐 Der API-Token ist persönlich – geben Sie ihn nicht weiter.

@@ -1,23 +1,245 @@
 ..:: CiefpVibes v1.0 ::..
 - Enigma2 Musik-Jukebox-Plugin
-### Beschreibung:
-CiefpVibes ist ein cooles Musikplayer-Plugin für Enigma2-Boxen.
-Spiele lokale oder Online-Playlists (.m3u/.tv) mit Wiederholung,
-Zufallswiedergabe, benutzerdefinierten Hintergründen und GitHub-Integration für neue Tracks ab.
-Unterstützte Formate sind MP3 und FLAC.
-Perfekt für durchgehend gute Vibes!
 
-### Verwendung:
-Starte das Plugin über das Menü „Plugins“.
+### Beschreibung:
+CiefpVibes ist ein großartiges Musikplayer-Plugin für Enigma2-Boxen.
+Spielt lokale oder Online-Playlists (.m3u/.tv) mit Wiederholung, Zufallswiedergabe,
+benutzerdefinierten Hintergründen und GitHub-Integration für neue Songs ab.
+Unterstützt die Formate MP3 und FLAC.
+
+Ideal für durchgehend gute Musik!
+
+### Bedienung: Starten Sie über das Menü „Plugins“.
 
 Grün: Lokale Datei laden.
 Blau: Online von GitHub.
 Gelb: Einstellungen.
 Rot: Beenden.
 
-Durchsuche die Playlist, OK zum Abspielen.
-Speichert die letzte Sitzung automatisch.
+Durch die Playlist navigieren, OK zum Abspielen.
+Speichert automatisch die letzte Sitzung.
 
-Genieße die guten Vibes mit dem CiefpVibes Enigma2-Plugin.
+Genieße die guten Vibes mit dem CiefpVibes Enigma2-Plugin
+..:: CiefpSettings ::..
+
+# CiefpVibes v1.1
+Enigma2 Musik-Jukebox-Plugin
+
+### 🆕 Neue Funktionen in Version 1.1:
+Online-Radio – Unterstützung für Online-Radiosender, Möglichkeit zum Herunterladen fertiger Playlists von GitHub
+Zahlreiches Cache-Verzeichnis – Alle temporären Dateien (Listen und Poster) werden jetzt in /tmp/ciefvibes_cache gespeichert
+Cache leeren – Neue Option in den Einstellungen zum Löschen aller zwischengespeicherten Dateien
+Cache-Größe anzeigen – Sieh dir an, wie viel Speicherplatz der Cache belegt, bevor du ihn löschst
+Optimierte Dateiverwaltung – Übersichtliche Struktur für einfachere Wartung
+
+### 🎯 Anwendung:
+Grundfunktionen:
+🟢 GRÜN – Dateien anzeigen (lokal)
+🔵 BLAU – Online-Listen (M3U, TV, RADIO)
+🟡 GELB – Einstellungen
+🔴 ROT – Anwendung beenden
+
+### Neue Option – RADIO
+Drücken Sie 🔵 BLAU – Online-Listen
+Wählen Sie RADIO, um verschiedene Wiedergabelisten auszuwählen.
+
+GITHUB_RADIO_URL und Unterstützung für .radio-Dateien hinzugefügt (beim Parsen, im Dateibrowser und beim GitHub-Download).
+Verbessertes Parsen von .tv-/.radio-Dateien: Erweiterte Erkennung von Audiostreams
+
+(Kennzeichen wie .mp3, .flac, /stream, rtmp://), mit Ausnahmen für Videoformate (.ts, .mp4 usw.).
+Verbessertes Metadaten-Parsing: parseArtistTitle() trennt das Format „Interpret – Titel“.
+Unterstützung für ICY-Metadaten, automatische Aktualisierung des Wiedergabetextes und der Poster.
+
+### Neue Option – Cache leeren:
+Drücken Sie 🟡 GELB (Einstellungen).
+Wählen Sie „🧹 Cache leeren“.
+
+Bestätigen Sie die Löschung im Dialogfeld.
+Der Cache wird geleert (Poster + Listen).
+
+### Verbesserungen bei Optik und Wiedergabe:
+
+- Dynamische Posteranzeige hinzugefügt (showPoster(), showDefaultPoster())
+
+mit automatischem Download des Albumcovers von der iTunes-API (fetchAlbumCover()).
+
+- Zwei Fortschrittsbalken: „progress_real“ (exakter Fortschritt) und „progress_vibe“ (pulsierender grüner Balken für den „Vibe“-Effekt).
+
+- Offline-Erkennung: Bezeichnung für „offline_status“ (z. B. „Stream offline“),
+Timer zur Überprüfung des Streams (checkStreamStatus()), Status wird beim Abspielen zurückgesetzt.
+
+- Mehr Designoptionen: Bis zu 10 Hintergründe, Poster und Infoleisten (in Version 1.0 nur bis zu 5).
+
+- Automatische Wiedergabe des ersten Titels der Willkommens-Playlist.
+
+### Weitere Optionen in den Einstellungen:
+
+▶ Wiedergabe – Wiederholung, Zufallsreihenfolge
+🌐 Netzwerk – Timeouts, URL-Laden
+🎨 Hintergrundbild – 10 Hintergrundbilder
+🖼️ Poster – 10 Poster
+📊 Infoleiste – 10 Infoleisten
+💾 Speichern & Laden – Einstellungen speichern
+
+### 💾 Gespeichert wird:
+Poster – Albumcover (zwischengespeichert)
+Listen – .m3u-/.tv-/.radio-Dateien herunterladen
+Einstellungen – Konfiguration in /etc/enigma2/ciefvibes.cfg
+Letzte Liste – In /etc/enigma2/ciefvibes_last.txt
+
+### ⚡ Vorteile der neuen Version:
+
+✅ Saubereres System – Nur noch ein Verzeichnis statt zwei
+✅ Bessere Speicherverwaltung – Cache anzeigen und leeren
+✅ Professionelle Darstellung – Fortschrittsanzeige mit pulsierender Animation
+✅ Höhere Stabilität – Offline-Statuserkennung Streams
+
+### 🎵 Unterstützte Formate:
+.m3u / .m3u8 – Standard-Playlists
+.tv – IPTV-Bouquets (Enigma2)
+.radio – Radiolisten (Enigma2)
+URL – Direktes Laden aus dem Internet
+
+### 🔍 Automatische Funktionen:
+Automatisches Laden der letzten Playlist beim Start
+Metadatenerkennung (Interpret – Titel)
+Automatischer Download von Albumcovern
+Offline-Anzeige für Streams
+
+Das Plugin ist ideal zum Hören von Musik von lokalen Dateien und Internetradio-Streams! 🎧
+Genieße die guten Vibes mit der CiefpVibes Jukebox
+
+..:: CiefpSettings ::..
+
+..:: CiefpVibes ::..
+📋 WICHTIGSTE UNTERSCHIEDE ZWISCHEN VERSION 1.1 UND 1.3
+
+✅ NEUE FUNKTIONEN IN VERSION 1.3:
+VOLLSTÄNDIGE NETZWERKUNTERSTÜTZUNG – Verbindung zu Laptops und freigegebenen Ordnern
+DIREKTE WIEDERGABE VON AUDIODATEIEN – MP3, FLAC, M4A, AAC (kein .m3u erforderlich)
+HIERARCHISCHES LADEN VON ORDNERN – Lädt ganze Ordner mit Musik
+INTELLIGENTERER DATEIBROWSER – Mehr Optionen und bessere Organisation
+AUTOMATISCHE NETZWERKSUCHE – Automatische Erkennung von SMB-Geräten
+HINWEIS IM MENÜ – Neue „Menü“-Schaltfläche für Netzwerkoptionen
+
+🔧 TECHNISCHE UNTERSCHIEDE:
+Version 1.1 1.3
+Nur .tv/.radio/.m3u + MP3/FLAC/M4A/AAC direkt
+Keine Netzwerkunterstützung Volle SMB/NFS-Netzwerkunterstützung
+Einfacher Dateibrowser Erweiterter Dateibrowser mit Ordneroption
+Nur Online-Playlists + Lokale und Netzwerkdateien
+Version: 1.2 Version: 1.3
+
+📁 NEUE FILME IN 1.3:
+Vollständige Netzwerkmethoden (mountSMBShare, mountNFSShare, autoScanNetwork)
+Verbesserter Dateibrowser mit Ordneroption
+System zum Lesen von ID3/FLAC/MP4-Tags
+
+🔗 ANLEITUNG ZUM HERSTELLEN EINER NETZWERKVERBINDUNG
+1. VORGEHENSWEISE AUF DEM LAPTOP/COMPUTER:
+
+Für Windows:
+bash
+1. Rechtsklick auf den Ordner → „Eigenschaften“
+2. Registerkarte „Freigabe“ → „Erweiterte Freigabe“
+3. ✅ Freigeben Sein Ordner
+4. „Berechtigungen“ → „Jeder“ hinzufügen → Vollzugriff
+5. Alle Passwortabfragen entfernen
+6. Netzwerk- und Freigabecenter → Passwortgeschützte Freigabe deaktivieren
+
+Für Linux/Mac:
+bash
+# Samba installieren, falls nicht installiert
+sudo apt install samba
+sudo nano /etc/samba/smb.conf
+
+# Am Ende hinzufügen:
+[Musik]
+path = /Pfad/zum/Ordner
+browsable = yes
+read only = yes
+guest ok = yes
+force user = nobody
+
+# Samba neu starten
+sudo systemctl restart smbd
+
+2. VERBINDUNGSPROBLEME UND LÖSUNGEN:
+Problem
+Lösung
+„Zugriff verweigert“
+Passwortgeschützte Freigabe entfernen
+
+„Netzwerkpfad nicht gefunden“
+Firewall und IP-Adresse prüfen
+
+„Mount-Fehler“
+Gastoption anstelle von Benutzername/Passwort verwenden
+
+Langsame Verbindung
+Timeout in den Plugin-Einstellungen reduzieren
+
+3. DIE HÄUFIG VERWENDETEN PFAD:
+bash
+//192.168.1.100/Music # Windows ohne Authentifizierung
+//192.168.1.100/ # Root-Freigabe
+//namelaptopa/Public # Öffentlicher Ordner
+
+4. PLUGIN-EINSTELLUNGEN FÜR DAS NETZWERK:
+Menü-Schaltfläche → Netzwerkoptionen
+Automatischer Scan → findet Geräte automatisch
+SMB-Gastmodus → verwendet Gast ohne Passwort
+
+🎯 KURZBESCHREIBUNG VON VERSION 1.3:
+„CiefpVibes 1.3“ ist eine vollständige Audio-Playlist mit folgenden Funktionen:
+
+✅ Direkte Wiedergabe von MP3-, FLAC-, M4A- und AAC-Dateien
+✅ Verbindung zu Netzwerkordnern (SMB/NFS ohne Passwort)
+✅ Automatischer Download von Albumcovern
+✅ Lesen von ID3-/FLAC-/MP4-Tags
+✅ Offline-Erkennung von Streams
+✅ 10 Hintergrundbilder, 10 Infoleisten 10 Poster
+✅ Online-Playlists von GitHub
+
+Hauptvorteil gegenüber Version 1.1: Keine .m3u-Datei mehr nötig! Sie können direkt jede Audiodatei oder einen ganzen Ordner mit Musik öffnen.
+
+🚀 SCHRITTE ZUR VERBINDUNG MIT EINEM LAPTOP:
+Auf einem Laptop: Passwortgeschützte Freigabe entfernen.
+Auf einer E2-Box: CiefpVibes öffnen → Menü-Schaltfläche → „Mit Laptop verbinden“.
+IP-Adresse eingeben (z. B. 192.168.1.100).
+Freigabenamen eingeben (oder leer lassen für Standard).
+Musikordner öffnen.
+Pro-Version:
+Automatischen Scan aktivieren, damit das Plugin alle verfügbaren Geräte im Netzwerk findet!
+
+⚠️ WICHTIGER HINWEIS:
+Version 1.3 ist abwärtskompatibel – alles, was in Version 1.1 funktioniert, funktioniert auch in Version 1.3, zusätzlich stehen Ihnen alle neuen Funktionen zur Verfügung. Bei Problemen mit der Netzwerkverbindung können Sie wie in der alten Version jederzeit auf „Online-Dateien“ oder lokale .m3u-Wiedergabelisten zurückgreifen.
+
+..:: CiefpSettings ::..
+
+CiefpVibes v1.4 – Änderungsübersicht
+Veröffentlichungsdatum: 13. Dezember 2025.
+Wichtigste Verbesserungen:
+
+Automatisches Update-System: Versionsprüfung über die version.txt-Datei auf GitHub hinzugefügt.
+
+Das Plugin erkennt nun automatisch neue Versionen, zeigt den Status auf dem Bildschirm an (z. B. „Aktuell ✓“ oder „Update v1.5 verfügbar!“)
+und bietet die Installation über eine MessageBox an. Das Sichern und Wiederherstellen von Konfigurationsdateien für sichere Updates ist ebenfalls enthalten.
+
+Verbesserte Posterdarstellung: Deutlich verbesserte Erkennung von Songtiteln aus Dateinamen
+
+(Seriennummern wie „01 -“, Jahreszahlen wie „(1993)“, Remix-Tags usw. werden ignoriert).
+
+Verbesserte Suche in der iTunes-API mit Fallback auf den Interpreten, wenn keine Treffer pro Song gefunden werden. Der „Drosselungsmechanismus“ wurde korrigiert, um heruntergeladene Poster sofort anzuzeigen. Die Anzeigedauer des Standardposters wurde verkürzt.
+
+Der Cache wurde präziser angepasst und das Flackern während der Wiedergabe beseitigt.
+
+Weitere Verbesserungen und Korrekturen:
+
+Verbesserte Handhabung von Online-TV-Playlists und lokalen MP3-Dateien.
+Detailliertere Debug-Protokolle erleichtern die Fehlersuche. Die Zusammenarbeit mit Netzwerk-Mounts für die Verbindung mit einem Laptop wurde verbessert.
+
+So aktualisieren Sie: Starten Sie das Plugin. Es prüft automatisch, ob eine neue Version auf GitHub verfügbar ist, und bietet die Installation an.
+Vielen Dank an alle, die CiefpVibes nutzen und testen – viel Spaß mit der Musik! 🎶🖼️
 
 ..:: CiefpSettings ::..

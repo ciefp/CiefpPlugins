@@ -1,0 +1,72 @@
+
+🎬 CiefpOpenSubtitles Plugin v1.1
+Plugin za pretragu i preuzimanje titlova sa OpenSubtitles.com i OpenSubtitles.org 
+— za Enigma2 uređaje (OpenATV,PurE2,OpenPLi, itd.)
+
+✅ Glavne funkcije:
+🔍 Pretraga titlova za filmove i serije po naslovu
+🌐 Podrška za dva sajta:
+OpenSubtitles.com (preko API ključa – preporučeno)
+OpenSubtitles.org (preko korisničkog naloga)
+🗣️ Višejezična podrška: unesite kodove (sr,hr,en ili srp,hrv,eng)
+⬇️ Automatsko preuzimanje i čuvanje titlova u željeni direktorijum
+🔄 Multi-language download – preuzimanje titlova na više jezika za isti naslov
+
+🛠️ Konfigurabilno:
+putanja za čuvanje,
+kašnjenje između preuzimanja,
+prioritet jezika (prvi pronađeni / svi jezici),
+automatsko preimenovanje titlova po šemi VideoName.sr.srt
+
+📱 Kako se koristi:
+Pokrenite plugin iz Extensions menija.
+Odaberite "Search Movies" ili "Search Series".
+Pritisnite ŽUTO dugme → otvara se virtuelna tastatura za unos naslova.
+Pritisnite ZELENO dugme za pretragu.
+Strelama odaberite željeni titl.
+Pritisnite PLAVO dugme ili OK za preuzimanje.
+Titl se automatski čuva u /media/hdd/subtitles/ (konfigurabilno).
+
+💡 Napomena: Za OpenSubtitles.com, potreban je besplatan API ključ 
+(dobija se na https://www.opensubtitles.com).
+
+🛠️ Verzija 1.1 — Izmene:
+Dodat izbor između .com (API) i .org (login) verzije
+Unapređeno sortiranje rezultata (po godini i broju preuzimanja)
+Podrška za višejezično preuzimanje
+Automatsko mapiranje titlova na postojeće video zapise
+Optimizovan UI za 16:9 ekrane (1600×800)
+Poboljšana vidljivost teksta i kompatibilnost sa MetrixHD skinom
+
+Zašto koristiti CiefpOpenSubtitles?
+⭐ Najbolja pretraga serija – preciznije rezultate od drugih pluginova.
+🌐 Podrška za OpenSubtitles.com (API Key) i OpenSubtitles.org (login).
+🎬 Automatsko mapiranje titlova na video fajlove.
+🛠️ Potpuno konfigurabilno – jezici, putanja, delay, prioritet.
+📱 Lako korišćenje – jednostavan interfejs, brza pretraga.
+
+🛠️ Sačuvaj API Key, Username i Password
+U glavnom meniju plugina izaberi API Key / Login (plavi/OK).
+Za .com (preporučeno – brže i bolje):
+Pritisni GREEN (Edit API Key).
+Unesi API key sa opensubtitles.com (besplatan nalog > API tab > Kreiraj novi key).
+Sačuva se automatski u fajlu: /etc/enigma2/ciefpopensubtitles/opensubtitles_apikey.txt 
+(format: apikey=xxxxxxxxxxxxxxx).
+
+Za .org (stariji sistem):
+Pritisni YELLOW (Edit Login).
+Unesi username, zatim password sa opensubtitles.org.
+Sačuva se automatski u fajlu: /etc/enigma2/ciefpopensubtitles/opensubtitles_login.txt 
+(format: 
+user=vasusername
+pass=vaspassword).
+
+🇷🇸 Kako dobiti API ključ (OpenSubtitles.com)
+Idite na https://www.opensubtitles.com
+Kliknite na "Login" (ili "Sign Up" ako nemate nalog)
+Nakon prijave, idite na: Account → API
+Kliknite "Generate API Token"
+Kopirajte dobijeni API Token (npr. abc123xyz456)
+Unesite ga u plugin:
+Extensions → OpenSubtitles → Settings → API/Login → API Token
+🔐 API ključ je ličan — nemojte ga deliti sa drugima.

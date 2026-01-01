@@ -1,46 +1,41 @@
 ..:: CiefpTMDBSearch v1.0 ::..
 
-Suchen Sie Filme und Serien über TMDB mit Postern, Beschreibungen, Schauspielern und Bewertungen – in 14 Sprachen! Sie benötigen lediglich einen kostenlosen TMDB-API-Schlüssel (einmalig über den gelben Button eingeben).
+Suchen Sie Filme und Serien in der TMDB mit Postern, Beschreibungen, Schauspielern und Bewertungen 
+– in 14 Sprachen! Sie benötigen lediglich einen kostenlosen TMDB-API-Schlüssel (einmalige Eingabe über den gelben Button).
 
 # GRUNDFUNKTIONEN #
 Filme (GRÜN) und Serien (GELB) suchen
 Details anzeigen: Titel, Jahr, Dauer, Bewertung, Genre, Regisseur/Schöpfer, Schauspieler, Beschreibung
 Poster (Cover) von TMDB herunterladen
 Mehrsprachige Unterstützung (Beschreibung, Titel)
-Poster zwischenspeichern (schnellerer Zugriff, weniger Datenverkehr)
+Poster-Caching (schnellerer Zugriff, weniger Datenverkehr)
 TMDB-API-Schlüssel manuell festlegen
 
 # INSTALLATION UND EINRICHTUNG #
-
 1. API-Schlüssel (ERFORDERLICH)
 Registrieren Sie sich auf themoviedb.org und erhalten Sie einen API-Schlüssel.
-
 Im Plugin auf BLAU → Einstellungen → GELB (API-Schlüssel) klicken.
-
 Geben Sie Ihren API-Schlüssel über die virtuelle Tastatur ein.
-
-2. Der API-Schlüssel wird in der Datei tmdbapikey.txt gespeichert.
-
-Sie können den Schlüssel in die Textdatei tmdbapikey.txt schreiben
+2. Der API-Schlüssel ist in der Datei tmdbapikey.txt gespeichert.
+Sie können den Schlüssel in die Textdatei tmdbapikey.txt eingeben
 und diese in den Plugin-Ordner verschieben.
-
 Beim Start des Plugins wird er automatisch eingelesen.
 
 # ANWENDUNG #
 Hauptmenü:
 GRÜN → Filme suchen
-GELB → Serien suchen
+GELB → Seriensuche
 BLAU → Einstellungen
-ROT → Beenden
+ZEILE → Beenden
 
 Suchbeispiel:
-GRÜN für Filme drücken
-Filmtitel eingeben (z. B. „Inception“)
+Drücken Sie GRÜN für Filme.
+Geben Sie den Filmnamen ein (z. B. „Inception“).
 Das Plugin zeigt Folgendes an:
 Titel, Jahr, Dauer
 Bewertung (z. B. 8,3/10 ★)
 Genre, Regisseur
-Kurze Inhaltsangabe
+Kurzbeschreibung der Handlung
 Hauptdarsteller
 Poster (falls verfügbar)
 
@@ -51,13 +46,257 @@ Poster herunterladen – Poster-Download aktivieren/deaktivieren
 Cache leeren (MENÜ) – Alle gespeicherten Poster löschen
 Speichern (GRÜN) – Änderungen speichern
 
-# CACHE #
-Poster werden automatisch in /tmp/CiefpTMDBSearch/ gespeichert. Spart Datenvolumen bei erneuter Suche. Kann bei Bedarf in den Einstellungen deaktiviert werden.
+# CACHING #
+Poster werden automatisch in /tmp/CiefpTMDBSearch/ gespeichert. Dies spart Datenvolumen bei wiederholten Suchen.
+Sie können dies in den Einstellungen deaktivieren.
 
-# UNTERSTÜTZTE SPRACHEN # Englisch, Serbisch, Kroatisch, Bosnisch, Slowakisch, Deutsch, Spanisch,
-Französisch, Italienisch, Russisch, Portugiesisch, Polnisch, Türkisch, Arabisch, Chinesisch
+# Unterstützte Sprachen:
+Englisch, Serbisch, Kroatisch, Bosnisch, Slowakisch, Deutsch, Spanisch, Französisch, Italienisch, Russisch, Portugiesisch, Polnisch, Türkisch, Arabisch, Chinesisch.
 
 Getestet und funktioniert einwandfrei auf:
 OpenATV · OpenBH · OpenPLI · Pure2 · Egami · OpenVision
+
+..:: CiefpSettings ::..
+
+..:: CiefpTMDBSearch v1.2 ::..
+
+Das beste TMDB-Info-Plugin für Enigma2
+Jetzt mit automatischer EPG-Suche!
+Erhalten Sie alle Informationen zu Filmen/Serien (Poster, Bewertung, Besetzung, Handlung usw.) direkt auf Ihrem Enigma2-Receiver – kein Smartphone oder Computer erforderlich!
+Neu in Version 1.2:
+
+Automatische EPG-Suche (BLAUE Taste) – Drücken Sie einfach die BLAUE Taste, während Sie einen beliebigen Kanal schauen.
+Das Plugin lädt automatisch den aktuellen Programmtitel/das Jahr aus dem EPG herunter und durchsucht die TMDB! Intelligente Titelbereinigung (entfernt [HD], (2024), Film: usw.)
+Es werden sowohl Film → Serie als auch Serie → Film durchsucht, bis das korrekte Ergebnis gefunden ist.
+Deutlich verbesserte Erkennung des Erscheinungsjahres anhand der EPG-Beschreibung.
+Schnelleres und zuverlässigeres Herunterladen und Zwischenspeichern von Postern.
+15 Sprachen werden unterstützt (u. a. Serbisch, Kroatisch, Bosnisch, Englisch, Deutsch usw.).
+
+Funktionen
+Schönes, großes Poster (500×750) + alle Details auf einen Blick.
+Vollständige Besetzungsliste mit Namen der Charaktere.
+Regisseur/Produzenten, Genre, Laufzeit, Bewertung ★.
+Poster-Zwischenspeicherung (/tmp oder HDD) – blitzschnell nach dem ersten Download.
+Option zum Leeren des Caches + Cache-Informationen.
+Funktioniert einwandfrei mit allen modernen Enigma2-Images (OpenATV, OpenBH, VTI, BlackHole, Egami usw.).
+
+Anwendung
+Plugin installieren.
+Erster Start → MENU → Einstellungen → drücken. GELBER Button → Geben Sie Ihren kostenlosen TMDB-API-Schlüssel ein
+(Hier in 10 Sekunden herunterladen: https://www.themoviedb.org/settings/api)
+Add-on über das Menü starten
+
+Buttons
+
+GRÜN – Manuelle Filmsuche
+GELB – Manuelle Seriensuche
+BLAU – Automatische Suche nach aktuellem EPG-Ereignis ← NEU UND GENIAL!
+MENÜ – Einstellungen (Sprache, Cache-Ordner, Poster löschen…)
+
+Vielen Dank
+Ein besonderer Dank geht an Hamdy Ahmed – ohne seine Hilfe und seine großartigen Ideen wären die neue automatische EPG-Funktion und viele Verbesserungen in Version 1.2 nie möglich gewesen!
+Add-on erstellt und betreut von Ciefp
+Genießen Sie echtes Kinofeeling zu Hause – einfach BLAU drücken und entspannen!
+
+Feedback, Fehlermeldungen oder Kaffeeangebote – jederzeit willkommen!
+
+..:: CiefpSettings ::..
+
+..:: CiefpTMDBSearch 1.4 ::..
+
+Zusätzlich zur TMDB-Bewertung:
+IMDb-Bewertung hinzugefügt:
+Ein API-Schlüssel ist ebenfalls erforderlich:
+Geben Sie den API-Schlüssel für OMDB in den Einstellungen ein.
+
+Der Schlüssel wird in der Datei omdbapikey.txt gespeichert (ähnlich wie tmdbapikey.txt).
+Sie können den API-Schlüssel kostenlos hier herunterladen:
+https://www.omdbapi.com
+Geben Sie Ihre E-Mail-Adresse, Ihren Vor- und Nachnamen ein.
+Geben Sie beliebige Daten ein.
+Zum Beispiel: CiefpTMDBSearch auf Enigma2
+Sie erhalten einen Link per E-Mail, um den API-Schlüssel zu aktivieren.
+Der API-Schlüssel wird Ihnen dann per E-Mail zugesendet.
+Geben Sie Ihre E-Mail-Adresse, Ihren Vor- und Nachnamen ein.
+Geben Sie beliebige Daten ein.
+Zum Beispiel: CiefpTMDBSearch auf Enigma2
+Sie erhalten einen Link per E-Mail, um den API-Schlüssel zu aktivieren.
+Der API-Schlüssel wird Ihnen dann per E-Mail zugesendet.
+Der API-Schlüssel wird Ihnen dann in der Datei omdbapikey.txt angezeigt.
+Sie erhalten einen Link per E-Mail, um den API-Schlüssel zu aktivieren.
+Der API-Schlüssel wird Ihnen in der Datei omdbapikey.txt angezeigt.
+Sie erhalten einen API-Schlüssel, um ihn zu aktivieren.
+Der API-Schlüssel wird Ihnen in der Datei omdbapi ... können den API-Schlüssel kostenlos herunterladen.
+
+
+Ich habe außerdem die Unterstützung für Hintergrundposter hinzugefügt.
+Das Poster wird durch Drücken der OK-Taste aktiviert.
+Automatische Suche:
+Blaue Schaltfläche: Links Beschreibung, rechts Poster (klassische Ansicht).
+OK-Taste: Zeigt Hintergrundbild und Poster an.
+OK-Taste: Ein weiterer Druck auf die OK-Taste führt zurück zur klassischen Ansicht.
+Die Schaltfläche „Beenden“ beendet das Plugin.
+
+Grüne Schaltfläche: Filme suchen.
+Öffnet virtuelles Tattoo mit dem Namen von Zanuso.
+Die grüne Schaltfläche startet die Suche und öffnet… (Links Beschreibung, rechts Poster).
+OK-Taste: Zeigt Hintergrundbild und Poster an.
+OK-Taste: Ein weiterer Druck auf die OK-Taste führt zurück zur klassischen Ansicht.
+Die Schaltfläche „Beenden“ beendet das Plugin.
+
+Gelbe Schaltfläche: Serien suchen.
+Öffnet virtuelles Tattoo mit dem Namen von Zanuso.
+Die grüne Schaltfläche startet die Suche und öffnet… (Links Beschreibung, rechts Poster).
+OK-Taste: Zeigt Hintergrundbild und Poster an.
+OK-Taste: Ein weiterer Druck auf die OK-Taste führt zurück zur klassischen Ansicht.
+Die Schaltfläche „Beenden“ beendet das Plugin.
+
+In Version 1.3 habe ich ein automatisches Upgrade hinzugefügt. Die Installation der neuen Versionen sollte nun beginnen.
+
+..:: CiefpSettings ::..
+
+🎬 CiefpTMDBSearch v1.6 – Neue Version!
+
+
+📋 Was ist neu in Version 1.6?
+
+🚀 Wichtige Verbesserungen:
+🎯 AUTOMATISCHE BESETZUNGSSUCHE (Gelbe Schaltfläche)
+
+Zeigt automatisch Regisseur und Hauptdarsteller des aktuellen Films/der aktuellen Serie an.
+Sie können mit einem Klick Informationen zu jedem Mitglied der Besetzung abrufen.
+Schneller Wechsel zwischen Schauspieler- und Regisseurprofilen.
+
+📊 NÜTZLICHERE PROFILANZEIGE
+Die unverständliche „Popularitäts“-Angabe wurde durch nützliche Informationen ersetzt:
+Karrierejahre (z. B. „50+ Jahre“)
+Anzahl der Filme und Fernsehprojekte (z. B. „86 Filme, 31 Fernsehproduktionen“)
+Bessere Sortierung im Bereich „Bekannt für“ – zeigt die beliebtesten Werke an.
+
+🎨 VERBESSERTE BENUTZEROBERFLÄCHE
+Bessere Textformatierung
+Optimiertes Informationslayout
+Bessere Lesbarkeit auf allen Bildschirmgrößen
+
+🔧 Technische Verbesserungen:
+Verbesserte Sortierung der Filmografie nach aktueller Popularität
+Verbesserte Datenverarbeitung der TMDB-API
+Optimierte Bilddarstellung Download
+Verbesserte Ladefehler
+
+🎮 Kurzanleitung:
+1. Automatische EPG-Suche (🔵 Blaue Schaltfläche) Während des Fernsehens klicken – Film/Serie wird automatisch im EPG gefunden.
+Ergebnis: Alle Details zum Film/zur Serie.
+
+2. Besetzungssuche (🟡 Gelbe Schaltfläche) ← NEU!
+
+1. Film/Serie laden (per Auto-EPG oder manueller Suche)
+2. Gelbe Schaltfläche für die Liste der Schauspieler und Regisseure anklicken
+3. Auswählen: Profil einer Person anzeigen
+4. Ergebnis: Vollständiges Profil der ausgewählten Person wird automatisch angezeigt
+5. Erweiterte Suche (Grüne Schaltfläche)
+Manuelle Suche nach Filmen, Serien, Schauspielern und Regisseuren
+6. Menüoptionen: Filme suchen, Serien suchen, Schauspieler suchen, Regisseure suchen
+6. Hintergrundansicht (OK-Schaltfläche)
+Umschalten zwischen klassischer und Bildansicht
+Klassisch: Textinformationen + Poster
+7. Hintergrund: Großes Hintergrundbild + Poster
+8. Einstellungen (Menü-Schaltfläche)
+9. API-Schlüssel (TMDB, OMDb) festlegen
+10. Sprache für Beschreibungen auswählen
+11. Cache-Verwaltung
+12. Nach Updates suchen
+
+💡 Tipps zur Verwendung:
+13. Schnellste Methode: Blau → Gelb = Sofortige Informationen zu allen Mitwirkenden im Film! Für die Recherche: Grüne Schaltfläche für die detaillierte Suche nach Personen/Themen.
+Für die Atmosphäre: OK-Schaltfläche zum Umschalten auf schöne Hintergrundbilder.
+Für genauere Bewertungen: OMDb-API-Schlüssel für die IMDB-Bewertung (optional).
+
+🎉 Warum v1.6 fantastisch ist:
+
+✅ Schneller – Weniger Klicks, mehr Informationen
+✅ Intelligenter – Automatische Verknüpfung von Personen und Projekten
+✅ Nützlicher – Echte Informationen statt unverständlicher Zahlen
+✅ Mehr Spaß – Wie die Recherche zur Filmgeschichte!
+
+Filme und Serien zu recherchieren macht jetzt mehr Spaß als je zuvor! 🍿🎥 Wir haben eine Phase erreicht, in der es noch mehr Spaß macht, die Möglichkeiten der Plugins zu entdecken.
+
+Schon beim Ansehen des Films selbst regt die Neugier an.
+
+..:: CiefpSettings ::..
+
+..:: CiefpTMDBSearch 1.7 ::..
+
+Neuerungen in Version 1.7
+Das Menü „Erweiterte Suche“ wurde um vier neue Optionen erweitert:
+
+Beliebte Filme suchen
+– Zeigt die 20 aktuell beliebtesten Filme auf TMDB (langfristige Beliebtheit).
+– Die Liste enthält: Filmtitel, Erscheinungsjahr, TMDB-Bewertung und Sterne.
+– Ein Klick auf den Film öffnet eine Vollansicht mit Poster, Beschreibung, Schauspielern usw.
+
+Beliebte Serien suchen
+– Zeigt die 20 aktuell beliebtesten Serien auf TMDB.
+– Anzeige: Serienname, Startjahr, Bewertung und Sterne.
+– Durch Auswahl wird eine Detailansicht der Serie geöffnet.
+
+Beliebte Personen suchen
+– Zeigt die 20 beliebtesten Personen (Schauspieler, Regisseure usw.).
+– Anzeige: Name der Person, Berufsfeld (z. B. Schauspiel/Regie), Kurzliste bekannter Filme/Serien, Beliebtheit bei anderen Stars.
+- Klicken Sie, um das Profil der Person mit Biografie, Filmografie und Poster zu öffnen.
+Trendsuche (täglich)
+– Zeigt die 20 aktuellsten Titel und Personen pro Tag (gemischt – Filme, Serien und Personen),
+genau wie der Bereich „Trends“ auf der TMDB-Startseite.
+– Wird täglich aktualisiert und zeigt die aktuellsten Inhalte an. Die aktuellsten Highlights (neue Hits, virale Serien, aktuelle Schauspieler).
+
+– Anzeige:
+• Filme: [Mov] Titel (Jahr) ★★★★★ 7,8
+• Serien: [Ser] Titel (Jahr) ★★★★★ 8,5
+• Personen: [Person] Name Nachname • Schauspiel ★★★★ 45,2
+– Durch Auswahl wird die entsprechende Detailansicht (Film-/Serien-/Personenprofil) geöffnet.
+
+Weitere Informationen
+Alle Anzeigen sind aus Gründen der Übersichtlichkeit und Geschwindigkeit auf 20 Ergebnisse beschränkt (wie auf der TMDB-Website – erste Seite).
+Bewertungen werden mit Sternen angezeigt, um eine schnellere Ansicht zu ermöglichen.
+Die Auswahl der Beschreibungssprache wird unterstützt (über die Plugin-Einstellungen).
+Online-Installation via Plugin
+
+..:: CiefpSettings ::..
+
+📊 CiefpTMDBSearch 2.1
+Neu: Staffeln und Episoden – das Serien-Plugin zeigt jetzt alle Staffeln und Episoden an.
+Das Plugin verfügt nun auch über eine Galerie mit allen verfügbaren Postern und Hintergrundbildern.
+
+Das Plugin bietet jetzt:
+✅ Automatische EPG-Suche – automatische Erkennung des aktuellen Programms
+✅ Erweiterte Suche – Filme, Serien, Schauspieler, Regisseure
+✅ Beliebte/Trend-Listen – Aktuelle Trends
+✅ Cast Explorer – Suche nach Darstellern
+✅ Staffeln und Episoden – detaillierte Übersicht über TV-Serien und Episoden
+✅ TMDB- und IMDB-Bewertungen – zusätzliche Informationen
+✅ Hintergrundbild-Galerie – Vorschau der Hintergrundbilder
+✅ Poster-Galerie – Poster-Vorschau
+✅ Einstellungen – API-Schlüssel, Sprache, Cache
+
+🖼️ Kurzanleitung: So verwenden Sie die Poster- und Hintergrundbild-Ansicht
+Die neue Galerie ist einfach zu bedienen. Hier eine Kurzanleitung:
+
+Galerie öffnen:
+Nachdem die Film- oder Serieninformationen geladen wurden, drücken Sie die Menü-Taste auf Ihrer Fernbedienung.
+Wählen Sie im Menü die Option „Hintergrundgalerie“ (🖼) oder „Postergalerie“ (🎬).
+
+Galerienavigation:
+Verwenden Sie die gelben und blauen Tasten (oder die Pfeiltasten links/rechts), um durch die Bilder zu navigieren.
+Die grüne Taste bringt Sie zurück zum Startbildschirm oder wechselt (falls verfügbar) zwischen Hintergrund- und Postergalerie.
+Die Statusleiste oben zeigt an, welches Bild Sie gerade ansehen (z. B. „6/185“).
+Galerie schließen: Drücken Sie die rote Taste oder OK/Beenden, um zum Hauptbildschirm des Plugins zurückzukehren.
+
+💡 Tipps und Hinweise
+Zwischenspeicherung: Bilder werden automatisch heruntergeladen und in Ihrem ausgewählten Cache-Ordner (in den Einstellungen festgelegt) gespeichert. Dies beschleunigt die Anzeige beim nächsten Öffnen.
+Spracheinstellung: In den Einstellungen können Sie die Sprache der Beschreibungen ändern. Dies wirkt sich auch auf die Sprache der Daten aus, die Sie von der TMDB-Datenbank erhalten.
+
+Leistung: Falls das Plugin aufgrund eines vollen Caches langsamer arbeitet, können Sie diesen über MENÜ > Weitere Optionen > 🗑️ Cache leeren leeren.
+
+Die neue Galerie ist eine großartige Ergänzung und bietet Nutzern ein umfassendes Erlebnis beim Betrachten der visuellen Inhalte eines Films oder einer Serie.
 
 ..:: CiefpSettings ::..

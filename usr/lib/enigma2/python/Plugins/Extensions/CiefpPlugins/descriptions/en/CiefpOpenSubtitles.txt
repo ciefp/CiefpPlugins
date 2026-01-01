@@ -1,0 +1,72 @@
+
+🎬 CiefpOpenSubtitles Plugin v1.1
+Subtitle search & download plugin for Enigma2-based set-top boxes (OpenATV,PurE2,OpenPLi, etc.)
+ — supporting OpenSubtitles.com and OpenSubtitles.org.
+
+✅ Key Features:
+🔍 Search subtitles for movies and TV series by title
+🌐 Dual-site support:
+OpenSubtitles.com (via free API key — recommended)
+OpenSubtitles.org (via username/password login)
+🗣️ Multi-language support: enter language codes (e.g. sr,hr,en or srp,hrv,eng)
+⬇️ Automatic download & save to user-defined directory
+🔄 Multi-language download mode — fetch subtitles in all configured languages for a given title
+
+🛠️ Fully configurable via settings screen:
+Save path
+Download delay (to respect API rate limits)
+Language priority (first match vs. all languages)
+Auto-renaming to match video files (e.g. MovieName.sr.srt)
+
+📱 How to Use:
+Launch the plugin from Extensions menu.
+Choose "Search Movies" or "Search Series".
+Press YELLOW to open the virtual keyboard and type the title.
+Press GREEN to start the search.
+Navigate results with arrow keys.
+Press BLUE or OK to download the selected subtitle.
+Subtitle is saved automatically (default: /media/hdd/subtitles/).
+
+💡 Note: For OpenSubtitles.com, you need a free API key 
+(register at https://www.opensubtitles.com).
+
+🛠️ v1.1 — What’s New:
+Added site selection: .com (API) vs .org (login)
+Improved result sorting (by year ↓, then downloads ↓)
+Multi-language download support
+Auto-matching of downloaded subtitles to existing video files
+UI optimized for 16:9 screens (1600×800)
+Enhanced text readability & MetrixHD skin compatibility
+
+Why use CiefpOpenSubtitles?
+⭐ The best series search - more accurate results than other plugins.
+🌐 Support for OpenSubtitles.com (API Key) and OpenSubtitles.org (login).
+🎬 Automatic mapping of subtitles to video files.
+🛠️ Fully configurable - languages, path, delay, priority.
+📱 Ease of use - simple interface, fast search.
+
+🛠️ Save API Key, Username and Password
+In the main menu of the plugin, select API Key / Login (blue/OK).
+For .com (recommended – faster and better):
+Press GREEN (Edit API Key).
+Enter the API key from opensubtitles.com (free account > API tab > Create new key).
+It is saved automatically in the file: /etc/enigma2/ciefpopensubtitles/opensubtitles_apikey.txt
+(format: apikey=xxxxxxxxxxxxxxx).
+
+For .org (older system):
+Press YELLOW (Edit Login).
+Enter username, then password from opensubtitles.org.
+It is saved automatically in the file: /etc/enigma2/ciefpopensubtitles/opensubtitles_login.txt
+(format:
+user=yourusername
+pass=yourpassword).
+
+🇬🇧 How to get an API key (OpenSubtitles.com)
+Go to https://www.opensubtitles.com
+Click "Login" (or "Sign Up" if you don’t have an account)
+After login, go to: Account → API
+Click "Generate API Token"
+Copy the generated API Token (e.g. abc123xyz456)
+Enter it in the plugin:
+Extensions → OpenSubtitles → Settings → API/Login → API Token
+🔐 The API token is personal — do not share it.

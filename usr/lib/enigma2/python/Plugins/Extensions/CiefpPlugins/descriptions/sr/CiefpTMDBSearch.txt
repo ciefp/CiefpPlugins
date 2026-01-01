@@ -1,4 +1,3 @@
-
 ..:: CiefpTMDBSearch v1.0 ::..
 
 Pretraga filmova i serija preko TMDB-a sa posterima, opisima, glumcima i ocenama – na 14 jezika!
@@ -59,5 +58,246 @@ Francuski, Italijanski, Ruski, Portugalski, Poljski, Turski, Arapski, Kineski.
 
 Testirano i radi savršeno na:
 OpenATV · OpenBH · OpenPLI · Pure2 · Egami · OpenVision
+
+..:: CiefpSettings ::..
+
+   ..:: CiefpTMDBSearch v1.2 ::..
+   
+Najbolji TMDB info plugin za Enigma2
+Sada s automatskim EPG pretraživanjem!
+Trenutno dobijte sve informacije o filmu/seriji (poster, ocjena, glumačka postava, radnja itd.) 
+direktno na vašem Enigma2 prijemniku – nije potreban telefon ili računar!
+Šta je novo u v1.2
+
+Automatsko EPG pretraživanje (PLAVI dugme) – samo pritisnite PLAVO dugme dok gledate bilo koji kanal 
+i plugin će automatski preuzeti trenutni naslov/godinu programa iz EPG-a i pretražiti TMDB!
+Pametno čišćenje naslova (uklanja [HD], (2024), Film:, itd.)
+Isprobava i film → seriju i seriju → film dok ne pronađe tačan rezultat
+Mnogo bolje otkrivanje godine iz EPG opisa
+Brže i pouzdanije preuzimanje i keširanje postera
+15 podržanih jezika (uključujući srpski, hrvatski, bosanski, engleski, njemački, itd.)
+
+Karakteristike
+
+Prekrasan veliki poster (500×750) + svi detalji na jednom ekranu
+Potpuna lista glumaca s imenima likova
+Režiser / kreatori, žanrovi, vrijeme izvođenja, ocjena ★
+Keširanje postera (/tmp ili HDD) - munjevito brzo nakon prvog preuzimanja
+Opcija brisanja keša + informacije o kešu
+Savršeno radi na svim modernim Enigma2 slikama (OpenATV, OpenBH, VTI, BlackHole, Egami, itd.)
+
+Kako koristiti
+
+Instalirajte dodatak
+Prvo pokretanje → pritisnite MENU → Postavke → ŽUTO dugme → unesite svoj besplatni TMDB API ključ
+(preuzmite ga za 10 sekundi ovdje: https://www.themoviedb.org/settings/api)
+Pokrenite dodatak iz menija
+
+Dugmad
+
+ZELENA – Ručna pretraga filmova
+ŽUTA – Ručna pretraga serija
+PLAVA – Automatska pretraga trenutnog EPG događaja ← NOVO I ODLIČNO!
+IZBORNIK – Postavke (jezik, mapa predmemorije, brisanje postera…)
+
+Veliko hvala i priznanje
+Posebno veliko hvala Hamdyju Ahmedu – bez njegove pomoći i sjajnih ideja nova funkcija automatskog EPG-a i mnoga poboljšanja u v1.2 nikada ne bi bila ostvarena!
+Dodatak kreirao i održava Ciefp
+Uživajte u pravom osjećaju kina kod kuće – samo pritisnite PLAVO i opustite se!
+Bilo kakve povratne informacije, izvještaji o greškama ili ponude za kafu – uvijek su dobrodošli!
+
+..:: CiefpSettings ::..
+
+..:: CiefpTMDBSearch 1.4 ::..
+  
+Pored TMDB ocene 
+Dodana i IMDB ocena 
+Takođe je potreban Apikey 
+Preko settings unesete apikey za omdb
+Ključ se čuva u fajl omdbapikey.txt
+slično kao tmdbapikey.txt 
+Apikey možete besplatno preuzeti sa:
+https://www.omdbapi.com
+Popunite email,ime i prezime 
+korišćenje upišete bilo šta 
+naprimer : CiefpTMDBSearch on enigma2 
+dobićete na mail link kojim aktivirate api ključ.
+
+Dodao sam i podršku za pozadinski poster
+Poster se aktivira na dugme OK
+Automatska pretraga :
+plavo dugme:leva strana opis, desna poster (classic view)
+OK dugme: prikazuje pozadinsku sliku i poster
+OK dugme : još jedan pritisak na ok dugme je korak unazad na (classic view)
+Exit dugme izlazi iz plugina
+
+Zeleno dugme: Search Movies
+otvara virtuelnu tataturu zaunos naziva
+zeleno dugme pokreće pretragu i otvara 
+ekran levo opis desno poster
+OK dugme: prikazuje pozadinsku sliku i poster
+OK dugme : još jedan pritisak na ok dugme je korak unazad na (classic view)
+Exit dugme izlazi iz plugina
+
+Žuto dugme:Search Series
+otvara virtuelnu tataturu zaunos naziva
+zeleno dugme pokreće pretragu i otvara 
+ekran levo opis desno poster
+OK dugme: prikazuje pozadinsku sliku i poster
+OK dugme : još jedan pritisak na ok dugme je korak unazad na (classic view)
+Exit dugme izlazi iz plugina
+
+Automatsku nadogradnju koju sam dodao na verziji 1.3 
+Sada bi trebalo da pokrene instalaciju nove verzije 
+
+..:: CiefpSettings ::..
+
+
+
+🎬 CiefpTMDBSearch v1.6 - Nova Verzija!
+
+📋 Šta je NOVO u verziji 1.6:
+🚀 Glavna Poboljšanja:
+🎯 AUTO CAST EXPLORER (Žuto dugme)
+
+Automatski prikazuje režisera i glavne glumce iz trenutnog filma/serije
+Jednim klikom možeš istražiti bilo koga iz glumačke ekipe
+Brzo prebacivanje između profila glumaca i režisera
+
+📊 KORISNIJI PRIKAZ PROFILA
+Zamenjen nerazumljivi "Popularity" skor sa korisnim informacijama:
+Godine karijere (npr. "50+ years")
+Broj filmova i TV projekata (npr. "86 movies, 31 TV")
+Bolje sortiranje "Known For" sekcije - prikazuje najpopularnije radove
+
+🎨 POBOLJŠAN KORISNIČKI INTERFEJS
+Bolje formatiranje teksta
+Optimizovan raspored informacija
+Čitljiviji prikaz na svim ekranima
+
+🔧 Tehnička Poboljšanja:
+Poboljšano sortiranje filmografije po stvarnoj popularnosti
+Bolje rukovanje podacima iz TMDB API-ja
+Optimizovano preuzimanje slika
+Poboljšana greška pri učitavanju
+
+🎮 Kratko Uputstvo za Korišćenje:
+1. AUTO EPG Pretraga (🔵 Plavo dugme)
+Klikni dok gledaš TV - automatski pronalazi film/seriju iz EPG-a
+Rezultat: Kompletni detalji o filmu/seriji
+
+2. CAST EXPLORER (🟡 Žuto dugme) ← NOVO!
+Prvo: Učitaj film/seriju (preko Auto EPG ili ručne pretrage)
+Onda: Klikni žuto dugme za listu glumaca i režisera
+Biraj: Odaberi bilo koga za instant profil
+Rezultat: Automatski prikaz kompletnog profila odabrane osobe
+
+3. ADVANCED SEARCH (🟢 Zeleno dugme)
+Ručna pretraga filmova, serija, glumaca, režisera
+Meni opcije: Search Movies, Search TV Series, Search Actors, Search Directors
+
+4. BACKDROP VIEW (OK dugme)
+Prebacuje između klasičnog i slikovnog prikaza
+Klasični: Tekstualne informacije + poster
+Backdrop: Velika pozadinska slika + poster
+
+5. SETTINGS (MENU dugme)
+Podešavanje API ključeva (TMDB, OMDb)
+Izbor jezika za opise
+Upravljanje keš memorijom
+
+Provera ažuriranja
+
+💡 Saveti za Korišćenje:
+Najbrži način: Plavo → Žuto = Instant informacije o svima u filmu!
+Za istraživanje: Zeleno dugme za detaljnu pretragu bilo koga/čega
+Za atmosferu: OK dugme za prebacivanje na lepe backdrop slike
+Za tačnije ocene: OMDb API key za IMDB rating (opciono)
+
+🎉 Zašto je v1.6 Fantastična:
+✅ Brže - Manje klikanja, više informacija
+✅ Pametnije - Automatsko povezivanje ljudi i projekata
+✅ Korisnije - Stvarne informacije umesto nerazumljivih brojeva
+✅ Zabavnije - Kao istraživanje filmske istorije!
+
+Sada je istraživanje filmova i serija zabavnije nego što su ikada bili! 🍿🎥
+Došli smo do faze kada je zabavnije istraživanje mogućnosti plugina
+od gledanja samog filma drži te da istražuješ.
+
+..:: CiefpSettings ::..
+
+..:: CiefpTMDBSearch 1.7 ::..
+
+Šta je novo u verziji 1.7
+Dodane su četiri nove opcije u Advanced Search meni:
+
+Search popular Movies
+– Prikazuje 20 najpopularnijih filmova trenutno na TMDB-u (dugoročna popularnost).
+– Lista sadrži: naziv filma, godinu izlaska, TMDB ocenu i zvezdice.
+– Klikom na film otvara se puni prikaz sa posterom, opisom, glumcima itd.
+Search popular Series
+– Prikazuje 20 najpopularnijih serija trenutno na TMDB-u.
+– Prikaz: naziv serije, godina početka, ocena i zvezdice.
+– Odabir otvara detaljan prikaz serije.
+Search popular Persons
+– Prikazuje 20 najpopularnijih osoba (glumci, režiseri, itd.).
+– Prikaz: ime osobe, oblast (npr. Acting/Directing), kratak spisak poznatih filmova/serija, popularnost sa zvezdicama.
+– Klikom se otvara profil osobe sa biografijom, filmografijom i posterom.
+Search trending All (Daily)
+– Prikazuje 20 trenutno najaktuelnijih naslova i osoba dnevno (mješovito – filmovi, serije i osobe), 
+  baš kao "U trendu" sekcija na početnoj stranici TMDB-a.
+– Dnevno se ažurira i pokazuje ono što je trenutno najviše u fokusu (novi hitovi, viralne serije, aktuelni glumci).
+– Prikaz:
+• Filmovi: [Mov] Naslov (godina) ★★★★★ 7.8
+• Serije: [Ser] Naslov (godina) ★★★★★ 8.5
+• Osobe: [Person] Ime Prezime • Acting ★★★★ 45.2
+– Odabir otvara odgovarajući detaljan prikaz (film/serija/profil osobe).
+
+Ostalo
+
+Svi prikazi su ograničeni na 20 rezultata radi brzine i preglednosti (kao na TMDB sajtu – prva stranica).
+Ocene su prikazane sa zvezdicama za brži pregled.
+Podržan je odabir jezika opisa (preko postavki plugina).
+Instalacija online preko plugina
+
+..:: CiefpSettings ::..
+
+📊 CiefpTMDBSearch 2.1
+Novo:
+Sezone i epizode ,plugin sada za serije može da prikazuje sve sezone i njihove epizode.
+Plugin sada ima i galeriju za prikazivanje svih dostupnih postera i pozadinskih slika. 
+
+Plugin sada ima:
+✅ Auto EPG pretragu - automatsko prepoznavanje trenutnog programa
+✅ Naprednu pretragu - filmovi, serije, glumci, režiseri
+✅ Popularne/Trending liste - šta je trenutno popularno
+✅ Cast Explorer - istraživanje glumačke ekipe
+✅ Sezone i epizode - detaljni pregled TV serija i epizoda
+✅ TMDB i IMDB ocene - dodatne informacije
+✅ Backdrop Gallery - pregled pozadinskih slika 
+✅ Poster Gallery - pregled postera 
+✅ Postavke - API ključevi, jezik, keš
+
+🖼️ Kratko uputstvo: Kako koristiti preglednik postera i backdrop-a
+Nova galerija je jednostavna za korištenje. Evo kratkog vodiča:
+
+Pristup galeriji:
+Nakon što učitate podatke o filmu ili seriji, pritisnite MENU dugme na daljinskom upravljaču.
+U izborniku izaberite opciju 🖼️ Backdrop Gallery ili 🎬 Poster Gallery.
+
+Navigacija kroz galeriju:
+Koristite ŽUTO i PLAVO dugme (ili strelice lijevo/desno) da se krećete kroz slike.
+
+ZELENO dugme vas vraća na početni ekran ili prebacuje između backdrop i poster galerije (ako je moguće).
+Statusna linija pri vrhu pokazuje koja ste slika od ukupno koliko (npr., "6/185").
+
+Zatvaranje galerije:
+Pritisnite CRVENO dugme ili OK/Exit da se vratite na glavni ekran plugina.
+
+💡 Savjeti i napomene
+Keširanje: Slike se automatski preuzimaju i spašavaju u vaš odabrani cache folder (podešava se u Settings). Ovo ubrzava prikaz prilikom sljedećeg otvaranja.
+Podešavanje jezika: U Settings možete promijeniti jezik za opise (language). Ovo utiče i na jezik podataka koje dobijate od TMDB baze.
+Performance: Ako plugin počne sporije da radi zbog punog keša, možete ga očistiti preko MENU > More Options > 🗑️ Clear Cache.
+Nova galerija je odličan dodatak koji korisnicima omogućava potpuno iskustvo pregledavanja vizuelnog sadržaja filma ili serije.
 
 ..:: CiefpSettings ::..

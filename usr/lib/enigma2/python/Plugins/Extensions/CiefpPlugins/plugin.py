@@ -20,7 +20,7 @@ import urllib.request
 import uuid
 
 # Plugin version
-PLUGIN_VERSION = "2.7" 
+PLUGIN_VERSION = "2.8" 
 
 # Setup logging
 LOG_FILE = "/tmp/ciefp_plugin.log"
@@ -102,6 +102,7 @@ PLUGIN_LIST = [
     ("CiefpOpenDirectories", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpOpenDirectories.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpOpenDirectories/main/installer.sh -O - | /bin/sh", "CiefpOpenDirectories"),
     ("CiefpTMDBSearch", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpTMDBSearch.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpTMDBSearch/main/installer.sh -O - | /bin/sh", "CiefpTMDBSearch"),
     ("CiefpVibes", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpVibes.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpVibes/main/installer.sh -O - | /bin/sh", "CiefpVibes"),
+    ("CiefpOpenSubtitles", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpOpenSubtitles.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpOpenSubtitles/main/installer.sh -O - | /bin/sh", "CiefpOpenSubtitles"),
     ("Ciefp Whitelist Streamrelay", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpWhitelistStreamrelay.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpWhitelistStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpWhitelistStreamrelay"),
     ("Ciefp Streamrelay py2", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpStreamrelayPy2.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsStreamrelayPY2/main/installer.sh -O - | /bin/sh", "CiefpStreamrelayPy2"),
     ("Ciefp Streamrelay py3", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpStreamrelayPy3.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpStreamrelayPy3"),

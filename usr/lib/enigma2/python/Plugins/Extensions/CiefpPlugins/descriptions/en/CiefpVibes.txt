@@ -1,20 +1,227 @@
 ..:: CiefpVibes v1.0 ::..
- - Enigma2 Music Jukebox Plugin
+- Enigma2 Music Jukebox Plugin
+
 ### Description:
-CiefpVibes is a cool music player plugin for Enigma2 boxes. 
-Play local or online playlists (.m3u/.tv) with repeat, shuffle, custom backgrounds, 
-and GitHub integration for fresh tracks. 
-Supported formats are mp3 and flac.
-Perfect for non-stop vibes!
+CiefpVibes is a great music player plugin for Enigma2 boxes.
+Plays local or online playlists (.m3u/.tv) with repeat, shuffle,
+custom backgrounds and integration with GitHub for fresh songs.
+Supported mp3 and flac formats.
+Ideal for non-stop vibes!
 
 ### Usage:
-Launch from Plugins menu.
-Green: Load local file. 
-Blue: Online from GitHub. 
-Yellow: Settings. 
+Start from the Plugins menu.
+Green: Load local file.
+Blue: Online from GitHub.
+Yellow: Settings.
 Red: Exit.
-Navigate playlist, OK to play. 
-Auto-saves last session.
+Navigate the playlist, OK to play.
+Automatically saves the last session.
 
 Feel the good vibes with the CiefpVibes enigma2 plugin
+..:: CiefpSettings ::..
+
+
+# CiefpVibes v1.1
+Enigma2 Music Jukebox Plugin
+
+### 🆕 New functions in version 1.1:
+Online radio - support for online radio stations, the possibility of downloading ready-made playlists from github
+Single cache directory - All temporary files (lists and posters) are now stored in /tmp/ciefvibes_cache
+Clear cache - New option in settings to clear all cached files
+View cache size - See how much space the cache takes up before deleting
+Optimized file management - Individual structure for easier maintenance
+
+### 🎯 How to use:
+Basic functions:
+🟢 GREEN - View files (local)
+🔵 BLUE - Online lists (M3U, TV, RADIO)
+🟡 YELLOW - Settings
+🔴 RED - Exit the application
+
+### New option - RADIO
+Press 🔵 BLUE - Online lists
+Choose RADIO, the possibility of choosing various playlists
+
+Added GITHUB_RADIO_URL and support for .radio files (in parsing, file browser and GitHub download).
+Improved parsing of .tv/.radio files: Extended detection of audio streams
+(indicators like .mp3, .flac, /stream, rtmp://), with exceptions for video formats (.ts, .mp4, etc.).
+Better metadata parsing: parseArtistTitle() to split "artist - title" format,
+support for ICY metadata, automatic updating of nowplaying text and posters.
+
+### New option - Clear cache:
+Press 🟡 YELLOW (Settings)
+Select "🧹 Clear cache"
+Confirm the deletion in the dialog
+Cache will be cleared (posters + lists)
+
+### Visual and Playback Improvements:
+- Added dynamic poster display (showPoster(), showDefaultPoster()) 
+with automatic download of the album cover from the iTunes API (fetchAlbumCover()).
+- Two progress bars: "progress_real" (exact progress) and "progress_vibe" (pulsating green bar for "vibe" effect).
+- Offline detection: Label for "offline_status" (eg "Stream Offline"), 
+timer for checking the stream (checkStreamStatus()), reset status when playing.
+- More skin options: Up to 10 backgrounds, posters and infobars (in 1.0 only up to 5).
+- Automatic playback of the first song in the welcome playlist.
+
+### Other options in settings:
+▶ Playback - Repeat, random order
+🌐 Network - Timeouts, URL loading
+🎨 Wallpaper - 10 wallpapers
+🖼️ Poster - 10 posters
+📊 Infobar - 10 infobars
+💾 Save & Load - Save settings
+
+### 💾 What is stored:
+Posters - Album covers (cached)
+Lists - Download .m3u/.tv/.radio files
+Settings - Configuration in /etc/enigma2/ciefvibes.cfg
+Last List - In /etc/enigma2/ciefvibes_last.txt
+
+### ⚡ Advantages of the new version:
+✅ Cleaner system - One directory instead of two
+✅ Better memory management - You can see and clear the cache
+✅ Professional display - Progress bar with pulsating animation
+✅ More stable - Detection of offline status for streams
+
+### 🎵 Supported formats:
+.m3u / .m3u8 - Standard playlists
+.tv - IPTV bouquets (Enigma2)
+.radio - Radio lists (Enigma2)
+URL - Direct loading from the Internet
+
+### 🔍 Automatic functions:
+Automatic loading of the last list at startup
+Metadata Detection (Artist - Title)
+Automatic download of album covers
+Offline indication for streams
+
+The plugin is ideal for listening to music from local files and internet radio streams! 🎧
+Feel the good vibes with CiefpVibes Jukebox
+
+..:: CiefpSettings ::.. 
+
+
+..:: CiefpVibes ::..
+📋 MAIN DIFFERENCES BETWEEN VERSIONS 1.1 and 1.3
+
+
+✅ NEW FUNCTIONALITIES IN VERSION 1.3:
+COMPLETE NETWORK SUPPORT - Connecting to laptops and shared folders
+DIRECT PLAYBACK OF AUDIO FILES - MP3, FLAC, M4A, AAC (no need for .m3u)
+HIERARCHICAL FOLDER LOADING - Loads entire folders with music
+SMARTER FILE BROWSER - More options and better organization
+AUTOSCAN NETWORKS - Automatic detection of SMB devices
+NOTE IN MENU - New "Menu" button for network options
+
+🔧 TECHNICAL DIFFERENCES:
+Version 1.1 Version 1.3
+Only .tv/.radio/.m3u + MP3/FLAC/M4A/AAC directly
+No network support Full SMB/NFS network support
+Simple file browser Advanced file browser with folder option
+Only online playlists + Local and network files
+Version: 1.2 Version: 1.3
+
+📁 NEW CLASSES IN 1.3:
+Complete network methods (mountSMBShare, mountNFSShare, autoScanNetwork)
+Improved file browser with folder option
+System for reading ID3/FLAC/MP4 tags
+
+🔗 INSTRUCTIONS FOR ESTABLISHING A NETWORK CONNECTION
+1. WHAT NEEDS TO BE DONE ON THE LAPTOP/COMPUTER:
+
+For Windows:
+bash
+1. Right click on the folder → "Properties"
+2. "Sharing" tab → "Advanced Sharing"
+3. ✅ Share this folder
+4. "Permissions" → Add "Everyone" → Full Control
+5. Remove all password requests
+6. Network and Sharing Center → Turn off password protected sharing
+
+For Linux/Mac:
+bash
+# Install Samba if it is not installed
+sudo apt install samba
+sudo nano /etc/samba/smb.conf
+
+# Add to the end:
+[Music] 
+path = /path/to/folder 
+browseable = yes 
+read only = yes 
+guest ok = yes 
+force user = nobody
+
+# Restart Samba
+sudo systemctl restart smbd
+
+2. CONNECTION PROBLEMS AND SOLUTIONS:
+Problem Solution
+"Access denied" Remove password protected sharing
+"Network path not found" Check firewall and IP address
+"Mount error" Uses the guest option instead of user/pass
+Slow connection Reduce timeout in plugin settings
+
+3. THE MOST FREQUENTLY USED PATH:
+bash
+//192.168.1.100/Music # Windows without authentication
+//192.168.1.100/ # Root share
+//namelaptopa/Public # Public folder
+
+4. PLUGIN SETTINGS FOR THE NETWORK:
+Menu button → Network Options
+Auto-scan → finds devices automatically
+SMB Guest mode → uses guest without password
+
+🎯 BRIEF DESCRIPTION OF VERSION 1.3:
+"CiefpVibes 1.3" is a complete audio playlist that supports:
+
+✅ Direct playback of MP3, FLAC, M4A, AAC files
+✅ Connection to network folders (SMB/NFS without password)
+✅ Automatic album cover download
+✅ Reading ID3/FLAC/MP4 tags
+✅ Offline detection of streams
+✅ 10 wallpapers, 10 infobars, 10 posters
+✅ Online playlists from GitHub
+
+Main advantage over 1.1: No more .m3u file needed! You can directly open any audio file or entire folder with music.
+
+🚀 STEPS TO CONNECT TO A LAPTOP:
+On a laptop: Remove password protected sharing
+On E2 box: Open CiefpVibes → Menu button → "Connect to Laptop"
+Enter the IP address (eg 192.168.1.100)
+Enter share name (or blank for default)
+Access the music folder
+Pro type:
+Use Auto-scan so that the plugin finds all available devices on the network!
+
+⚠️ IMPORTANT NOTE:
+Version 1.3 is backwards compatible - everything that works in 1.1 works in 1.3, plus you have all the new functions.
+If you have problems with network connection, you can always go back to "Online Files" or local .m3u playlists like in the old version.
+
+..:: CiefpSettings ::..
+
+CiefpVibes v1.4 – Changelog
+Release date: December 13, 2025.
+Key improvements:
+
+Automatic update system: Added version check via the version.txt file on GitHub.
+The plugin now automatically detects new versions, displays the status on the screen (eg "Up to date ✓" or "Update v1.5 available!")
+and offers installation via MessageBox. Includes backing up and restoring configuration files for safe updates.
+
+Improved poster display: Significantly improved parsing of song titles from filenames
+(ignores serial numbers like "01 - ", years like "(1993)", remix tags, etc.).
+Better search on iTunes API with fallback to artist when there are no matches per song.
+Fixed "throttle" mechanism to display downloaded posters immediately, reduced display time of the default poster.
+More accurate cache matching and removed flickering during playback.
+
+Other improvements and corrections:
+
+Better handling of online .tv playlists and local MP3 files.
+More detailed debug logs for easier error detection.
+Improvements in working with network mounts for connecting to a laptop.
+
+How to update: Run the plugin - it will automatically check and offer to install if a new version is available on GitHub.
+Thanks to everyone who uses and tests CiefpVibes - enjoy the music! 🎶🖼️
+
 ..:: CiefpSettings ::..

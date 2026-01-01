@@ -1,4 +1,3 @@
-
 ..:: CiefpVibes v1.0  ::..
 - Enigma2 Muzički Jukebox Plugin
 
@@ -19,4 +18,210 @@ Naviguj plejlistu, OK za puštanje.
 Automatski čuva poslednju sesiju.
 
 Oseti dobru vibraciju uz CiefpVibes enigma2 plugin
+..:: CiefpSettings ::..
+
+
+# CiefpVibes  v1.1 
+Enigma2 Muzički Jukebox Plugin
+
+### 🆕 Nove funkcije u verziji 1.1:
+Online radio - podrška za online radio stanice, mogućnost preuzimanja gotovih plej listi sa github-a
+Jedini keš direktorijum - Svi privremeni fajlovi (liste i posteri) se sada čuvaju u /tmp/ciefpvibes_cache
+Čišćenje keša - Nova opcija u setinzima za brisanje svih keširanih datoteka
+Prikaz veličine keša - Vidi koliko prostora zauzima keš prije brisanja
+Optimizirano upravljanje datotekama - Pojedinačna struktura za lakše održavanje
+
+### 🎯 Kako se koristi:
+Osnovne funkcije:
+🟢 ZELENO - Pregled datoteka (lokalno)
+🔵 PLAVO - Online liste (M3U, TV, RADIO)
+🟡 ŽUTO - Setinzi
+🔴 CRVENO - Izađi iz aplikacije
+
+### Nova opcija - RADIO
+Pritisnite 🔵 PLAVO - Online liste 
+Izaberi RADIO ,mogućnost izbora raznih plej listi
+
+Dodat GITHUB_RADIO_URL i podrška za .radio fajlove (u parsiranju, file browser-u i GitHub preuzimanju).
+Poboljšano parsiranje .tv/.radio fajlova: Proširena detekcija audio streamova
+(indikatori poput .mp3, .flac, /stream, rtmp://), sa izuzecima za video formate (.ts, .mp4 itd.).
+Bolje parsiranje metapodataka: parseArtistTitle() za razdvajanje "artist - title" formata, 
+podrška za ICY metadata, automatsko ažuriranje nowplaying teksta i postera.
+
+### Nova opcija - Čišćenje keša:
+Pritisnite 🟡 ŽUTO (Postavke)
+Izaberi "🧹 Očisti predmemoriju"
+Potvrdi brisanje u dijalogu
+Keš će biti obrisan (posteri + liste)
+
+### Vizuelna i Playback Poboljšanja:
+- Dodat dinamički poster prikaz (showPoster(), showDefaultPoster()) 
+  sa automatskim preuzimanjem album covera sa iTunes API-ja (fetchAlbumCover()).
+- Dva progress bara: "progress_real" (tačan progress) i "progress_vibe" (pulsirajući zeleni bar za "vibe" efekat).
+- Offline detekcija: Label za "offline_status" (npr. "Stream Offline"), 
+  timer za proveru streama (checkStreamStatus()), reset statusa pri puštanju.
+- Više opcija za skin: Do 10 background-a, postera i infobara (u 1.0 samo do 5).
+- Automatsko puštanje prve pesme u welcome playlisti.
+
+### Ostale opcije u setinzima:
+▶ Reprodukcija - Ponavljanje, slučajni redosljed
+🌐 Mreža - Timeauti, učitavanje URL-a
+🎨 Pozadina - 10 pozadina
+🖼️ Poster - 10 postera
+📊 Infobar - 10 infobara
+💾 Save & Load - Sačuvaj podešavanja
+
+### 💾 Šta se čuva:
+Posteri - Album naslovnice (keširane)
+Liste - Preuzmite .m3u/.tv/.radio datoteke
+Podešavanja - Konfiguracija u /etc/enigma2/ciefpvibes.cfg
+Posljednja lista - U /etc/enigma2/ciefpvibes_last.txt
+
+### ⚡ Prednosti nove verzije:
+✅ Čistiji sistem - Jedan direktorijum umjesto dva
+✅ Bolje upravljanje memorijom - Možeš vidjeti i obrisati keš
+✅ Profesionalni prikaz - Progres bar sa pulsirajućom animacijom
+✅ Stabilniji - Detekcija oflajn stanja za stream-ove
+
+### 🎵 Podržani formati:
+.m3u / .m3u8 - Standardne plejliste
+.tv - IPTV buketi (Enigma2)
+.radio - Radio liste (Enigma2)
+URL - Direktno učitavanje sa interneta
+
+### 🔍 Automatske funkcije:
+Automatsko učitavanje posljednje liste pri pokretanju
+Detekcija metapodataka (Izvođač - Naslov)
+Automatsko preuzimanje albuma naslovnica
+Oflajna indikacija za stream-ove
+
+Plagin je idealan za slušanje glazbe sa lokalnih datoteka i internet radio stream-ova! 🎧
+Oseti dobru vibraciju uz CiefpVibes Jukebox
+
+..:: CiefpSettings ::..
+
+
+       ..:: CiefpVibes ::..
+📋 GLAVNE RAZLIKE IZMEĐU VERZIJA 1.1 i 1.3
+
+
+✅ NOVE FUNKCIONALNOSTI U VERZIJI 1.3:
+KOMPLETNA MREŽNA PODRŠKA - Povezivanje sa laptopima i deljenim folderima
+DIREKTNO REPRODUKOVANJE AUDIO FAJLOVA - MP3, FLAC, M4A, AAC (bez potrebe za .m3u)
+HIJERARHIJSKO UČITAVANJE FOLDERA - Učitava cele foldere sa muzikom
+PAMETNIJI FILE BROWSER - Više opcija i bolja organizacija
+AUTOSCAN MREŽE - Automatsko pronalaženje SMB uređaja
+NAPOMENA U MENIJU - Novi "Menu" dugme za mrežne opcije
+
+🔧 TEHNIČKE RAZLIKE:
+Verzija 1.1	Verzija 1.3
+Samo .tv/.radio/.m3u	+ MP3/FLAC/M4A/AAC direktno
+Bez mrežne podrške	Full SMB/NFS mrežna podrška
+Simple file browser	Advanced file browser sa folder opcijom
+Samo online playliste	+ Lokalni i mrežni fajlovi
+Verzija: 1.2	Verzija: 1.3
+
+📁 NOVE KLASE U 1.3:
+Kompletne mrežne metode (mountSMBShare, mountNFSShare, autoScanNetwork)
+Poboljšani file browser sa folder opcijom
+Sistem za čitanje ID3/FLAC/MP4 tagova
+
+🔗 UPUTSTVO ZA USPOSTAVLJANJE MREŽNE KONEKCIJE
+1. ŠTA JE POTREBNO URADITI NA LAPTOPU/RAČUNARU:
+
+Za Windows:
+bash
+1. Desni klik na folder → "Properties"
+2. "Sharing" tab → "Advanced Sharing"
+3. ✅ Share this folder
+4. "Permissions" → Add "Everyone" → Full Control
+5. Ukloni sve zahteve za lozinku
+6. Network and Sharing Center → Turn off password protected sharing
+
+Za Linux/Mac:
+bash
+# Instaliraj Samba ako nije instaliran
+sudo apt install samba
+sudo nano /etc/samba/smb.conf
+
+# Dodaj na kraj:
+[Music]
+   path = /putanja/do/foldera
+   browseable = yes
+   read only = yes
+   guest ok = yes
+   force user = nobody
+
+# Restartuj Samba
+sudo systemctl restart smbd
+
+2. PROBLEMI SA KONEKCIJOM I REŠENJA:
+Problem	Rešenje
+"Access denied"	Ukloni password zaštićeno deljenje
+"Network path not found"	Proveri firewall i IP adresu
+"Mount error"	Koristi opciju guest umesto user/pass
+Sporo povezivanje	Smanji timeout u plugin settings
+
+3. NAJČEŠĆE KORIŠĆENE PUTANJE:
+bash
+//192.168.1.100/Music        # Windows bez autentikacije
+//192.168.1.100/             # Root share
+//imelaptopa/Public          # Public folder
+
+4. PLUGIN SETTINGS ZA MREŽU:
+Menu dugme → Network Options
+Auto-scan → automatski pronalazi uređaje
+SMB Guest mode → koristi guest bez lozinke
+
+🎯 KRATAK OPIS VERZIJE 1.3:
+"CiefpVibes 1.3" je kompletna audio plejlista koja podržava:
+
+✅ Direktno puštanje MP3, FLAC, M4A, AAC fajlova
+✅ Povezivanje na mrežne foldere (SMB/NFS bez lozinke)
+✅ Automatsko preuzimanje album covera
+✅ Čitanje ID3/FLAC/MP4 tagova
+✅ Offline detekciju streamova
+✅ 10 pozadina, 10 infobara, 10 postera
+✅ Online playliste sa GitHub-a
+
+Glavna prednost nad 1.1: Ne treba više .m3u fajl! Možeš direktno otvoriti bilo koji audio fajl ili ceo folder sa muzikom.
+
+🚀 KORACI ZA POVEZIVANJE NA LAPTOP:
+Na laptopu: Ukloni password zaštićeno deljenje
+Na E2 box: Otvori CiefpVibes → Menu dugme → "Connect to Laptop"
+Unesi IP adresu (npr. 192.168.1.100)
+Unesi share name (ili prazno za default)
+Pristupi folderu sa muzikom
+Pro tip: 
+Koristi Auto-scan da plugin sam nađe sve dostupne uređaje na mreži!
+
+⚠️ VAŽNA NAPOMENA:
+Verzija 1.3 je kompatibilna unazad - sve što radi u 1.1 radi i u 1.3, plus imaš sve nove funkcije. 
+Ako imaš problema sa mrežnim povezivanjem, uvek možeš da se vratiš na "Online Files" ili lokalne .m3u playliste kao u staroj verziji.
+
+..:: CiefpSettings ::..
+
+CiefpVibes v1.4 – Dnevnik izmena
+Datum izdanja: 13. decembar 2025.
+Ključna poboljšanja:
+
+Automatski sistem ažuriranja: Dodata provera verzije preko version.txt fajla na GitHub-u. 
+Plugin sada automatski otkriva nove verzije, prikazuje status na ekranu (npr. „Up to date ✓“ ili „Dostupan update v1.5!“)
+i nudi instalaciju putem MessageBox-a. Uključuje pravljenje rezervne kopije i vraćanje konfiguracionih fajlova radi bezbednog ažuriranja.
+
+Poboljšan prikaz postera: Znatno unapređeno parsiranje naslova pesama iz naziva fajlova 
+(ignoriše redne brojeve poput „01 - “, godine poput „(1993)“,remix oznake itd.). 
+Bolja pretraga na iTunes API-ju sa fallback-om na izvođača kada nema podudaranja po pesmi. 
+Popravljen „throttle“ mehanizam da se preuzeti posteri prikazuju odmah, smanjeno vreme prikazivanja podrazumevanog postera. 
+Tačnije podudaranje u kešu i uklonjeno treperenje tokom reprodukcije.
+
+Ostala poboljšanja i ispravke:
+
+Bolje rukovanje online .tv plejlistama i lokalnim MP3 fajlovima.
+Detaljniji debug logovi za lakše otkrivanje grešaka.
+Poboljšanja u radu sa mrežnim mount-ovima za konekciju sa laptopom.
+
+Kako se ažurirati: Pokrenite plugin – on će automatski proveriti i ponuditi instalaciju ako je dostupna nova verzija na GitHub-u.
+Hvala svima koji koriste i testiraju CiefpVibes – uživajte u muzici! 🎶🖼️
+
 ..:: CiefpSettings ::..

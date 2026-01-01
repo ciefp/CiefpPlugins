@@ -1,58 +1,56 @@
-
 ..:: CiefpTMDBSearch v1.0 ::..
 
-Search for movies and series via TMDB with posters, descriptions, actors and ratings – in 14 languages!
-All you need is a free TMDB API key (enter once via the yellow button).
+Search movies and series through TMDB with posters, descriptions, actors and ratings - in 14 languages!
+Only a free TMDB API key is required (entered once via the yellow button).
 
 # BASIC FUNCTIONS #
 Search for movies (GREEN) and series (YELLOW)
-Show details: title, year, duration, rating, genre, director/creator, actors, description
-Download posters (covers) from TMDB
+Display details: title, year, duration, rating, genre, director/creator, actors, description
+Downloading the poster (cover) from TMDB
 Support for multiple languages ​​(description, titles)
-Caching posters (faster access, less internet traffic)
-Manually set TMDB API key
+Poster caching (faster access, less internet traffic)
+Manually setting the TMDB API key
 
 # INSTALLATION AND SETUP #
-
 1. API Key (MANDATORY)
 Register at themoviedb.org and get an API key
 In the plugin, press BLUE → Settings → YELLOW (API Key)
 Enter your API key via the virtual keyboard
 
 2. The API key is stored in tmdbapikey.txt
-You can write the key in the text file tmdbapikey.txt
-and move it to the plugin folder
-when you start the plugin will read it.
+You can enter the key in the text file tmdbapikey.txt
+and transfer it to the plugin folder
+when starting the plugin will read it.
 
 # USAGE #
 Main menu:
 GREEN → Search movies
-YELLOW → Search series
+YELLOW → Series search
 BLUE → Settings
-RED → Exit
+ROW → Exit
 
 Search example:
 Press GREEN for movies
-Enter movie name (e.g. "Inception")
+Enter the name of the movie (eg "Inception")
 The plugin displays:
 Title, year, duration
-Rating (e.g. 8.3/10 ★)
+Rating (eg 8.3/10 ★)
 Genre, director
-Short plot description
-Main actors
+Short description of the plot
+The main actors
 Poster (if available)
 
 # SETTINGS (BLUE) #
 API Key (YELLOW) - set your key
-Language (BLUE) - change language
-Download Posters - enable/disable downloading posters
-Clear Cache (MENU) - delete all saved posters
+Language (BLUE) - change the language
+Download Posters - enable/disable download of posters
+Clear Cache (MENU) - clear all saved posters
 Save (GREEN) - save changes
 
-# CACHE #
+# CACHING #
 Posters are automatically saved in /tmp/CiefpTMDBSearch/
-Saves internet traffic when searching again
-You can disable it in settings if you want
+Saves internet traffic during repeated searches
+You can turn it off in the settings if you want
 
 # SUPPORTED LANGUAGES #
 English, Serbian, Croatian, Bosnian, Slovak, German, Spanish,
@@ -60,5 +58,246 @@ French, Italian, Russian, Portuguese, Polish, Turkish, Arabic, Chinese.
 
 Tested and works perfectly on:
 OpenATV · OpenBH · OpenPLI · Pure2 · Egami · OpenVision
+
+..:: CiefpSettings ::.. 
+
+..:: CiefpTMDBSearch v1.2 ::..
+
+The best TMDB info plugin for Enigma2
+Now with automatic EPG search!
+Get all information about the movie/series (poster, rating, cast, plot, etc.) right now.
+directly on your Enigma2 receiver - no phone or computer needed!
+What's new in v1.2
+
+Automatic EPG search (BLUE button) – just press the BLUE button while watching any channel
+and the plugin will automatically download the current program title/year from the EPG and search the TMDB!
+Smart title cleaning (removes [HD], (2024), Movie:, etc.)
+It tries both movie → series and series → movie until it finds the correct result
+Much better detection of the year from the EPG description
+Faster and more reliable downloading and caching of posters
+15 languages ​​supported (including Serbian, Croatian, Bosnian, English, German, etc.)
+
+Characteristics
+
+Beautiful large poster (500×750) + all details on one screen
+Full cast list with character names
+Director / Creators, Genres, Running Time, Rating ★
+Poster caching (/tmp or HDD) - lightning fast after first download
+Clear cache option + cache information
+Works perfectly on all modern Enigma2 images (OpenATV, OpenBH, VTI, BlackHole, Egami, etc.)
+
+How to use
+
+Install the plugin
+First boot → press MENU → Settings → YELLOW button → enter your free TMDB API key
+(download it in 10 seconds here: https://www.themoviedb.org/settings/api)
+Launch the add-on from the menu
+
+Buttons
+
+GREEN – Manual search for movies
+YELLOW – Manual search for series
+BLUE – Automatic search for current EPG event ← NEW AND AWESOME!
+MENU – Settings (language, cache folder, poster deletion…)
+
+Big thanks and recognition
+A special big thanks to Hamdy Ahmed – without his help and great ideas the new auto EPG feature and many improvements in v1.2 would never have been realized!
+Add-on created and maintained by Ciefp
+Enjoy the real cinema feeling at home – just press BLUE and relax!
+Any feedback, bug reports or coffee offers – always welcome!
+
+..:: CiefpSettings ::..
+
+..:: CiefpTMDBSearch 1.4 ::..
+
+In addition to the TMDB rating
+Added IMDB rating
+Apikey is also required
+Enter apikey for omdb via settings
+The key is saved in the file omdbapikey.txt
+similar to tmdbapikey.txt
+You can download Apikey for free from:
+https://www.omdbapi.com
+Fill in your email, first and last name
+using type anything
+for example: CiefpTMDBSearch on enigma2
+you will receive a link via email to activate the api key.
+
+I also added background poster support
+The poster is activated by pressing the OK button
+Automatic search:
+blue button: left side description, right side poster (classic view)
+OK button: displays background image and poster
+OK button: another press on the ok button is a step back to (classic view)
+The exit button exits the plugin
+
+Green button: Search Movies
+opens virtual tattoo zanusos name
+the green button starts the search and opens
+screen left description right poster
+OK button: displays background image and poster
+OK button: another press on the ok button is a step back to (classic view)
+The exit button exits the plugin
+
+Yellow button: Search Series
+opens a virtual tAtaturu is called infatuation
+the green button starts the search and opens
+screen left description right poster
+OK button: displays background image and poster
+OK button: another press on the ok button is a step back to (classic view)
+The exit button exits the plugin
+
+An automatic upgrade I added on version 1.3
+It should now start installing the new version
+
+..:: CiefpSettings ::..
+
+
+
+🎬 CiefpTMDBSearch v1.6 - New Version!
+
+📋 What's NEW in version 1.6:
+🚀 Major Improvements:
+🎯 AUTO CAST EXPLORER (Yellow button)
+
+Automatically shows the director and main actors from the current movie/series
+You can research anyone from the cast with one click
+Quick switching between actor and director profiles
+
+📊 MORE USEFUL PROFILE DISPLAY
+Replaced the incomprehensible "Popularity" score with useful information:
+Career years (eg "50+ years")
+Number of movies and TV projects (eg "86 movies, 31 TV")
+Better sorting of the "Known For" section - shows the most popular works
+
+🎨 IMPROVED USER INTERFACE
+Better text formatting
+Optimized layout of information
+More readable display on all screens
+
+🔧 Technical Improvements:
+Improved sorting of filmography by actual popularity
+Better handling of data from the TMDB API
+Optimized image download
+Improved loading error
+
+🎮 Short Instructions for Use:
+1. AUTO EPG Search (🔵 Blue button)
+Click while watching TV - it automatically finds the movie/series from the EPG
+Result: Complete details about the movie/series
+
+2. CAST EXPLORER (🟡 Yellow button) ← NEW!
+First: Load movie/series (via Auto EPG or manual search)
+Then: Click the yellow button for the list of actors and directors
+Choose: Choose anyone for an instant profile
+Result: Automatic display of the complete profile of the selected person
+
+3. ADVANCED SEARCH (Green button)
+Manual search of films, series, actors, directors
+Menu options: Search Movies, Search TV Series, Search Actors, Search Directors
+
+4. BACKDROP VIEW (OK button)
+Switches between classic and image view
+Classic: Text information + poster
+Backdrop: Large background image + poster
+
+5. SETTINGS (MENU button)
+Setting API keys (TMDB, OMDb)
+Choice of language for descriptions
+Cache management
+
+Checking for updates
+
+💡 Tips for Use:
+Fastest way: Blue → Yellow = Instant information about everyone in the movie!
+For research: Green button for detailed search of anyone/what
+For the atmosphere: OK button to switch to nice backdrop images
+For more accurate ratings: OMDb API key for IMDB rating (optional)
+
+🎉 Why v1.6 is Fantastic:
+✅ Faster - Fewer clicks, more information
+✅ Smarter - Automatic connection of people and projects
+✅ More useful - Real information instead of incomprehensible numbers
+✅ More fun - Like researching film history!
+
+Now researching movies and series is more fun than ever! 🍿🎥
+We've reached the stage where it's more fun to explore the possibilities of plugins
+from watching the movie itself it keeps you exploring.
+
+..:: CiefpSettings ::..
+
+..:: CiefpTMDBSearch 1.7 ::..
+
+What's new in version 1.7
+Four new options have been added to the Advanced Search menu:
+
+Search popular Movies
+– Shows the 20 most popular movies currently on TMDB (long term popularity).
+– The list contains: movie name, year of release, TMDB rating and stars.
+- Clicking on the film opens a full view with the poster, description, actors, etc.
+Search popular Series
+– Shows the 20 most popular series currently on TMDB.
+– Display: name of series, year of start, rating and stars.
+– Selection opens a detailed view of the series.
+Search popular persons
+– Shows the 20 most popular people (actors, directors, etc.).
+– Display: person's name, field (eg Acting/Directing), short list of famous movies/series, popularity with stars.
+- Click to open the person's profile with biography, filmography and poster.
+Search trending All (Daily)
+– Shows the 20 most current titles and people per day (mixed – movies, series and people), 
+just like the "Trending" section on the TMDB home page.
+- It is updated daily and shows what is currently most in focus (new hits, viral series, current actors).
+– Display:
+• Movies: [Mov] Title (year) ★★★★★ 7.8
+• Series: [Ser] Title (year) ★★★★★ 8.5
+• Persons: [Person] Name Surname • Acting ★★★★ 45.2
+– Selection opens the corresponding detailed view (movie/series/person profile).
+
+The rest
+
+All displays are limited to 20 results for speed and clarity (as on the TMDB site - first page).
+Ratings are shown with stars for faster viewing.
+Selection of description language is supported (via plugin settings).
+Installation online via plugin
+
+..:: CiefpSettings ::..
+
+📊 CiefpTMDBSearch 2.1
+New:
+Seasons and episodes, the series plugin can now display all seasons and their episodes.
+The plugin now also has a gallery to display all available posters and background images.
+
+The plugin now has:
+✅ Auto EPG search - automatic recognition of the current program
+✅ Advanced search - movies, series, actors, directors
+✅ Popular/Trending lists - what is currently popular
+✅ Cast Explorer - exploration of the cast
+✅ Seasons and episodes - detailed overview of TV series and episodes
+✅ TMDB and IMDB ratings - additional information
+✅ Backdrop Gallery - overview of background images
+✅ Poster Gallery - overview of posters
+✅ Settings - API keys, language, cache
+
+🖼️ Short instructions: How to use the poster and backdrop viewer
+The new gallery is easy to use. Here's a quick guide:
+
+Access to the gallery:
+After loading the movie or series data, press the MENU button on the remote control.
+In the menu, select the option 🖼️ Backdrop Gallery or 🎬 Poster Gallery.
+
+Navigation through the gallery:
+Use the YELLOW and BLUE buttons (or left/right arrows) to move through the images.
+
+The GREEN button returns you to the home screen or switches between the backdrop and poster gallery (if possible).
+The status line at the top shows which image you are out of a total of how many (eg, "6/185").
+
+Closing the gallery:
+Press the RED button or OK/Exit to return to the main plugin screen.
+
+💡 Tips and notes
+Caching: Images are automatically downloaded and saved to your selected cache folder (set in Settings). This speeds up the display the next time you open it.
+Setting the language: In Settings, you can change the language for the descriptions. This also affects the language of the data you receive from the TMDB database.
+Performance: If the plugin starts working slower due to a full cache, you can clear it via MENU > More Options > 🗑️ Clear Cache.
+The new gallery is a great addition that provides users with a full experience of viewing the visual content of a movie or series.
 
 ..:: CiefpSettings ::..

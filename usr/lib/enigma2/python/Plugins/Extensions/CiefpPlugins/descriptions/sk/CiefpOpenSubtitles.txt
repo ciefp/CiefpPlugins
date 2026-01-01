@@ -1,0 +1,71 @@
+🎬 Doplnok CiefpOpenSubtitles v1.1
+Doplnok na vyhľadávanie a sťahovanie titulkov pre set-top boxy založené na Enigma2 (OpenATV, PurE2, OpenPLi atď.)
+— podporuje OpenSubtitles.com a OpenSubtitles.org.
+
+✅ Kľúčové vlastnosti:
+🔍 Vyhľadávanie titulkov k filmom a televíznym seriálom podľa názvu
+🌐 Podpora dvoch stránok:
+OpenSubtitles.com (prostredníctvom bezplatného kľúča API – odporúčané)
+OpenSubtitles.org (prostredníctvom prihlásenia pomocou používateľského mena/hesla)
+🗣️ Podpora viacerých jazykov: zadajte kódy jazykov (napr. sr, hr, en alebo srp, hrv, eng)
+⬇️ Automatické sťahovanie a ukladanie do používateľom definovaného adresára
+🔄 Režim sťahovania vo viacerých jazykoch – načítanie titulkov vo všetkých nakonfigurovaných jazykoch pre daný titul
+
+🛠️ Plne konfigurovateľné prostredníctvom obrazovky nastavení:
+Cesta uloženia
+Oneskorenie sťahovania (na rešpektovanie limitov rýchlosti API)
+Priorita jazyka (prvý zhodný súbor oproti všetkým jazykom)
+Automatické premenovanie podľa zhody video súborov (napr. NázovMovia.sr.srt)
+
+📱 Ako používať:
+Spustite doplnok z ponuky Rozšírenia.
+Vyberte možnosť „Vyhľadať filmy“ alebo „Vyhľadať seriály“.
+
+Stlačením ŽLTÉHO tlačidla otvoríte virtuálnu klávesnicu a zadáte názov.
+Stlačením ZELENÉHO tlačidla spustíte vyhľadávanie.
+Vo výsledkoch sa pohybujte pomocou šípok.
+Stlačením MODRÉHO tlačidla alebo tlačidla OK stiahnete vybrané titulky.
+Titulky sa uložia automaticky (predvolené: /media/hdd/subtitles/).
+
+💡 Poznámka: Pre OpenSubtitles.com potrebujete bezplatný kľúč API (zaregistrujte sa na https://www.opensubtitles.com).
+
+🛠️ v1.1 — Čo je nové:
+Pridaný výber lokality: .com (API) vs. .org (prihlásenie)
+Vylepšené triedenie výsledkov (podľa roku ↓, potom sťahovania ↓)
+Podpora viacerých jazykov na sťahovanie
+Automatické priraďovanie stiahnutých titulkov k existujúcim video súborom
+Používateľské rozhranie optimalizované pre obrazovky s pomerom strán 16:9 (1600×800)
+Vylepšená čitateľnosť textu a kompatibilita s skiny MetrixHD
+
+Prečo používať CiefpOpenSubtitles?
+⭐ Najlepšie vyhľadávanie seriálov - presnejšie výsledky ako iné pluginy.
+🌐 Podpora pre OpenSubtitles.com (kľúč API) a OpenSubtitles.org (prihlásenie).
+🎬 Automatické mapovanie titulkov na video súbory.
+🛠️ Plne konfigurovateľné - jazyky, cesta, oneskorenie, priorita.
+📱 Jednoduché používanie - jednoduché rozhranie, rýchle vyhľadávanie.
+
+🛠️ Uloženie kľúča API, používateľského mena a hesla
+V hlavnej ponuke pluginu vyberte Kľúč API / Prihlásenie (modrá/OK).
+Pre .com (odporúčané - rýchlejšie a lepšie):
+Stlačte ZELENÉ tlačidlo (Upraviť kľúč API).
+Zadajte kľúč API z opensubtitles.com (bezplatný účet > karta API > Vytvoriť nový kľúč).
+Automaticky sa uloží do súboru: /etc/enigma2/ciefpopensubtitles/opensubtitles_apikey.txt
+(formát: apikey=xxxxxxxxxxxxxxx).
+
+Pre .org (starší systém):
+Stlačte ŽLTÉ tlačidlo (Upraviť prihlásenie).
+Zadajte používateľské meno a potom heslo z opensubtitles.org.
+Automaticky sa uloží do súboru: /etc/enigma2/ciefpopensubtitles/opensubtitles_login.txt
+(formát:
+používateľ=vašepoužívateľskémeno
+heslo=vašeheslo).
+
+🇬🇧 Ako získať API kľúč (OpenSubtitles.com)
+Prejdite na https://www.opensubtitles.com
+Kliknite na „Prihlásiť sa“ (alebo „Registrovať sa“, ak nemáte účet)
+Po prihlásení prejdite na: Účet → API
+Kliknite na „Vygenerovať API token“
+Skopírujte vygenerovaný API token (napr. abc123xyz456)
+Zadajte ho do pluginu:
+Rozšírenia → OpenSubtitles → Nastavenia → API/Prihlásenie → API token
+🔐 API token je osobný – nezdieľajte ho.
