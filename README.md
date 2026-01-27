@@ -11,7 +11,7 @@
 - Deutsch, 
 - Ελληνικά
 
-**31 active plugins
+**31 active plugins** 
 ---
 ## 📸 Screenshots
 ![CiefpPlugins](https://github.com/ciefp/CiefpPlugins/blob/main/ciefpplugins-1.jpg)
