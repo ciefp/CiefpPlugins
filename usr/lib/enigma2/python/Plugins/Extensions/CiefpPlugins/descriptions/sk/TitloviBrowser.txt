@@ -1,0 +1,85 @@
+..:: Prehliadač titulkov v1.0 ::..
+
+📋 ZÁKLADNÉ INFORMÁCIE
+Názov: Prehliadač titulkov
+Verzia: 1.0
+Platforma: Enigma2 (všetky prijímače)
+Kategória: Zábava / Titulky / Filmy
+
+🎬 HLAVNÉ FUNKCIE
+1. FILMY
+Prehľad populárnych filmov z Titlovi.com
+Nové filmy v kinách
+Detaily o filme (plagát, popis, recenzie, herci, režisér)
+
+Zoznamy v kinách:
+Srbsko
+Chorvátsko
+USA
+
+SERIÁL 2
+Prehľad populárnych seriálov
+Detaily o seriáli (sezóny, epizódy, TV kanály)
+
+3. VYHĽADÁVANIE
+Univerzálne vyhľadávanie filmov a seriálov podľa niekoľkých kritérií:
+Podľa názvu
+Podľa rokov (od-do)
+Podľa žánru
+Podľa IMDB ID
+Triedenie podľa rôznych kritérií
+
+4. TITULKY
+Základné vyhľadávanie titulkov - pre filmy
+Rozšírené vyhľadávanie titulkov - pre seriály (so sériami/epizódami)
+
+Prieskumník súborov na zobrazenie stiahnutých titulkov
+Sťahovanie titulkov s automatickým uložením do nakonfigurovaného priečinka
+
+5. KONFIGURÁCIA
+Konfigurovateľná cesta sťahovania (/media/hdd/subtitles/)
+Predvolený jazyk titulkov (srbčina, chorvátčina, bosniančina...)
+Limit vyrovnávacej pamäte
+
+Možnosti ladenia
+
+🛠️ TECHNICKÉ ŠPECIFIKÁCIE
+✅ ČO FUNGUJE HNEĎ PO VYBAVENÍ:
+Plne funkčné grafické rozhranie s pekným zobrazením
+Načítavanie údajov z Titlovi.com
+Sťahovanie titulkov
+Systém vyrovnávacej pamäte pre rýchlejšie načítanie
+Viacnásobný výber v Prieskumníkovi súborov
+
+⚠️ OBMEDZENIA (verzia 1.0):
+Max. 60 výsledkov na zoznam (pre stabilitu)
+Žiadne automatické sťahovanie na základe aktuálneho videa
+Žiadna integrácia s prehrávačom videa Enigma2
+
+🔧 INŠTALÁCIA:
+Skopírujte wget do telnetu
+Reštartujte Enigma2
+
+🎯 VÝHODY:
+Všetko na jednom mieste - filmy, seriály a titulky
+Lokálne jazyky - zameranie na obsah z krajín bývalej Yu
+Rýchle - ukladanie do vyrovnávacej pamäte a optimalizovaný parser
+Pekné grafické rozhranie - zásadne navrhnuté rozhranie
+Stabilné - obmedzenia zabraňujú pády
+
+✅ Funkcie:
+• Vyhľadávanie filmov
+• Prehľad populárnych filmov
+• Prehľad populárnych seriálov
+• Vyhľadávanie filmov
+• Vyhľadávanie seriálov
+• BOX Office Srbsko
+• BOX Office Chorvátsko
+• BOX Office USA
+• Konfigurácia
+• Vymazať vyrovnávaciu pamäť
+• Prieskumník súborov
+• ŽLTÉ tlačidlo: Jednoduché titulky (pre filmy)
+• MODRÉ tlačidlo: Rozšírené titulky (pre seriály)
+
+..:: CiefpSettings ::..

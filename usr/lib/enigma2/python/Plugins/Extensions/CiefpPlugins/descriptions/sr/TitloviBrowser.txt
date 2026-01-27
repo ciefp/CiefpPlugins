@@ -1,0 +1,85 @@
+..:: Titlovi Browser v1.0 ::..
+
+📋 OSNOVNE INFORMACIJE
+Naziv: Titlovi Browser
+Verzija: 1.0
+Platforma: Enigma2 (svi receiveri)
+Kategorija: Entertainment / Subtitles / Movies
+
+🎬 GLAVNE FUNKCIONALNOSTI
+1. FILMOVI
+Pregled popularnih filmova sa Titlovi.com
+Novi filmovi u bioskopima
+Detalji filma (poster, opis, ocene, glumci, režija)
+
+BOX Office liste:
+Srbija
+Hrvatska
+SAD
+
+2. SERIJE
+Pregled popularnih serija
+Detalji serija (sezone, epizode, TV kanali)
+
+3. PRETRAGA
+Univerzalna pretraga filmova i serija po više kriterijuma:
+Po nazivu
+Po godinama (od-do)
+Po žanru
+Po IMDB ID-u
+Sortiranje po različitim kriterijumima
+
+4. TITLOVI (SUBTITLES)
+Osnovna pretraga titlova - za filmove
+Napredna pretraga titlova - za serije (sa sezonama/epizodama)
+
+File Explorer za pregled skinutih titlova
+Download titlova sa automatskim čuvanjem u konfigurisan folder
+
+5. KONFIGURACIJA
+Podesiv download path (/media/hdd/subtitles/)
+Podrazumevani jezik titlova (srpski, hrvatski, bosanski...)
+Limit keš memorije
+
+Debug opcije
+
+🛠️ TEHNIČKE KARAKTERISTIKE
+✅ ŠTA RADI ODMAH:
+Puno funkcionalan GUI sa lepim prikazom
+Učitavanje podataka sa Titlovi.com
+Download titlova
+Caching sistema za brže učitavanje
+Multi-selection u File Exploreru
+
+⚠️ OGRANIČENJA (Verzija 1.0):
+Max 60 rezultata po listi (radi stabilnosti)
+Nema auto-download na osnovu trenutnog videa
+Nema integracije sa Enigma2 video playerom
+
+🔧 INSTALACIJA:
+Kopiraj wget u telnet
+Restart Enigma2
+
+🎯 PREDNOSTI:
+Sve na jednom mestu - filmovi, serije i titlovi
+Lokalni jezici - fokus na ex-Yu sadržaj
+Brzo - caching i optimizovan parser
+Lep GUI - temeljno dizajniran interface
+Stabilan - limiti sprečavaju crash
+
+✅ Funkcije:
+• Pretraga Filmova
+• Pregled popularnih filmova
+• Pregled popularnih serija
+• Pretraga filmova
+• Pretraga serija
+• BOX Office Srbija
+• BOX Office Hrvatska
+• BOX Office SAD
+• Konfiguracija
+• Obriši Keš
+• File Explorer
+• ŽUTO dugme: Titlovi Jednostavno (Za Filmove)
+• PLAVO dugme: Titlovi Napredno (Za Serije)
+
+..:: CiefpSettings ::..

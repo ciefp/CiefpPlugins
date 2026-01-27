@@ -1,0 +1,86 @@
+
+..:: Titlovi Browser v1.0 ::..
+
+📋 BASIC INFORMATION
+Name: Subtitles Browser
+Version: 1.0
+Platform: Enigma2 (all receivers)
+Category: Entertainment / Subtitles / Movies
+
+🎬 MAIN FUNCTIONALITIES
+1. MOVIES
+Overview of popular movies from Titlovi.com
+New movies in cinemas
+Movie details (poster, description, reviews, actors, director)
+
+BOX Office lists:
+Serbia
+Croatia
+USA
+
+SERIES 2
+Overview of popular series
+Series details (seasons, episodes, TV channels)
+
+3. SEARCH
+Universal search of movies and series by several criteria:
+By name
+By years (from-to)
+By genre
+By IMDB ID
+Sorting by different criteria
+
+4. SUBTITLES
+Basic subtitle search - for movies
+Advanced subtitle search - for series (with seasons/episodes)
+
+File Explorer to view downloaded subtitles
+Subtitle download with automatic saving to a configured folder
+
+5. CONFIGURATION
+Configurable download path (/media/hdd/subtitles/)
+Default subtitle language (Serbian, Croatian, Bosnian...)
+Cache limit
+
+Debug options
+
+🛠️ TECHNICAL SPECIFICATIONS
+✅ WHAT WORKS OUT OF THE BOX:
+Fully functional GUI with a nice display
+Loading data from Titlovi.com
+Subtitle download
+Caching system for faster loading
+Multi-selection in File Explorer
+
+⚠️ LIMITATIONS (Version 1.0):
+Max 60 results per list (for stability)
+No auto-download based on current video
+No integration with Enigma2 video player
+
+🔧 INSTALLATION:
+Copy wget to telnet
+Restart Enigma2
+
+🎯 ADVANTAGES:
+Everything in one place - movies, series and subtitles
+Local languages ​​- focus on ex-Yu content
+Fast - caching and optimized parser
+Nice GUI - fundamentally designed interface
+Stable - limits prevent crashes
+
+✅ Functions:
+• Search Movies
+• Overview of popular movies
+• Overview of popular series
+• Movie search
+• Series search
+• BOX Office Serbia
+• BOX Office Croatia
+• BOX Office USA
+• Configuration
+• Clear Cache
+• File Explorer
+• YELLOW button: Titlovi Simple (For Movies)
+• BLUE button: Titlovi Advanced (For Series)
+
+..:: CiefpSettings ::..

@@ -1,0 +1,85 @@
+..:: Untertitel-Browser v1.0 ::..
+
+📋 GRUNDINFORMATIONEN
+Name: Untertitel-Browser
+Version: 1.0
+Plattform: Enigma2 (alle Receiver)
+Kategorie: Unterhaltung / Untertitel / Filme
+
+🎬 HAUPTFUNKTIONEN
+1. FILME
+Übersicht beliebter Filme von Titlovi.com
+Neue Kinofilme
+Filmdetails (Poster, Beschreibung, Kritiken, Schauspieler, Regisseur)
+
+Kinocharts:
+Serbien
+Kroatien
+USA
+
+SERIEN 2
+Übersicht beliebter Serien
+Seriendetails (Staffeln, Folgen, Fernsehsender)
+
+3. SUCHE
+Universelle Suche nach Filmen und Serien anhand verschiedener Kriterien:
+Nach Name
+Nach Jahren (von-bis)
+Nach Genre
+Nach IMDb-ID
+Sortierung nach verschiedenen Kriterien
+
+4. UNTERTITEL
+Einfache Untertitelsuche – für Filme
+Erweiterte Untertitelsuche – für Serien (mit Staffeln/Episoden)
+
+Datei-Explorer zum Anzeigen heruntergeladener Untertitel
+Untertitel-Download mit automatischer Speicherung in einem konfigurierten Ordner
+
+5. KONFIGURATION
+Konfigurierbarer Download-Pfad (/media/hdd/subtitles/)
+Standard-Untertitelsprache (Serbisch, Kroatisch, Bosnisch...)
+Cache-Limit
+
+Debug-Optionen
+
+🛠️ TECHNISCHE DATEN
+✅ SOFORT FUNKTIONIERT:
+Voll funktionsfähige Benutzeroberfläche mit ansprechender Darstellung
+Laden von Daten von Titlovi.com
+Untertitel-Download
+Caching-System für schnelleres Laden
+Mehrfachauswahl im Datei-Explorer
+
+⚠️ EINSCHRÄNKUNGEN (Version 1.0):
+Maximal 60 Ergebnisse pro Liste (aus Stabilitätsgründen)
+Kein automatischer Download basierend auf dem aktuellen Video
+Keine Integration mit dem Enigma2-Videoplayer
+
+🔧 INSTALLATION:
+wget in Telnet kopieren
+Enigma2 neu starten
+
+🎯 VORTEILE:
+Alles in Filme, Serien und Untertitel an einem Ort
+Lokale Sprachen – Fokus auf Inhalte aus dem ehemaligen Jugoslawien
+Schnell – Caching und optimierter Parser
+Ansprechende Benutzeroberfläche – übersichtliches Design
+Stabil – Absturzsicherung
+
+✅ Funktionen:
+• Filmsuche
+• Übersicht beliebter Filme
+• Übersicht beliebter Serien
+• Filmsuche
+• Seriensuche
+• Kinocharts Serbien
+• Kinocharts Kroatien
+• Kinocharts USA
+• Einstellungen
+• Cache leeren
+• Datei-Explorer
+• GELBE Schaltfläche: Einfache Untertitel (für Filme)
+• BLAUE Schaltfläche: Erweiterte Untertitel (für Serien)
+
+..:: CiefpSettings ::..
