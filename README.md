@@ -3,9 +3,20 @@
 **Version:** `2.9`  
 **Author:** [@ciefp](https://github.com/ciefp)  
 **License:** Free for personal use  
-**Supported Languages:** English, Srpski, Slovenčina, Русский, Deutsch, Ελληνικά
+**Supported Languages:** 
+- English, 
+- Srpski, 
+- Slovenčina, 
+- Русский, 
+- Deutsch, 
+- Ελληνικά
+
 **31 active plugins
 ---
+## 📸 Screenshots
+![CiefpPlugins](https://github.com/ciefp/CiefpPlugins/blob/main/ciefpplugins-1.jpg)
+![CiefpPlugins](https://github.com/ciefp/CiefpPlugins/blob/main/ciefpplugins-2.jpg)
+
 
 ## 📖 Description
 
