@@ -1,0 +1,66 @@
+🔹 CiefpKingSat v2.0 – Veliko unapređenje interfejsa i funkcionalnosti 🔹
+
+Ova verzija predstavlja veliki korak napred u pogledu izgleda i upotrebljivosti plugina.
+
+Od jednostavnog tekstualnog prikaza kanala, CiefpKingSat je evoluirao u potpuno strukturisan, 
+tabelarni sistem pregleda sa ujednačenim dizajnom na svim ekranima.
+
+✅ Šta je novo u verziji 2.0
+
+• Potpuno redizajniran ekran Satellite Channels sa tabelarnim prikazom
+• Dodati zaglavlja kolona (Channel, Country, Category, Package, Encryption)
+• Grupisanje kanala po transponderima sa jasno vidljivim headerima
+• Implementirana paginacija (Next / Prev) umesto klasičnog skrolovanja
+• Ujednačen izgled za Satellite, Packages, Channels i News ekrane
+• Ekran Packages sada koristi isti tabelarni prikaz kanala
+• News ekran prebačen na paginirani prikaz sa Next / Prev i Left / Right tasterima
+• Poboljšani fontovi, razmaci i poravnanja radi bolje čitljivosti
+• Prikaz FTA umesto teksta "clear"
+• Poboljšana brzina i stabilnost rada
+
+🎯 Rezultat
+
+CiefpKingSat v2.0 donosi čistiji izgled, lakšu navigaciju i profesionalniji osećaj rada, 
+podižući plugin na znatno viši nivo u odnosu na prethodne verzije.
+
+..:: CiefpSettings ::..
+
+
+.:: CiefpKingSat ::..
+
+Enigma2 python3 plugin
+Koristi requests + BeautifulSoup
+
+📝 Karakteristike verzije 1.0:
+✅ Funkcionalnosti:
+Sateliti: Pregled kanala po satelitu 
+(sa grupisanjem po frekvenciji/transponderu, zemlja, kategorija, paket, enkripcija).
+
+Paketi: Lista popularnih paketa grupisanih po satelitu 
+(npr. Digi TV, Sky, Total TV, MaxTV, Bulsatcom itd.), sa učitavanjem kanala za odabrani paket.
+
+Vesti: Najnovije KingOfSat vesti 
+(grupisane po datumu i satelitu, sa vremenom, kanalom i opisom).
+
+Cache sistem: Podaci se čuvaju lokalno (1 sat), brzo učitavanje i manje opterećenje sajta.
+Cache u JSON fajlovima (cache/ direktorijum)
+
+Prikazivanje osnovnih podataka o kanalu
+Frekvencija,polarizacija,sistem,modulacija,simbol rate,fec 
+Država,kategorija,paket,kodiranje
+(FTA, Conax/Nagra, VideoGuard, itd.)
+
+✅ UI/UX:
+Čist, poravnat tabelarni prikaz
+Scroll za velike liste
+Navigacija strelicama
+Status bar sa informacijama
+Responsive dizajn za Enigma2
+
+✅ Optimizacije:
+Async učitavanje podataka
+Cache za brži prikaz
+Error handling
+Clean code struktura
+
+..:: CiefpSettings ::..

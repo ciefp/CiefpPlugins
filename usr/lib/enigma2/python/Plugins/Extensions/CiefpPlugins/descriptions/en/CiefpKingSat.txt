@@ -1,0 +1,66 @@
+🔹 CiefpKingSat v2.0 – Major UI & Usability Upgrade 🔹
+
+This release represents a major step forward in both usability and visual presentation of the plugin.
+
+Starting from a simple text-based channel listing, CiefpKingSat has evolved into a fully structured, 
+table-based browsing experience with consistent layout across all sections.
+
+✅ What’s New in v2.0
+
+• Completely redesigned Satellite Channels screen with tabular layout
+• Added column headers (Channel, Country, Category, Package, Encryption)
+• Implemented transponder grouping headers for easier frequency overview
+• Introduced pagination system (Next / Prev) instead of continuous scrolling
+• Unified layout and colors across Satellite, Packages, Channels and News screens
+• Packages screen now uses the same table-based channel view
+• News screen converted to paged reading mode with Next / Prev & Left / Right support
+• Improved fonts, spacing and alignment for better readability
+• Clearer encryption display (FTA shown instead of “clear”)
+• Better performance and smoother navigation
+
+🎯 Result
+
+CiefpKingSat v2.0 offers a cleaner, faster and more professional user experience, 
+bringing the plugin to a much higher visual and functional level compared to previous versions.
+
+..:: CiefpSettings ::..
+
+
+.:: CiefpKingSat ::..
+
+Enigma2 python3 plugin
+Use requests + BeautifulSoup
+
+📝 Version 1.0 Features:
+✅ Functionalities:
+Satellites: Overview of channels by satellite
+(with grouping by frequency/transponder, country, category, package, encryption).
+
+Packages: List of popular packages grouped by satellite
+(eg Digi TV, Sky, Total TV, MaxTV, Bulsatcom etc.), with channel loading for the selected package.
+
+News: The latest KingOfSat news
+(grouped by date and satellite, with time, channel and description).
+
+Cache system: Data is stored locally (1 hour), fast loading and less load on the site.
+Cache in JSON files (cache/directory)
+
+Displaying basic channel data
+Frequency, polarization, system, modulation, rate symbol, fec
+Country, category, package, coding
+(FTA, Conax/Nagra, VideoGuard, etc.)
+
+✅ UI/UX:
+A clean, aligned tabular view
+Scroll for large lists
+Arrow navigation
+Status bar with information
+Responsive design for Enigma2
+
+✅ Optimizations:
+Async data loading
+Cache for faster display
+Error handling
+Clean code structure
+
+..:: CiefpSettings ::..

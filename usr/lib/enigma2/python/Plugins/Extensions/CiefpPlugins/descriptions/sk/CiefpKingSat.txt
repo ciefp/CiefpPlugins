@@ -1,0 +1,65 @@
+🔹 CiefpKingSat v2.0 – Významné vylepšenie používateľského rozhrania a použiteľnosti 🔹
+
+Toto vydanie predstavuje významný krok vpred v použiteľnosti aj vizuálnej prezentácii pluginu.
+
+Z jednoduchého textového zoznamu kanálov sa CiefpKingSat vyvinul do plne štruktúrovaného prehliadania založeného na tabuľkách s konzistentným rozložením vo všetkých sekciách.
+
+✅ Čo je nové vo verzii 2.0
+
+• Úplne prepracovaná obrazovka satelitných kanálov s tabuľkovým rozložením
+• Pridané hlavičky stĺpcov (Kanál, Krajina, Kategória, Balík, Šifrovanie)
+• Implementované hlavičky zoskupovania transpondérov pre jednoduchší prehľad frekvencií
+• Zavedený systém stránkovania (Ďalší / Predchádzajúci) namiesto plynulého rolovania
+• Zjednotené rozloženie a farby na obrazovkách Satelit, Balíčky, Kanály a Správy
+• Obrazovka Balíčky teraz používa rovnaké tabuľkové zobrazenie kanálov
+• Obrazovka Správy prevedená do režimu čítania po stránkach s podporou Ďalší / Predchádzajúci a Vľavo / Vpravo
+• Vylepšené písma, rozstupy a zarovnanie pre lepšiu čitateľnosť
+• Jasnejšie zobrazenie šifrovania (zobrazuje sa FTA namiesto „čisté“)
+• Lepší výkon a plynulejšia navigácia
+
+🎯 Výsledok
+
+CiefpKingSat v2.0 ponúka čistejší, rýchlejší a profesionálnejší používateľský zážitok,
+čím sa doplnok dostane na oveľa vyššiu vizuálnu a funkčnú úroveň v porovnaní s predchádzajúcimi verziami.
+
+..:: CiefpSettings ::..
+
+.:: CiefpKingSat ::..
+
+Plugin Enigma2 python3
+Použitie požiadaviek + BeautifulSoup
+
+📝 Funkcie verzie 1.0:
+✅ Funkcie:
+Satelity: Prehľad kanálov podľa satelitu
+(so zoskupením podľa frekvencie/transpondéra, krajiny, kategórie, balíka, šifrovania).
+
+Balíčky: Zoznam populárnych balíkov zoskupených podľa satelitu
+(napr. Digi TV, Sky, Total TV, MaxTV, Bulsatcom atď.) s načítaním kanálov pre vybraný balík.
+
+Správy: Najnovšie správy KingOfSat
+(zoskupené podľa dátumu a satelitu, s časom, kanálom a popisom).
+
+Systém vyrovnávacej pamäte: Dáta sa ukladajú lokálne (1 hodina), rýchle načítanie a menšie zaťaženie stránky.
+
+Vyrovnávacia pamäť v súboroch JSON (vyrovnávacia pamäť/adresár)
+
+Zobrazenie základných údajov o kanáloch
+Frekvencia, polarizácia, systém, modulácia, symbol rýchlosti, fec
+Krajina, kategória, balík, kódovanie
+(FTA, Conax/Nagra, VideoGuard atď.)
+
+✅ UI/UX:
+Prehľadné, zarovnané tabuľkové zobrazenie
+Posúvanie pre veľké zoznamy
+Navigácia šípkami
+Stavový riadok s informáciami
+Responzívny dizajn pre Enigma2
+
+✅ Optimalizácie:
+Asynchrónne načítanie údajov
+Vyrovnávacia pamäť pre rýchlejšie zobrazenie
+Ošetrenie chýb
+Prehľadná štruktúra kódu
+
+..:: CiefpSettings ::..

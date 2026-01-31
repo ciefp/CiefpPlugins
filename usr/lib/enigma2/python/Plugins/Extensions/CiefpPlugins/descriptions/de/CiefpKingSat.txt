@@ -1,0 +1,63 @@
+🔹 CiefpKingSat v2.0 – Großes UI- & Usability-Upgrade 🔹
+
+Diese Version stellt einen großen Fortschritt sowohl in der Bedienbarkeit als auch in der visuellen Darstellung des Plugins dar.
+
+Ausgehend von einer einfachen textbasierten Kanalliste hat sich CiefpKingSat zu einem vollständig strukturierten, tabellenbasierten Browsing-Erlebnis mit einheitlichem Layout in allen Bereichen entwickelt.
+
+✅ Was ist neu in v2.0
+
+• Komplett neu gestalteter Bildschirm für Satellitenkanäle mit Tabellenlayout
+• Hinzugefügte Spaltenüberschriften (Kanal, Land, Kategorie, Paket, Verschlüsselung)
+• Implementierte Transponder-Gruppierungsüberschriften für bessere Frequenzübersicht
+• Eingeführtes Paginierungssystem (Weiter / Zurück) statt kontinuierlichem Scrollen
+• Einheitliches Layout und Farben für Satelliten-, Pakete-, Kanäle- und News-Bildschirme
+• Pakete-Bildschirm verwendet jetzt dieselbe tabellenbasierte Kanalansicht
+• News-Bildschirm auf seitenweises Lesen mit Weiter / Zurück & Links / Rechts umgestellt
+• Verbesserte Schriftarten, Abstände und Ausrichtung für bessere Lesbarkeit
+• Klarere Anzeige der Verschlüsselung (FTA statt „clear“)
+• Bessere Performance und flüssigere Navigation
+
+🎯 Ergebnis
+
+CiefpKingSat v2.0 bietet eine sauberere, schnellere und professionellere Benutzererfahrung und hebt das Plugin visuell und funktional auf ein deutlich höheres Niveau als frühere Versionen.
+
+..:: CiefpSettings ::..
+
+.:: CiefpKingSat ::..
+
+Enigma2 Python3 Plugin
+Verwendet requests + BeautifulSoup
+
+📝 Version 1.0 Funktionen:
+✅ Funktionalitäten:
+Satelliten: Übersicht der Kanäle nach Satellit
+(mit Gruppierung nach Frequenz/Transponder, Land, Kategorie, Paket, Verschlüsselung)
+
+Pakete: Liste beliebter Pakete, nach Satellit gruppiert
+(z.B. Digi TV, Sky, Total TV, MaxTV, Bulsatcom usw.), mit Laden der Kanäle für das ausgewählte Paket
+
+News: Die neuesten KingOfSat-Nachrichten
+(nach Datum und Satellit gruppiert, mit Zeit, Kanal und Beschreibung)
+
+Cache-System: Daten werden lokal gespeichert (1 Stunde), schnelles Laden und geringere Serverlast
+Cache in JSON-Dateien (cache/directory)
+
+Anzeige grundlegender Kanaldaten
+Frequenz, Polarisation, System, Modulation, Symbolrate, FEC
+Land, Kategorie, Paket, Verschlüsselung
+(FTA, Conax/Nagra, VideoGuard usw.)
+
+✅ UI/UX:
+Saubere, ausgerichtete Tabellenansicht
+Scrollen für große Listen
+Pfeilnavigation
+Statusleiste mit Informationen
+Responsives Design für Enigma2
+
+✅ Optimierungen:
+Asynchrones Laden der Daten
+Cache für schnellere Anzeige
+Fehlerbehandlung
+Saubere Code-Struktur
+
+..:: CiefpSettings ::..
