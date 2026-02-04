@@ -1,0 +1,68 @@
+🔧 Ciefp Rotten Tomatoes – v1.2
+
+✅# Nové funkcie
+- Pridaná možnosť Načítať viac… pre BASE /prehliadať/ zoznamy filmov a TV
+(načíta ďalšie položky pomocou prehliadania HTML na základe stránok)
+- Pridané nastavenie maximálneho načítania položiek (používateľom voliteľné: 50 / 100 / 150 / 200 / …)
+- Pridaných viacero nových kategórií prehliadania pre filmy a TV
+
+# Vylepšenia
+- Optimalizované načítavanie zoznamov pre prijímače s nízkou pamäťou
+- Vylepšená stabilita pri prehliadaní veľkých zoznamov
+- Rýchlejšia navigácia medzi kategóriami
+
+🛠# Opravy
+- Opravené duplicitné položky pri použití možnosti Načítať viac
+- Zabránené nekonečnému načítavaniu, keď už nie sú k dispozícii žiadne ďalšie položky
+⚡Všeobecné vyčistenie kódu
+
+CiefpRottenTomatoes v1.1 — Zoznam zmien
+✅ Nové
+- Pridaná podpora pre redakčné zoznamy „Sprievodca“ Rotten Tomatoes
+(editorial.rottentomatoes.com/guide/...)
+– teraz dokáže plugin načítať „Najlepšie z / Zoradené podľa Tomatometra“ kategórie
+(Disney, Marvel, Netflix, žánre, roky atď.).
+
+plugin
+- Pridané automatické zobrazenie roku v názve pre redakčné zoznamy
+(napr. Aristokočky (1970)).
+- Rozšírené menu filmov a seriálov s mnohými novými zaujímavými kategóriami
+(Najlepšie nové filmy, Najlepšie podľa roka, Disney, Marvel, Základné sci-fi, Najlepšie z Netflixu atď.).
+
+🛠 Opravy chýb
+- Opravený normalizátor URL pre odkazy ako //www.rottentomatoes.com/... (relatívne k protokolu),
+- ktorý vyriešil problém, že niektoré tituly sa otvárali bez podrobností (napr. zoznamy Marvel).
+
+⚡ Výkon / Obmedzenia
+Zvýšený maximálny počet výsledkov zobrazených v zoznamoch a vyhľadávaní
+(testované na Vu+ Zero 4K – funguje rýchlo a stabilne).
+
+📌 Doplnok Ciefp RottenTomatoes – verzia 1.0
+Prehliadajte a sledujte filmy a televízne relácie z Rotten Tomatoes
+
+Zobrazte podrobné informácie:
+- Názov, Rok, Žánre, Dĺžka
+- Hodnotenie kritikov, Hodnotenie publika, Tomatometer
+- Synopsa / Popis
+
+Podpora obrázkov plagátov a pozadia
+Zobrazenie hercov a štábu (režiséri a hlavní herci)
+
+Prehliadač profilov celebrít:
+- Meno, narodeniny, miesto narodenia
+- Najvyššie a najnižšie hodnotené tituly
+- Biografia
+- Portrét
+
+Rýchle akcie (menu OK):
+- Zobraziť URL položku
+- Zobraziť pozadie
+- Prehliadač hercov a štábu
+
+Nastavenie:
+- Vymazať vyrovnávaciu pamäť
+po použití ukážky
+vymažte vyrovnávaciu pamäť, aby ste uvoľnili pamäť.
+
+Čisté HD rozhranie s farebnými hodnoteniami
+Záložný obrázok zástupcu, keď chýba plagát

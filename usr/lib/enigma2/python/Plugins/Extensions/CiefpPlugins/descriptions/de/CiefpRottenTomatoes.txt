@@ -1,0 +1,77 @@
+🔧 Ciefp Rotten Tomatoes – v1.2
+
+✅# Neue Funktionen
+- Option „Mehr laden…“ für die Film- und Fernsehlisten unter BASE /browse/ hinzugefügt
+
+(Lädt zusätzliche Elemente per seitenbasiertem HTML-Browsing)
+- Einstellung für die maximale Anzahl geladener Elemente hinzugefügt (vom Benutzer wählbar: 50 / 100 / 150 / 200 / …)
+- Mehrere neue Kategorien für Filme und Fernsehsendungen hinzugefügt
+
+# Verbesserungen
+- Optimiertes Laden von Listen für Geräte mit wenig Speicherplatz
+- Verbesserte Stabilität beim Durchsuchen großer Listen
+- Schnellere Navigation zwischen Kategorien
+
+🛠# Fehlerbehebungen
+- Doppelte Einträge beim Laden von „Mehr laden“ behoben
+
+Endloses Laden bei fehlenden Elementen verhindert
+⚡Allgemeine Codebereinigung
+
+CiefpRottenTomatoes v1.1 – Changelog
+
+✅ Neu
+- Unterstützung für die Rotten Tomatoes Editorial „Guide“-Listen hinzugefügt
+
+(editorial.rottentomatoes.com/guide/...)
+– Das Plugin kann jetzt „Best of“-Listen laden / Nach Tomatometer-Kategorien sortiert
+
+(Disney, Marvel, Netflix, Genres, Jahre usw.)
+
+Plugin
+- Automatische Anzeige des Jahres im Titel für redaktionelle Listen hinzugefügt
+
+(z. B. Aristocats (1970))
+- Menü „Filme und Serien“ um viele neue, interessante Kategorien erweitert
+
+(Beste neue Filme, Beste Filme nach Jahr, Disney, Marvel, Wichtige Science-Fiction-Filme, Netflix-Bestseller usw.)
+
+🛠 Fehlerbehebungen
+- URL-Normalisierung für Links wie //www.rottentomatoes.com/... (protokollrelativ) korrigiert
+- Dadurch wurde das Problem behoben, dass einige Titel ohne Details geöffnet wurden (z. B. Marvel-Listen)
+
+⚡ Leistung / Einschränkungen
+Maximale Anzahl der in Listen und der Suche angezeigten Ergebnisse erhöht
+(getestet auf Vu+ Zero 4K – läuft schnell und stabil)
+
+📌 Ciefp RottenTomatoes Plugin – Version 1.0
+Filme und Serien von Rotten Tomatoes durchsuchen und ansehen
+
+Detaillierte Informationen anzeigen:
+
+- Titel, Jahr, Genre, Laufzeit
+- Kritikerwertung, Publikumswertung, Tomatometer
+- Inhaltsangabe/Beschreibung
+
+Unterstützung für Poster und Hintergrundbilder
+Anzeige von Besetzung und Crew (Regisseure und Hauptdarsteller)
+
+Profilansicht für Prominente:
+
+- Name, Geburtstag, Geburtsort
+- Höchst- und niedrigstbewertete Titel
+- Biografie
+- Porträtbild
+
+Schnellaktionen (OK-Menü):
+- URL des Titels anzeigen
+- Hintergrundbild anzeigen
+- Besetzungs- und Crew-Browser
+
+Einstellungen:
+
+- Cache leeren
+Nach der Vorschau den Cache leeren, um Speicherplatz freizugeben.
+
+Klare HD-Oberfläche mit farbigen Bewertungen
+Platzhalterbild als Ersatzbild, falls kein Poster verfügbar ist

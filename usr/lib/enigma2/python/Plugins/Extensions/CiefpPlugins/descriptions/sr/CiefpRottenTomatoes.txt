@@ -1,0 +1,71 @@
+
+🔧 Ciefp Rotten Tomatoes – v1.2
+
+✅# Novo
+- Dodata opcija Load more… za BASE /browse/ liste filmova i serija
+ (učitavanje dodatnih stavki preko stranica)
+- Dodata opcija u podešavanjima Max Items Load
+ (korisnik bira: 50 / 100 / 150 / 200 / …)
+- Dodato više novih kategorija za filmove i serije
+
+# Poboljšanja
+- Optimizovano učitavanje lista za slabije resivere
+- Poboljšana stabilnost pri radu sa velikim listama
+- Brže kretanje kroz menije
+
+🛠# Ispravke
+- Ispravljeno dupliranje stavki kod Load more
+- Sprečeno beskonačno učitavanje kada nema više rezultata
+⚡Čišćenje i sređivanje koda
+
+CiefpRottenTomatoes v1.1 — Changelog
+✅ Novo
+- Dodata podrška za Rotten Tomatoes Editorial “Guide” liste
+  (editorial.rottentomatoes.com/guide/...) 
+– sada plugin može da učitava “Best of / Ranked by Tomatometer” kategorije 
+  (Disney, Marvel, Netflix, žanrovi, godine itd.). 
+
+plugin
+- Dodato automatsko prikazivanje godine u naslovu za editorial liste 
+  (npr. The Aristocats (1970)). 
+- Proširen Movies i Series meni sa mnogo novih zanimljivih kategorija 
+  (Best New Movies, Best by Year, Disney, Marvel, Essential Sci-Fi, Netflix best, itd.). 
+
+🛠 Ispravke
+- Popravljen URL normalizer za linkove tipa //www.rottentomatoes.com/... (protocol-relative), 
+- što je rešilo problem da se neki naslovi otvore bez detalja (npr. Marvel liste). 
+
+⚡ Performanse / limiti
+Povećan maksimalan broj prikazanih rezultata u listama i pretrazi 
+(testirano na Vu+ Zero 4K – radi brzo i stabilno).
+
+📌 Ciefp RottenTomatoes Plugin – Verzija 1.0
+
+Pregled filmova i TV serija sa sajta Rotten Tomatoes
+
+Prikaz detaljnih informacija:
+- Naziv, godina, žanr, trajanje
+- Ocene kritičara, publike i Tomatometer
+- Kratak opis (sinopsis)
+
+Prikaz postera i pozadinske slike (backdrop)
+Prikaz glumaca i reditelja (Cast & Crew)
+
+Pregled profila glumaca / poznatih ličnosti:
+- Ime, datum rođenja, mesto rođenja
+- Najbolje i najgore ocenjeni filmovi
+- Biografija
+- Fotografija
+
+Brze opcije (OK meni):
+- Prikaži URL stavke
+- Prikaži pozadinsku sliku (backdrop)
+- Cast & Crew pregled
+
+Podešavanje:
+- Clear Cache 
+posle korišćenja pregleda
+obrišite keš da oslobodite memoriju.
+
+Moderan HD interfejs sa obojenim ocenama
+Placeholder slika kada poster nije dostupan

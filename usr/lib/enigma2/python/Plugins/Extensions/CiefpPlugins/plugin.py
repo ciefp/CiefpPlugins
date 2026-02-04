@@ -20,7 +20,7 @@ import urllib.request
 import uuid
 
 # Plugin version
-PLUGIN_VERSION = "3.0" 
+PLUGIN_VERSION = "3.1" 
 
 # Setup logging
 LOG_FILE = "/tmp/ciefp_plugin.log"
@@ -100,6 +100,7 @@ PLUGIN_LIST = [
     ("CiefpOscamEditor", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpOscamEditor.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpOscamEditor/main/installer.sh -O - | /bin/sh", "CiefpOscamEditor"),
     ("CiefpSatelliteAnalyzer", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpSatelliteAnalyzer.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSatelliteAnalyzer/main/installer.sh -O - | /bin/sh", "CiefpSatelliteAnalyzer"),
     ("CiefpOpenDirectories", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpOpenDirectories.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpOpenDirectories/main/installer.sh -O - | /bin/sh", "CiefpOpenDirectories"),
+    ("CiefpRottenTomatoes", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpRottenTomatoes.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpRottenTomatoes/main/installer.sh -O - | /bin/sh", "CiefpRottenTomatoes"),
     ("CiefpTMDBSearch", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpTMDBSearch.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpTMDBSearch/main/installer.sh -O - | /bin/sh", "CiefpTMDBSearch"),
     ("CiefpVibes", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpVibes.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpVibes/main/installer.sh -O - | /bin/sh", "CiefpVibes"),
     ("CiefpOpenSubtitles", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpOpenSubtitles.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpOpenSubtitles/main/installer.sh -O - | /bin/sh", "CiefpOpenSubtitles"),
@@ -264,7 +265,7 @@ class ImageViewerScreen(Screen):
 
 class CiefpPluginsPanel(Screen):
     skin = """
-    <screen name="CiefpPluginsPanel" position="center,center" size="1600,850" title="..:: Ciefp Plugins (NO.32) ::.. (Version {version})">
+    <screen name="CiefpPluginsPanel" position="center,center" size="1600,850" title="..:: Ciefp Plugins (NO.33) ::.. (Version {version})">
         <widget name="title" position="0,0" size="1600,100" font="Regular;60" halign="center" foregroundColor="#FFFFFF" backgroundColor="#000000" />
         <widget source="pluginlist" render="Listbox" position="50,100" size="400,680" scrollbarMode="showOnDemand" enableWrapAround="1">
             <convert type="TemplatedMultiContent">
@@ -348,7 +349,7 @@ class CiefpPluginsPanel(Screen):
         self["pluginlist"] = List(self.pluginList)
         self["description"] = ScrollLabel("")
         self["status_label"] = Label("")
-        self["title"] = Label(f"..:: Ciefp Plugins (NO.32) ::.. (Version {PLUGIN_VERSION})")
+        self["title"] = Label(f"..:: Ciefp Plugins (NO.33) ::.. (Version {PLUGIN_VERSION})")
         self["actions"] = ActionMap(["OkCancelActions", "ColorActions", "DirectionActions"], {
             "cancel": self.exit,
             "red": self.exit,

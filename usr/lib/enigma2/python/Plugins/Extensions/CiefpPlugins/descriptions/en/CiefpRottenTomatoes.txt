@@ -1,0 +1,71 @@
+
+🔧 Ciefp Rotten Tomatoes – v1.2
+
+✅# New Features
+- Added Load more… option for BASE /browse/ movie and TV lists
+  (loads additional items using page-based HTML browsing)
+- Added Max Items Load setting (user selectable: 50 / 100 / 150 / 200 / …)
+- Added multiple new browse categories for movies and TV
+
+# Improvements
+- Optimized list loading for low-memory receivers
+- Improved stability when browsing large lists
+- Faster navigation between categories
+
+🛠# Fixes
+- Fixed duplicate items when using Load more
+- Prevented infinite loading when no more items are available
+⚡General code cleanup
+
+
+CiefpRottenTomatoes v1.1 — Changelog
+✅ New
+- Added support for Rotten Tomatoes Editorial “Guide” lists
+(editorial.rottentomatoes.com/guide/...)
+– now the plugin can load “Best of / Ranked by Tomatometer” categories
+(Disney, Marvel, Netflix, genres, years, etc.).
+
+plugin
+- Added automatic display of year in the title for editorial lists
+(e.g. The Aristocats (1970)).
+- Expanded Movies and Series menu with many new interesting categories
+(Best New Movies, Best by Year, Disney, Marvel, Essential Sci-Fi, Netflix best, etc.).
+
+🛠 Bugfixes
+- Fixed URL normalizer for links like //www.rottentomatoes.com/... (protocol-relative),
+- which solved the problem that some titles opened without details (e.g. Marvel lists).
+
+⚡ Performance / Limitations
+Increased maximum number of results displayed in lists and search
+(tested on Vu+ Zero 4K – works fast and stable).
+
+
+📌 Ciefp RottenTomatoes Plugin – Version 1.0
+Browse and view Movies and TV Shows from Rotten Tomatoes
+
+Display detailed information:
+- Title, Year, Genres, Runtime
+- Critics Score, Audience Score, Tomatometer
+- Synopsis / Description
+
+Poster and Backdrop image support
+Cast & Crew display (Directors and main Cast)
+
+Celebrity profile viewer:
+- Name, Birthday, Birthplace
+- Highest Rated and Lowest Rated titles
+- Biography
+- Portrait image
+
+Quick actions (OK menu):
+- Show Item URL
+- Show Backdrop
+- Cast & Crew browser
+
+Setting:
+- Clear Cache
+after using the preview
+clear the cache to free up memory.
+
+Clean HD interface with colored ratings
+Placeholder image fallback when poster is missing
