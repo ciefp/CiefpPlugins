@@ -1,0 +1,62 @@
+🇬🇧 ENGLISH VERSION
+📦 CiefpParabolaCZ – Version 1.0
+
+🛰 Parabola.cz Viewer for Enigma2 (FullHD edition)
+Version 1.0 brings a completely redesigned and functional content browser
+from the Parabola.cz portal, adapted for the FullHD Enigma2 environment.
+
+🔹 Main Features
+📰 News Module
+- Display of latest articles (Články)
+- Display of Zprávičky section
+- Automatic parsing and cleaning of HTML content
+- FullHD detail screen (1920×1080)
+- Display of featured image (og:image / first image from article)
+- Meta line (date, category, tags)
+- Scroll support (UP/DOWN)
+- Stable loading without UI freezing
+- Automatic removal of duplicate title from text
+
+📡 Satellite & Channel Module
+- Satellite list
+- Channel list per satellite
+- Display of technical parameters:
+Frequency
+Polarization
+SR
+FEC
+Standard
+Modulation
+Language
+Genre
+Display of number of loaded channels
+Page navigation
+
+🎨 FullHD Redesign
+- Fully adapted 1920×1080 skin
+- Dark theme for better readability
+- separated header, meta, content and footer sections
+- Consistent color scheme
+- Improved image and text balance
+- Stable and optimized content display
+
+⚙ Technical Improvements
+- Stable parser adapted to the new parabola.cz structure
+- Fallback mechanisms in case of layout changes
+- Safe image handling (ePicLoad)
+- Fixed navigation between list and detail screens
+- Crash bugs removed
+
+🚀 Status
+Version 1.0 represents a stable and functional plugin release
+with complete News and Satellite modules ready for daily use.
+
+🔜 Plans for Version 1.1
+🌍 Multi-language news translation
+Integration with AI translation service (API key support)
+Target language selection option
+API key input option or loading from file (e.g. groq_apikey.txt)
+Local cache for translated articles
+Additional performance and stability optimizations
+
+..:: CiefpSettings ::..

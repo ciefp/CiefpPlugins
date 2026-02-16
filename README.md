@@ -1,6 +1,6 @@
 # Ciefp Plugins Panel
 
-**Version:** `2.9`  
+**Version:** `3.2`  
 **Author:** [@ciefp](https://github.com/ciefp)  
 **License:** Free for personal use  
 **Supported Languages:** 
@@ -11,7 +11,7 @@
 - Deutsch, 
 - Ελληνικά
 
-**31 active plugins** 
+**34 active plugins** 
 ---
 ## 📸 Screenshots
 ![CiefpPlugins](https://github.com/ciefp/CiefpPlugins/blob/main/ciefpplugins-1.jpg)
@@ -26,7 +26,7 @@
 
 ## ✨ Features
 
-- **One-click installation** of 31 Ciefp plugins
+- **One-click installation** of 34 Ciefp plugins
 - **Multilingual interface** (6 languages)
 - **Plugin descriptions** with localized text
 - **Image viewer** for plugin screenshots

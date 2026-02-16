@@ -1,0 +1,65 @@
+
+🇷🇸 SRPSKA VERZIJA
+📦 CiefpParabolaCZ – Verzija 1.0
+🛰 Parabola.cz Viewer za Enigma2 (FullHD izdanje)
+
+Verzija 1.0 donosi kompletno redizajniran i funkcionalan preglednik sadržaja 
+sa portala Parabola.cz, prilagođen za FullHD Enigma2 okruženje.
+
+🔹 Glavne funkcionalnosti
+📰 News modul
+- Prikaz najnovijih članaka (Články)
+- Prikaz rubrike Zprávičky
+- Automatsko parsiranje i čišćenje HTML sadržaja
+- FullHD detail ekran (1920×1080)
+- Prikaz naslovne slike (og:image / prva slika iz članka)
+- Meta linija (datum, rubrika, oznake)
+- Scroll podrška (UP/DOWN)
+- Stabilno učitavanje bez zamrzavanja UI-a
+- Automatsko uklanjanje duplog naslova iz teksta
+
+📡 Satellite & Channel modul
+- Lista satelita
+- Lista kanala po satelitu
+- Prikaz tehničkih parametara:
+Frekvencija
+Polarizacija
+SR
+FEC
+Norma
+Modulacija
+Jezik
+Žanr
+
+Prikaz broja učitanih kanala
+Navigacija po stranicama
+
+🎨 FullHD Redesign
+- Kompletno prilagođen 1920×1080 skin
+- Tamna tema za bolju čitljivost
+- Jasno odvojeni header, meta, content i footer delovi
+- Konzistentna kolor šema
+- Poboljšan balans slike i teksta
+- Stabilan i optimizovan prikaz sadržaja
+
+⚙ Tehnička poboljšanja
+- Stabilan parser prilagođen novoj strukturi parabola.cz
+- Fallback mehanizmi u slučaju promene layout-a
+- Sigurno rukovanje slikama (ePicLoad)
+- Ispravljena navigacija između liste i detail ekrana
+- Uklonjeni crash bug-ovi
+
+🚀 Status
+Verzija 1.0 predstavlja stabilno i funkcionalno izdanje plugina 
+sa kompletnim News i Satellite modulom spremnim za svakodnevnu upotrebu.
+
+🔜 Planovi za verziju 1.1
+
+🌍 Prevod vesti na više jezika
+Integracija sa AI prevod servisom (API key podrška)
+Mogućnost izbora ciljnog jezika
+Opcija unosa API ključa ili učitavanje iz fajla (npr. groq_apikey.txt)
+Lokalni cache prevedenih članaka
+Dodatna optimizacija performansi i stabilnosti
+
+..:: CiefpSettings ::..

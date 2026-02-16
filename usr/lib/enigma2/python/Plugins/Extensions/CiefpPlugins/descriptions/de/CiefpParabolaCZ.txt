@@ -1,0 +1,70 @@
+
+🇩🇪 GERMAN VERSION
+📦 CiefpParabolaCZ – Version 1.0
+
+🛰 Parabola.cz Viewer für Enigma2 (FullHD Edition)
+Version 1.0 bringt einen komplett neu gestalteten und funktionalen Inhaltsbrowser
+vom Portal Parabola.cz, angepasst an die FullHD Enigma2-Umgebung.
+
+🔹 Hauptfunktionen
+📰 News-Modul
+- Anzeige der neuesten Artikel (Články)
+- Anzeige der Rubrik Zprávičky
+- Automatisches Parsen und Bereinigen von HTML-Inhalten
+- FullHD Detailansicht (1920×1080)
+- Anzeige des Titelbildes (og:image / erstes Bild aus dem Artikel)
+- Meta-Zeile (Datum, Rubrik, Tags)
+- Scroll-Unterstützung (HOCH/UNTEN)
+- Stabiles Laden ohne Einfrieren der Benutzeroberfläche
+- Automatische Entfernung doppelter Titel aus dem Text
+
+📡 Satellite & Channel Modul
+- Satellitenliste
+- Kanalliste pro Satellit
+- Anzeige technischer Parameter:
+Frequenz
+Polarisation
+SR
+FEC
+Norm
+Modulation
+Sprache
+Genre
+Anzeige der Anzahl geladener Kanäle
+Seitennavigation
+
+🎨 FullHD Redesign
+- Vollständig angepasster 1920×1080 Skin
+- Dunkles Theme für bessere Lesbarkeit
+- Klare Trennung von Header, Meta, Content und Footer
+- Konsistente Farbschema
+- Verbessertes Gleichgewicht von Bild und Text
+- Stabile und optimierte Inhaltsanzeige
+
+⚙ Technische Verbesserungen
+- Stabiler Parser angepasst an die neue Struktur von parabola.cz
+- Fallback-Mechanismen bei Layout-Änderungen
+- Sichere Bildverarbeitung (ePicLoad)
+- Korrigierte Navigation zwischen Listen- und Detailansicht
+- Absturz-Bugs entfernt
+
+🚀 Status
+Version 1.0 stellt eine stabile und funktionsfähige Plugin-Version dar
+mit vollständigen News- und Satellite-Modulen, bereit für den täglichen Einsatz.
+
+🔜 Pläne für Version 1.1
+🌍 Nachrichtenübersetzung in mehrere Sprachen
+Integration eines KI-Übersetzungsdienstes (API-Schlüssel-Unterstützung)
+Möglichkeit der Zielsprachenauswahl
+Option zur Eingabe des API-Schlüssels oder Laden aus Datei (z.B. groq_apikey.txt)
+Lokaler Cache für übersetzte Artikel
+Zusätzliche Optimierung von Performance und Stabilität
+
+..:: CiefpSettings ::..
+Copy
+Ask Qwen
+Explain
+Translate(en-US)
+How can I help you today?
+
+
