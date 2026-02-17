@@ -1,0 +1,86 @@
+🎬 CiefpSRTplayer v1.0
+Erweiterter SRT-Overlay-Player für Enigma2
+
+Erweiterter SRT-Untertitel-Player für Enigma2 mit manueller und automatischer Synchronisierung,
+FPS-Konvertierung und erweiterter Untertitelpositionsauswahl.
+
+Das Plugin nutzt Echtzeit-Wiedergabezeit (PTS) für präzise Untertitelsynchronisation,
+mit EPG-Referenz als zusätzlicher/Fallback-Zeitquelle auf Live-Kanälen.
+
+🔹 Hauptfunktionen
+✅ Automatische Untertitelausrichtung entsprechend der aktuellen Wiedergabezeit
+✅ EPG-Referenz für Live-Sender (Fallback, falls keine Wiedergabe verfügbar ist)
+✅ Manuelle Offset-Anpassung (CH+ / CH-)
+✅ FPS-Konvertierung (23,976 ↔ 24 ↔ 25)
+✅ Cue Picker – direkte Auswahl der Untertitelposition
+✅ Vorschau der SRT-Datei (erste Cues)
+✅ Löschen von SRT-Dateien über den Datei-Explorer
+✅ Statusanzeige (Untertitelposition, EPG-Zeit, Dauer usw.)
+✅ Speichert den zuletzt ausgewählten Untertitel nicht (manuelle Dateiauswahl)
+✅ Seitennavigation im Cue Picker (links/rechts – ganze Seite)
+
+CiefpSRTplayer ermöglicht die präzise manuelle und automatische Anpassung von SRT-Untertiteln während der Wiedergabe.
+
+Unterstützt Offset, FPS-Korrektur, EPG-Referenz, Cue Picker und einen erweiterten Datei-Explorer.
+
+🎮 Steuerung
+⏱ Zeitsynchronisation
+- CH+ / CH- → Untertitelzeit manuell verschieben (Feinsynchronisation vorwärts/rückwärts)
+- Pfeil links → Minus-Offset (Untertitel werden früher angezeigt)
+- Pfeil rechts → Plus-Offset (Untertitel werden später angezeigt)
+
+📌 Minus-Offset = Untertitel werden früher angezeigt
+📌 Plus-Offset = Untertitel werden später angezeigt
+
+🎞 FPS-Steuerung
+BLAU → FPS-Modus ändern (zyklisch – durchläuft alle Optionen)
+
+# FPS-Modi:
+- Keine (wie SRT)
+- 23.976 → 25
+- 25 → 23.976
+- 24 → 25
+- 25 → 24
+
+📌 Der FPS-Modus ändert die Wiedergabegeschwindigkeit der Untertitel.
+📌 Der Offset verschiebt die Untertitel nur linear (ändert nicht die Geschwindigkeit). (Geschwindigkeit)
+
+🔤 Untertiteldarstellung
+- GRÜN → Schriftgröße vergrößern
+- ROT → Schriftgröße verkleinern
+- Pfeil nach oben → Untertitel nach oben verschieben
+- Pfeil nach unten → Untertitel nach unten verschieben
+
+📊 Informationen
+GELB → INFO-/Statusanzeige
+Anzeige:
+- Dateiname
+- Aktuelle Untertitelnummer (z. B. 207/839)
+- Untertitelzeit (Start → Ende)
+- Aktuelle Wiedergabezeit
+- EPG-Zeit
+- Programmdauer
+- Offset
+- FPS-Modus
+- Kodierung
+- Schriftart und Position
+
+📂 Datei-Explorer (GELB im Browser)
+- Vorschau der ersten Cues
+- Cue auswählen & synchronisieren
+- Datei löschen
+
+Schnelle Positionierung entsprechend der aktuellen Wiedergabezeit
+
+💡 Hinweis zur EPG-Zeit
+Auf einigen Sendern kann die EPG-Zeit um einige Minuten von der tatsächlichen Sendung abweichen.
+
+Dies hängt vom jeweiligen Sender/Anbieter ab und hat nichts mit dem Plugin zu tun.
+
+Das Plugin nutzt, sofern verfügbar, die Echtzeit-Wiedergabezeit und den EPG lediglich als zusätzliche Referenz.
+
+✅ Hinweise
+Das Plugin speichert die vorherige Untertiteldatei nicht mehr in den Einstellungen.
+Nach dem Start muss eine neue Datei ausgewählt werden.
+
+..:: CiefpSettings ::..

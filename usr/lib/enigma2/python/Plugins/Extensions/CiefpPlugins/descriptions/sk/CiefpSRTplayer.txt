@@ -1,0 +1,84 @@
+🎬 CiefpSRTplayer v1.0
+Pokročilý prehrávač SRT prekrytí pre Enigmu2
+
+Pokročilý prehrávač titulkov SRT pre Enigmu2 s manuálnou a automatickou synchronizáciou,
+konverziou FPS a pokročilým výberom pozície titulkov.
+
+Plugin používa reálny čas prehrávania (PTS) pre presnú synchronizáciu titulkov,
+s odkazom na EPG ako pomocným/záložným zdrojom času na živých kanáloch.
+
+🔹 Hlavné funkcie
+✅ Automatické zarovnanie titulkov podľa aktuálneho času prehrávania
+✅ Referencia EPG pre živé kanály (záložná funkcia, ak prehrávanie nie je k dispozícii)
+✅ Manuálne nastavenie posunu (CH+ / CH-)
+✅ Konverzia FPS (23.976 ↔ 24 ↔ 25)
+✅ Výber cue pickeru – priamy výber pozície titulkov
+✅ Náhľad súboru SRT (prvých niekoľko cue pickerov)
+✅ Odstránenie súborov SRT z Prieskumníka súborov
+✅ Informatívne zobrazenie stavu (pozícia titulkov, čas EPG, trvanie...)
+✅ Nepamätá si posledné titulky (vždy manuálny výber súboru)
+✅ Navigácia po stránkach vo Výbere cue pickeru (vľavo/vpravo – celá stránka)
+
+CiefpSRTplayer umožňuje presné manuálne a automatické nastavenie titulkov SRT počas prehrávania.
+
+Podporuje posun, korekciu FPS, referenciu EPG, výber cue pickeru a pokročilý prieskumník súborov.
+
+🎮 Ovládacie prvky
+⏱ Synchronizácia času
+- CH+ / CH- → Manuálne posunutie času titulkov (jemná synchronizácia dopredu/dozadu)
+- Šípka doľava → Posun v mínus (titulky sa zobrazia skôr)
+- Šípka doprava → Posun v plus (titulky sa zobrazia neskôr)
+
+📌 Posun mínus = titulky sa zobrazia skôr
+📌 Posun plus = titulky sa zobrazia neskôr
+
+🎞 Ovládanie FPS
+MODRÁ → Zmena režimu FPS (cyklicky – prechádza všetkými možnosťami)
+
+# režimy FPS:
+- Žiadny (ako SRT)
+- 23 976 → 25
+- 25 → 23 976
+- 24 → 25
+- 25 → 24
+
+📌 Režim FPS mení rýchlosť prehrávania titulkov
+📌 Posun iba lineárne posúva titulky (nemení rýchlosť)
+
+🔤 Vzhľad titulkov
+- ZELENÁ → Zväčšuje veľkosť písma
+- ČERVENÁ → Zmenšuje veľkosť písma
+- Šípka HORE → Posunie titulky nahor
+- Šípka DOLE → Posunie titulky nadol
+
+📊 Informácie
+ŽLTÁ → INFO / Zobrazenie stavu
+Zobrazuje:
+- Názov súboru
+- Aktuálne číslo titulkov (napr. 207/839)
+- Čas titulkov (začiatok → koniec)
+- Aktuálny čas prehrávania
+- Uplynutý čas EPG
+- Trvanie programu
+- Posun
+- Režim FPS
+- Kódovanie
+- Písmo a pozíciu
+
+📂 Prieskumník súborov (ŽLTÁ v prehliadači)
+- Náhľad prvých signálov
+- Výber signálu a synchronizácia odtiaľto
+- Odstránenie súboru
+
+Rýchle umiestnenie podľa aktuálneho času prehrávania
+
+💡 Poznámka k času EPG
+Na niektorých kanáloch sa EPG môže líšiť o niekoľko minút od skutočného vysielania.
+Toto závisí od samotného kanála/operátora a nesúvisí to s pluginom.
+Plugin používa skutočný čas prehrávania, ak je k dispozícii, a EPG iba ako pomocnú referenciu.
+
+✅ Poznámky
+Plugin už neukladá predchádzajúci súbor s titulkami v nastaveniach.
+Po spustení je potrebné vybrať nový súbor.
+
+..::CiefpSettings ::..

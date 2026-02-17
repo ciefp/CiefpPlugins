@@ -1,0 +1,84 @@
+
+🎬 CiefpSRTplayer v1.0
+Advanced SRT overlay player for Enigma2
+
+Napredni SRT subtitle player za Enigma2 sa ručnom i automatskom sinhronizacijom,
+FPS konverzijom i naprednim biranjem subtitle pozicije.
+
+Plugin koristi real playback vreme (PTS) za preciznu sinhronizaciju titlova,
+uz EPG referencu kao pomoćni/fallback izvor vremena na live kanalima.
+
+🔹 Glavne funkcije
+✅ Automatsko poravnanje titlova prema trenutnom playback vremenu
+✅ EPG referenca za live kanale (fallback ako playback nije dostupan)
+✅ Ručno podešavanje offset-a (CH+ / CH-)
+✅ FPS konverzija (23.976 ↔ 24 ↔ 25)
+✅ Cue Picker – direktan izbor subtitle pozicije
+✅ Preview SRT fajla (prvih nekoliko cue-ova)
+✅ Brisanje SRT fajlova iz File Explorer-a
+✅ Informativni status prikaz (Subtitle position, EPG time, trajanje…)
+✅ Ne pamti poslednji titl (uvek ručni izbor fajla)
+✅ Page navigation u Cue Picker-u (levo/desno – cela strana)
+
+CiefpSRTplayer omogućava precizno ručno i automatsko podešavanje SRT titlova tokom reprodukcije.
+Podržava offset, FPS korekciju, EPG referencu, cue picker i napredni file explorer.
+
+🎮 Komande
+⏱ Vremenska sinhronizacija
+- CH+ / CH- → Ručno pomeranje subtitle vremena (fine sync napred / nazad)
+- Strelica LEVO → Offset u minus (titl se prikazuje ranije)
+- Strelica DESNO → Offset u plus (titl se prikazuje kasnije)
+
+📌 Minus offset = titl ide ranije
+📌 Plus offset = titl ide kasnije
+
+🎞 FPS kontrola
+PLAVO → Promena FPS moda (ciklično – ide u krug kroz sve opcije)
+
+# FPS modovi:
+- None (as SRT)
+- 23.976 → 25
+- 25 → 23.976
+- 24 → 25
+- 25 → 24
+
+📌 FPS mod menja brzinu reprodukcije titla
+📌 Offset samo pomera titl linearno (ne menja brzinu)
+
+🔤 Izgled titla
+- ZELENO → Povećava veličinu fonta
+- CRVENO → Smanjuje veličinu fonta
+- Strelica GORE → Pomera titl nagore
+- Strelica DOLE → Pomera titl nadole
+
+📊 Informacije
+ŽUTO → INFO / Status prikaz
+Prikazuje:
+- Naziv fajla
+- Trenutni subtitle broj (npr. 207/839)
+- Subtitle vreme (start → end)
+- Trenutno playback vreme
+- EPG elapsed vreme
+- Trajanje programa
+- Offset
+- FPS mod
+- Encoding
+- Font i poziciju
+
+📂 File Explorer (ŽUTO u browseru)
+- Preview prvih cue-ova
+- Pick cue & Sync from here
+- Delete fajla
+
+Brzo pozicioniranje prema trenutnom playback vremenu
+
+💡 Napomena o EPG vremenu
+Na pojedinim kanalima EPG može odstupati nekoliko minuta od realnog emitovanja.
+Ovo zavisi od samog kanala/operatera i nije vezano za plugin.
+Plugin koristi real playback vreme kada je dostupno, a EPG samo kao pomoćnu referencu.
+
+✅ Napomena
+Plugin više ne čuva prethodni subtitle fajl u settings.
+Po pokretanju potrebno je izabrati novi fajl.
+
+..:: CiefpSettings ::..
