@@ -352,7 +352,7 @@ class CiefpPluginsPanel(Screen):
         self["pluginlist"] = List(self.pluginList)
         self["description"] = ScrollLabel("")
         self["status_label"] = Label("")
-        self["title"] = Label(f"..:: Ciefp Plugins (NO.35) ::.. (Version {PLUGIN_VERSION})")
+        self["title"] = Label(f"..:: Ciefp Plugins (NO.36) ::.. (Version {PLUGIN_VERSION})")
         self["actions"] = ActionMap(["OkCancelActions", "ColorActions", "DirectionActions"], {
             "cancel": self.exit,
             "red": self.exit,
