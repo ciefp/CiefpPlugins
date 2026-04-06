@@ -1,0 +1,25 @@
+
+🇷🇸 [SRPSKI] CiefpEasySetup v1.3 – PY3 Multi-Image Installer
+CiefpEasySetup je "sve-u-jednom" alat za Enigma2 risivere, dizajniran da maksimalno pojednostavi instalaciju sistema, kanala i dodataka. 
+Testiran na najnovijim Python 3 imidžima, ovaj plugin osigurava stabilnost i brzinu bez potrebe za ručnim kucanjem komandi.
+
+🛠️ Glavne Opcije:
+Full Installation (Sve odjednom): Jednim klikom instalirajte kompletan sistem (Faza 1 + 2 + 3). Idealno za tek flešovan risiver.
+
+💻 Instalacija po Fazama:
+FAZA 1 (Sistem): Instalacija neophodnih biblioteka (lxml, six, requests), mrežnih alata i softcam feed-ova.
+FAZA 2 (Moji plugini): Instalacija svih mojih 33 PY3 plugina.
+FAZA 3 (Plugins): Paket popularnih dodataka (AJPannel, Vavoo, EStalker, X-Streamity...).
+Manuelna Instalacija (Zeleno dugme): Selektujte samo jedan određeni plugin iz liste i instalirajte ga trenutno pritiskom na zeleno dugme.
+
+⏳ Očekivano vreme (Testirani rezultati):
+OpenATV, Pure2, OpenSPA: ~35–45 minuta (puna instalacija).
+OpenPLi (Scarthgap): ~80–90 minuta (zbog instalacije sistemskih paketa koji nedostaju).
+
+Vreme varira u zavisnosti od procesora risivera i brzine interneta i dali je imidž u flešu ili multiboot.
+Promena Jezika:meni dugme opcija 1
+
+Autor: ciefp
+Posebna zahvala: Zajednici za testiranje i Gemini A.I. za tehničku podršku.
+
+...:: CiefpSettings ::...

@@ -20,7 +20,7 @@ import urllib.request
 import uuid
 
 # Plugin version
-PLUGIN_VERSION = "3.3" 
+PLUGIN_VERSION = "3.4" 
 
 # Setup logging
 LOG_FILE = "/tmp/ciefp_plugin.log"
@@ -107,7 +107,8 @@ PLUGIN_LIST = [
     ("Titlovi Browser", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/TitloviBrowser.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/TitloviBrowser/main/installer.sh -O - | /bin/sh", "TitloviBrowser"),
     ("CiefpKingSat", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpKingSat.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpKingSat/main/installer.sh -O - | /bin/sh", "CiefpKingSat"),
     ("CiefpParabolaCZ", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpParabolaCZ.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpParabolaCZ/main/installer.sh -O - | /bin/sh", "CiefpParabolaCZ"),
-    ("CiefpSRTplayer", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpSRTplayer.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSRTplayer/main/installer.sh -O - | /bin/sh", "CiefpSRTplayer"),
+    ("CiefpEasySetup", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpSRTplayer.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSRTplayer/main/installer.sh -O - | /bin/sh", "CiefpSRTplayer"),
+    ("CiefpSRTplayer", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpEasySetup.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpEasySetup/main/installer.sh -O - | /bin/sh", "CiefpEasySetup"),
     ("Ciefp Whitelist Streamrelay", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpWhitelistStreamrelay.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpWhitelistStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpWhitelistStreamrelay"),
     ("Ciefp T2Mi Abertis", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpT2MiAbertis.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsT2miAbertis/main/installer.sh -O - | /bin/sh", "CiefpT2MiAbertis"),
     ("Ciefp T2Mi Abertis OpenPli", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpT2MiAbertisOpenPli.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsT2miAbertisOpenPLi/main/installer.sh -O - | /bin/sh", "CiefpT2MiAbertisOpenPli"),

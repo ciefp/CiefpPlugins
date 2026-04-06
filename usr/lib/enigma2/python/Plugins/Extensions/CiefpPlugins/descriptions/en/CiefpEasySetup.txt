@@ -1,0 +1,25 @@
+
+🇺🇸 [ENGLISH] CiefpEasySetup v1.3 – PY3 Multi-Image Installer
+CiefpEasySetup is an "all-in-one" utility for Enigma2 receivers, designed to simplify the installation of system files, channel lists, and plugins. 
+Optimized for the latest Python 3 images, it ensures stability and ease of use.
+
+🛠️ Key Features:
+Full Installation: One-click setup for the entire system (Phase 1 + 2 + 3). Perfect for freshly flashed images.
+
+💻 Phase-based Installation:
+PHASE 1 (System): Installs essential libraries (lxml, six, requests), network tools, and softcam feeds.
+PHASE 2 (My Plugins): Installation of all my 33 PY3 plugins.
+PHASE 3 (Plugins): A bundle of popular extensions (AJPannel, Vavoo, EStalker, X-Streamity, etc.).
+Manual Installation (Green Button): Select a specific item from the list and install it instantly by pressing the Green Button.
+
+⏳ Estimated Time (Tested Results):
+OpenATV, Pure2, OpenSPA: ~35–45 minutes (full setup).
+OpenPLi (Scarthgap): ~80–90 minutes (due to heavy dependency fetching).
+
+The time varies depending on the processor of the receiver and the speed of the Internet and whether the image is in flash or multiboot.
+Change Language: menu button option 1
+
+Author: ciefp
+Special thanks: To the community for testing and Gemini A.I. for technical support.
+
+...:: CiefpSettings ::...
