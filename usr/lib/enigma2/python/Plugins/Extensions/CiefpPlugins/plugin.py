@@ -630,4 +630,4 @@ def main(session, **kwargs):
 
 def Plugins(**kwargs):
     from Plugins.Plugin import PluginDescriptor
-    return [PluginDescriptor(name="Ciefp Plugins", description=f"Panel for Ciefp plugins NO.34 (Version {PLUGIN_VERSION})", where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main, icon="plugin.png")]
+    return [PluginDescriptor(name="Ciefp Plugins", description=f"Panel for Ciefp plugins NO.36 (Version {PLUGIN_VERSION})", where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main, icon="plugin.png")]
