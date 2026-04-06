@@ -268,7 +268,7 @@ class ImageViewerScreen(Screen):
 
 class CiefpPluginsPanel(Screen):
     skin = """
-    <screen name="CiefpPluginsPanel" position="center,center" size="1600,850" title="..:: Ciefp Plugins (NO.35) ::.. (Version {version})">
+    <screen name="CiefpPluginsPanel" position="center,center" size="1600,850" title="..:: Ciefp Plugins (NO.36) ::.. (Version {version})">
         <widget name="title" position="0,0" size="1600,100" font="Regular;60" halign="center" foregroundColor="#FFFFFF" backgroundColor="#000000" />
         <widget source="pluginlist" render="Listbox" position="50,100" size="400,680" scrollbarMode="showOnDemand" enableWrapAround="1">
             <convert type="TemplatedMultiContent">
