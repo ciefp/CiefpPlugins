@@ -1,0 +1,64 @@
+📷 CiefpPicturePlayer v1.0 - Rýchly štart
+
+🎮 Tlačidlá (hlavná obrazovka)
+Tlačidlo Funkcia
+◀ ▲ ▼ ▶ Prechádzanie zoznamom
+OK Otvoriť priečinok / zobraziť obrázok na celej obrazovke
+UKONČIŤ (ČERVENÉ) Ukončiť plugin
+PRIEČINOK (ZELENÉ) Otvoriť prehliadač priečinkov (lokálne súbory)
+SIEŤ (ŽLTÉ) Pripojiť sa k sieťovým zdieľaniam (SMB)
+ONLINE (MODRÉ) ​​Načítať online obrázky z GitHub
+MENU Otvoriť Nastavenia (vymazať vyrovnávaciu pamäť, informácie)
+
+🖼️ Zobrazenie obrázka
+Náhľad – obrázok sa zobrazí na pravej strane pri prechádzaní zoznamom
+Celá obrazovka - stlačte OK na obrázku
+Prezentácia – v režime celej obrazovky stlačte ZELENÉ tlačidlo
+Informácie o obrázku – v režime celej obrazovky stlačte MODRÉ tlačidlo
+Späť – v režime celej obrazovky stlačte ČERVENÉ tlačidlo
+
+🌐 Sieťové pripojenie (SMB)
+Stlačte ŽLTÉ (SIEŤ) → Pripojiť k notebooku (SMB)
+Zadajte IP adresu notebooku (napr. 192.168.1.100)
+Zadajte názov zdieľaného priečinka (alebo ho nechajte prázdne)
+Po úspešnom pripojení budete presmerovaní do priečinka s obrázkami
+#Automatické skenovanie
+- vyberte IP adresu zariadenia
+- zadajte názov zdieľaného priečinka
+
+📡 Online obsah
+Stlačte MODRÉ tlačidlo (ONLINE)
+Vyberte súbor .tv zo zoznamu
+Plugin stiahne a zobrazí obrázky z daného súboru
+
+⚙️ Nastavenia (tlačidlo MENU)
+Možnosť Funkcia
+Vymazať vyrovnávaciu pamäť obrázkov Odstráni obrázky uložené v vyrovnávacej pamäti (uvoľní miesto v /tmp)
+Informácie o vyrovnávacej pamäti Zobrazí veľkosť a počet súborov vo vyrovnávacej pamäti
+Jazyk / Language Zmena jazyka (pripravené pre budúce verzie)
+Téma / Téma Zmena témy (pripravené pre budúce verzie)
+
+📁 Podporované formáty obrázkov
+.jpg / .JPG / .jpeg / .JPEG
+.png / .PNG
+.gif / .GIF
+.bmp / ​​​​​​.BMP
+.webp / .WEBP
+
+⚠️ Známe problémy
+Problém Riešenie
+Pripojenie siete nefunguje na OpenPLi Nainštalujte cifs-utils: opkg install cifs-utils
+Pomalé načítavanie veľkých obrázkov Obrázky sa automaticky menia, počkajte niekoľko sekúnd
+.JPG sa nezobrazuje Už opravené vo v1.0 – používa os.path.splitext
+📝 Verzia 1.0 – čo robí
+✅ Lokálne priečinky a obrázky
+✅ Sieťové zdieľania SMB
+✅ Online obsah (súbory GitHub .tv)
+✅ Náhľad so škálovaním ePicLoad
+✅ Náhľad na celú obrazovku
+✅ Prezentácia (5 sekúnd)
+✅ Pomer strán (scale="aspect")
+✅ Vymazať vyrovnávaciu pamäť
+
+Autor: Ciefp
+...:: CiefpSettings ::...

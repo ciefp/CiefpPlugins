@@ -1,0 +1,67 @@
+📷 CiefpPicturePlayer v1.0 – Schnellstart
+
+🎮 Schaltflächen (Hauptbildschirm)
+Tastenfunktion
+◀ ▲ ▼ ▶ Durch die Liste scrollen
+OK Ordner öffnen / Bild im Vollbildmodus anzeigen
+BEENDEN (ROT) Plugin beenden
+ORDNER (GRÜN) Ordnerbrowser öffnen (lokale Dateien)
+NETZWERK (GELB) Verbindung zu Netzwerkfreigaben (SMB) herstellen
+ONLINE (BLAU) Online-Bilder von GitHub laden
+MENÜ Einstellungen öffnen (Cache leeren, Info)
+
+🖼️ Bildanzeige
+Vorschau – Das Bild wird beim Scrollen durch die Liste rechts angezeigt
+Vollbild – OK auf dem Bild drücken
+Diashow – im Vollbildmodus die GRÜNE Taste drücken
+Bildinfo – im Vollbildmodus die BLAUE Taste drücken
+Zurück – im Vollbildmodus die ROTE Taste drücken
+
+🌐 Netzwerkverbindung (SMB)
+GELB (NETZWERK) drücken → Mit Laptop verbinden (SMB)
+IP-Adresse eingeben des Laptops (z. B. 192.168.1.100)
+Geben Sie den Namen des freigegebenen Ordners ein (oder lassen Sie das Feld leer).
+Nach erfolgreicher Verbindung werden Sie zum Ordner mit den Bildern weitergeleitet.
+#Automatischer Scan
+- Wählen Sie die IP-Adresse des Geräts aus.
+- Geben Sie den Namen des freigegebenen Ordners ein.
+
+📡 Online-Inhalte
+Drücken Sie BLAU (ONLINE).
+Wählen Sie eine .tv-Datei aus der Liste aus.
+Das Plugin lädt die Bilder aus dieser Datei herunter und zeigt sie an.
+
+⚙️ Einstellungen (MENÜ-Taste)
+Optionen
+Funktion
+Bildcache leeren: Löscht zwischengespeicherte Bilder (gibt Speicherplatz in /tmp frei).
+Cache-Info: Zeigt die Größe und Anzahl der Dateien im Cache an.
+Sprache: Sprache ändern (für zukünftige Versionen vorbereitet).
+Design: Design ändern (für zukünftige Versionen vorbereitet).
+
+📁 Unterstützte Bildformate
+.jpg / .JPG / .jpeg / .JPEG
+.png / .PNG
+.gif / .GIF
+.bmp / ​​. .BMP
+.webp / .WEBP
+
+⚠️ Bekannte Probleme
+Problem Lösung
+Netzwerk-Mount funktioniert nicht unter OpenPLi. Installieren Sie cifs-utils: opkg install cifs-utils
+Langsames Laden großer Bilder. Bilder werden automatisch skaliert, bitte warten Sie einige Sekunden.
+.JPG wird nicht angezeigt. Bereits in Version 1.0 behoben – verwendet os.path.splitext
+
+📝 Version 1.0 – Funktionen
+
+✅ Lokale Ordner und Bilder
+✅ Netzwerk-SMB-Freigaben
+✅ Online-Inhalte (GitHub .tv-Dateien)
+✅ Vorschau mit ePicLoad-Skalierung
+✅ Vollbildvorschau
+✅ Diashow (5 Sekunden)
+✅ Seitenverhältnis (scale="aspect")
+✅ Cache leeren
+
+Autor: Ciefp
+...:: CiefpSettings ::...

@@ -20,7 +20,7 @@ import urllib.request
 import uuid
 
 # Plugin version
-PLUGIN_VERSION = "3.4" 
+PLUGIN_VERSION = "3.5" 
 
 # Setup logging
 LOG_FILE = "/tmp/ciefp_plugin.log"
@@ -109,6 +109,7 @@ PLUGIN_LIST = [
     ("CiefpParabolaCZ", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpParabolaCZ.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpParabolaCZ/main/installer.sh -O - | /bin/sh", "CiefpParabolaCZ"),
     ("CiefpSRTplayer", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpSRTplayer.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSRTplayer/main/installer.sh -O - | /bin/sh", "CiefpSRTplayer"),
     ("CiefpEasySetup", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpEasySetup.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpEasySetup/main/installer.sh -O - | /bin/sh", "CiefpEasySetup"),
+    ("CiefpPicturePlayer", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpPicturePlayer.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpPicturePlayer/main/installer.sh -O - | /bin/sh", "CiefpPicturePlayer"),
     ("Ciefp Whitelist Streamrelay", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpWhitelistStreamrelay.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpWhitelistStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpWhitelistStreamrelay"),
     ("Ciefp T2Mi Abertis", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpT2MiAbertis.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsT2miAbertis/main/installer.sh -O - | /bin/sh", "CiefpT2MiAbertis"),
     ("Ciefp T2Mi Abertis OpenPli", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpT2MiAbertisOpenPli.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsT2miAbertisOpenPLi/main/installer.sh -O - | /bin/sh", "CiefpT2MiAbertisOpenPli"),
@@ -268,7 +269,7 @@ class ImageViewerScreen(Screen):
 
 class CiefpPluginsPanel(Screen):
     skin = """
-    <screen name="CiefpPluginsPanel" position="center,center" size="1600,850" title="..:: Ciefp Plugins (NO.36) ::.. (Version {version})">
+    <screen name="CiefpPluginsPanel" position="center,center" size="1600,850" title="..:: Ciefp Plugins (NO.37) ::.. (Version {version})">
         <widget name="title" position="0,0" size="1600,100" font="Regular;60" halign="center" foregroundColor="#FFFFFF" backgroundColor="#000000" />
         <widget source="pluginlist" render="Listbox" position="50,100" size="400,680" scrollbarMode="showOnDemand" enableWrapAround="1">
             <convert type="TemplatedMultiContent">
@@ -352,7 +353,7 @@ class CiefpPluginsPanel(Screen):
         self["pluginlist"] = List(self.pluginList)
         self["description"] = ScrollLabel("")
         self["status_label"] = Label("")
-        self["title"] = Label(f"..:: Ciefp Plugins (NO.36) ::.. (Version {PLUGIN_VERSION})")
+        self["title"] = Label(f"..:: Ciefp Plugins (NO.37) ::.. (Version {PLUGIN_VERSION})")
         self["actions"] = ActionMap(["OkCancelActions", "ColorActions", "DirectionActions"], {
             "cancel": self.exit,
             "red": self.exit,
@@ -630,4 +631,4 @@ def main(session, **kwargs):
 
 def Plugins(**kwargs):
     from Plugins.Plugin import PluginDescriptor
-    return [PluginDescriptor(name="Ciefp Plugins", description=f"Panel for Ciefp plugins NO.36 (Version {PLUGIN_VERSION})", where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main, icon="plugin.png")]
+    return [PluginDescriptor(name="Ciefp Plugins", description=f"Panel for Ciefp plugins NO.37 (Version {PLUGIN_VERSION})", where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main, icon="plugin.png")]

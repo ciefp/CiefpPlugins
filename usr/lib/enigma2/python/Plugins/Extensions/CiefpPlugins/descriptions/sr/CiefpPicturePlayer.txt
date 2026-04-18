@@ -1,0 +1,65 @@
+
+📷 CiefpPicturePlayer v1.0 - Kratko uputstvo
+
+🎮 Tasteri (glavni ekran)
+Taster	Funkcija
+◀ ▲ ▼ ▶	Kretanje kroz listu
+OK	Otvori folder / prikaži sliku preko celog ekrana
+EXIT (CRVENO)	Izlaz iz plugina
+FOLDER (ZELENO)	Otvori folder browser (lokalni fajlovi)
+NETWORK (ŽUTO)	Povezivanje na mrežne deljene resurse (SMB)
+ONLINE (PLAVO)	Učitaj online slike sa GitHub-a
+MENU	Otvori Settings (brisanje keša, info)
+
+🖼️ Prikaz slika
+Preview – slika se prikazuje na desnoj strani pri kretanju kroz listu
+Fullscreen – pritisni OK na slici
+Slideshow – u fullscreen modu pritisni ZELENO dugme
+Info o slici – u fullscreen modu pritisni PLAVO dugme
+Povratak – u fullscreen modu pritisni CRVENO dugme
+
+🌐 Mrežno povezivanje (SMB)
+Pritisni ŽUTO (NETWORK) → Connect to Laptop (SMB)
+Unesi IP adresu laptopa (npr. 192.168.1.100)
+Unesi naziv deljenog foldera (ili ostavi prazno)
+Nakon uspešnog povezivanja, bićeš prebačen u folder sa slikama
+#Auto Scan
+- izaberi ip od uređaja 
+- unesi naziv deljenog foldera 
+
+📡 Online sadržaj
+Pritisni PLAVO (ONLINE)
+Izaberi .tv fajl sa liste
+Plugin će preuzeti i prikazati slike iz tog fajla
+
+⚙️ Settings (MENU dugme)
+Opcija	Funkcija
+Clear Image Cache	Briše keširane slike (oslobađa prostor u /tmp)
+Cache Info	Prikazuje veličinu i broj fajlova u kešu
+Language / Jezik	Promena jezika (pripremljeno za buduće verzije)
+Theme / Tema	Promena teme (pripremljeno za buduće verzije)
+
+📁 Podržani formati slika
+.jpg / .JPG / .jpeg / .JPEG
+.png / .PNG
+.gif / .GIF
+.bmp / .BMP
+.webp / .WEBP
+
+⚠️ Poznati problemi
+Problem	Rešenje
+Network mount ne radi na OpenPLi	Instaliraj cifs-utils: opkg install cifs-utils
+Sporo učitavanje velikih slika	Slike se skaliraju automatski, sačekaj par sekundi
+.JPG se ne prikazuje	Već rešeno u v1.0 – koristi os.path.splitext
+📝 Verzija 1.0 – šta radi
+✅ Lokalni folderi i slike
+✅ Mrežni SMB share-ovi
+✅ Online sadržaj (GitHub .tv fajlovi)
+✅ Preview sa ePicLoad skaliranjem
+✅ Fullscreen pregled
+✅ Slideshow (5 sekundi)
+✅ Aspekt ratio (scale="aspect")
+✅ Brisanje keša
+
+Autor: Ciefp
+...:: CiefpSettings ::...

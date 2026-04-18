@@ -1,0 +1,65 @@
+
+📷 CiefpPicturePlayer v1.0 - Quick Start
+
+🎮 Buttons (main screen)
+Button Function
+◀ ▲ ▼ ▶ Scroll through the list
+OK Open folder / display image in full screen
+EXIT (RED) Exit plugin
+FOLDER (GREEN) Open folder browser (local files)
+NETWORK (YELLOW) Connect to network shares (SMB)
+ONLINE (BLUE) Load online images from GitHub
+MENU Open Settings (clear cache, info)
+
+🖼️ Image display
+Preview – the image is displayed on the right side when scrolling through the list
+Fullscreen – press OK on the image
+Slideshow – in fullscreen mode press the GREEN button
+Image info – in fullscreen mode press the BLUE button
+Back – in fullscreen mode press the RED button
+
+🌐 Network connection (SMB)
+Press YELLOW (NETWORK) → Connect to Laptop (SMB)
+Enter the IP address of the laptop (e.g. 192.168.1.100)
+Enter the name of the shared folder (or leave it blank)
+After successful connection, you will be transferred to the folder with images
+#Auto Scan
+- select the IP of the device
+- enter the name of the shared folder
+
+📡 Online content
+Press BLUE (ONLINE)
+Select a .tv file from the list
+The plugin will download and display images from that file
+
+⚙️ Settings (MENU button)
+Option Function
+Clear Image Cache Deletes cached images (frees up space in /tmp)
+Cache Info Displays the size and number of files in the cache
+Language / Language Change the language (prepared for future versions)
+Theme / Theme Change the theme (prepared for future versions)
+
+📁 Supported image formats
+.jpg / .JPG / .jpeg / .JPEG
+.png / .PNG
+.gif / .GIF
+.bmp / ​​.BMP
+.webp / .WEBP
+
+⚠️ Known issues
+Problem Solution
+Network mount does not work on OpenPLi Install cifs-utils: opkg install cifs-utils
+Slow loading of large images Images are scaled automatically, wait a few seconds
+.JPG is not displayed Already fixed in v1.0 – uses os.path.splitext
+📝 Version 1.0 – what it does
+✅ Local folders and images
+✅ Network SMB shares
+✅ Online content (GitHub .tv files)
+✅ Preview with ePicLoad scaling
+✅ Fullscreen preview
+✅ Slideshow (5 seconds)
+✅ Aspect ratio (scale="aspect")
+✅ Clear cache
+
+Author: Ciefp
+...:: CiefpSettings ::...
