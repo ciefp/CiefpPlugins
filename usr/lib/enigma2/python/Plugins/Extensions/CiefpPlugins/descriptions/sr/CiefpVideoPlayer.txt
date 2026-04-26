@@ -1,0 +1,68 @@
+
+# CiefpVideoPlayer v1.3
+
+**CiefpVideoPlayer** je napredni video player za Enigma2 uređaje sa kompletnom kontrolom reprodukcije.
+
+## 🎬 Ključne karakteristike
+
+### 📺 Napredni video player
+- **Potpuna kontrola reprodukcije** – Play, Pause, Stop, Reverse, Forward
+- **Pamćenje pozicije** – nastavak gledanja sa mjesta gdje ste stali
+- **HTTP streamova** – pauziranje i nastavak online sadržaja
+- **Titlovi** – podrška za ugrađene i eksterne titlove
+
+### 📁 Podržani izvori
+- **Lokalni fajlovi** – HDD, USB, CF kartice
+- **Mrežni share-ovi** – SMB/CIFS, NFS
+- **Online streamovi** – M3U i Enigma2 .tv playliste
+- **Open Directory** – pregled i puštanje filmova/serija sa HTTP servera
+
+### 🎭 TMDB integracija
+- **Filmovi** – detaljne informacije, ocjene, glumci (žuto dugme)
+- **Serije** – detalji o sezonama, epizodama, glumcima (plavo dugme)
+- **Posteri** – automatsko keširanje za brže prikazivanje
+- **IMDb ocjene** – preko OMDb API (opciono)
+
+### 💾 Keširanje
+- Posteri i metapodaci se keširaju za brže učitavanje
+- Podesiva veličina keša
+- Opcija auto-brisanja pri izlazu
+
+## 🎮 Kontrole u MoviePlayer-u
+
+| Dugme | Funkcija |
+|-------|----------|
+| **Play/Pause** | Pauziranje i nastavak |
+| **Stop** | Zaustavljanje reprodukcije |
+| **◀ ▶** | Premotavanje unazad/naprijed |
+| **◀◀ ▶▶** | Skeniranje (brzo premotavanje) |
+| **Info** | Prikaz informacija o videu |
+| **Audio** | Izbor audio zapisa |
+| **Subtitle** | Uključivanje/isključivanje titlova |
+| **Exit** | Izlaz iz playera (pamti poziciju!) |
+
+## ⏯️ Resume Play (Nastavak gledanja)
+
+MoviePlayer automatski pamti poziciju na kojoj ste stali. 
+Kada sledeći put pustite isti video, Enigma2 će vas pitati da li želite da nastavite sa mjesta gdje ste stali.
+
+**Podržano za:**
+- ✅ Lokalne fajlove (HDD, USB)
+- ✅ Mrežne share-ove (SMB/NFS)
+- ✅ HTTP streamove (Open Directory)
+- ✅ M3U i .tv playliste
+
+## 🚀 Kako funkcioniše
+
+**Stari način (v1.2 i ranije):**
+
+ref = eServiceReference(4097, 0, path)
+session.nav.playService(ref)  # Nema kontrole, nema resume-a
+
+Novi način (v1.3):
+
+ref = eServiceReference(4097, 0, path)
+ref.setName(name)
+session.open(MoviePlayer, ref)  # Puna kontrola, resume podrška!
+
+...:: CiefpSettings ::...

@@ -1,0 +1,66 @@
+# CiefpVideoPlayer v1.3
+
+**CiefpVideoPlayer** je pokročilý prehrávač videa pre zariadenia Enigma2 s kompletným ovládaním prehrávania.
+
+## 🎬 Kľúčové vlastnosti
+
+### 📺 Pokročilý prehrávač videa
+- **Plné ovládanie prehrávania** – Prehrávanie, Pozastavenie, Zastavenie, Dozadu, Dopredu
+- **Zapamätanie si pozície** – obnovenie sledovania od miesta, kde ste prestali
+- **HTTP streamy** – pozastavenie a obnovenie online obsahu
+- **Titulky** – podpora vložených a externých titulkov
+
+### 📁 Podporované zdroje
+- **Lokálne súbory** – HDD, USB, CF karty
+- **Sieťové zdieľania** – SMB/CIFS, NFS
+- **Online streamy** – Zoznamy skladieb M3U a Enigma2 .tv
+- **Otvorený adresár** – prehliadanie a prehrávanie filmov/seriálov z HTTP serverov
+
+### 🎭 Integrácia TMDB
+- **Filmy** – podrobné informácie, hodnotenia, herci (žlté tlačidlo)
+- **Seriály** – podrobnosti o sériách, epizódach, hercoch (modré tlačidlo)
+- **Plagáty** – automatické ukladanie do vyrovnávacej pamäte pre rýchlejšie prehrávanie
+- **Hodnotenia IMDb** – cez OMDb API (voliteľné)
+
+### 💾 Ukladanie do vyrovnávacej pamäte
+- Plagáty a metadáta sa ukladajú do vyrovnávacej pamäte pre rýchlejšie načítanie
+- Nastaviteľná veľkosť vyrovnávacej pamäte
+- Možnosť automatického vymazania pri ukončení
+
+## 🎮 Ovládacie prvky MoviePlayer
+
+| Tlačidlo | Funkcia |
+|------|------|
+| **Prehrať/Pozastaviť** | Pozastaviť a obnoviť |
+| **Zastaviť** | Zastaviť prehrávanie |
+| **◀ ▶** | Pretočiť dozadu/rýchlo dopredu |
+| **◀◀ ▶▶** | Skenovať (rýchlo dopredu) |
+| **Informácie** | Zobraziť informácie o videu |
+| **Zvuk** | Vybrať zvukovú stopu |
+| **Titulky** | Zapnúť/vypnúť titulky |
+| **Ukončiť** | Ukončiť prehrávač (pamätá si pozíciu!) |
+
+## ⏯️ Obnoviť prehrávanie
+
+MoviePlayer si automaticky zapamätá pozíciu, kde ste prestali. Pri ďalšom prehrávaní toho istého videa sa vás Enigma2 opýta, či chcete pokračovať tam, kde ste prestali.
+
+**Podporované pre:**
+- ✅ Lokálne súbory (HDD, USB)
+- ✅ Sieťové zdieľania (SMB/NFS)
+- ✅ HTTP streamy (Open Directory)
+- ✅ Zoznamy skladieb M3U a .tv
+
+## 🚀 Ako to funguje
+
+**Starý spôsob (v1.2 a staršie):**
+
+ref = eServiceReference(4097, 0, path)
+session.nav.playService(ref) # Žiadna kontrola, žiadne obnovenie
+
+Nový spôsob (v1.3):
+
+ref = eServiceReference(4097, 0, path)
+ref.setName(name)
+session.open(MoviePlayer, ref) # Plná kontrola, podpora obnovenia!
+
+...:: CiefpSettings ::...

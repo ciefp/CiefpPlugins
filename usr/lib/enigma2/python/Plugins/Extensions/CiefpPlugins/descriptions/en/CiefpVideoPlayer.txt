@@ -1,0 +1,67 @@
+
+# CiefpVideoPlayer v1.3
+
+**CiefpVideoPlayer** is an advanced video player for Enigma2 devices with complete playback control.
+
+## 🎬 Key Features
+
+### 📺 Advanced Video Player
+- **Full Playback Control** – Play, Pause, Stop, Reverse, Forward
+- **Remembering Position** – resume watching from where you left off
+- **HTTP Streams** – pause and resume online content
+- **Subtitles** – support for embedded and external subtitles
+
+### 📁 Supported Sources
+- **Local Files** – HDD, USB, CF Cards
+- **Network Shares** – SMB/CIFS, NFS
+- **Online Streams** – M3U and Enigma2 .tv Playlists
+- **Open Directory** – browse and play movies/series from HTTP servers
+
+### 🎭 TMDB Integration
+- **Movies** – detailed information, ratings, actors (yellow button)
+- **Series** – details about seasons, episodes, actors (blue button)
+- **Posters** – automatic caching for faster viewing
+- **IMDb Ratings** – via OMDb API (optional)
+
+### 💾 Caching
+- Posters and metadata are cached for faster loading
+- Adjustable cache size
+- Auto-clear option on exit
+
+## 🎮 MoviePlayer controls
+
+| Button | Function |
+|------|------|
+| **Play/Pause** | Pause and resume |
+| **Stop** | Stop playback |
+| **◀ ▶** | Rewind/fast forward |
+| **◀◀ ▶▶** | Scan (fast forward) |
+| **Info** | Show video information |
+| **Audio** | Select audio track |
+| **Subtitle** | Turn subtitles on/off |
+| **Exit** | Exit the player (remembers position!) |
+
+## ⏯️ Resume Play
+
+MoviePlayer automatically remembers the position where you left off. The next time you play the same video, Enigma2 will ask you if you want to continue where you left off.
+
+**Supported for:**
+- ✅ Local files (HDD, USB)
+- ✅ Network shares (SMB/NFS)
+- ✅ HTTP streams (Open Directory)
+- ✅ M3U and .tv playlists
+
+## 🚀 How it works
+
+**Old way (v1.2 and earlier):**
+
+ref = eServiceReference(4097, 0, path)
+session.nav.playService(ref) # No control, no resume
+
+New way (v1.3):
+
+ref = eServiceReference(4097, 0, path)
+ref.setName(name)
+session.open(MoviePlayer, ref) # Full control, resume support!
+
+...:: CiefpSettings ::...
