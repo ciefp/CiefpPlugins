@@ -1,0 +1,57 @@
+🎵 CiefpYouTube v1.0 – YouTube Jukebox Player
+CiefpYouTube ist ein fortschrittliches Enigma2-Plugin, das YouTube-Musik- und Videostreaming in ein echtes,
+automatisches Jukebox-Erlebnis verwandelt. Im Gegensatz zu ressourcenhungrigen und langsamen Playern ist dieses Plugin maximal für schnelle Reaktionszeiten,
+Stabilität und ununterbrochenen Multimedia-Genuss optimiert – ganz ohne ständige Fernbedienung.
+
+🚀 Hauptfunktionen
+Automatische Jukebox-Umschaltung: Spielen Sie die gesamte Playlist am Stück ab!
+
+Das Plugin nutzt ein intelligentes System zur Stream-Längenverfolgung (angepasst für exteplayer3 / Service 5002),
+das automatisch zum nächsten Song wechselt, sobald der vorherige endet.
+
+Lokaler Playlist-Verlauf (Smart Cache):
+Jedes Mal, wenn Sie einen Kanal öffnen oder suchen, speichert das Plugin die Videoliste im Hintergrund im lokalen Speicher des Receivers.
+Wenn Sie dieselbe Liste das nächste Mal hören möchten, wird sie sofort und ohne Wartezeit geöffnet, wodurch die Startzeit drastisch reduziert wird.
+
+Dynamischer ChoiceBox-Manager:
+Durch Auswahl der letzten Playlist-Option erkennt das Plugin alle gespeicherten Kanäle auf Ihrem Receiver
+und bietet Ihnen ein elegantes Fenster zur Auswahl zuvor gespeicherter Mixe.
+
+Benutzerdefiniertes Mini-Skin:
+Während der Wiedergabe der gesamten Liste erscheint ein dezentes, halbtransparentes Bedienfeld (Mini-Skin) am oberen Bildschirmrand,
+das Ihnen jederzeit übersichtlich anzeigt, was gerade abgespielt wird, was als Nächstes kommt und wo Sie sich aktuell in der Liste befinden.
+
+Intelligente Dateisystemfilterung:
+Der Code ist absolut ausfallsicher – er entfernt automatisch Emojis,
+Sonderzeichen und lange URL-Links aus Kanalnamen, bevor die Dateien auf der Festplatte des Receivers gespeichert werden.
+
+🛠️ So verwenden Sie es:
+Liste laden und erstellen: Wählen Sie eine der vordefinierten Musikkategorien,
+starten Sie eine Suche oder geben Sie Ihren bevorzugten YouTube-Kanal ein. Warten Sie einige Sekunden, bis yt-dlp im Hintergrund eine Liste mit 30 Videos geladen hat.
+
+Wiedergabemodus auswählen:
+Wenn Sie in der Liste auf ein Video klicken, öffnet sich ein Menü mit zwei Optionen:
+
+Nur dieses Video abspielen – Klassische Wiedergabe einer einzelnen Datei.
+
+Gesamte Playlist nacheinander abspielen (Mini-Skin) – Startet einen kontinuierlichen Jukebox-Modus von dieser Position bis zum Ende der Liste.
+
+Schnellstart gespeicherter Mixe:
+Beim nächsten Start des Plugins wählen Sie einfach „Neueste Playlist“ aus.
+Wenn Sie nur eine gespeicherte Playlist haben, wird diese blitzschnell geladen.
+Bei mehreren gespeicherten Kanälen öffnet sich ein Fenster, in dem Sie den gewünschten Mix auswählen können.
+
+Steuerung während der Wiedergabe (Mini-Skin):
+
+OK – Video pausieren/fortsetzen.
+
+▲ (Auf) / ▼ (Ab) – Manuelles Wechseln zum vorherigen oder nächsten Titel in der Liste.
+
+BEENDEN – Wiedergabe beenden und zum Hauptmenü des Plugins zurückkehren.
+
+Getestet:
+OpenAtv 7.6
+OpenPLi Scarthgap
+Pure2 7.6
+
+...:: CiefpSettings ::...

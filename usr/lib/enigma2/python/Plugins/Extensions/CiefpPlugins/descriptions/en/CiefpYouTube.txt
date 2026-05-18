@@ -1,0 +1,56 @@
+
+
+🎵 CiefpYouTube v1.0 – YouTube Jukebox Player
+CiefpYouTube is an advanced Enigma2 plugin created to elevate YouTube music and video streaming to a true,
+automated jukebox experience. Unlike heavy and slow players, this plugin is maximally optimized for fast response,
+stability and uninterrupted multimedia enjoyment without the need for constant use of the remote control.
+
+🚀 Main Features
+Automatic Jukebox Switching: Play the entire playlist in a row!
+The plugin uses an intelligent stream length tracking system (customized for exteplayer3 / Service 5002)
+which switches to the next song in a second when the previous one ends.
+
+Local Playlist History (Smart Cache):
+Every time you open a channel or search, the plugin silently caches the video list in the local memory of the receiver in the background.
+The next time you want to listen to the same list, it opens instantly and without any waiting, dramatically reducing startup time.
+
+Dynamic ChoiceBox Manager:
+By selecting the last playlist option, the plugin recognizes all saved channels on your receiver
+and offers you an elegant window for selecting previously saved mixes.
+
+Custom Mini-Skin:
+During playback of the entire list, a discreet, semi-transparent top panel (Mini Skin) rises on the screen
+which clearly shows you at all times what is currently playing, what is next and the status of the current position in the list.
+
+Smart file system filtering:
+The code is fully crash-proof – it automatically cleans channel names of emojis,
+special characters and long URL links when saving to the receiver's disk.
+
+🛠️ How to use it?
+Loading and creating a list: Choose one of the predefined music categories,
+start a search or enter your favorite YouTube channel. Wait a few seconds for yt-dlp to pull a list of 30 videos in the background.
+
+Selecting playback mode:
+When you click OK on any video in the list, a menu with two options will open:
+
+Play only this video – Classic playback of a single file.
+
+Run the entire playlist in a row (Mini Skin) – Starts a continuous Jukebox mode from that position to the end of the list.
+
+Quick launch of saved mixes:
+The next time you run the plugin, simply select the "Latest playlist" item:
+If you only have one saved playlist, it will load in a split second.
+If you have multiple saved channels, a window will open where you can choose which exact saved mix you want to listen to.
+
+Controls during playback (Mini Skin):
+
+OK – Pause / Resume the video.
+▲ (Up) / ▼ (Down) – Manually switch to the previous or next song in the list.
+EXIT – Stop playback and return to the plugin's main menu.
+
+Tested:
+OpenAtv 7.6
+OpenPLi Scarthgap
+Pure2 7.6
+
+...:: CiefpSettings ::...

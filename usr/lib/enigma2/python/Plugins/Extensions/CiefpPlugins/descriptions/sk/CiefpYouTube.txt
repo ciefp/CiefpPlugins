@@ -1,0 +1,54 @@
+🎵 CiefpYouTube v1.0 – Prehrávač YouTube Jukebox
+CiefpYouTube je pokročilý doplnok Enigma2, ktorý bol vytvorený na pozdvihnutie streamovania hudby a videa z YouTube na skutočný,
+automatizovaný zážitok z jukeboxu. Na rozdiel od ťažkých a pomalých prehrávačov je tento doplnok maximálne optimalizovaný pre rýchlu odozvu,
+stabilitu a nerušený multimediálny zážitok bez nutnosti neustáleho používania diaľkového ovládača.
+
+🚀 Hlavné funkcie
+Automatické prepínanie jukeboxu: Prehrajte celý zoznam skladieb za sebou!
+Doplnok používa inteligentný systém sledovania dĺžky streamu (prispôsobený pre exteplayer3 / Service 5002),
+ktorý prepne na ďalšiu skladbu o sekundu, keď predchádzajúca skončí.
+
+História lokálneho zoznamu skladieb (Smart Cache):
+Vždy, keď otvoríte kanál alebo vyhľadávate, doplnok ticho ukladá zoznam videí do lokálnej pamäte prijímača na pozadí.
+Keď si budete chcieť nabudúce vypočuť ten istý zoznam, otvorí sa okamžite a bez čakania, čím sa dramaticky skracuje čas spustenia.
+
+Dynamický správca ChoiceBox:
+Výberom poslednej možnosti zoznamu skladieb plugin rozpozná všetky uložené kanály vo vašom prijímači
+a ponúkne vám elegantné okno na výber predtým uložených mixov.
+
+Vlastný mini-skin:
+Počas prehrávania celého zoznamu sa na obrazovke zobrazí diskrétny, polopriehľadný horný panel (Mini-skin),
+ktorý vám neustále jasne ukazuje, čo sa práve prehráva, čo bude ďalej a stav aktuálnej pozície v zozname.
+
+Inteligentné filtrovanie súborového systému:
+Kód je plne odolný voči pádom – pri ukladaní na disk prijímača automaticky čistí názvy kanálov od emoji,
+špeciálnych znakov a dlhých URL odkazov.
+
+🛠️ Ako ho používať?
+Načítanie a vytvorenie zoznamu: Vyberte si jednu z preddefinovaných hudobných kategórií,
+spúšťte vyhľadávanie alebo zadajte svoj obľúbený kanál YouTube. Počkajte niekoľko sekúnd, kým yt-dlp na pozadí načíta zoznam 30 videí.
+
+Výber režimu prehrávania:
+Po kliknutí na OK na ľubovoľnom videu v zozname sa otvorí ponuka s dvoma možnosťami:
+
+Prehrať iba toto video – Klasické prehrávanie jedného súboru.
+
+Spustiť celý zoznam skladieb v rade (Mini Skin) – Spustí nepretržitý režim Jukebox od danej pozície až do konca zoznamu.
+
+Rýchle spustenie uložených mixov:
+Pri ďalšom spustení pluginu jednoducho vyberte položku „Najnovší zoznam skladieb“:
+Ak máte uložený iba jeden zoznam skladieb, načíta sa v zlomku sekundy.
+Ak máte uložených viacero kanálov, otvorí sa okno, v ktorom si môžete vybrať, ktorý presne uložený mix chcete počúvať.
+
+Ovládacie prvky počas prehrávania (Mini Skin):
+
+OK – Pozastaviť / Obnoviť video.
+▲ (Hore) / ▼ (Dole) – Manuálne prepnúť na predchádzajúcu alebo nasledujúcu skladbu v zozname.
+EXIT – Zastaviť prehrávanie a vrátiť sa do hlavnej ponuky pluginu.
+
+Testované:
+OpenAtv 7.6
+OpenPLi Scarthgap
+Pure2 7.6
+
+...:: CiefpSettings ::...

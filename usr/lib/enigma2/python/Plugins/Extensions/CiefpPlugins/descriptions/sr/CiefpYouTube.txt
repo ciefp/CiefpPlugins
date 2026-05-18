@@ -1,0 +1,52 @@
+🎵 CiefpYouTube v1.0 – YouTube Jukebox Player
+CiefpYouTube je napredni Enigma2 dodatak kreiran sa ciljem da strimovanje muzike i video sadržaja sa YouTube-a podigne na nivo pravog, 
+automatizovanog jukebox iskustva. Za razliku od teških i sporih plejera, ovaj plugin je maksimalno optimizovan za brz odziv, 
+stabilnost i neprekidno uživanje u multimediji bez potrebe za stalnim korišćenjem daljinskog upravljača.
+
+🚀 Glavne Funkcije
+Automatsko Jukebox prebacivanje: Pustite celu plejlistu u nizu!
+Plugin koristi inteligentni sistem praćenja dužine strima (prilagođen za exteplayer3 / Service 5002) 
+koji prebacuje na sledeću pesmu u sekundi kada se prethodna završi.
+
+Lokalna istorija plejlista (Smart Cache): 
+Svaki put kada otvorite neki kanal ili pretragu, plugin tiho u pozadini kešira listu videa u lokalnu memoriju risivera. 
+Sledeći put kada želite da slušate istu listu, ona se otvara trenutno i bez ikakvog čekanja, dramatično skraćujući vreme pokretanja.
+
+Dinamički ChoiceBox menadžer: 
+Izborom opcije za poslednju plejlistu, plugin prepoznaje sve sačuvane kanale na vašem risiveru 
+i nudi vam elegantan prozor za odabir prethodno sačuvanih mikseva.
+
+Prilagođeni Mini-Skin: 
+Tokom reprodukcije cele liste, na ekranu se podiže diskretan, poluprozirni gornji panel (Mini Skin) 
+koji vam u svakom trenutku jasno prikazuje šta trenutno svira, šta je sledeće na redu i status trenutne pozicije na listi.
+
+Pametno filtriranje fajlsistema: 
+Kod je u potpunosti obezbeđen od rušenja sistema – automatski čisti nazive kanala od emojija, 
+specijalnih karaktera i dugačkih URL linkova prilikom čuvanja na disku risivera.
+
+🛠️ Kako se koristi?
+Učitavanje i kreiranje liste: Izaberite neku od predefinisanih muzičkih kategorija, 
+pokrenite pretragu ili unesite svoj omiljeni YouTube kanal. Sačekajte par sekundi da yt-dlp u pozadini izvuče listu od 30 videa.
+
+Odabir režima reprodukcije:
+Kada kliknete OK na bilo koji video sa liste, otvoriće se meni sa dve opcije:
+
+Pusti samo ovaj video – Klasično puštanje jednog fajla.
+Pokreni celu plejlistu u nizu (Mini Skin) – Pokreće neprekidni Jukebox mod od te pozicije pa sve do kraja liste.
+
+Brzo pokretanje sačuvanih mikseva:
+Sledeći put kada pokrenete plugin, jednostavno izaberite stavku "Poslednja plejlista" (Latest playlist):
+Ako imate samo jednu sačuvanu listu, ona će se podići u delu sekunde.
+Ako imate više sačuvanih kanala, otvoriće se prozor gde birate koji tačno sačuvani miks želite da slušate.
+
+Kontrole u toku reprodukcije (Mini Skin):
+OK – Pauziraj / Nastavi video.
+▲ (Gore) / ▼ (Dole) – Ručno prebaci na prethodnu ili sledeću pesmu na listi.
+EXIT – Prekini reprodukciju i vrati se u glavni meni plugina.
+
+Testirano:
+OpenAtv 7.6
+OpenPLi Scarthgap
+Pure2 7.6 
+
+...:: CiefpSettings ::...
