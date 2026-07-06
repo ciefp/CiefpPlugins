@@ -1,3 +1,141 @@
+🎉 CiefpYouTube v1.8 - Finálna verzia
+📋 Popis verzie
+CiefpYouTube v1.8 je plne funkčný prehliadač videí z YouTube a správca sťahovania pre zariadenia Enigma2.
+Táto verzia prináša stabilný a plne integrovaný správca sťahovania, ktorý umožňuje jednoduché sťahovanie obsahu YouTube priamo na váš pevný disk alebo USB zariadenie.
+
+🆕 Nová významná funkcia - Správca sťahovania
+📥 Správca sťahovania YouTube (ytdownloader.py)
+Úplne nový modul na správu sťahovania obsahu z YouTube s nasledujúcimi možnosťami:
+
+🎯 Hlavné funkcie:
+
+Dvojitý panel:
+- Ľavý panel zobrazuje zoznamy skladieb,
+- Pravý panel zobrazuje vybrané súbory
+Výber súborov:
+- Tlačidlom OK (nie je zelené) sa súbory presunú do pravého panela
+
+Formáty sťahovania:
+- MP4 (video)
+- MP3 (audio) sa sťahuje ako m4a
+
+🎵 Zvukové formáty: MP3 vs M4A
+M4A (MPEG-4 Audio)
+Modernejší formát (AAC od Apple)
+Menšia veľkosť súboru pri rovnakej kvalite
+Lepšia kvalita pri rovnakej bitovej rýchlosti
+Podporované na všetkých moderných zariadeniach (smartfóny, televízory, počítače)
+Nátívny formát YouTube - sťahuje sa priamo, bez straty kvality
+
+MP3 (MPEG-1 Audio Layer 3)
+Starší, ale štandardný formát (od roku 1993)
+Väčšia veľkosť súboru pri rovnakej kvalita
+Kompatibilné s úplne všetkými zariadeniami
+Staršie autorádiá musia byť podporované
+
+Indikátor priebehu.......Grafické zobrazenie priebehu sťahovania s percentami
+Systém frontu.......Poradie sťahovania viacerých súborov so zobrazením priebehu
+Prehrávanie a sťahovanie....Súčasné prehrávanie prvého videa a sťahovanie všetkých vybraných
+Vlastná cesta.....Nastavenie cesty sťahovania prostredníctvom nastavení
+
+🎮 Ovládacie prvky v Správcovi sťahovania:
+Tlačidlo Funkcia
+OK................................Vyberie súbor (ľavý panel) / Odstráni súbor (pravý panel)
+DOĽAVA/DOPRAVA...........Prepínanie medzi ľavým a pravým panelom
+HORE/DOLE..............Navigácia v zoznamoch
+ČERVENÁ (KONIEC)..........Ukončenie Správcu sťahovania
+ZELENÁ (NASTAVENIA)......Nastavenie cesty sťahovania
+ŽLTÁ (STIAHNUTIE)......Stiahnutie vybraných súborov
+MODRÁ (PREHRAŤ+STIAHNUŤ).Prehrať + stiahnuť
+
+📂 Umiestnenie sťahovania:
+Predvolené: /hdd/movie/YouTube_Downloads/
+
+Možnosti v Nastavenia:
+/hdd/movie/YouTube_Downloads/
+/hdd/YouTube_Downloads/
+/usb/movie/YouTube_Downloads/
+/media/hdd/YouTube_Downloads/
+
+Vlastná cesta (cez žlté tlačidlo v Nastaveniach)
+otvorí virtuálnu klávesnicu
+
+Možno v ďalšej verzii pridám konverziu z m4a do mp3
+
+..:: CiefpSettings ::..
+
+CiefpYouTube v1.3
+
+Čo je nové:
+
+🎥 Prehrávač webovej kamery
+Pridaný špeciálny prehrávač na monitorovanie webkamier zo súboru userbouquet
+Automatické prepínanie kamery - automatické prepínanie na ďalšiu kameru po nastavenom čase (15, 20, 25, 30, 45 alebo 60 sekúnd)
+Odpočítavanie - vizuálne zobrazenie zostávajúcich sekúnd do ďalšej kamery
+Režim slučky - automatický návrat na prvú kameru po poslednej
+Pozastaviť/Obnoviť - možnosť pozastaviť automatické prepínanie
+Zobrazenie verzie kytice - informácie o verzii kytice webovej kamery na obrazovka
+
+🎬 Prehrávač filmov (iba prehrávanie jedného videa)
+Pridaný Prehrávač filmov ako možnosť na prehrávanie jednotlivých videí
+Ideálne pre dlhšie videá (1-2 hodiny) vďaka dodatočným ovládacím prvkom
+Ovládacie prvky prehrávania:
+
+1 - Prehrať/Pozastaviť
+3 - Zastaviť
+4 - Pretočiť dozadu
+6 - Pretočiť dopredu
+7 - Predchádzajúca kapitola
+9 - Nasledujúca kapitola
+0 - Informácie
+
+Zoznamy skladieb stále používajú stabilný DVB prehrávač - bez rizika zamrznutia
+
+⚙️ Nastavenia
+Nová možnosť v nastaveniach: Časový limit automatického prepínania webkamery (15-60 sekúnd)
+Nová možnosť v nastaveniach: Typ prehrávača médií s jasným popisom, ktorý prehrávač je na čo určený
+
+🛠️ Chyby a vylepšenia
+Opravené zobrazenie zostávajúceho času pre zoznamy skladieb hudby
+Odstránené duplicitné funkcie pre stabilnejšiu prevádzku
+Vylepšené prepínanie medzi skladbami v zoznamoch skladieb
+Lepšia detekcia konca videa
+
+Požiadavky:
+Python 3.x
+nainštalovaný yt-dlp (inštalácia opkg yt-dlp alebo inštalácia pip yt-dlp)
+(Voliteľné) Podpora ServiceApp pre Exteplayer3
+
+CiefpYouTube v1.3 - Prehliadač videí YouTube pre Enigma2
+
+© 2026 Ciefp
+
+...:: CiefpYouTube v1.2 ::...
+
+Aktualizácia podpory FHD
+Prehrávanie videí vo Full HD 1080p
+Komponent.................................Stav
+Vyhľadávanie a kategórie............✅ Funguje
+Jedno video (FHD)..............✅ Funguje
+Zoznam skladieb s mini skinom.........✅ Funguje
+Odpočítavanie.............✅ Funguje
+Načítava sa správa o ďalšej skladbe..........✅ Funguje
+Ukladanie zoznamu skladieb JSON..........✅ Funguje
+Používateľské/Živé kanály...............✅ Funguje
+Kúpeľ webovej kamery................................✅ Funguje
+Denník nefunkčných odkazov................✅ Funguje
+
+🚀 Plány pre verziu 1.3 (budúcnosť)
+4K cez oficiálny doplnok YouTube - iba na prehrávanie jedného súboru
+FHD zostáva pre zoznamy skladieb a mini skin
+oficiálny doplnok nepodporuje zoznamy skladieb
+
+Webkamera funguje manuálne iba pri spustení zoznamu skladieb
+momentálne nefunguje automatické prepínanie z kamery na inú kameru
+
+Vylepšená stabilita
+Ďalšie možnosti vyhľadávania
+
 🎵 CiefpYouTube v1.0 – Prehrávač YouTube Jukebox
 CiefpYouTube je pokročilý doplnok Enigma2, ktorý bol vytvorený na pozdvihnutie streamovania hudby a videa z YouTube na skutočný,
 automatizovaný zážitok z jukeboxu. Na rozdiel od ťažkých a pomalých prehrávačov je tento doplnok maximálne optimalizovaný pre rýchlu odozvu,

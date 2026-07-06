@@ -1,3 +1,104 @@
+..:: CiefpVibes v2.3 ::..
+
+Neuerungen in Version 2.3
+
+🛰️ Satellitenradio (lamedb)
+Direktes Auslesen von Radiosendern aus der Datenbank /etc/enigma2/lamedb
+Unterstützte Typen: 2 (Radio), A (10 – erweiterter Codec)
+Exakte Satellitenpositionen aus satellites.xml
+Satellitensortierung: Ost → West
+Anzeige der Anzahl der Sender pro Satellit
+
+📡 EPG (Elektronischer Programmführer)
+EPG in der Liste – neben dem Sendernamen wird das aktuelle Programm angezeigt
+EPG in der Infoleiste – aktuelles Programm mit Sendernamen
+Automatische EPG-Aktualisierung alle 2 Sekunden
+
+📻 RDS (Radio Data System)
+Anzeige des RDS-Textes in der Infoleiste (aktueller Titel/Sendung)
+Automatische RDS-Aktualisierung
+Unterstützung für rdsDecoder (OpenATV 7.x und höher)
+
+🎨 Verbesserungen der Benutzeroberfläche
+Vergrößerte Anzeige für Satellitenradio (1300x900)
+Bild auf der rechten Seite hinzugefügt
+Verbesserte Satelliten- und Senderlistenanzeige
+
+Vollständige Plugin-Funktionen:
+Funktion Beschreibung
+🎵 Lokale MP3/FLAC/M4A-Direktwiedergabe von Audiodateien
+🌐 Online-Streams HTTP/HTTPS-Streams
+📡 Satellitenradio (DVB) Lesen von lamedb + EPG + RDS
+🖥️ Netzwerk (SMB/NFS) Netzlaufwerke
+📱 FTP (Android/Smartphone) Verbindung zum FTP-Server
+📂 OpenDirectory OpenDirectory-Browser
+🖼️ Albumcover Automatische Covererkennung
+📻 RDS-Anzeige Radio Data System
+📺 EPG-Anzeige Elektronischer Programmführer
+🎨 10 Hintergründe Verschiedene Hintergründe
+🖼️ 10 Poster Verschiedene Poster-Platzhalter
+📊 10 Infoleisten Verschiedene Infoleisten
+
+So verwenden Sie Satellitenradio:
+Starten Sie CiefpVibes
+Drücken Sie auf ORDNER (Grüner Button)
+Wählen Sie „📻 Satellitenradio (lamedb)“
+Satellit auswählen
+Radiosender auswählen
+
+Viel Spaß! CiefpVibes 🎶
+
+CiefpVibes v2.2 – Versionshinweise
+
+Neues Modul: OpenDirectory Downloader
+Ein brandneues Modul zum Herunterladen von Musik von OpenDirectory-Servern wurde hinzugefügt!
+
+Was ist OpenDirectory?
+
+Öffentliche Server zum Teilen von Musikdateien (MP3, FLAC, M4A usw.)
+Einfaches Durchsuchen und Herunterladen ohne komplizierte APIs
+
+Funktionen:
+🌐 OpenDirectory-Server durchsuchen – URLs aus der Datei opendir.txt laden
+📁 Ordnernavigation – einfaches Navigieren durch Verzeichnisse
+🎵 Dateiauswahl – einzelne Titel oder ganze Ordner hinzufügen
+⬇️ Download-Manager – MP3-, FLAC-, M4A-, AAC-, WAV- und OGG-Dateien herunterladen
+
+📊 Fortschrittsanzeige – Downloadfortschritt visualisieren
+💾 Benutzerdefinierter Pfad – Speicherort für heruntergeladene Dateien festlegen
+
+Anwendung:
+OpenDirectory-URLs zur Datei hinzufügen:
+
+/usr/lib/enigma2/python/Plugins/Extensions/CiefpVibes/opendir.txt
+CiefpVibes starten → Online-Dateien → OpenDirectory Downloader
+
+Navigation:
+OK – Ordner auswählen / Datei hinzufügen
+Blauer Button – Alles auswählen (Fügt alle Dateien aus dem Ordner hinzu)
+Gelber Button – Herunterladen (lädt ausgewählte Dateien herunter)
+Grüner Button – Einstellungen (Pfad festlegen)
+
+Verbesserungen:
+Automatische Bereinigung von Dateinamen (entfernt Unterstriche und doppelte Dateiendungen)
+Intelligente Namensgebung (z. B. A-Ha_-_Take_On_Me.mp3 → A-Ha - Take On Me.mp3)
+
+Protokollierung aller Download-Aktivitäten
+Schnelle Auswahl aller Dateien aus einem Ordner (ohne rekursives Scannen)
+
+Voraussetzungen:
+Python 3
+beautifulsoup4 (optional, für besseres Parsen)
+Installation:
+opkg install python3-beautifulsoup4
+
+Kurz gesagt:
+Jetzt können Sie Musik direkt von öffentlichen OpenDirectory-Servern auf Ihr Enigma2-Gerät herunterladen! 🎵
+
+..:: CiefpVibes – Spüre die Vibes ::..
+
+
+
 ..:: CiefpVibes v1.0 ::..
 - Enigma2 Musik-Jukebox-Plugin
 

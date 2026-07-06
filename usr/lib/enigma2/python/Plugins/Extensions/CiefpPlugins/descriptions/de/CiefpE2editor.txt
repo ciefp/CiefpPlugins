@@ -1,0 +1,94 @@
+CiefpE2editor-Plugin – Beschreibung
+
+Dies ist mein 40. Plugin, das ich in Zusammenarbeit mit künstlicher Intelligenz entwickelt habe.
+
+Beschreibung: CiefpE2editor ist ein leistungsstarkes und umfassendes Enigma2-Tool, das vollständig in Full-HD-Auflösung (1920x1080) entwickelt wurde.
+Inspiriert von der legendären PC-Software Dreamboxedit, bringt dieses Plugin die erweiterte Kanal-, Bouquet- und Transponderverwaltung direkt auf Ihren Receiver und macht so einen Computer überflüssig.
+
+Das Plugin vereint mehrere leistungsstarke Module in einer einzigen grafischen Oberfläche und ermöglicht die vollständige Kontrolle über die lamedb-Datenbank und Benutzerlisten – ganz ohne Computer.
+
+🚀 Hauptmerkmale und Funktionen
+1. Dreiteiliger Haupteditor (Hauptbildschirm)
+Übersicht auf einen Blick: Der Bildschirm ist in drei funktionale, hochauflösende (FHD) Bereiche unterteilt:
+Service (Alle Kanäle aus lamedb), Kanäle (Kanäle im aktiven Bouquet) und Bouquets (Liste Ihrer Bouquets).
+
+1. Haupteditor (CiefpE2editorMain)
+Dreifachansicht:
+Links: Liste aller Dienste (Kanäle)
+Mitte: Kanäle im aktiven Bouquet
+Rechts: Bouquet-Übersicht
+
+Kanalfilter:
+Nach Satellit (alle Satelliten, einzelne Satelliten, terrestrisch)
+Nach Typ (TV, Radio)
+Nach Auflösung (SD, HD H.264, HD H.265, UHD)
+Nach Anbieter
+Neue Kanäle (Markierung: X)
+
+Kanalverwaltung:
+Kanäle in das aktive Bouquet kopieren
+Kanäle aus der Liste löschen
+Einstellungen speichern und neu laden
+
+2. Kanal-Editor (CiefpChannelEditor)
+Kanäle verschieben/löschen
+Kanalgruppen unter der Markierung auswählen
+Kanäle per Drag & Drop nach oben/unten verschieben
+Änderungen am Bouquet speichern
+
+3. Bouquet-Editor (CiefpBouquetEditor)
+Bouquets verwalten (erstellen, löschen, verschieben)
+Kanal-Editor für das ausgewählte Bouquet öffnen
+
+4. Kanalmanager (CiefpChannelManager)
+Einstellungen von GitHub herunterladen
+Bouquets kopieren und installieren
+Automatisch die neuesten Listen herunterladen
+
+5. Einstellungen-Downloader (CiefpSettingsDownloaderScreen)
+Vorgefertigte Kanallisten aus dem GitHub-Repository herunterladen
+Unterstützt über 15 verschiedene Satellitenkombinationen:
+Von 1 Satellit (19° Ost) bis 18 Satelliten
+Alle gängigen Satelliten werden abgedeckt: 42° Ost, 39° Ost, 28° Ost, 23° Ost, 19° Ost, 16° Ost, 13° Ost, 9° Ost, 0,8° West, 4° West, 5° West, 30° West usw.
+Motorisierter Kanallistenbereich: 80° Ost – 34° West
+
+6. Satellitenauswahl (CiefpSelectSatellite)
+Satelliten zur Installation auswählen
+Automatische Zuordnung der Satelliten zu den entsprechenden Bouquet-Dateien
+Ausgewählte Satelliten kopieren und installieren
+Unterstützt über 40 verschiedene Satellitenpositionen
+
+7. Satellites.xml-Editor (CiefpSatelliteXmlReader/Editor)
+Satellites.xml-Datei anzeigen und bearbeiten
+Transponder hinzufügen und löschen
+Alle Transponderparameter bearbeiten:
+Frequenz, Symbolrate
+Polarisation, FEC
+DVB-S/S2-System
+Modulation (QPSK, 8PSK, 16APSK, 32APSK)
+Multistream (IS, PLS-Modus/Code)
+T2-MI-Unterstützung
+
+8. Streamrelay auf die Whitelist setzen (WhitelistScreen)
+Whitelist-Datei für Streamrelay generieren
+Automatische Bouquet-Analyse für Streamrelay-Kanäle
+Filter zum Ausschließen unerwünschter Einträge
+
+Technische Daten
+Funktionsdetails
+Version 1.9.1
+Bildschirmauflösung: Full HD (1920x1080)
+Unterstützte Dateien: lamedb, flowers.tv, satellites.xml, userbouquet.*.tv
+GitHub-Integration
+Automatischer Listen-Download
+Debug-Protokolldatei: /tmp/ciefp_e2editor_debug.log
+
+Tasten und Navigation:
+📂 Tastenbelegung auf der Fernbedienung (Hauptbildschirm):
+🔴 Zeile: Beenden
+🟢 Grün: Satellitenauswahl (Filter)
+🟡 Gelb: Erweitertes Menü mit Filtern (TV, Radio, SD, HD, UHD, Anbieter usw.)
+🔵 Blau: Schnellauswahl und Laden von Senderpaketen
+⚙️ MENÜ: Öffnet das Hauptmenü mit allen zusätzlichen Modulen und Editoren.
+
+..:: CiefpSettings ::..

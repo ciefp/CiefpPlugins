@@ -1,3 +1,54 @@
+CiefpVideoPlayer v1.5
+
+- Plugin WebcamPlayer
+Popis novej funkcie
+WebcamPlayer je nový komponent v CiefpVideoPlayer v1.5, ktorý umožňuje prezeranie a prehrávanie streamov z webkamery z existujúcich súborov Enigma2 userbouquet.
+
+Čo je nové?
+Automatické rozpoznávanie súborov webkamery - Doplnok automaticky detekuje všetky súbory userbouquet obsahujúce webkamery
+rozpoznáva ich podľa názvov súborov, ako napríklad:
+- userbouquet.web_cam____prenj___.tv,
+- userbouquet.ciefpsettings_iptv_webcam.tv
+- alebo akýkoľvek súbor obsahujúci slovo „webcam“ alebo „prenj“)
+
+Podpora viacerých formátov streamu - Funguje s:
+#SERVICE 5002:... (exteplayer3)
+#SERVICE 4097:... (štandardný prehrávač Enigma2)
+#SERVICE 1:... (klasické služby)
+
+Dva režimy prehrávania:
+Jedno prehrávanie - prehráva iba jednu webkameru
+Prehrávanie zoznamu skladieb - prehráva všetky webkamery v poradí (automatické prepínanie)
+
+Mini prehrávač s automatickým prepínaním - Po spustení zoznamu skladieb sa v hornej časti obrazovky zobrazí malý priehľadný prehrávač, ktorý zobrazuje:
+Aktuálne prehrávajúcu webkameru
+Ďalšiu webkameru v poradí
+Odpočítavanie do ďalšej kamery
+Číslo kamery (napr. „Kamera: 5 z 120")
+
+Ovládacie prvky prehrávania:
+Tlačidlo OK - pozastaví automatické prepínanie
+Tlačidlá ▲/▼ - manuálne prepnutie na predchádzajúcu/nasledujúcu kameru
+Tlačidlo EXIT - ukončenie zoznamu skladieb
+
+Nastaviteľná dĺžka trvania
+- Používateľ si môže nastaviť, koľko sekúnd bude každá webkamera zobrazená pred automatickým prepnutím na ďalšiu (15, 20, 25, 30, 40 alebo 60 sekúnd)
+- Nastaviteľná priehľadnosť miniatúry - Priehľadnosť miniatúry je možné nastaviť (20 %, 30 %, 50 %, 80 % alebo 100 %)
+
+Ako ju spustiť?
+WebcamPlayer je možné spustiť dvoma spôsobmi:
+Použitím ZELENÉHO tlačidla (Lokálne) → v ponuke vyberte „Prehrávač webkamery“
+Použitím ŽLTÉHO tlačidla (Sieť) → v ponuke vyberte „Prehrávač webkamery“
+Potom sa zobrazí zoznam všetkých nájdených webkamerových blokov, vyberte požadovanú a otvorí sa hlavná obrazovka WebcamPlayeru.
+
+Automatické prepínanie umožňuje monitorovanie viacerých kamier bez manuálneho prepínania.
+Odkazy na YouTube sa automaticky ignorujú (nedajú sa prehrať cez štandardný prehrávač).
+Podporuje staré aj nové formáty súborov userbouquet.
+
+Verzia
+CiefpVideoPlayer v1.5 - doplnok WebcamPlayer
+jún 2026.
+
 # CiefpVideoPlayer v1.3
 
 **CiefpVideoPlayer** je pokročilý prehrávač videa pre zariadenia Enigma2 s kompletným ovládaním prehrávania.

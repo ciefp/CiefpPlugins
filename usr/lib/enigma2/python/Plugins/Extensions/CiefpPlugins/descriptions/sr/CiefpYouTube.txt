@@ -1,3 +1,145 @@
+🎉 CiefpYouTube v1.8 - Final Release
+📋 Opis verzije
+CiefpYouTube v1.8 je potpuno funkcionalan YouTube video browser i download manager za Enigma2 uređaje. 
+Ova verzija donosi stabilan i potpuno integrisan Download Manager koji omogućava jednostavno preuzimanje YouTube sadržaja direktno na HDD ili USB uređaj.
+
+🆕 Glavna nova funkcionalnost - Download Manager
+📥 YouTube Download Manager (ytdownloader.py)
+Potpuno novi modul za upravljanje download-om YouTube sadržaja sa sljedećim mogućnostima:
+
+🎯 Glavne karakteristike:
+
+Dvostruki panel	:
+- Lijevi panel prikazuje playliste, 
+- desni panel prikazuje selektovane fajlove
+Selektovanje fajlova:
+- Pomoću OK dugmeta (ne zelenog) - fajlovi se prebacuju na desni panel
+
+Download formati:
+- MP4 (video) 
+- MP3 (audio) skida se kao m4a 
+
+🎵 Audio formati: MP3 vs M4A
+M4A (MPEG-4 Audio)
+Moderniji format (Apple-ov AAC)
+Manja veličina fajla za isti kvalitet
+Bolji kvalitet pri istoj brzini bitrate-a
+Podržan na svim modernim uređajima (smartfonima, TV, PC)
+YouTube native format - skida se direktno, nema gubitka kvaliteta
+
+MP3 (MPEG-1 Audio Layer 3)
+Stariji, ali standardni format (od 1993.)
+Veća veličina fajla za isti kvalitet
+Kompatibilan sa apsolutno svim uređajima
+Stariji auto stereo uređaji ga obavezno podržavaju
+
+Progress bar.......Grafički prikaz napretka downloada sa procentima
+Queue sistem.......Redno preuzimanje više fajlova sa prikazom napretka
+Play & Download....Istovremena reprodukcija prvog videa i download svih selektovanih
+Custom putanja.....Podešavanje download putanje kroz Settings
+
+🎮 Kontrole u Download Manager-u:
+Dugme	Funkcija
+OK...................Selektuje fajl (lijevi panel) / Uklanja fajl (desni panel)
+LEFT/RIGHT...........Prebacivanje fokusa između lijevog i desnog panela
+UP/DOWN..............Navigacija kroz liste
+RED (EXIT)...........Izlaz iz Download Manager-a
+GREEN (SETTINGS).....Podešavanje download putanje
+YELLOW (DOWNLOAD)....Preuzimanje selektovanih fajlova
+BLUE (PLAY+DOWNLOAD).Reprodukcija + preuzimanje
+
+📂 Download lokacija:
+Default: /hdd/movie/YouTube_Downloads/
+
+Opcije u Settings:
+/hdd/movie/YouTube_Downloads/
+/hdd/YouTube_Downloads/
+/usb/movie/YouTube_Downloads/
+/media/hdd/YouTube_Downloads/
+
+Custom putanja (preko žutog dugmeta u Settings)
+otvara se virtuelna tastatura
+
+Možda u sledećoj verziji dodam konvertovanje iz m4a u mp3
+
+..:: CiefpSettings ::..
+
+
+CiefpYouTube v1.3
+Šta je novo:
+🎥 WebCam Player
+Dodan poseban player za praćenje web kamera iz userbouquet fajla
+Auto-switch kamera - automatsko prebacivanje na sljedeću kameru nakon podešenog vremena (15, 20, 25, 30, 45 ili 60 sekundi)
+Odbrojavanje - vizuelni prikaz preostalih sekundi do sljedeće kamere
+Loop mode - automatsko vraćanje na prvu kameru nakon zadnje
+Pause/Resume - mogućnost pauziranja auto-switch-a
+Prikaz verzije buketa - informacija o verziji WebCam buketa na ekranu
+
+🎬 Movie Player (Single Play Only)
+Dodan MoviePlayer kao opcija za reprodukciju pojedinačnih video zapisa
+Idealno za duže videe (1-2 sata) zbog dodatnih kontrola
+Kontrole tokom reprodukcije:
+
+1 - Play/Pause
+3 - Stop
+4 - Rewind (premotavanje unazad)
+6 - Fast forward (premotavanje naprijed)
+7 - Previous chapter
+9 - Next chapter
+0 - Info
+
+Playliste i dalje koriste stabilni DVB Player - bez rizika od zaglavljivanja
+
+⚙️ Podešavanja
+Nova opcija u Settings: Webcam Auto-Switch Timeout (15-60 sekundi)
+Nova opcija u Settings: Media Player Type sa jasnim opisom koji player je za šta
+
+🛠️ Ispravke i poboljšanja
+Ispravljen prikaz preostalog vremena za muzičke playliste
+Uklonjeni duplikati funkcija za stabilniji rad
+Poboljšano prebacivanje između pjesama u playlisti
+Bolja detekcija kraja video zapisa
+
+Zahtjevi:
+Python 3.x
+yt-dlp instaliran (opkg install yt-dlp ili pip install yt-dlp)
+(Opciono) ServiceApp za Exteplayer3 podršku
+
+CiefpYouTube v1.3 - YouTube Video Browser za Enigma2
+
+© 2026 Ciefp
+
+
+...:: CiefpYouTube v1.2 ::...
+
+Update FHD podrška 
+FHD reprodukcija	Full HD 1080p video zapisi
+Komponenta.......................Status
+Pretraga i kategorije............✅ Radi
+Single video (FHD)...............✅ Radi
+Playlista sa mini skinom.........✅ Radi
+Odbrojavanje vremena.............✅ Radi
+Loading next song poruk..........✅ Radi
+JSON čuvanje playlisti...........✅ Radi
+User/Live Channels...............✅ Radi
+WebCam bouquet...................✅ Radi
+Broken links log.................✅ Radi
+
+🚀 Planovi za verziju 1.3 (budućnost)
+4K preko oficijelnog YouTube plugina - samo za puštanje jednog fajla
+FHD ostaje za plejliste i mini skin 
+oficijalni plugin ne podržava plej liste
+
+Webcam radi samo ručno prebacivanje kada se pokrene plejlista
+trenutno ne radi automatsko prebacivanje sa kamere na drugu kameru
+
+Poboljšana stabilnost
+Dodatne opcije pretrage
+
+
+
+
+
 🎵 CiefpYouTube v1.0 – YouTube Jukebox Player
 CiefpYouTube je napredni Enigma2 dodatak kreiran sa ciljem da strimovanje muzike i video sadržaja sa YouTube-a podigne na nivo pravog, 
 automatizovanog jukebox iskustva. Za razliku od teških i sporih plejera, ovaj plugin je maksimalno optimizovan za brz odziv, 

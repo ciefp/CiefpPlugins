@@ -20,7 +20,7 @@ import urllib.request
 import uuid
 
 # Plugin version
-PLUGIN_VERSION = "3.7" 
+PLUGIN_VERSION = "3.8"
 
 # Setup logging
 LOG_FILE = "/tmp/ciefp_plugin.log"
@@ -32,11 +32,10 @@ def setup_logging():
     if logger.handlers:
         logger.handlers.clear()
 
-    logger.setLevel(logging.INFO)  # <--- samo INFO i više (nema DEBUG)
+    logger.setLevel(logging.INFO)
 
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 
-    # Log fajl
     try:
         handler = logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8')
         handler.setFormatter(formatter)
@@ -48,9 +47,8 @@ def setup_logging():
             logger.addHandler(fallback)
             logger.error(f"Primary log failed, using fallback: {str(e)}")
         except:
-            pass  # tiho pada ako ni fallback ne radi
+            pass
 
-    # Opcionalno: konzola (ako ti treba za debug preko telneta)
     stream = logging.StreamHandler()
     stream.setFormatter(formatter)
     logger.addHandler(stream)
@@ -112,6 +110,7 @@ PLUGIN_LIST = [
     ("CiefpPicturePlayer", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpPicturePlayer.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpPicturePlayer/main/installer.sh -O - | /bin/sh", "CiefpPicturePlayer"),
     ("CiefpVideoPlayer", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpVideoPlayer.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpVideoPlayer/main/installer.sh -O - | /bin/sh", "CiefpVideoPlayer"),
     ("CiefpYouTube", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpYouTube.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpYouTube/main/installer.sh -O - | /bin/sh", "CiefpYouTube"),
+    ("CiefpE2editor", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpE2editor.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpE2editor/main/installer.sh -O - | /bin/sh", "CiefpE2editor"),
     ("Ciefp Whitelist Streamrelay", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpWhitelistStreamrelay.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpWhitelistStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpWhitelistStreamrelay"),
     ("Ciefp T2Mi Abertis", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpT2MiAbertis.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsT2miAbertis/main/installer.sh -O - | /bin/sh", "CiefpT2MiAbertis"),
     ("Ciefp T2Mi Abertis OpenPli", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpT2MiAbertisOpenPli.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsT2miAbertisOpenPLi/main/installer.sh -O - | /bin/sh", "CiefpT2MiAbertisOpenPli"),
@@ -154,7 +153,6 @@ def load_selected_language(available_languages):
             with open(LANGUAGE_FILE, "r", encoding="utf-8") as f:
                 line = f.readline().strip()
                 if line:
-                    # Expect format like "Srpski - sr"
                     lang_code = line.split("-")[-1].strip()
                     if lang_code in available_languages:
                         logger.debug(f"Loaded language from file: {lang_code}")
@@ -186,12 +184,13 @@ config.plugins.CiefpPlugins.language.choices = language_choices
 
 class ImageViewerScreen(Screen):
     skin = """
-    <screen name="ImageViewerScreen" position="center,center" size="1600,850" title="..:: Image Viewer ::..">
-        <widget name="image" position="50,100" size="1500,680" zPosition="1" alphatest="on" scale="1" />
-        <widget name="image_label" position="50,780" size="1500,40" font="Regular;24" halign="center" foregroundColor="#FFFFFF" />
-        <eLabel text="Exit" position="50,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F0000" />
-        <eLabel text="Previous" position="210,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#003F00" />
-        <eLabel text="Next" position="370,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#00003F" />
+    <screen name="ImageViewerScreen" position="center,center" size="1920,1080" title="..:: Image Viewer ::.." backgroundColor="#000000">
+        <widget name="image" position="60,80" size="1800,860" zPosition="1" alphatest="on" scale="1" />
+        <widget name="image_label" position="60,960" size="1800,50" font="Regular;28" halign="center" foregroundColor="#FFFFFF" backgroundColor="#000000" />
+        <eLabel text="Exit" position="60,1020" size="180,50" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F0000" />
+        <eLabel text="Previous" position="260,1020" size="180,50" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#003F00" />
+        <eLabel text="Next" position="460,1020" size="180,50" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#00003F" />
+        <eLabel text="Info: Use Arrows or Colored Buttons to navigate" position="660,1020" size="1200,50" font="Regular;24" foregroundColor="#888888" halign="left" />
     </screen>"""
 
     def __init__(self, session, image_urls, plugin_name):
@@ -238,7 +237,7 @@ class ImageViewerScreen(Screen):
             pixmap = LoadPixmap(temp_file)
             if pixmap:
                 self["image"].instance.setPixmap(pixmap)
-                self["image_label"].setText(f"Image {self.current_index + 1}/{len(self.image_urls)}")
+                self["image_label"].setText(f"Image {self.current_index + 1}/{len(self.image_urls)} - {self.plugin_name}")
             else:
                 self["image_label"].setText("Failed to load image.")
                 logger.error(f"LoadPixmap failed for: {temp_file}")
@@ -271,24 +270,24 @@ class ImageViewerScreen(Screen):
 
 class CiefpPluginsPanel(Screen):
     skin = """
-    <screen name="CiefpPluginsPanel" position="center,center" size="1600,850" title="..:: Ciefp Plugins (NO.39) ::.. (Version {version})">
-        <widget name="title" position="0,0" size="1600,100" font="Regular;60" halign="center" foregroundColor="#FFFFFF" backgroundColor="#000000" />
-        <widget source="pluginlist" render="Listbox" position="50,100" size="400,680" scrollbarMode="showOnDemand" enableWrapAround="1">
+    <screen name="CiefpPluginsPanel" position="center,center" size="1920,1080" title="..:: Ciefp Plugins (NO.40) ::.. (Version {version})" backgroundColor="#011a2e">
+        <widget name="title" position="0,0" size="1920,80" font="Regular;48" halign="center" foregroundColor="#FFFFFF" backgroundColor="#012e01" />
+        <widget source="pluginlist" render="Listbox" position="40,100" size="520,850" backgroundColor="#00070d" scrollbarMode="showOnDemand" enableWrapAround="1">
             <convert type="TemplatedMultiContent">
                 {{"template": [
                     MultiContentEntryPixmapAlphaTest(pos=(10,10), size=(150,150), png=0, flags=1),
-                    MultiContentEntryText(pos=(170,10), size=(220,150), font=0, text=1, flags=RT_VALIGN_CENTER|RT_WRAP),
+                    MultiContentEntryText(pos=(180,10), size=(320,150), font=0, text=1, flags=RT_VALIGN_CENTER|RT_WRAP),
                 ],
-                "fonts": [gFont("Regular", 24)],
+                "fonts": [gFont("Regular", 26)],
                 "itemHeight": 170}}
             </convert>
         </widget>
-        <widget name="description" position="470,100" size="1100,680" font="Regular;26" scrollbarMode="showOnDemand" />
-        <eLabel text="Exit" position="50,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F0000" />
-        <eLabel text="Install" position="210,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#003F00" />
-        <eLabel text="Language" position="370,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F3F00" />
-        <eLabel text="Image Viewer" position="530,800" size="150,40" font="Regular;22" foregroundColor="#FFFFFF" halign="center" backgroundColor="#00003F" />
-        <widget name="status_label" position="690,800" size="900,40" font="Regular;22" foregroundColor="#FFFFFF" halign="left" transparent="1" />
+        <widget name="description" position="580,100" size="1300,850" font="Regular;26" scrollbarMode="showOnDemand" backgroundColor="#00070d" foregroundColor="#FFFFFF" />
+        <eLabel text="Exit" position="40,960" size="180,50" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F0000" />
+        <eLabel text="Install" position="230,960" size="180,50" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#003F00" />
+        <eLabel text="Language" position="420,960" size="180,50" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F3F00" />
+        <eLabel text="Image Viewer" position="610,960" size="180,50" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#00003F" />
+        <widget name="status_label" position="810,960" size="1070,50" font="Regular;24" foregroundColor="#FFFFFF" halign="left" transparent="1" />
     </screen>""".format(version=PLUGIN_VERSION)
 
     def __init__(self, session):
@@ -355,7 +354,7 @@ class CiefpPluginsPanel(Screen):
         self["pluginlist"] = List(self.pluginList)
         self["description"] = ScrollLabel("")
         self["status_label"] = Label("")
-        self["title"] = Label(f"..:: Ciefp Plugins (NO.39) ::.. (Version {PLUGIN_VERSION})")
+        self["title"] = Label(f"..:: Ciefp Plugins (NO.40) ::.. (Version {PLUGIN_VERSION})")
         self["actions"] = ActionMap(["OkCancelActions", "ColorActions", "DirectionActions"], {
             "cancel": self.exit,
             "red": self.exit,
@@ -633,4 +632,4 @@ def main(session, **kwargs):
 
 def Plugins(**kwargs):
     from Plugins.Plugin import PluginDescriptor
-    return [PluginDescriptor(name="Ciefp Plugins", description=f"Panel for Ciefp plugins NO.39 (Version {PLUGIN_VERSION})", where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main, icon="plugin.png")]
+    return [PluginDescriptor(name="Ciefp Plugins", description=f"Panel for Ciefp plugins NO.40 (Version {PLUGIN_VERSION})", where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main, icon="plugin.png")]

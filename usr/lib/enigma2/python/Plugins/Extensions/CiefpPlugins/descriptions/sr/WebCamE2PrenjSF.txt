@@ -1,3 +1,130 @@
+
+...:: WebCamE2PrenjSF v1.1 ::...
+
+📦 Šta je novo u verziji 1.1
+🎥 WebCam Player
+WebCam mode - automatsko prebacivanje između kamera sa podešivim vremenom (15-90 sekundi)
+Mini Skin - elegantan prikaz trenutne i sledeće kamere na dnu ekrana
+Single play - puštanje pojedinačne kamere
+Playlist mode - reprodukcija svih kamera u nizu
+Play from here - reprodukcija od selektovane kamere
+
+📺 Podrška za različite formate
+m3u8 stream-ovi - direktno puštanje (HLS)
+YouTube linkovi - preko yt-dlp ekstrakcije (YT-DLP:// format)
+Podrška za 4097, 5001, 5002 servicetype
+
+⚙️ Podešavanja (Settings)
+Video Quality - Best, 4K, Full HD, HD Ready
+Mini Skin Opacity - 0% do 100% transparentnosti
+Media Player Type - GStreamer, DVB Player, Exteplayer3, MoviePlayer
+Webcam Auto-Switch Timeout - 15 do 90 sekundi
+
+🔍 Log Viewer
+Broken Links Log - pregled svih neispravnih linkova
+Skrolovanje - strelice za navigaciju kroz log
+Brisanje loga - zeleno dugme za čišćenje
+Automatsko logovanje svih neispravnih linkova (m3u8 i YouTube)
+
+📁 Poboljšanja interfejsa
+Pregledniji meni sa markerima i kamerama
+Prikaz verzije buketa u glavnom prozoru
+Logo podrška
+
+🛠️ Tehničke karakteristike
+Enigma2 Plugin - kompatibilan sa svim Enigma2 uređajima
+Python3 podrška - radi na svim verzijama
+JSON podešavanja - laka konfiguracija
+Threading - ne blokira UI tokom učitavanja
+eTimer - precizno vreme za auto-switch
+
+📋 Upotreba
+DOWNLOAD - preuzima i instalira najnoviji bouquet sa GitHub-a
+SETTINGS - podešavanje kvaliteta, playera i timeout-a
+LOGVIEWER - pregled neispravnih linkova
+OK - odabir kamere i načina reprodukcije
+
+Verzija 1.0 → samo download liste sa GitHub-a
+Verzija 1.1 → kompletan WebCam player sa svim funkcionalnostima
+
+📋 Sistemski zahtevi
+Minimalni zahtevi
+Enigma2 baziran prijemnik (OpenPLi, OpenATV, OpenVision, VTi, itd.)
+Python 2.7 ili Python 3.x
+RAM: Minimum 128 MB (preporučeno 256 MB)
+Slobodan prostor: ~10 MB za plugin i zavisnosti
+
+Preporučeni zahtevi
+RAM: 512 MB ili više (za velike playliste od 2800+ kamera)
+Procesor: 600 MHz ili brži (za brže učitavanje i yt-dlp obradu)
+Interna memorija: 50 MB slobodnog prostora
+
+📦 Zavisnosti (Dependencies)
+Zavisnost	Opis
+Python 3.x (ugrađen u Enigma2)
+enigma2	Osnovni framework (ugrađen)
+json	Za podešavanja (ugrađen)
+subprocess	Za pokretanje eksternih alata (ugrađen)
+threading	Za pozadinske operacije (ugrađen)
+urllib/urllib2	Za download sa GitHub-a (ugrađen)
+Opcione zavisnosti (potrebne za YouTube podršku)
+Zavisnost	Verzija	Opis
+yt-dlp	2023.11.16 ili noviji	Za ekstrakciju YouTube stream-ova
+ffmpeg	4.0 ili noviji	Za obradu video/audio stream-ova
+Instalacija opcionih zavisnosti
+bash
+# Preko opkg (OpenATV, OpenPLi, itd.)
+opkg update
+opkg install yt-dlp ffmpeg
+
+# Ili ručno preko pip-a
+pip install yt-dlp
+
+# Provera instalacije
+yt-dlp --version
+ffmpeg -version
+NAPOMENA: Bez yt-dlp i ffmpeg, YouTube linkovi NEĆE raditi. m3u8 stream-ovi rade bez njih.
+
+📡 Podržani stream formati
+Format	Podrška	Napomena
+m3u8 (HLS)	✅ Potpuna	Direktno puštanje preko Enigma2 playera
+YouTube	✅ Potpuna	Zahteva yt-dlp
+RTMP	⚠️ Delimična	Zavisi od playera
+MP4	✅ Potpuna	Direktno puštanje
+TS	✅ Potpuna	Direktno puštanje
+
+🎮 Podržani playeri
+Player	Servicetype	Podrška	Napomena
+GStreamer	4097	✅ Potpuna	Preporučen
+DVB Player	5002	✅ Potpuna	Originalni Enigma2 player
+Exteplayer3	5001	✅ Potpuna	Zahteva ServiceApp
+MoviePlayer	4097	✅ Potpuna	Single play samo
+
+📊 Performanse
+Scenario	Vreme učitavanja	RAM korišćenje
+Mali buket (< 50 kamera)	< 1 sekund	~20 MB
+Srednji buket (50-500 kamera)	1-3 sekunde	~30 MB
+Veliki buket (> 500 kamera)	3-10 sekundi	~50 MB
+Ekstrakcija YouTube-a	5-30 sekundi	~30 MB (privremeno)
+Auto-switch	< 1 sekund	Minimalno
+
+🔧 Preporučene postavke
+Za najbolje performanse:
+Video Quality: 720p ili 1080p (zavisno od snage uređaja)
+Mini Skin Opacity: 30-50% (za bolju vidljivost)
+Media Player Type: 4097 (GStreamer)
+Webcam Timeout: 20-30 sekundi
+
+Za stare/slabije uređaje:
+Video Quality: 720p
+Mini Skin Opacity: 0% (potpuno providno)
+Media Player Type: 5002 (DVB Player)
+Webcam Timeout: 30+ sekundi
+
+..:: CiefpSettings ::..
+
+
+
 ..:: WebCamE2PrenjSF ::..
 
 py2 & py3 podrška

@@ -1,3 +1,116 @@
+CiefpTMDBSearch v2.5
+
+Neuerungen:
+🎬 Trailer-Unterstützung
+Trailer für Filme und Serien direkt im Plugin ansehen
+Automatischer Abruf von YouTube-Trailern über die TMDB-API
+Wiedergabe via yt-dlp und Enigma2 Player
+
+🎮 Schnellstart
+INFO-Taste – Trailer-Wiedergabe
+HILFE-Taste – Alternative Startmöglichkeit
+MENÜ → Option „Trailer ansehen“
+
+📺 Verbesserte Anzeige
+Titelanzeige im Player: „Filmtitel – Trailer“ (statt index.m3u8)
+Benachrichtigung oben rechts: „▶ Trailer verfügbar – Zum Ansehen MENU, INFO oder HILFE drücken“
+
+🔧 Technische Verbesserungen
+Direkte Streaming-URL via yt-dlp
+Unterstützung für verschiedene Enigma2-Systeme (OpenATV, OpenPLi usw.)
+Asynchroner Trailer-Abruf (beeinträchtigt die Informationsanzeige nicht)
+
+Kurz gesagt: Version 2.5 bietet folgende Funktionen Trailer können direkt über das Plugin angesehen werden,
+mit schnellem Zugriff über die INFO/HELP-Schaltfläche und einer übersichtlichen Namensanzeige. 🎬
+
+..:: CiefpSettings ::..
+
+CiefpTMDBSearch-Plugin – Version 2.3 – Änderungen und Ergänzungen
+
+🎯 Wichtigste Verbesserungen in Version 2.3:
+1. Erweiterte Ergebnisanzeige von 20 auf 40 Ergebnisse
+- Beliebte Filme – zeigt jetzt 40 statt 20 Filme
+- Beliebte Serien – zeigt jetzt 40 statt 20 Serien
+- Beliebte Personen – zeigt jetzt 40 statt 20 Personen
+- Top-bewertete Filme – zeigt jetzt 40 statt 20 Filme
+- Top-bewertete Serien – zeigt jetzt 40 statt 20 Serien
+- Demnächst erscheinende Filme – zeigt jetzt 40 statt 20 Filme
+- Alle Trends – zeigt jetzt 20 Ergebnisse (wird nicht mehr unterstützt)
+
+📊 2. Neue Kategorien hinzugefügt (mit 40 Ergebnissen)
+- Aktuelle Filme – Filme, die derzeit im Kino laufen
+- TV-Programm – Serien, die aktuell laufen
+- Heute im Fernsehen – Serien, die heute laufen Heute
+
+🚀 Optimierungen:
+Geschwindigkeit und Stabilität:
+Asynchroner Download – Bilder werden im Hintergrund heruntergeladen
+Cache-System – heruntergeladene Bilder werden für schnelleren Zugriff zwischengespeichert
+Doppelte API-Aufrufe – paralleles Laden von 2 Seiten für 40 Ergebnisse
+Fehlerbehandlung – robuste Fehlerbehandlung ohne Leistungseinbußen
+Speicheroptimierung – effizientes Speichermanagement
+
+UI/UX-Verbesserungen:
+Anzeige der Ergebnisanzahl – jede Auswahlliste zeigt nun die Anzahl der Ergebnisse an
+Detaillierte Informationen – Bewertung, Alter, Sternebewertung
+Einheitliches Format – alle Kategorien werden im gleichen Stil angezeigt
+Navigation – einfache Pfeilnavigation
+
+🔧 Kompatibilität:
+Getestet auf: VU+ Zero 4K mit OpenATV 7.6
+API-Kompatibilität: TMDB API v3
+Enigma2-Versionen: Kompatibel mit allen modernen E2-Versionen
+Plugin-Systeme: OpenATV, OpenPLi, OpenBH, VTI usw.
+
+📈 Leistung:
+Ladezeit für 40 Ergebnisse: ~2–4 Sekunden
+Speichernutzung: Optimiert für Set-Top-Boxen
+Netzwerk-Overhead: Minimierte Anzahl an API-Aufrufen
+Cache-Effizienz: Automatisches Entfernen unnötiger Bilder
+
+..:: CiefpSettings ::..
+
+📊 CiefpTMDBSearch 2.1
+Neu: Staffeln und Episoden – das Plugin kann nun alle Staffeln und Episoden einer Serie anzeigen.
+
+Das Plugin verfügt jetzt auch über eine Galerie mit allen verfügbaren Postern und Hintergrundbildern.
+
+Das Plugin bietet jetzt:
+
+✅ Automatische EPG-Suche – automatische Erkennung des aktuellen Programms
+✅ Erweiterte Suche – Filme, Serien, Schauspieler, Regisseure
+✅ Beliebte/Trend-Listen – Was ist gerade angesagt?
+✅ Besetzungsübersicht – Erkundung der Besetzung
+✅ Staffeln und Episoden – detaillierte Übersicht von Serien und Episoden
+✅ TMDB- und IMDB-Bewertungen – zusätzliche Informationen
+✅ Hintergrundbildgalerie – Übersicht der Hintergrundbilder
+✅ Postergalerie – Übersicht der Poster
+✅ Einstellungen – API-Schlüssel, Sprache, Cache
+
+🖼️ Kurzanleitung: So verwenden Sie die Poster- und Hintergrundbildansicht
+Die neue Galerie ist einfach zu bedienen. Hier eine Kurzanleitung:
+
+Zugriff auf die Galerie:
+Nachdem die Film- oder Seriendaten geladen wurden, drücken Sie die MENU-Taste auf der Fernbedienung.
+
+Wählen Sie im Menü die Option 🖼️ Hintergrundbildgalerie oder 🎬 Postergalerie.
+
+Navigation durch die Galerie: Verwenden Sie die GELBEN und BLAUEN Schaltflächen (oder die Pfeiltasten links/rechts), um durch die Bilder zu blättern.
+
+Die GRÜNE Schaltfläche führt Sie zurück zum Startbildschirm oder wechselt zwischen der Hintergrundbild- und der Postergalerie (sofern verfügbar). Die Statusleiste oben zeigt an, welches Bild Sie gerade geöffnet haben (z. B. „6/185“).
+
+Galerie schließen: Drücken Sie die ROTE Schaltfläche oder OK/Beenden, um zum Hauptbildschirm des Plugins zurückzukehren.
+
+💡 Tipps und Hinweise
+Zwischenspeicherung: Bilder werden automatisch heruntergeladen und in Ihrem ausgewählten Cache-Ordner (in den Einstellungen festgelegt) gespeichert. Dies beschleunigt die Anzeige beim nächsten Öffnen.
+Spracheinstellungen: In den Einstellungen können Sie die Sprache der Beschreibungen ändern. Dies wirkt sich auch auf die Sprache der Daten aus der TMDB-Datenbank aus.
+Leistung: Falls das Plugin aufgrund eines vollen Caches langsam arbeitet, können Sie diesen über MENÜ > Weitere Optionen > 🗑️ Cache leeren leeren leeren.
+
+Die neue Galerie ist eine großartige Ergänzung, die es Nutzern ermöglicht, die visuellen Inhalte eines Films oder einer Serie in vollen Zügen zu genießen.
+
+..:: CiefpSettings ::..
+
+
 ..:: CiefpTMDBSearch v1.0 ::..
 
 Suchen Sie Filme und Serien in der TMDB mit Postern, Beschreibungen, Schauspielern und Bewertungen 

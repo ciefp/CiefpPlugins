@@ -1,3 +1,118 @@
+CiefpTMDBSearch v2.5
+
+What's new:
+🎬 Trailer Support
+Ability to view trailers for movies and series directly from the plugin
+Automatic retrieval of YouTube trailers from TMDB API
+Playback via yt-dlp and Enigma2 player
+
+🎮 Quick launch
+INFO button - direct trailer playback
+HELP button - alternative way to launch
+MENU → "Watch Trailer" option
+
+📺 Improved display
+Display of title in the player: "Movie title - Trailer" (instead of index.m3u8)
+Notification in the upper right corner: "▶ Trailer available - Press MENU, INFO or HELP to watch"
+
+🔧 Technical improvements
+Using yt-dlp to get direct URL for streaming
+Support for various Enigma2 systems (OpenATV, OpenPLi, etc.)
+Asynchronous trailer retrieval (does not slow down information display)
+
+In short: v2.5 brings the ability to watch trailers directly from the plugin,
+with quick access via the INFO/HELP button and a nice display of names. 🎬
+
+..:: CiefpSettings ::..
+
+CiefpTMDBSearch Plugin - Version 2.3 - Changes and Additions
+
+🎯 Main improvements in version 2.3:
+1. Expanded results display from 20 to 40
+- Popular Movies - now shows 40 instead of 20 movies
+- Popular Series - now shows 40 instead of 20 series
+- Popular Persons - now shows 40 instead of 20 people
+- Top Rated Movies - now shows 40 instead of 20 movies
+- Top Rated Series - now shows 40 instead of 20 series
+- Upcoming Movies - now shows 40 instead of 20 movies
+- Trending All - now shows 20 no longer supported
+
+📊 2. Added NEW categories (with 40 results)
+- Now Playing Movies - movies currently playing in theaters
+- TV On The Air - series currently airing
+- TV Airing Today - series airing today
+
+🚀 Optimizations:
+Speed ​​and stability:
+Asynchronous download - images are downloaded in the background
+Cache system - downloaded images are cached for faster access
+Double API calls - parallel loading of 2 pages for 40 results
+Error handling - robust error handling without slowing down
+Memory optimization - efficient memory management
+
+UI/UX improvements:
+Result count display - each ChoiceBox now displays the number of results
+Detailed information - rating, age, rating stars
+Consistent format - all categories have the same display style
+Navigation - simple arrow navigation
+
+🔧 Compatibility:
+Tested on: VU+ Zero 4K with OpenATV 7.6
+API compatibility: TMDB API v3
+Enigma2 versions: Compatible with all modern E2 versions
+Plugin systems: OpenATV, OpenPLi, OpenBH, VTI etc.
+
+📈 Performance:
+Load time 40 results: ~2-4 seconds
+Memory usage: Optimized for set-top boxes
+Network overhead: Minimized number of API calls
+Cache efficiency: Automatic cleaning of unnecessary images
+
+..:: CiefpSettings ::..
+
+📊 CiefpTMDBSearch 2.1
+New:
+Seasons and episodes, the plugin can now display all seasons and their episodes for series.
+The plugin now also has a gallery to display all available posters and background images.
+
+The plugin now has:
+✅ Auto EPG search - automatic recognition of the current program
+✅ Advanced search - movies, series, actors, directors
+✅ Popular/Trending lists - what's popular right now
+✅ Cast Explorer - exploration of the cast
+✅ Seasons and episodes - detailed overview of TV series and episodes
+✅ TMDB and IMDB ratings - additional information
+✅ Backdrop Gallery - overview of background images
+✅ Poster Gallery - overview of posters
+✅ Settings - API keys, language, cache
+
+🖼️ Short instructions: How to use the poster and backdrop viewer
+The new gallery is easy to use. Here's a quick guide:
+
+Gallery access:
+After loading the movie or series data, press the MENU button on the remote control.
+In the menu, select the option 🖼️ Backdrop Gallery or 🎬 Poster Gallery.
+
+Navigation through the gallery:
+Use the YELLOW and BLUE buttons (or left/right arrows) to move through the images.
+
+The GREEN button takes you back to the home screen or switches between the backdrop and poster galleries (if available).
+The status bar at the top shows which image you are out of the total (e.g., "6/185").
+
+Close the gallery:
+Press the RED button or OK/Exit to return to the main plugin screen.
+
+💡 Tips and Notes
+Caching: Images are automatically downloaded and saved to your chosen cache folder (set in Settings). This speeds up the display the next time you open them.
+Language Settings: In Settings you can change the language for the descriptions (language). This also affects the language of the data you get from the TMDB database.
+Performance: If the plugin starts to work slowly due to a full cache, you can clear it via MENU > More Options > 🗑️ Clear Cache.
+The new gallery is a great addition that allows users to fully experience viewing the visual content of a movie or series.
+
+..:: CiefpSettings ::..
+
+
+
+
 ..:: CiefpTMDBSearch v1.0 ::..
 
 Search movies and series through TMDB with posters, descriptions, actors and ratings - in 14 languages!

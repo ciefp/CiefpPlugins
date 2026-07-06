@@ -1,3 +1,151 @@
+
+..:: CiefpVibes v2.3 ::..
+
+Noviteti u verziji 2.3
+🛰️ Satelitski Radio (lamedb)
+Direktno čitanje radio stanica iz /etc/enigma2/lamedb baze
+Podržani tipovi: 2 (Radio), A (10 - extended codec)
+Tačne satelitske pozicije iz satellites.xml
+Sortiranje satelita: Istok → Zapad
+Prikaz broja stanica po satelitu
+
+📡 EPG (Electronic Program Guide)
+EPG u listi - pored naziva stanice prikazuje se trenutni program
+EPG na infobaru - trenutni program uz naziv stanice
+Automatsko osvežavanje EPG-a svake 2 sekunde
+
+📻 RDS (Radio Data System)
+Prikaz RDS teksta na infobaru (trenutna pjesma/emisija)
+Automatsko ažuriranje RDS-a
+Podrška za rdsDecoder (OpenATV 7.x i noviji)
+
+🎨 UI Poboljšanja
+Povećan ekran za satelitski radio (1300x900)
+Dodata slika na desnoj strani
+Lepši prikaz liste satelita i stanica
+
+Kompletne mogućnosti plugina:
+Funkcija	Opis
+🎵 Lokalni MP3/FLAC/M4A	Direktna reprodukcija audio fajlova
+🌐 Online streamovi	HTTP/HTTPS streamovi
+📡 Satelitski radio (DVB)	Čitanje iz lamedb + EPG + RDS
+🖥️ Network (SMB/NFS)	Mrežni deljeni diskovi
+📱 FTP (Android/Phone)	Povezivanje na FTP server
+📂 OpenDirectory	OpenDirectory browser
+🖼️ Album covers	Automatsko dohvatanje omota
+📻 RDS prikaz	Radio Data System
+📺 EPG prikaz	Elektronski programski vodič
+🎨 10 backgrounda	Različite pozadine
+🖼️ 10 postera	Različiti poster placeholderi
+📊 10 infobara	Različiti infobari
+
+Kako koristiti satelitski radio:
+Pokreni CiefpVibes
+Pritisni FOLDER (zelena tipka)
+Izaberi "📻 Satellite Radio (lamedb)"
+Izaberi satelit
+Izaberi radio stanicu
+
+Uživaj! CiefpVibes 🎶 
+
+CiefpVibes v2.2 Release Notes
+
+Novi modul: OpenDirectory Downloader
+Dodan je potpuno novi modul za preuzimanje muzike sa OpenDirectory servera!
+
+Šta je OpenDirectory?
+
+Javni serveri koji dijele muzičke fajlove (MP3, FLAC, M4A, itd.)
+Jednostavan pregled i preuzimanje bez komplikovanih API-ja
+
+Funkcionalnosti:
+🌐 Pregled OpenDirectory servera - učitajte URL adrese iz opendir.txt fajla
+📁 Navigacija kroz foldere - krećite se kroz direktorijume jednostavno
+🎵 Selektovanje fajlova - dodajte pojedinačne pjesme ili cijeli folder odjednom
+⬇️ Download menadžer - preuzima MP3, FLAC, M4A, AAC, WAV, OGG fajlove
+
+📊 Progress bar - vizuelni prikaz napretka preuzimanja
+💾 Podesiva putanja - birate gdje će se snimati preuzeti fajlovi
+
+Kako koristiti:
+Dodajte OpenDirectory URL-ove u fajl:
+/usr/lib/enigma2/python/Plugins/Extensions/CiefpVibes/opendir.txt
+Pokrenite CiefpVibes → Online Files → OpenDirectory Downloader
+
+Navigacija:
+OK - ulaz u folder / dodavanje fajla
+Plavo dugme - Select All (dodaje sve fajlove iz foldera)
+Žuto dugme - Download (preuzima selektovane fajlove)
+Zeleno dugme - Settings (podešavanje putanje)
+
+Poboljšanja:
+Automatsko čišćenje naziva fajlova (uklanja underscore, duple ekstenzije)
+Pametno imenovanje (npr. A-Ha_-_Take_On_Me.mp3 → A-Ha - Take On Me.mp3)
+
+Logiranje svih download aktivnosti
+Brza selekcija svih fajlova iz foldera (bez rekurzivnog skeniranja)
+
+Zahtjevi:
+Python 3
+beautifulsoup4 (opciono, za bolje parsiranje)
+Instalacija:
+opkg install python3-beautifulsoup4
+
+Ukratko: 
+sada možete direktno preuzimati muziku sa javnih OpenDirectory servera direktno na vaš Enigma2 uređaj! 🎵
+
+..:: CiefpVibes - Feel the vibes ::..
+
+
+CiefpVibes v2.2 Release Notes
+
+New module: OpenDirectory Downloader
+A brand new module for downloading music from OpenDirectory servers has been added!
+
+What is OpenDirectory?
+
+Public servers that share music files (MP3, FLAC, M4A, etc.)
+Easy browsing and downloading without complicated APIs
+
+Features:
+🌐 OpenDirectory server browsing - load URLs from opendir.txt file
+📁 Folder navigation - navigate through directories easily
+🎵 File selection - add individual songs or an entire folder at once
+⬇️ Download manager - downloads MP3, FLAC, M4A, AAC, WAV, OGG files
+
+📊 Progress bar - visual display of download progress
+💾 Customizable path - choose where downloaded files will be saved
+
+How to use:
+Add OpenDirectory URLs to the file:
+/usr/lib/enigma2/python/Plugins/Extensions/CiefpVibes/opendir.txt
+Run CiefpVibes → Online Files → OpenDirectory Downloader
+
+Navigation:
+OK - enter folder / add file
+Blue button - Select All (adds all files from folder)
+Yellow button - Download (downloads selected files)
+Green button - Settings (set path)
+
+Improvements:
+Automatically clean up file names (removes underscores, duplicate extensions)
+Smart naming (e.g. A-Ha_-_Take_On_Me.mp3 → A-Ha - Take On Me.mp3)
+
+Logging all download activities
+Quick selection of all files from a folder (without recursive scanning)
+
+Requirements:
+Python 3
+beautifulsoup4 (optional, for better parsing)
+Installation:
+opkg install python3-beautifulsoup4
+
+In short:
+now you can directly download music from public OpenDirectory servers directly to your Enigma2 device! 🎵
+
+..:: CiefpVibes - Feel the vibes ::..
+
+
 ..:: CiefpVibes v1.0  ::..
 - Enigma2 Muzički Jukebox Plugin
 

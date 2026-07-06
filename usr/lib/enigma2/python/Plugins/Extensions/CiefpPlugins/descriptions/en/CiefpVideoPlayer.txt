@@ -1,3 +1,55 @@
+CiefpVideoPlayer v1.5
+
+- WebcamPlayer plugin
+New functionality description
+WebcamPlayer is a new component in CiefpVideoPlayer v1.5 that allows viewing
+and playback of webcam streams from existing Enigma2 userbouquet files.
+
+What's new?
+Automatic webcam bouquet recognition - The plugin automatically detects all userbouquet files containing webcams
+recognizes them by file names such as:
+- userbouquet.web_cam____prenj___.tv,
+- userbouquet.ciefpsettings_iptv_webcam.tv
+- or any file containing the word "webcam" or "prenj")
+
+Support for multiple stream formats - Works with:
+#SERVICE 5002:... (exteplayer3)
+#SERVICE 4097:... (standard Enigma2 player)
+#SERVICE 1:... (classic services)
+
+Two playback modes:
+Single play - plays only one webcam
+Playlist play - plays all webcams in order (automatic switching)
+
+Mini player with automatic switching - When a playlist is started, a small transparent player appears at the top of the screen that displays:
+Currently playing webcam
+Next webcam in sequence
+Countdown to the next camera
+Camera number (e.g. "Camera: 5 of 120")
+
+Playback controls:
+OK button - pauses automatic switching
+▲/▼ buttons - manually switch to the previous/next camera
+EXIT button - exit the playlist
+
+Adjustable duration
+- The user can set how many seconds each webcam will be displayed before automatically switching to the next one (15, 20, 25, 30, 40 or 60 seconds)
+- Adjustable mini skin transparency - The transparency of the mini player can be set (20%, 30%, 50%, 80% or 100%)
+
+How to start it?
+There are two ways to start WebcamPlayer:
+Using the GREEN button (Local) → select "Webcam Player" from the menu
+Using the YELLOW button (Network) → select "Webcam Player" from the menu
+Then a list of all found webcam bouquets is displayed, select the desired one and the main WebcamPlayer screen opens.
+
+Automatic switching allows monitoring of multiple cameras without manual switching
+YouTube links are automatically ignored (cannot be played via standard player)
+Supports both old and new userbouquet file formats
+
+Version
+CiefpVideoPlayer v1.5 - WebcamPlayer plugin
+Jun 2026.
+
 
 # CiefpVideoPlayer v1.3
 

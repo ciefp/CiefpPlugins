@@ -1,3 +1,116 @@
+CiefpTMDBSearch v2.5
+
+Čo je nové:
+🎬 Podpora trailerov
+Možnosť prezerať si trailery k filmom a seriálom priamo z pluginu
+Automatické načítanie trailerov YouTube z TMDB API
+Prehrávanie cez prehrávač yt-dlp a Enigma2
+
+🎮 Rýchle spustenie
+Tlačidlo INFO - priame prehrávanie traileru
+Tlačidlo POMOCNÍK - alternatívny spôsob spustenia
+MENU → Možnosť „Pozrieť si trailer“
+
+📺 Vylepšené zobrazenie
+Zobrazenie názvu v prehrávači: „Názov filmu - Trailer“ (namiesto index.m3u8)
+Upozornenie v pravom hornom rohu: „▶ Trailer k dispozícii - Stlačte MENU, INFO alebo POMOCNÍK pre sledovanie“
+
+🔧 Technické vylepšenia
+Použitie yt-dlp na získanie priamej URL adresy pre streamovanie
+Podpora rôznych systémov Enigma2 (OpenATV, OpenPLi atď.)
+Asynchrónne načítanie traileru (nespomaľuje zobrazenie informácií)
+
+V skratke: v2.5 prináša možnosť sledovať trailery priamo z pluginu,
+s rýchlym prístupom cez tlačidlo INFO/POMOCNÍK a pekná prezentácia mien. 🎬
+
+..:: CiefpSettings ::..
+
+Doplnok CiefpTMDBSearch - Verzia 2.3 - Zmeny a doplnky
+
+🎯 Hlavné vylepšenia vo verzii 2.3:
+1. Rozšírené zobrazenie výsledkov z 20 na 40
+- Populárne filmy - teraz zobrazuje 40 namiesto 20 filmov
+- Populárne seriály - teraz zobrazuje 40 namiesto 20 seriálov
+- Populárne osoby - teraz zobrazuje 40 namiesto 20 ľudí
+- Najlepšie hodnotené filmy - teraz zobrazuje 40 namiesto 20 filmov
+- Najlepšie hodnotené seriály - teraz zobrazuje 40 namiesto 20 seriálov
+- Nadchádzajúce filmy - teraz zobrazuje 40 namiesto 20 filmov
+- Všetky trendy - teraz zobrazuje 20, už nie je podporované
+
+📊 2. Pridané NOVÉ kategórie (so 40 výsledkami)
+- Práve hrané filmy - filmy, ktoré sa práve prehrávajú v kinách
+- TV vysielané - seriály, ktoré sa práve vysielajú
+- TV vysielané dnes - seriály, ktoré sa dnes vysielajú
+
+🚀 Optimalizácie:
+Rýchlosť a stabilita:
+Asynchrónne sťahovanie - obrázky sa sťahujú na pozadí
+Systém vyrovnávacej pamäte - stiahnuté obrázky sa ukladajú do vyrovnávacej pamäte pre rýchlejší prístup
+Dvojité volania API - paralelné načítanie 2 stránok pre 40 výsledkov
+Ošetrenie chýb - robustné spracovanie chýb bez spomalenia
+Optimalizácia pamäte - efektívna správa pamäte
+
+Vylepšenia UI/UX:
+Zobrazenie počtu výsledkov - každý ChoiceBox teraz zobrazuje počet výsledkov
+Podrobné informácie - hodnotenie, vek, hviezdičky hodnotenia
+Konzistentný formát - všetky kategórie majú rovnaký štýl zobrazenia
+Navigácia - jednoduchá navigácia pomocou šípok
+
+🔧 Kompatibilita:
+Testované na: VU+ Zero 4K s OpenATV 7.6
+Kompatibilita API: TMDB API v3
+Verzie Enigma2: Kompatibilné so všetkými modernými verziami E2
+Systémy doplnkov: OpenATV, OpenPLi, OpenBH, VTI atď.
+
+📈 Výkon:
+Doba načítania 40 výsledkov: ~2-4 sekundy
+Využitie pamäte: Optimalizované pre set-top boxy
+Sieťové réžie: Minimalizovaný počet volaní API
+Efektivita vyrovnávacej pamäte: Automatické čistenie nepotrebných obrázkov
+
+..:: CiefpSettings ::..
+
+📊 CiefpTMDBSearch 2.1
+Nové:
+Série a epizódy, plugin teraz dokáže zobraziť všetky série a ich epizódy.
+Plugin teraz obsahuje aj galériu na zobrazenie všetkých dostupných plagátov a obrázkov na pozadí.
+
+Plugin teraz obsahuje:
+✅ Automatické vyhľadávanie EPG - automatické rozpoznanie aktuálneho programu
+✅ Rozšírené vyhľadávanie - filmy, seriály, herci, režiséri
+✅ Zoznamy populárnych/trendových - čo je práve teraz populárne
+✅ Prieskumník hercov - prieskum hereckého obsadenia
+✅ Série a epizódy - podrobný prehľad televíznych seriálov a epizód
+✅ Hodnotenia TMDB a IMDB - ďalšie informácie
+✅ Galéria pozadí - prehľad obrázkov na pozadí
+✅ Galéria plagátov - prehľad plagátov
+✅ Nastavenia - API kľúče, jazyk, vyrovnávacia pamäť
+
+🖼️ Stručný návod: Ako používať prehliadač plagátov a pozadí
+Nová galéria sa ľahko používa. Tu je stručný návod:
+
+Prístup do galérie:
+Po načítaní údajov o filme alebo seriáli stlačte tlačidlo MENU na diaľkovom ovládači.
+V ponuke vyberte možnosť 🖼️ Galéria pozadí alebo 🎬 Galéria plagátov.
+
+Navigácia v galérii:
+Na prechádzanie obrázkami použite ŽLTÉ a MODRÉ tlačidlo (alebo šípky doľava/doprava).
+
+ZELENÉ tlačidlo vás vráti späť na domovskú obrazovku alebo prepína medzi galériami pozadí a plagátov (ak sú k dispozícii).
+Stavový riadok v hornej časti zobrazuje, na ktorom obrázku sa nachádzate z celkového počtu (napr. „6/185“).
+
+Zatvorenie galérie:
+Stlačením ČERVENÉHO tlačidla alebo OK/Ukončiť sa vrátite na hlavnú obrazovku pluginu.
+
+💡 Tipy a poznámky
+Ukladanie do vyrovnávacej pamäte: Obrázky sa automaticky sťahujú a ukladajú do vami zvoleného priečinka vyrovnávacej pamäte (nastaveného v Nastaveniach). Tým sa zrýchli zobrazenie pri ich ďalšom otvorení.
+Nastavenia jazyka: V Nastaveniach môžete zmeniť jazyk popisov (jazyk). Toto ovplyvňuje aj jazyk údajov, ktoré získavate z databázy TMDB.
+Výkon: Ak plugin začne pracovať pomaly kvôli plnej vyrovnávacej pamäti, môžete ju vymazať cez MENU > Ďalšie možnosti > 🗑️ Vymazať vyrovnávaciu pamäť.
+Nová galéria je skvelým doplnkom, ktorý umožňuje používateľom naplno si vychutnať sledovanie vizuálneho obsahu filmu alebo seriálu.
+
+..:: CiefpSettings ::..
+
+
 ..:: CiefpTMDBSearch v1.0 ::..
 
 Vyhľadávajte filmy a seriály cez TMDB s plagátmi, popismi, hercami a hodnoteniami - v 14 jazykoch!

@@ -1,3 +1,127 @@
+...:: WebCamE2PrenjSF v1.1 ::...
+
+📦 Čo je nové vo verzii 1.1
+🎥 Prehrávač webovej kamery
+Režim webovej kamery - automatické prepínanie medzi kamerami s nastaviteľným časom (15-90 sekúnd)
+Mini Skin - elegantné zobrazenie aktuálnej a nasledujúcej kamery v dolnej časti obrazovky
+Prehrávanie jednej kamery - prehrávanie jednej kamery
+Režim zoznamu skladieb - prehrávanie všetkých kamier za sebou
+Prehrávanie odtiaľto - prehrávanie z vybranej kamery
+
+📺 Podpora rôznych formátov
+Streamy m3u8 - priame prehrávanie (HLS)
+Odkazy na YouTube - prostredníctvom extrakcie yt-dlp (formát YT-DLP://)
+Podpora pre typ služby 4097, 5001, 5002
+
+⚙️ Nastavenia
+Kvalita videa - Najlepšia, 4K, Full HD, HD Ready
+Nepriehľadnosť mini skinu - priehľadnosť od 0% do 100%
+Typ prehrávača médií - GStreamer, DVB Player, Exteplayer3, MoviePlayer
+Časový limit automatického prepínania webovej kamery - 15 až 90 sekúnd
+
+🔍 Prehliadač protokolov
+Protokol nefunkčných odkazov - zobrazenie všetkých nefunkčných odkazov
+Posúvanie - šípky na navigáciu v protokole
+Vymazať protokol - zelené tlačidlo na vymazanie
+Automatické zaznamenávanie všetkých nefunkčných odkazov (m3u8 a YouTube)
+
+📁 Vylepšenia rozhrania
+Lepšie menu so značkami a kamerami
+Zobrazenie verzie kytice v hlavnom okne
+Podpora loga
+
+🛠️ Technické vlastnosti
+Plugin Enigma2 - kompatibilný so všetkými zariadeniami Enigma2
+Podpora Python3 - funguje na všetkých verziách
+Nastavenia JSON - jednoduchá konfigurácia
+Vlákna - neblokuje používateľské rozhranie počas načítavania
+eTimer - presný čas pre automatické prepínanie
+
+📋 Použitie
+STIAHNUTIE - sťahuje a inštaluje najnovšiu kyticu z GitHubu
+NASTAVENIA - nastavenie kvality, prehrávača a časového limitu
+PREHĽADÁVATEĽ PROTOKOLOV - zobrazenie nefunkčných odkazov
+OK - výber kamery a režimu prehrávania
+
+Verzia 1.0 → sťahovanie zoznamov iba z GitHubu
+Verzia 1.1 → kompletný prehrávač webovej kamery so všetkými funkciami
+
+📋 Systém požiadavky
+Minimálne požiadavky
+Prijímač založený na Enigme2 (OpenPLi, OpenATV, OpenVision, VTi atď.)
+Python 2.7 alebo Python 3.x
+RAM: Minimálne 128 MB (odporúča sa 256 MB)
+Voľné miesto: ~10 MB pre plugin a závislosti
+
+Odporúčané požiadavky
+RAM: 512 MB alebo viac (pre veľké zoznamy skladieb s viac ako 2800 kamerami)
+Procesor: 600 MHz alebo rýchlejší (pre rýchlejšie načítavanie a spracovanie yt-dlp)
+Interná pamäť: 50 MB voľného miesta
+
+📦 Závislosti
+Popis závislostí
+Python 3.x (vstavaný do Enigmy2)
+enigma2 Core framework (vstavaný)
+json Pre nastavenia (vstavaný)
+subproces Pre spúšťanie externých nástrojov (vstavaný)
+threading Pre operácie na pozadí (vstavané)
+urllib/urllib2 Pre sťahovanie z GitHubu (vstavané)
+Voliteľné závislosti (potrebné pre YouTube) podpora)
+Závislosť Verzia Popis
+yt-dlp 2023.11.16 alebo novší Na extrakciu streamov YouTube
+ffmpeg 4.0 alebo novší Na spracovanie video/audio streamov
+Inštalácia voliteľných závislostí
+bash
+# Cez opkg (OpenATV, OpenPLi atď.)
+opkg update
+opkg install yt-dlp ffmpeg
+
+# Alebo manuálne cez pip
+pip install yt-dlp
+
+# Overenie inštalácie
+yt-dlp --version
+ffmpeg -version
+POZNÁMKA: Bez yt-dlp a ffmpeg odkazy na YouTube NEBUDÚ fungovať. Streamy m3u8 bez nich fungujú.
+
+📡 Podporované formáty streamu
+Poznámka k podpore formátu
+m3u8 (HLS) ✅ Úplné Priame prehrávanie cez prehrávač Enigma2
+YouTube ✅ Úplné Vyžaduje yt-dlp
+RTMP ⚠️ Čiastočné Závisí od prehrávača
+MP4 ✅ Úplné Priame prehrávanie
+TS ✅ Úplné Priame prehrávanie
+
+🎮 Podporované prehrávače
+Typ služby prehrávača Podpora Poznámka
+GStreamer 4097 ✅ Úplné Odporúčané
+DVB Player 5002 ✅ Úplné Pôvodný prehrávač Enigma2
+Exteplayer3 5001 ✅ Úplné Vyžaduje ServiceApp
+MoviePlayer 4097 ✅ Úplné Iba jedno prehrávanie
+
+📊 Výkon
+Scenár Čas načítania Využitie RAM
+Malý súbor (< 50 kamier) < 1 sekunda ~20 MB
+Stredný súbor (50-500 kamier) 1-3 sekundy ~30 MB
+Veľký súbor (> 500 kamier) 3-10 sekúnd ~50 MB
+Extrakcia z YouTube 5-30 sekúnd ~30 MB (dočasne)
+Automatické prepínanie < 1 sekunda Minimálne
+
+🔧 Odporúčané nastavenia
+Pre najlepší výkon:
+Kvalita videa: 720p alebo 1080p (v závislosti od výkonu zariadenia)
+Nepriehľadnosť Mini Skin: 30-50% (pre lepšiu viditeľnosť)
+Typ prehrávača médií: 4097 (GStreamer)
+Časový limit webkamery: 20-30 sekúnd
+
+Pre staršie/slabšie zariadenia:
+Kvalita videa: 720p
+Nepriehľadnosť Mini Skin: 0% (úplne priehľadná)
+Typ prehrávača médií: 5002 (DVB prehrávač)
+Časový limit webkamery: 30+ sekúnd
+
+..:: CiefpSettings ::..
+
 ..:: WebCamE2PrenjSF ::..
 
 Podpora py2 a py3

@@ -1,3 +1,148 @@
+🎉 CiefpYouTube v1.8 – Finale Version
+📋 Versionsbeschreibung
+CiefpYouTube v1.8 ist ein voll funktionsfähiger YouTube-Videobrowser und Download-Manager für Enigma2-Geräte.
+
+Diese Version bietet einen stabilen und vollständig integrierten Download-Manager, mit dem Sie YouTube-Inhalte einfach direkt auf Ihre Festplatte oder Ihr USB-Gerät herunterladen können.
+
+🆕 Wichtige neue Funktion – Download-Manager
+📥 YouTube Download-Manager (ytdownloader.py)
+Ein komplett neues Modul zur Verwaltung von YouTube-Downloads mit folgenden Funktionen:
+
+🎯 Hauptfunktionen:
+
+Doppelfenster:
+
+- Linkes Fenster: Wiedergabelisten
+
+- Rechtes Fenster: Ausgewählte Dateien
+Dateiauswahl:
+
+- Mit der OK-Schaltfläche (nicht grün) werden die Dateien ins rechte Fenster verschoben
+
+Download-Formate:
+
+- MP4 (Video)
+
+- MP3 (Audio) wird als m4a heruntergeladen
+
+🎵 Audioformate: MP3 vs. M4A
+M4A (MPEG-4 Audio)
+Ein moderneres Format (Apples AAC)
+Kleinere Dateigröße bei gleicher Qualität
+Bessere Qualität bei gleicher Bitrate
+Unterstützt auf allen modernen Geräten (Smartphones, Fernseher, PC)
+YouTube-eigenes Format – direkter Download ohne Qualitätsverlust
+
+MP3 (MPEG-1 Audio Layer 3)
+Älteres, aber Standardformat (seit …) 1993)
+Größere Dateigröße bei gleicher Qualität
+Kompatibel mit allen Geräten
+Ältere Autoradios müssen dies unterstützen
+
+Fortschrittsanzeige: Grafische Darstellung des Downloadfortschritts in Prozent
+Warteschlangensystem: Geordneter Download mehrerer Dateien mit Fortschrittsanzeige
+Wiedergabe & Download: Gleichzeitige Wiedergabe des ersten Videos und Download aller ausgewählten Videos
+Benutzerdefinierter Pfad: Downloadpfad in den Einstellungen festlegen
+
+🎮 Steuerung im Download-Manager:
+Tastenfunktion
+OK: Datei auswählen (linke Seite) / Datei entfernen (rechte Seite)
+LINKS/RECHTS: Fokus zwischen linker und rechter Seite wechseln
+HOCH/RUNTER: Durch Listen navigieren
+ROT (BEENDEN): Download-Manager beenden
+GRÜN (EINSTELLUNGEN): Downloadpfad festlegen
+GELB (DOWNLOAD): Ausgewählte Dateien herunterladen
+BLAU (WIEDERGABE + HERUNTERLADEN): Wiedergabe + Download
+
+📂 Download-Speicherort:
+Standard: /hdd/movie/YouTube_Downloads/
+
+Optionen in den Einstellungen:
+/hdd/movie/YouTube_Downloads/
+/hdd/YouTube_Downloads/
+/usb/movie/YouTube_Downloads/
+/media/hdd/YouTube_Downloads/
+
+Benutzerdefinierter Pfad (über die gelbe Schaltfläche in den Einstellungen)
+öffnet eine virtuelle Tastatur
+
+Möglicherweise füge ich in der nächsten Version die Konvertierung von m4a zu mp3 hinzu.
+
+..:: CiefpSettings ::..
+
+CiefpYouTube v1.3
+
+Neuerungen:
+
+🎥 Webcam-Player
+Spezieller Player zur Überwachung von Webcams aus der Benutzerdatei hinzugefügt
+Automatischer Kamerawechsel – automatischer Wechsel zur nächsten Kamera nach einer festgelegten Zeit (15, 20, 25, 30, 45 oder 60 Sekunden)
+Countdown – visuelle Anzeige der verbleibenden Sekunden bis zur nächsten Kamera
+Wiedergabewiederholung – automatische Rückkehr zur ersten Kamera nach der letzten
+Pause/Fortsetzen – Automatische Umschaltung pausieren
+Bouquet-Versionsanzeige – Informationen zur Webcam-Bouquet-Version auf dem Bildschirm
+
+🎬 Videoplayer (Einzelwiedergabe)
+Videoplayer als Option zum Abspielen einzelner Videos hinzugefügt
+Ideal für längere Videos (1–2 Stunden) dank zusätzlicher Steuerelemente
+Wiedergabesteuerung:
+
+1 – Wiedergabe/Pause
+3 – Stopp
+4 – Zurückspulen
+6 – Vorspulen
+7 – Vorheriges Kapitel
+9 – Nächstes Kapitel
+0 – Info
+
+Playlists verwenden weiterhin den stabilen DVB-Player – kein Einfrieren
+
+⚙️ Einstellungen
+Neue Option in den Einstellungen: Timeout für automatische Webcam-Umschaltung (15–60 Sekunden)
+Neue Option in den Einstellungen: Mediaplayer-Typ mit klarer Beschreibung, welcher Player wofür verwendet wird
+
+🛠️ Fehlerbehebungen und Verbesserungen
+Anzeige der verbleibenden Zeit für Musik-Playlists korrigiert
+Doppelte Funktionen für einen stabileren Betrieb entfernt
+Verbessertes Wechseln zwischen Titeln in Playlists
+Bessere Erkennung des Videoendes
+
+Voraussetzungen:
+Python 3.x
+yt-dlp installiert (opkg install yt-dlp oder pip install yt-dlp)
+(Optional) ServiceApp für Exteplayer3-Unterstützung
+
+CiefpYouTube v1.3 – YouTube-Videobrowser für Enigma2
+
+© 2026 Ciefp
+
+...:: CiefpYouTube v1.2 ::...
+
+Update: FHD-Unterstützung
+FHD-Wiedergabe von Full-HD-Videos (1080p)
+Komponenten: Status
+Suche und Kategorien: Funktioniert
+Einzelvideo (FHD): Funktioniert
+Playlist mit Mini-Skin: Funktioniert
+Countdown: Funktioniert
+Ladeanzeige für den nächsten Song: Funktioniert
+JSON-Playlist-Speicherung: Funktioniert
+Benutzer-/Live-Kanäle: Funktioniert
+Webcam-Bouquet: Funktioniert
+Protokoll defekter Links: Funktioniert
+
+🚀 Pläne für Version 1.3 (zukünftig):
+4K über offizielles YouTube Plugin – nur für die Wiedergabe einzelner Dateien
+FHD bleibt für Wiedergabelisten und Mini-Skin erhalten
+Offizielles Plugin unterstützt keine Wiedergabelisten
+
+Webcam funktioniert nur manuell beim Start einer Wiedergabeliste
+Automatischer Kamerawechsel funktioniert derzeit nicht
+
+Verbesserte Stabilität
+Zusätzliche Suchoptionen
+
+
 🎵 CiefpYouTube v1.0 – YouTube Jukebox Player
 CiefpYouTube ist ein fortschrittliches Enigma2-Plugin, das YouTube-Musik- und Videostreaming in ein echtes,
 automatisches Jukebox-Erlebnis verwandelt. Im Gegensatz zu ressourcenhungrigen und langsamen Playern ist dieses Plugin maximal für schnelle Reaktionszeiten,

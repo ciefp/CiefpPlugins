@@ -1,4 +1,140 @@
+🎉 CiefpYouTube v1.8 - Final Release
+📋 Version Description
+CiefpYouTube v1.8 is a fully functional YouTube video browser and download manager for Enigma2 devices.
+This version brings a stable and fully integrated Download Manager that allows easy downloading of YouTube content directly to your HDD or USB device.
 
+🆕 Major new functionality - Download Manager
+📥 YouTube Download Manager (ytdownloader.py)
+A completely new module for managing YouTube content downloads with the following capabilities:
+
+🎯 Main features:
+
+Double panel:
+- Left panel shows playlists,
+- Right panel shows selected files
+File selection:
+- With the OK button (not green) - files are moved to the right panel
+
+Download formats:
+- MP4 (video)
+- MP3 (audio) is downloaded as m4a
+
+🎵 Audio formats: MP3 vs M4A
+M4A (MPEG-4 Audio)
+A more modern format (Apple's AAC)
+Smaller file size for the same quality
+Better quality at the same bitrate
+Supported on all modern devices (smartphones, TV, PC)
+YouTube native format - downloads directly, no quality loss
+
+MP3 (MPEG-1 Audio Layer 3)
+Older, but standard format (since 1993)
+Larger file size for the same quality
+Compatible with absolutely all devices
+Older car stereos must support it
+
+Progress bar.......Graphical display of download progress with percentages
+Queue system.......Orderly download of multiple files with progress display
+Play & Download....Simultaneous playback of the first video and download of all selected
+Custom path.....Setting the download path through Settings
+
+🎮 Controls in Download Manager:
+Button Function
+OK................................Selects file (left panel) / Removes file (right panel)
+LEFT/RIGHT...........Switch focus between left and right panels
+UP/DOWN..............Navigate through lists
+RED (EXIT)..........Exit from Download Manager
+GREEN (SETTINGS).....Setting the download path
+YELLOW (DOWNLOAD)......Download selected files
+BLUE (PLAY+DOWNLOAD).Play + download
+
+📂 Download location:
+Default: /hdd/movie/YouTube_Downloads/
+
+Options in Settings:
+/hdd/movie/YouTube_Downloads/
+/hdd/YouTube_Downloads/
+/usb/movie/YouTube_Downloads/
+/media/hdd/YouTube_Downloads/
+
+Custom path (via the yellow button in Settings)
+opens a virtual keyboard
+
+Maybe in the next version I will add conversion from m4a to mp3
+
+..:: CiefpSettings ::..
+
+CiefpYouTube v1.3
+
+What's new:
+
+🎥 WebCam Player
+Added a special player for monitoring webcams from the userbouquet file
+Auto-switch camera - automatic switching to the next camera after a set time (15, 20, 25, 30, 45 or 60 seconds)
+Countdown - visual display of the remaining seconds until the next camera
+Loop mode - automatic return to the first camera after the last one
+Pause/Resume - possibility to pause auto-switch
+Bouquet version display - information about the WebCam bouquet version on the screen
+
+🎬 Movie Player (Single Play Only)
+Added MoviePlayer as an option for playing single videos
+Ideal for longer videos (1-2 hours) due to additional controls
+Playback controls:
+
+1 - Play/Pause
+3 - Stop
+4 - Rewind
+6 - Fast forward
+7 - Previous chapter
+9 - Next chapter
+0 - Info
+
+Playlists still use the stable DVB Player - no risk of freezing
+
+⚙️ Settings
+New option in Settings: Webcam Auto-Switch Timeout (15-60 seconds)
+New option in Settings: Media Player Type with clear description of which player is for what
+
+🛠️ Bugs and improvements
+Fixed remaining time display for music playlists
+Removed duplicate functions for more stable operation
+Improved switching between songs in playlists
+Better detection of the end of a video
+
+Requirements:
+Python 3.x
+yt-dlp installed (opkg install yt-dlp or pip install yt-dlp)
+(Optional) ServiceApp for Exteplayer3 support
+
+CiefpYouTube v1.3 - YouTube Video Browser for Enigma2
+
+© 2026 Ciefp
+
+...:: CiefpYouTube v1.2 ::...
+
+Update FHD support
+FHD playback Full HD 1080p videos
+Component.................................Status
+Search and categories............✅ Working
+Single video (FHD)..............✅ Working
+Playlist with mini skin.........✅ Working
+Countdown.............✅ Working
+Loading next song message..........✅ Working
+JSON playlist saving..........✅ Working
+User/Live Channels...............✅ Working
+WebCam bouquet................................✅ Working
+Broken links log................✅ Working
+
+🚀 Plans for version 1.3 (future)
+4K via official YouTube plugin - only for playing a single file
+FHD remains for playlists and mini skin
+official plugin does not support playlists
+
+Webcam only works manually when playlist is started
+currently does not work automatic switching from camera to other camera
+
+Improved stability
+Additional search options
 
 🎵 CiefpYouTube v1.0 – YouTube Jukebox Player
 CiefpYouTube is an advanced Enigma2 plugin created to elevate YouTube music and video streaming to a true,

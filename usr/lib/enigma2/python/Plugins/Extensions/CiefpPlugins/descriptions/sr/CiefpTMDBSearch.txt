@@ -1,3 +1,122 @@
+CiefpTMDBSearch v2.5 
+
+Šta je novo:
+🎬 Trailer Support
+Mogućnost pregleda trejlera za filmove i serije direktno iz plugina
+Automatsko dohvatanje YouTube trejlera sa TMDB API-ja
+Reprodukcija preko yt-dlp i Enigma2 player-a
+
+🎮 Brzo pokretanje
+INFO dugme - direktno puštanje trejlera
+HELP dugme - alternativni način za pokretanje
+MENU → "Watch Trailer" opcija
+
+📺 Poboljšan prikaz
+Prikaz naziva u player-u: "Naziv filma - Trailer" (umesto index.m3u8)
+Obaveštenje u gornjem desnom uglu: "▶ Trailer available - Press MENU, INFO or HELP to watch"
+
+🔧 Tehnička unapređenja
+Korišćenje yt-dlp za dobijanje direktnog URL-a za streaming
+Podrška za različite Enigma2 sisteme (OpenATV, OpenPLi, itd.)
+Asinhrono dohvatanje trejlera (ne usporava prikaz informacija)
+
+Ukratko: v2.5 donosi mogućnost gledanja trejlera direktno iz plugina, 
+sa brzim pristupom preko INFO/HELP dugmeta i lepim prikazom naziva. 🎬
+
+..:: CiefpSettings ::..
+
+
+
+
+CiefpTMDBSearch Plugin - Verzija 2.3 - Izmene i Dodaci
+
+🎯 Glavne poboljšanja u verziji 2.3:
+1. Proširen prikaz rezultata sa 20 na 40
+- Popular Movies - sada prikazuje 40 umesto 20 filmova
+- Popular Series - sada prikazuje 40 umesto 20 serija
+- Popular Persons - sada prikazuje 40 umesto 20 osoba
+- Top Rated Movies - sada prikazuje 40 umesto 20 filmova
+- Top Rated Series - sada prikazuje 40 umesto 20 serija
+- Upcoming Movies - sada prikazuje 40 umesto 20 filmova
+- Trending All - sada prikazuje 20 ne podržava više
+
+📊 2. Dodate NOVE kategorije (sa 40 rezultata)
+- Now Playing Movies - filmovi koji se trenutno prikazuju u bioskopima
+- TV On The Air - serije koje se trenutno emituju
+- TV Airing Today - serije koje se emituju danas
+
+🚀 Optimizacije:
+Brzina i stabilnost:
+Asinhroni download - slike se preuzimaju u pozadini
+Cache sistem - downloadovane slike se keširaju za brži pristup
+Dupli API pozivi - paralelno učitavanje 2 stranice za 40 rezultata
+Error handling - robustna obrada grešaka bez kočenja
+Memory optimization - efikasno upravljanje memorijom
+
+UI/UX poboljšanja:
+Prikaz broja rezultata - svaki ChoiceBox sada prikazuje broj rezultata
+Detaljne informacije - rating, godine, zvezdice za ocenu
+Konzistentan format - sve kategorije imaju isti stil prikaza
+Navigacija - jednostavna navigacija strelicama
+
+🔧 Kompatibilnost:
+Testirano na: VU+ Zero 4K sa OpenATV 7.6
+API kompatibilnost: TMDB API v3
+Enigma2 verzije: Kompatibilno sa svim modernim E2 verzijama
+Plugin sistemi: OpenATV, OpenPLi, OpenBH, VTI itd.
+
+📈 Performanse:
+Vreme učitavanja 40 rezultata: ~2-4 sekunde
+Memorijska upotreba: Optimizovano za set-top box uređaje
+Network overhead: Minimizovan broj API poziva
+Cache efikasnost: Automatsko čišćenje nepotrebnih slika
+
+..:: CiefpSettings ::..
+
+
+
+📊 CiefpTMDBSearch 2.1
+Novo:
+Sezone i epizode ,plugin sada za serije može da prikazuje sve sezone i njihove epizode.
+Plugin sada ima i galeriju za prikazivanje svih dostupnih postera i pozadinskih slika. 
+
+Plugin sada ima:
+✅ Auto EPG pretragu - automatsko prepoznavanje trenutnog programa
+✅ Naprednu pretragu - filmovi, serije, glumci, režiseri
+✅ Popularne/Trending liste - šta je trenutno popularno
+✅ Cast Explorer - istraživanje glumačke ekipe
+✅ Sezone i epizode - detaljni pregled TV serija i epizoda
+✅ TMDB i IMDB ocene - dodatne informacije
+✅ Backdrop Gallery - pregled pozadinskih slika 
+✅ Poster Gallery - pregled postera 
+✅ Postavke - API ključevi, jezik, keš
+
+🖼️ Kratko uputstvo: Kako koristiti preglednik postera i backdrop-a
+Nova galerija je jednostavna za korištenje. Evo kratkog vodiča:
+
+Pristup galeriji:
+Nakon što učitate podatke o filmu ili seriji, pritisnite MENU dugme na daljinskom upravljaču.
+U izborniku izaberite opciju 🖼️ Backdrop Gallery ili 🎬 Poster Gallery.
+
+Navigacija kroz galeriju:
+Koristite ŽUTO i PLAVO dugme (ili strelice lijevo/desno) da se krećete kroz slike.
+
+ZELENO dugme vas vraća na početni ekran ili prebacuje između backdrop i poster galerije (ako je moguće).
+Statusna linija pri vrhu pokazuje koja ste slika od ukupno koliko (npr., "6/185").
+
+Zatvaranje galerije:
+Pritisnite CRVENO dugme ili OK/Exit da se vratite na glavni ekran plugina.
+
+💡 Savjeti i napomene
+Keširanje: Slike se automatski preuzimaju i spašavaju u vaš odabrani cache folder (podešava se u Settings). Ovo ubrzava prikaz prilikom sljedećeg otvaranja.
+Podešavanje jezika: U Settings možete promijeniti jezik za opise (language). Ovo utiče i na jezik podataka koje dobijate od TMDB baze.
+Performance: Ako plugin počne sporije da radi zbog punog keša, možete ga očistiti preko MENU > More Options > 🗑️ Clear Cache.
+Nova galerija je odličan dodatak koji korisnicima omogućava potpuno iskustvo pregledavanja vizuelnog sadržaja filma ili serije.
+
+..:: CiefpSettings ::..
+
+
+
 ..:: CiefpTMDBSearch v1.0 ::..
 
 Pretraga filmova i serija preko TMDB-a sa posterima, opisima, glumcima i ocenama – na 14 jezika!

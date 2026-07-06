@@ -1,3 +1,129 @@
+...:: WebCamE2PrenjSF v1.1 ::...
+
+📦 Neuerungen in Version 1.1
+
+🎥 Webcam-Player
+Webcam-Modus – Automatischer Wechsel zwischen Kameras mit einstellbarer Zeit (15–90 Sekunden)
+Mini-Skin – Elegante Anzeige der aktuellen und nächsten Kamera am unteren Bildschirmrand
+Einzelwiedergabe – Wiedergabe einer einzelnen Kamera
+Playlist-Modus – Wiedergabe aller Kameras nacheinander
+Ab hier abspielen – Wiedergabe der ausgewählten Kamera
+
+📺 Unterstützung verschiedener Formate
+m3u8-Streams – Direktwiedergabe (HLS)
+YouTube-Links – via yt-dlp-Extraktion (YT-DLP://-Format)
+Unterstützung für die Diensttypen 4097, 5001 und 5002
+
+⚙️ Einstellungen
+Videoqualität – Beste, 4K, Full HD, HD Ready
+Mini-Skin-Deckkraft – 0 % bis 100 % Transparenz
+Mediaplayer-Typ – GStreamer, DVB Player, Exteplayer3, MoviePlayer
+Timeout für automatischen Webcam-Wechsel 15 bis 90 Sekunden
+
+🔍 Log-Viewer
+Defekte Links – Alle defekten Links anzeigen
+Scrollen – Pfeile zur Navigation im Log
+Log löschen – Grüne Schaltfläche zum Löschen
+Automatische Protokollierung aller defekten Links (m3u8 und YouTube)
+
+📁 Verbesserte Benutzeroberfläche
+Verbessertes Menü mit Markierungen und Kameras
+Anzeige der Bouquet-Version im Hauptfenster
+Logo-Unterstützung
+
+🛠️ Technische Merkmale
+Enigma2-Plugin – Kompatibel mit allen Enigma2-Geräten
+Python3-Unterstützung – Funktioniert mit allen Versionen
+JSON-Einstellungen – Einfache Konfiguration
+Threading – Blockiert die Benutzeroberfläche nicht während des Ladens
+eTimer – Präzise Zeit für den automatischen Wechsel
+
+📋 Verwendung
+DOWNLOAD – Lädt das neueste Bouquet von GitHub herunter und installiert es
+EINSTELLUNGEN – Qualität, Player und Timeout anpassen
+LOG-VIEWER – Defekte Links anzeigen
+OK – Kamera und Wiedergabemodus auswählen
+
+Version 1.0 → Nur Download-Listen von GitHub
+Version 1.1 → Vollständige Webcam-Unterstützung Player mit allen Funktionen
+
+📋 Systemvoraussetzungen
+Minimale Anforderungen
+Enigma2-basierter Empfänger (OpenPLi, OpenATV, OpenVision, VTi usw.)
+Python 2.7 oder Python 3.x
+Arbeitsspeicher: Mindestens 128 MB (256 MB empfohlen)
+Freier Speicherplatz: ca. 10 MB für Plugins und Abhängigkeiten
+
+Empfohlene Anforderungen
+Arbeitsspeicher: 512 MB oder mehr (für große Wiedergabelisten mit über 2800 Kameras)
+Prozessor: 600 MHz oder schneller (für schnelleres Laden und yt-dlp-Verarbeitung)
+Interner Speicher: 50 MB freier Speicherplatz
+
+📦 Abhängigkeiten
+Abhängigkeiten Beschreibung
+Python 3.x (in Enigma2 integriert)
+Enigma2-Kernframework (integriert)
+json für Einstellungen (integriert)
+subprocess zum Ausführen externer Tools (integriert)
+threading für Hintergrundprozesse (integriert)
+urllib/urllib2 für Download von GitHub (integriert)
+Optionale Abhängigkeiten (für YouTube-Unterstützung erforderlich)
+Abhängigkeit Version Beschreibung
+yt-dlp 2023.11.16 oder höher Zum Extrahieren von YouTube-Streams
+ffmpeg 4.0 oder höher Zur Verarbeitung von Video-/Audio-Streams
+Installieren optionaler Abhängigkeiten
+bash
+# Über opkg (OpenATV, OpenPLi usw.)
+opkg update
+opkg install yt-dlp ffmpeg
+
+# Oder manuell über pip
+pip install yt-dlp
+
+# Installation überprüfen
+yt-dlp --version
+ffmpeg --version
+HINWEIS: Ohne yt-dlp und ffmpeg funktionieren YouTube-Links NICHT. m3u8-Streams funktionieren auch ohne diese.
+
+📡 Unterstützte Stream-Formate
+Formatunterstützungshinweis
+m3u8 (HLS) ✅ Vollständig Direkte Wiedergabe über den Enigma2-Player
+YouTube ✅ Vollständig Erfordert yt-dlp
+RTMP ⚠️ Teilweise Abhängig vom Player
+MP4 ✅ Vollständig Direkte Wiedergabe
+TS ✅ Vollständig Direkte Wiedergabe
+
+🎮 Unterstützte Player
+Player | Diensttyp | Unterstützungshinweis
+GStreamer 4097 ✅ Vollständig Empfohlen
+DVB Player 5002 ✅ Vollständig Original Enigma2-Player
+Exteplayer3 5001 ✅ Vollständig Erfordert ServiceApp
+MoviePlayer 4097 ✅ Vollständig Nur Einzelwiedergabe
+
+📊 Leistung
+Szenario | Ladezeit | RAM-Auslastung
+Kleines Bouquet (< 50 Kameras) < 1 Sekunde | ~20 MB
+Mittleres Bouquet (50–500 Kameras) 1–3 Sekunden | ~30 MB
+Großes Bouquet (> 500 Kameras) Kameras) 3–10 Sekunden ~50 MB
+YouTube-Extraktion 5–30 Sekunden ~30 MB (temporär)
+Automatische Umschaltung < 1 Sekunde Minimum
+
+🔧 Empfohlene Einstellungen
+Für optimale Leistung:
+Videoqualität: 720p oder 1080p (abhängig von der Geräteleistung)
+Mini-Skin-Deckkraft: 30–50 % (für bessere Sichtbarkeit)
+Mediaplayer-Typ: 4097 (GStreamer)
+Webcam-Timeout: 20–30 Sekunden
+
+Für ältere/leistungsschwächere Geräte:
+Videoqualität: 720p
+Mini-Skin-Deckkraft: 0 % (vollständig transparent)
+Mediaplayer-Typ: 5002 (DVB-Player)
+Webcam-Timeout: 30+ Sekunden
+
+..:: CiefpSettings ::..
+
+
 ..:: WebCamE2PrenjSF ::..
 
 py2- und py3-Unterstützung

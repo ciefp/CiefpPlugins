@@ -1,3 +1,57 @@
+CiefpVideoPlayer v1.5 
+
+- WebcamPlayer dodatak
+Opis nove funkcionalnosti
+WebcamPlayer je nova komponenta u CiefpVideoPlayer v1.5 koja omogućava pregled
+i reprodukciju webcam streamova iz postojećih Enigma2 userbouquet fajlova.
+
+Šta je novo?
+Automatsko prepoznavanje webcam buketa - Plugin automatski detektuje sve userbouquet fajlove koji sadrže webcam-ove 
+prepoznaje po nazivima fajlova kao što su:
+- userbouquet.web_cam____prenj___.tv, 
+- userbouquet.ciefpsettings_iptv_webcam.tv 
+- ili bilo koji fajl koji sadrži reč "webcam" ili "prenj")
+
+Podrška za više formata streamova - Radi i sa:
+#SERVICE 5002:... (exteplayer3)
+#SERVICE 4097:... (standardni Enigma2 player)
+#SERVICE 1:... (klasični servisi)
+
+
+Dva načina reprodukcije:
+Single play - pušta samo jedan webcam
+Playlist play - pušta sve webcam-ove redom (automatsko prebacivanje)
+
+Mini player sa automatskim prebacivanjem - Kada se pokrene playlist, pojavljuje se mali transparentni player na vrhu ekrana koji prikazuje:
+Trenutni webcam koji se pušta
+Sledeći webcam u nizu
+Odbrojavanje do sledeće kamere
+Broj kamere (npr. "Camera: 5 of 120")
+
+Kontrole tokom reprodukcije:
+OK taster - pauzira automatsko prebacivanje
+▲/▼ tasteri - ručno prebacivanje na prethodnu/sledeću kameru
+EXIT taster - izlaz iz plejliste
+
+Podesivo vreme trajanja
+- Korisnik može podesiti koliko sekundi će se svaki webcam prikazivati pre nego što se automatski pređe na sledeći (15, 20, 25, 30, 40 ili 60 sekundi)
+- Podesiva transparentnost mini skin-a - Može se podesiti providnost mini playera (20%, 30%, 50%, 80% ili 100%)
+
+Kako se pokreće?
+Postoje dva načina za pokretanje WebcamPlayer-a:
+Preko GREEN tastera (Local) → izaberete "Webcam Player" iz menija
+Preko YELLOW tastera (Network) → izaberete "Webcam Player" iz menija
+Zatim se prikaže lista svih pronađenih webcam buketa, izaberete željeni i otvara se glavni WebcamPlayer ekran.
+
+Automatsko prebacivanje omogućava praćenje više kamera bez ručnog prebacivanja
+YouTube linkovi se automatski ignorišu (ne mogu se puštati preko standardnog playera)
+Podržava i stare i nove formate userbouquet fajlova
+
+Verzija
+CiefpVideoPlayer v1.5 - WebcamPlayer dodatak
+Jun 2026.
+
+
 
 # CiefpVideoPlayer v1.3
 

@@ -1,0 +1,93 @@
+CiefpE2editor Plugin - Opis
+
+Ovo je 40 moj plugin koji sam napravio u saradnji sa veštačkom inteligenciom.
+Opis: CiefpE2editor je moćan, sveobuhvatan Enigma2 alat razvijen u potpunosti u Full HD (1920x1080) rezoluciji. 
+Inspirisan legendarnim PC softverom Dreamboxedit, ovaj plugin donosi napredno upravljanje kanalima, 
+buketima i transponderima direktno na tvoj risiver, eliminišući potrebu za računarom.
+Plugin objedinjuje nekoliko moćnih modula unutar jednog grafičkog interfejsa, 
+omogućavajući potpunu kontrolu nad lamedb bazom i korisničkim listama bez potrebe za računarom. 
+
+🚀 Glavne Karakteristike i Funkcionalnosti
+1. Tro-panelni Glavni Editor (Glavni ekran)
+Preglednost na jednom mestu: Ekran je podeljen na tri funkcionalna panela visoke rezolucije (FHD): 
+Service (Svi kanali iz lamedb), Channels (Kanali unutar aktivnog buketa) i Bouquets (Lista vaših buketa).  
+
+1. Glavni Editor (CiefpE2editorMain)
+Trostruki panel prikaz:
+Levo: Lista svih servisa (kanala)
+Sredina: Kanali u aktivnom buketu
+Desno: Lista buketa
+
+Filteri za kanale:
+Po satelitu (svi sateliti, pojedinačni sateliti, terrestrial)
+Po tipu (TV, Radio)
+Po rezoluciji (SD, HD H.264, HD H.265, UHD)
+Po provajderu
+Novi kanali (flag X)
+
+Upravljanje kanalima:
+Kopiranje kanala u aktivni buket
+Brisanje kanala iz liste
+Čuvanje i reload podešavanja
+
+2. Channel Editor (CiefpChannelEditor)
+Move/Delete operacije nad kanalima
+Selektovanje grupa kanala ispod markera
+Pomeranje kanala gore/dole (drag-and-drop)
+Čuvanje promena u buketu
+
+3. Bouquet Editor (CiefpBouquetEditor)
+Upravljanje buketima (kreiranje, brisanje, pomeranje)
+Otvaranje Channel Editora za selektovani buket
+
+4. Channel Manager (CiefpChannelManager)
+Preuzimanje settingsa sa GitHub-a
+Kopiranje i instalacija buketa
+Automatsko preuzimanje najnovijih listi
+
+5. Settings Downloader (CiefpSettingsDownloaderScreen)
+Preuzimanje gotovih kanal-list sa GitHub repozitorijuma
+Podržava više od 15 različitih satelitskih kombinacija:
+Od 1 satelita (19E) do 18 satelita
+Pokriva sve popularne satelite: 42E, 39E, 28E, 23E, 19E, 16E, 13E, 9E, 0.8W, 4W, 5W, 30W, itd.
+Motorna lista kanala raspon 80.0E - 34.0W
+
+6. Satellite Selector (CiefpSelectSatellite)
+Selektovanje satelita za instalaciju
+Automatsko mapiranje satelita na odgovarajuće bouquet fajlove
+Kopiranje i instalacija selektovanih satelita
+Podržava preko 40 različitih satelitskih pozicija
+
+7. Satellites.xml Editor (CiefpSatelliteXmlReader/Editor)
+Pregled i editovanje satellites.xml fajla
+Dodavanje i brisanje transpondera
+Editovanje svih parametara transpondera:
+Frekvencija, Symbol Rate
+Polarisacija, FEC
+DVB-S/S2 sistem
+Modulacija (QPSK, 8PSK, 16APSK, 32APSK)
+Multistream (IS, PLS mod/code)
+T2-MI podrška
+
+8. Whitelist Streamrelay (WhitelistScreen)
+Generisanje whitelist_streamrelay fajla
+Automatsko parsiranje buketa za Streamrelay kanale
+Filter za isključivanje neželjenih referenci
+
+Tehničke Specifikacije
+Karakteristika	Detalji
+Verzija	1.9.1
+Skrin rezolucija	Full HD (1920x1080)
+Podržani fajlovi	lamedb, bouquets.tv, satellites.xml, userbouquet.*.tv
+GitHub integracija	Automatsko preuzimanje lista
+Debug	Log fajl: /tmp/ciefp_e2editor_debug.log
+
+Dugmad i Navigacija:
+📂 Struktura prečica na daljinskom (Glavni ekran):
+🔴 Crveno: Izlaz (Exit)  
+🟢 Zeleno: Izbor satelita (Filter)  
+🟡 Žuto: Napredni meni sa filterima (TV, Radio, SD, HD, UHD, Provajderi...)  
+🔵 Plavo: Brzi izbor i učitavanje buketa  
+⚙️ MENU: Otvaranje glavnog menija sa svim dodatnim modulima i editorima.  
+
+..:: CiefpSettings ::..

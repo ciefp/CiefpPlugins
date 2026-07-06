@@ -1,3 +1,102 @@
+..:: CiefpVibes v2.3 ::..
+
+Čo je nové vo verzii 2.3
+🛰️ Satelitné rádio (lamedb)
+Priame čítanie rozhlasových staníc z databázy /etc/enigma2/lamedb
+Podporované typy: 2 (Rádio), A (10 - rozšírený kodek)
+Presné polohy satelitov zo súboru satellites.xml
+Triedenie satelitov: Východ → ​​Západ
+Zobrazenie počtu staníc na satelit
+
+📡 EPG (Elektronický programový sprievodca)
+EPG v zozname - vedľa názvu stanice sa zobrazuje aktuálny program
+EPG na infobare - aktuálny program s názvom stanice
+Automatická aktualizácia EPG každé 2 sekundy
+
+📻 RDS (Radio Data System)
+Zobrazenie textu RDS na infobare (aktuálna skladba/relácia)
+Automatická aktualizácia RDS
+Podpora pre rdsDecoder (OpenATV 7.x a vyšší)
+
+🎨 Vylepšenia používateľského rozhrania
+Zväčšená obrazovka pre satelitné rádio (1300x900)
+Pridaný obrázok na pravá strana
+Lepšie zobrazenie zoznamu satelitov a staníc
+
+Kompletné funkcie pluginu:
+Popis funkcie
+🎵 Lokálne MP3/FLAC/M4A Priame prehrávanie zvukových súborov
+🌐 Online streamy HTTP/HTTPS streamy
+📡 Satelitné rádio (DVB) Čítanie z lamedb + EPG + RDS
+🖥️ Sieť (SMB/NFS) Zdieľané sieťové disky
+📱 FTP (Android/Telefón) Pripojenie k FTP serveru
+📂 OpenDirectory Prehliadač OpenDirectory
+🖼️ Obal albumov Automatické načítanie obalov
+📻 Zobrazenie RDS Systém rádiových dát
+📺 Zobrazenie EPG Elektronický programový sprievodca
+🎨 10 pozadí Rôzne pozadia
+🖼️ 10 plagátov Rôzne zástupné symboly plagátov
+📊 10 informačných panelov Rôzne informačné panely
+
+Ako používať satelitné rádio:
+Spustite CiefpVibes
+Stlačte PRIEČINOK (zelené tlačidlo)
+Vyberte "📻 Satelitné rádio (lamedb)"
+Vyberte satelit
+Vyberte rádio stanica
+
+Príjemné používanie! CiefpVibes 🎶
+
+Poznámky k vydaniu CiefpVibes v2.2
+
+Nový modul: OpenDirectory Downloader
+Bol pridaný úplne nový modul na sťahovanie hudby zo serverov OpenDirectory!
+
+Čo je OpenDirectory?
+
+Verejné servery, ktoré zdieľajú hudobné súbory (MP3, FLAC, M4A atď.)
+Jednoduché prehliadanie a sťahovanie bez zložitých API
+
+Funkcie:
+🌐 Prehliadanie servera OpenDirectory - načítanie URL adries zo súboru opendir.txt
+📁 Navigácia v priečinkoch - jednoduchá navigácia v adresároch
+🎵 Výber súborov - pridanie jednotlivých skladieb alebo celého priečinka naraz
+⬇️ Správca sťahovania - sťahovanie súborov MP3, FLAC, M4A, AAC, WAV, OGG
+
+📊 Ukazovateľ priebehu - vizuálne zobrazenie priebehu sťahovania
+💾 Prispôsobiteľná cesta - výber miesta, kam sa stiahnuté súbory uložia
+
+Ako používať:
+Pridajte URL adresy OpenDirectory do súboru:
+/usr/lib/enigma2/python/Plugins/Extensions/CiefpVibes/opendir.txt
+Spustite CiefpVibes → Súbory online → OpenDirectory Downloader
+
+Navigácia:
+OK - vstup do priečinka / pridanie súboru
+Modré tlačidlo - Vybrať všetko (pridá všetky súbory z priečinka)
+Žlté tlačidlo - Stiahnuť (stiahne vybrané súbory)
+Zelené tlačidlo - Nastavenia (nastaviť cestu)
+
+Vylepšenia:
+Automatické čistenie názvov súborov (odstraňuje podčiarkovníky, duplicitné prípony)
+Inteligentné pomenovanie (napr. A-Ha_-_Take_On_Me.mp3 → A-Ha - Take On Me.mp3)
+
+Zaznamenávanie všetkých aktivít sťahovania
+Rýchly výber všetkých súborov z priečinka (bez rekurzívneho skenovania)
+
+Požiadavky:
+Python 3
+beautifulsoup4 (voliteľné, pre lepšiu analýzu)
+Inštalácia:
+opkg install python3-beautifulsoup4
+
+V skratke:
+teraz si môžete priamo sťahovať hudbu z verejných serverov OpenDirectory priamo do svojho zariadenia Enigma2! 🎵
+
+..:: CiefpVibes - Pocíťte vibrácie ::..
+
+
+
 ..:: CiefpVibes v1.0 ::..
 - Doplnok Enigma2 Music Jukebox
 

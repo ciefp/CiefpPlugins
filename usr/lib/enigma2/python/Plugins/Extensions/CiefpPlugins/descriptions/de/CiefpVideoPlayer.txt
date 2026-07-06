@@ -1,3 +1,63 @@
+
+CiefpVideoPlayer v1.5
+
+- WebcamPlayer-Plugin
+Beschreibung der neuen Funktionen
+WebcamPlayer ist eine neue Komponente in CiefpVideoPlayer v1.5, die das Anzeigen und Abspielen von Webcam-Streams aus bestehenden Enigma2-Benutzerdateien ermöglicht.
+
+Was ist neu?
+
+Automatische Webcam-Bouquet-Erkennung – Das Plugin erkennt automatisch alle Benutzerbouquet-Dateien mit Webcams. Die Dateinamen sind beispielsweise:
+
+- userbouquet.web_cam____prenj___.tv,
+
+- userbouquet.ciefpsettings_iptv_webcam.tv
+
+- oder jede Datei, die das Wort „Webcam“ oder „Prenj“ enthält.
+
+Unterstützung mehrerer Stream-Formate – Kompatibel mit:
+
+#SERVICE 5002:... (exteplayer3)
+
+#SERVICE 4097:... (Standard-Enigma2-Player)
+
+#SERVICE 1:... (klassische Dienste)
+
+Zwei Wiedergabemodi:
+
+Einzelwiedergabe – Wiedergabe einer einzelnen Webcam
+
+Playlist-Wiedergabe – Wiedergabe aller Webcams nacheinander (automatischer Wechsel)
+
+Mini-Player mit automatischem Wechsel – Beim Start einer Playlist erscheint oben auf dem Bildschirm ein kleiner, transparenter Player mit folgenden Informationen:
+Aktuell wiedergegebene Webcam
+Nächste Webcam in der Reihenfolge
+Countdown zur nächsten Kamera
+Kameranummer (z. B. „Kamera: 5 von …“) 120")
+
+Wiedergabesteuerung:
+OK-Taste – pausiert die automatische Umschaltung
+▲/▼-Tasten – manuell zur vorherigen/nächsten Kamera wechseln
+EXIT-Taste – Wiedergabeliste verlassen
+
+Einstellbare Anzeigedauer
+
+– Der Benutzer kann festlegen, wie viele Sekunden jede Webcam angezeigt wird, bevor automatisch zur nächsten gewechselt wird (15, 20, 25, 30, 40 oder 60 Sekunden).
+
+– Einstellbare Transparenz des Mini-Players – Die Transparenz des Mini-Players kann eingestellt werden (20 %, 30 %, 50 %, 80 % oder 100 %).
+
+So starten Sie WebcamPlayer:
+WebcamPlayer kann auf zwei Arten gestartet werden:
+Über die GRÜNE Taste (Lokal) → „Webcam Player“ im Menü auswählen
+Über die GELBE Taste (Netzwerk) → „Webcam Player“ im Menü auswählen
+Anschließend wird eine Liste aller gefundenen Webcam-Bouquets angezeigt. Wählen Sie das gewünschte Bouquet aus, und der Hauptbildschirm von WebcamPlayer wird geöffnet.
+
+Automatisches Umschalten ermöglicht die Überwachung mehrerer Kameras ohne manuelles Umschalten. YouTube-Links werden automatisch ignoriert (können nicht mit dem Standardplayer abgespielt werden). Unterstützt sowohl alte als auch neue Userbouquet-Dateiformate.
+
+Version: CiefpVideoPlayer v1.5 – WebcamPlayer-Plugin
+Juni 2026
+
+
 # CiefpVideoPlayer v1.3
 
 **CiefpVideoPlayer** ist ein fortschrittlicher Videoplayer für Enigma2-Geräte mit umfassender Wiedergabesteuerung.

@@ -1,0 +1,93 @@
+Popis pluginu CiefpE2editor
+
+Toto je môj 40. plugin, ktorý som vytvoril v spolupráci s umelou inteligenciou.
+Popis: CiefpE2editor je výkonný a komplexný nástroj Enigma2 vyvinutý výlučne v rozlíšení Full HD (1920x1080).
+Tento plugin, inšpirovaný legendárnym počítačovým softvérom Dreamboxedit, prináša pokročilú správu kanálov, kytíc a transpondérov priamo do vášho prijímača, čím eliminuje potrebu počítača.
+Plugin kombinuje niekoľko výkonných modulov v jednom grafickom rozhraní,
+čo umožňuje plnú kontrolu nad databázou lamedb a zoznamami používateľov bez potreby počítača.
+
+🚀 Hlavné vlastnosti a funkcie
+1. Hlavný editor s tromi panelmi (Hlavná obrazovka)
+Prehľad na jednom mieste: Obrazovka je rozdelená na tri funkčné panely s vysokým rozlíšením (FHD):
+Služba (Všetky kanály z lamedb), Kanály (Kanály v rámci aktívnej kytice) a Kytice (Zoznam vašich kytíc).
+
+1. Hlavný editor (CiefpE2editorMain)
+Trojitý panelový pohľad:
+Vľavo: Zoznam všetkých služieb (kanálov)
+V strede: Kanály v aktívnom balíku
+Vpravo: List balíka
+
+Filtre kanálov:
+
+Podľa satelitu (všetky satelity, jednotlivé satelity, pozemné)
+Podľa typu (TV, Rádio)
+Podľa rozlíšenia (SD, HD H.264, HD H.265, UHD)
+Podľa poskytovateľa
+Nové kanály (príznak X)
+
+Správa kanálov:
+Kopírovanie kanálov do aktívneho balíka
+Odstránenie kanálov zo zoznamu
+Uloženie a opätovné načítanie nastavení
+
+2. Editor kanálov (CiefpChannelEditor)
+Operácie presunutia/odstránenia kanálov
+Výber skupín kanálov pod značkou
+Presun kanálov nahor/nadol (drag-and-drop)
+Uloženie zmien v balíku
+
+3. Editor balíkov (CiefpBouquetEditor)
+Správa balíkov (vytvorenie, odstránenie, presunutie)
+Otvorenie editora kanálov pre vybraný balík
+
+4. Správca kanálov (CiefpChannelManager)
+Stiahnutie nastavení z GitHubu
+Kopírovanie a inštalácia súborov
+Automatické sťahovanie najnovších zoznamov
+
+5. Sťahovač nastavení (CiefpSettingsDownloaderScreen)
+Sťahovanie hotových zoznamov kanálov z repozitára GitHub
+Podporuje viac ako 15 rôznych kombinácií satelitov:
+Od 1 satelitu (19E) do 18 satelitov
+Pokrýva všetky populárne satelity: 42E, 39E, 28E, 23E, 19E, 16E, 13E, 9E, 0.8W, 4W, 5W, 30W atď.
+Rozsah motorizovaného zoznamu kanálov 80.0E - 34.0W
+
+6. Výber satelitov (CiefpSelectSatellite)
+Výber satelitov na inštaláciu
+Automatické mapovanie satelitov na príslušné súbory súborov
+Kopírovanie a inštalácia vybraných satelitov
+Podporuje viac ako 40 rôznych pozícií satelitov
+
+7. Editor súboru Satellites.xml (CiefpSatelliteXmlReader/Editor)
+Zobrazenie a úprava Súbor satellites.xml
+Pridávanie a odstraňovanie transpondérov
+Úprava všetkých parametrov transpondéra:
+Frekvencia, Symbolová rýchlosť
+Polarizácia, FEC
+Systém DVB-S/S2
+Modulácia (QPSK, 8PSK, 16APSK, 32APSK)
+Multistream (IS, režim/kód PLS)
+Podpora T2-MI
+
+8. Whitelist Streamrelay (WhitelistScreen)
+Generovanie súboru whitelist_streamrelay
+Automatické parsovanie bouquet kanálov Streamrelay
+Filter na vylúčenie nechcených odkazov
+
+Technické špecifikácie
+Podrobnosti o funkciách
+Verzia 1.9.1
+Rozlíšenie obrazovky Full HD (1920x1080)
+Podporované súbory lamedb, bouquets.tv, satellites.xml, userbouquet.*.tv
+Integrácia GitHub Automatické sťahovanie zoznamu
+Súbor denníka ladenia: /tmp/ciefp_e2editor_debug.log
+
+Tlačidlá a navigácia:
+📂 Štruktúra skratiek na diaľkovom ovládači (Hlavná obrazovka):
+🔴 Riadok: Koniec
+🟢 Zelená: Výber satelitu (Filter)
+🟡 Žltá: Rozšírené menu s filtrami (TV, Rádio, SD, HD, UHD, Poskytovatelia...)
+🔵 Modrá: Rýchly výber a načítanie kytíc
+⚙️ MENU: Otvorenie hlavného menu so všetkými ďalšími modulmi a editormi.
+
+..:: CiefpSettings ::..
