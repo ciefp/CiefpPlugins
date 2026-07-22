@@ -184,7 +184,7 @@ config.plugins.CiefpPlugins.language.choices = language_choices
 
 class ImageViewerScreen(Screen):
     skin = """
-    <screen name="ImageViewerScreen" position="center,center" size="1920,1080" title="..:: Image Viewer ::.." backgroundColor="#000000">
+    <screen name="ImageViewerScreen" position="center,center" size="1920,1080"  backgroundColor="#000000">
         <widget name="image" position="60,80" size="1800,860" zPosition="1" alphatest="on" scale="1" />
         <widget name="image_label" position="60,960" size="1800,50" font="Regular;28" halign="center" foregroundColor="#FFFFFF" backgroundColor="#000000" />
         <eLabel text="Exit" position="60,1020" size="180,50" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F0000" />
@@ -270,7 +270,7 @@ class ImageViewerScreen(Screen):
 
 class CiefpPluginsPanel(Screen):
     skin = """
-    <screen name="CiefpPluginsPanel" position="center,center" size="1920,1080" title="..:: Ciefp Plugins (NO.40) ::.. (Version {version})" backgroundColor="#011a2e">
+    <screen name="CiefpPluginsPanel" position="center,center" size="1920,1080"  backgroundColor="#011a2e">
         <widget name="title" position="0,0" size="1920,80" font="Regular;48" halign="center" foregroundColor="#FFFFFF" backgroundColor="#012e01" />
         <widget source="pluginlist" render="Listbox" position="40,100" size="520,850" backgroundColor="#00070d" scrollbarMode="showOnDemand" enableWrapAround="1">
             <convert type="TemplatedMultiContent">
