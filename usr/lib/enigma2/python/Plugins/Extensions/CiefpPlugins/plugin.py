@@ -20,7 +20,7 @@ import urllib.request
 import uuid
 
 # Plugin version
-PLUGIN_VERSION = "3.8"
+PLUGIN_VERSION = "3.9"
 
 # Setup logging
 LOG_FILE = "/tmp/ciefp_plugin.log"
@@ -271,7 +271,9 @@ class ImageViewerScreen(Screen):
 class CiefpPluginsPanel(Screen):
     skin = """
     <screen name="CiefpPluginsPanel" position="center,center" size="1920,1080"  backgroundColor="#011a2e">
-        <widget name="title" position="0,0" size="1920,80" font="Regular;48" halign="center" foregroundColor="#FFFFFF" backgroundColor="#012e01" />
+        <widget name="separator0" position="0,0" size="1920,3" backgroundColor="#d5fa02" zPosition="1" />  
+        <widget name="title" position="0,5" size="1920,80" font="Regular;48" halign="center" foregroundColor="#FFFFFF" backgroundColor="#012e01" />
+        <widget name="separator1" position="0,90" size="1920,3" backgroundColor="#d5fa02" zPosition="1" />  
         <widget source="pluginlist" render="Listbox" position="40,100" size="520,850" backgroundColor="#00070d" scrollbarMode="showOnDemand" enableWrapAround="1">
             <convert type="TemplatedMultiContent">
                 {{"template": [
@@ -282,12 +284,13 @@ class CiefpPluginsPanel(Screen):
                 "itemHeight": 170}}
             </convert>
         </widget>
-        <widget name="description" position="580,100" size="1300,850" font="Regular;26" scrollbarMode="showOnDemand" backgroundColor="#00070d" foregroundColor="#FFFFFF" />
-        <eLabel text="Exit" position="40,960" size="180,50" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F0000" />
-        <eLabel text="Install" position="230,960" size="180,50" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#003F00" />
-        <eLabel text="Language" position="420,960" size="180,50" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F3F00" />
-        <eLabel text="Image Viewer" position="610,960" size="180,50" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#00003F" />
-        <widget name="status_label" position="810,960" size="1070,50" font="Regular;24" foregroundColor="#FFFFFF" halign="left" transparent="1" />
+        <widget name="description" position="580,100" size="1300,870" font="Regular;26" scrollbarMode="showOnDemand" backgroundColor="#00070d" foregroundColor="#FFFFFF" />
+        <widget name="separator3" position="0,990" size="1920,3" backgroundColor="#d5fa02" zPosition="1" />
+        <eLabel text="Exit" position="40,1000" size="350,40" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F0000" />
+        <eLabel text="Install" position="410,1000" size="350,40" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#003F00" />
+        <eLabel text="Language" position="780,1000" size="350,40" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#3F3F00" />
+        <eLabel text="Image Viewer" position="1150,1000" size="350,40" font="Regular;24" foregroundColor="#FFFFFF" halign="center" backgroundColor="#00003F" />
+        <widget name="status_label" position="1520,1000" size="400,40" font="Regular;24" foregroundColor="#FFFFFF" halign="left" transparent="1" />
     </screen>""".format(version=PLUGIN_VERSION)
 
     def __init__(self, session):
@@ -350,6 +353,12 @@ class CiefpPluginsPanel(Screen):
             
             self.pluginList.append((pixmap, name, install_cmd, desc_file))
 
+        # Separatori
+        self["separator0"] = Label()
+        self["separator1"] = Label()
+        self["separator2"] = Label()
+        self["separator3"] = Label()
+        
         # Components
         self["pluginlist"] = List(self.pluginList)
         self["description"] = ScrollLabel("")
