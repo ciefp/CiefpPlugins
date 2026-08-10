@@ -1,0 +1,41 @@
+
+🚀 CiefpBootlogo v1.1 for Enigma2
+CiefpBootlogo is a lightweight, fast, and user-friendly Enigma2 plugin designed to easily change your set-top box bootlogo. 
+It completely bypasses heavy local video conversions and FFmpeg encoder limitations, 
+offering instant installation from both GitHub online repository and local /tmp storage with built-in automatic backup and restore.
+
+✨ Key Features & What's New in v1.1
+Automatic System Backup: Automatically backs up your original system bootlogos (.backup) before applying any new ones, ensuring zero risk.
+One-Click Restore (Yellow Key): Instantly restore your original backup bootlogo at any time.
+Instant GitHub Integration: Direct online browsing and live preview of available bootlogos.
+One-Click Installation: Downloads pre-built .mvi bootlogo files and automatically updates all system locations (bootlogo.mvi, backdrop.mvi, bootlogo_wait.mvi).
+High Performance: Lightning-fast operation without CPU strain or reliance on system FFmpeg encoders.
+Local MVI Support: Quickly install custom local .mvi files directly from the /tmp directory.
+Modern UI: Clean Full HD layout with real-time graphical preview.
+
+🎮 How to Use
+🌐 1. Online Mode (GitHub Repository)
+Open CiefpBootlogo from your Plugin Menu.
+Browse through the available list on the left using the UP / DOWN navigation keys.
+Check the real-time visual preview on the right side.
+Press OK or GREEN button to download and apply the selected bootlogo.
+
+📁 2. Local Mode (/tmp folder)
+Copy your custom .mvi file to the /tmp directory on your receiver (via FTP/SFTP).
+Open the plugin and press the BLUE button (Change Source).
+Select Local Source (/tmp).
+Highlight your local .mvi file from the list and press OK or GREEN to apply.
+
+🔄 3. Restoring Original Bootlogo
+Press the YELLOW button at any time to restore your original system bootlogo from the automatic backup.
+
+🔘 Remote Control Shortcuts
+🔴 RED: Exit Plugin
+🟢 GREEN / OK: Download & Apply Selected Bootlogo
+🟡 YELLOW: Restore Original Backup Bootlogo
+🔵 BLUE: Switch Source (GitHub / Local /tmp)
+
+⬆️ / ⬇️ UP / DOWN: Navigate List
+
+..:: CiefpSettings ::..
+

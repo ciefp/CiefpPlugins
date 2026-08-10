@@ -1,0 +1,40 @@
+
+🚀 CiefpBootlogo v1.1 za Enigma2
+CiefpBootlogo je lagan, brz i jednostavan dodatak za Enigma2 dizajniran za jednostavnu promjenu bootlogo-a vašeg set-top box uređaja.
+Potpuno zaobilazi teške lokalne video konverzije i ograničenja FFmpeg enkodera, 
+nudeći trenutnu instalaciju iz GitHub online repozitorija i lokalne /tmp pohrane s ugrađenom automatskom sigurnosnom kopijom i vraćanjem.
+
+✨ Ključne karakteristike i šta je novo u v1.1
+Automatska sigurnosna kopija sistema: Automatski pravi sigurnosnu kopiju vaših originalnih bootlogo-a sistema (.backup) prije primjene bilo kojih novih, osiguravajući nulti rizik.
+Vraćanje jednim klikom (žuti ključ): Trenutno vratite svoj originalni bootlog iz sigurnosne kopije u bilo kojem trenutku.
+Trenutna integracija s GitHub-om: Direktno online pregledavanje i pregled uživo dostupnih bootlogo-a.
+Instalacija jednim klikom: Preuzima unaprijed izgrađene .mvi bootlogo datoteke i automatski ažurira sve sistemske lokacije (bootlogo.mvi, background.mvi, bootlogo_wait.mvi).
+Visoke performanse: Munjevito brz rad bez opterećenja CPU-a ili oslanjanja na sistemske FFmpeg enkodere.
+Lokalna MVI podrška: Brzo instalirajte prilagođene lokalne .mvi datoteke direktno iz direktorija /tmp.
+Moderni korisnički interfejs: Čist Full HD raspored s grafičkim pregledom u realnom vremenu.
+
+🎮 Kako koristiti
+🌐 1. Online način rada (GitHub repozitorij)
+Otvorite CiefpBootlogo iz vašeg menija dodataka.
+Pregledajte dostupnu listu s lijeve strane pomoću navigacijskih tipki GORE/DOLJE.
+Provjerite vizualni pregled u realnom vremenu s desne strane.
+Pritisnite OK ili ZELENO dugme da preuzmete i primijenite odabrani bootlogo.
+
+📁 2. Lokalni način rada (/tmp folder)
+Kopirajte svoju prilagođenu .mvi datoteku u /tmp direktorij na vašem prijemniku (putem FTP-a/SFTP-a).
+Otvorite dodatak i pritisnite PLAVO dugme (Promijeni izvor).
+Odaberite Lokalni izvor (/tmp).
+Označite svoju lokalnu .mvi datoteku s popisa i pritisnite OK ili ZELENO da biste primijenili.
+
+🔄 3. Vraćanje originalnog Bootlogo-a
+Pritisnite ŽUTO dugme u bilo kojem trenutku da biste vratili originalni bootlog sistema iz automatske sigurnosne kopije.
+
+🔘 Prečice daljinskog upravljanja
+🔴 CRVENO: Izlaz iz dodatka
+🟢 ZELENO / OK: Preuzimanje i primjena odabranog Bootlogo-a
+🟡 ŽUTO: Vraćanje originalnog Bootlogo-a iz sigurnosne kopije
+🔵 PLAVO: Promjena izvora (GitHub / Lokalno /tmp)
+
+⬆️ / ⬇️ GORE / DOLJE: Navigacija kroz popis
+
+..:: CiefpSettings ::..

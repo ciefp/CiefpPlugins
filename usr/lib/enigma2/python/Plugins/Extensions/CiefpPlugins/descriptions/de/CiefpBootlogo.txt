@@ -1,0 +1,52 @@
+🚀 CiefpBootlogo v1.1 für Enigma2
+CiefpBootlogo ist ein schlankes, schnelles und benutzerfreundliches Enigma2-Plugin, mit dem Sie das Bootlogo Ihrer Set-Top-Box ganz einfach ändern können.
+
+Es umgeht aufwändige lokale Videokonvertierungen und die Einschränkungen des FFmpeg-Encoders.
+
+Die Installation erfolgt sofort sowohl über das GitHub-Repository als auch lokal im /tmp-Speicher. Integrierte automatische Backup- und Wiederherstellungsfunktionen sind ebenfalls vorhanden.
+
+✨ Hauptfunktionen & Neuerungen in Version 1.1
+Automatische Systemsicherung: Ihre originalen System-Bootlogos (.backup) werden automatisch gesichert, bevor neue angewendet werden. So ist Ihr System absolut sicher.
+
+Wiederherstellung mit einem Klick (gelbe Taste): Stellen Sie Ihr ursprüngliches Backup-Bootlogo jederzeit wieder her.
+
+Instant GitHub-Integration: Direktes Online-Browsing und Live-Vorschau der verfügbaren Bootlogos.
+
+Installation mit einem Klick: Vorgefertigte .mvi-Bootlogo-Dateien werden heruntergeladen und alle Systemverzeichnisse (bootlogo.mvi, backdrop.mvi, bootlogo_wait.mvi) automatisch aktualisiert.
+
+Hohe Leistung: Blitzschnelle Ausführung ohne CPU-Belastung oder Abhängigkeit von den FFmpeg-Encodern des Systems.
+Lokale MVI-Unterstützung: Schnelle Installation benutzerdefinierter lokaler .mvi-Dateien direkt aus dem /tmp-Verzeichnis.
+Moderne Benutzeroberfläche: Übersichtliches Full-HD-Layout mit grafischer Echtzeitvorschau.
+
+🎮 Anwendung
+🌐 1. Online-Modus (GitHub-Repository)
+Öffnen Sie CiefpBootlogo über Ihr Plugin-Menü.
+
+Durchsuchen Sie die Liste der verfügbaren Bootlogos auf der linken Seite mit den Pfeiltasten (AUF/AB).
+
+Sehen Sie sich die visuelle Echtzeitvorschau auf der rechten Seite an.
+
+Klicken Sie auf OK oder die grüne Schaltfläche, um das ausgewählte Bootlogo herunterzuladen und anzuwenden.
+
+📁 2. Lokaler Modus (/tmp-Ordner)
+
+Kopieren Sie Ihre benutzerdefinierte .mvi-Datei in das /tmp-Verzeichnis Ihres Receivers (per FTP/SFTP).
+
+Öffnen Sie das Plugin und klicken Sie auf die blaue Schaltfläche (Quelle ändern).
+
+Wählen Sie „Lokale Quelle (/tmp)“.
+
+Markieren Sie Ihre lokale .mvi-Datei in der Liste und drücken Sie OK oder GRÜN, um die Änderung anzuwenden.
+
+🔄 3. Originales Bootlogo wiederherstellen
+Drücken Sie jederzeit die GELBE Taste, um Ihr originales System-Bootlogo aus der automatischen Sicherung wiederherzustellen.
+
+🔘 Fernbedienungs-Shortcuts
+🔴 ROT: Plugin beenden
+🟢 GRÜN / OK: Ausgewähltes Bootlogo herunterladen und anwenden
+🟡 GELB: Bootlogo aus der Sicherung wiederherstellen
+🔵 BLAU: Quelle wechseln (GitHub / Lokal /tmp)
+
+⬆️ / ⬇️ AUF / AB: In der Liste navigieren
+
+..:: CiefpSettings ::..

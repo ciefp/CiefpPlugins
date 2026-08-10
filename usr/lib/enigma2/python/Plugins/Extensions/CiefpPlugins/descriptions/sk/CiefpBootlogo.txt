@@ -1,0 +1,37 @@
+🚀 CiefpBootlogo v1.1 pre Enigma2
+CiefpBootlogo je ľahký, rýchly a užívateľsky prívetivý doplnok Enigma2 navrhnutý na jednoduchú zmenu bootloga vášho set-top boxu. Úplne obchádza náročné lokálne konverzie videa a obmedzenia FFmpeg enkódera a ponúka okamžitú inštaláciu z online repozitára GitHub aj z lokálneho úložiska /tmp so vstavaným automatickým zálohovaním a obnovou.
+
+✨ Kľúčové vlastnosti a novinky vo verzii 1.1
+Automatické zálohovanie systému: Automaticky zálohuje vaše pôvodné bootlogá systému (.backup) pred použitím akýchkoľvek nových, čím zabezpečuje nulové riziko.
+Obnovenie jedným kliknutím (žlté tlačidlo): Okamžite obnovte pôvodné záložné bootlogo kedykoľvek.
+Okamžitá integrácia s GitHub: Priame online prehliadanie a živý náhľad dostupných bootlog.
+Inštalácia jedným kliknutím: Sťahuje predpripravené súbory bootlogo .mvi a automaticky aktualizuje všetky systémové umiestnenia (bootlogo.mvi, background.mvi, bootlogo_wait.mvi).
+Vysoký výkon: Bleskovo rýchla prevádzka bez zaťaženia CPU alebo spoliehania sa na systémové FFmpeg kodéry.
+Podpora lokálnych MVI: Rýchla inštalácia vlastných lokálnych súborov .mvi priamo z adresára /tmp.
+Moderné používateľské rozhranie: Prehľadné rozloženie Full HD s grafickým náhľadom v reálnom čase.
+
+🎮 Ako používať
+🌐 1. Online režim (repozitár GitHub)
+Otvorte CiefpBootlogo z ponuky doplnkov.
+Prechádzajte dostupným zoznamom vľavo pomocou navigačných klávesov HORE/DOLE.
+Skontrolujte vizuálny náhľad v reálnom čase na pravej strane.
+Stlačením tlačidla OK alebo ZELENÉHO tlačidla stiahnite a použite vybraté bootlogo.
+
+📁 2. Lokálny režim (priečinok /tmp)
+Skopírujte svoj vlastný súbor .mvi do adresára /tmp na vašom prijímači (prostredníctvom FTP/SFTP).
+Otvorte plugin a stlačte MODRÉ tlačidlo (Zmeniť zdroj).
+Vyberte Lokálny zdroj (/tmp).
+Označte svoj lokálny súbor .mvi zo zoznamu a stlačte OK alebo ZELENÉ tlačidlo pre použitie.
+
+🔄 3. Obnovenie pôvodného bootovacieho loga
+Stlačením ŽLTÉHO tlačidla kedykoľvek obnovíte pôvodné bootovacie logo systému z automatickej zálohy.
+
+🔘 Skratky diaľkového ovládania
+🔴 ČERVENÉ: Ukončiť plugin
+🟢 ZELENÉ / OK: Stiahnuť a použiť vybrané bootovacie logo
+🟡 ŽLTÉ: Obnoviť pôvodné zálohované bootovacie logo
+🔵 MODRÉ: Prepnúť zdroj (GitHub / Lokálne /tmp)
+
+⬆️ / ⬇️ HORE / DOLE: Navigácia v zozname
+
+..:: CiefpSettings ::..
