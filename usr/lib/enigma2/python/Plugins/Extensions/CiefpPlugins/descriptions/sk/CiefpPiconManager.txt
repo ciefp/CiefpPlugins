@@ -1,0 +1,92 @@
+..:: Ciefp Picon Manager ::..
+
+Ciefp Picon Manager je pokročilý plugin Enigma2 na správu piconov (ikon kanálov) na OpenATV a iných systémoch Enigma2.
+Plugin umožňuje jednoduché prezeranie, priraďovanie, mazanie a sťahovanie piconov z kanála OpenATV.
+
+Hlavné funkcie:
+Prehľad kytíc a kanálov - ľavý panel zobrazuje kytice, stredný panel zobrazuje kanály
+Automatické zobrazenie ikon - pravý panel zobrazuje ikony pre vybraný kanál
+Priradenie ikon - možnosť priradiť ikony ku kanálom z priečinka USB
+Stiahnutie ikon - priamo z kanála OpenATV (42+ balíčkov)
+Odstránenie ikon - jednoduché odstránenie priradených ikon
+Podpora podpriečinkov - prehľadá všetky podpriečinky v adresári picon
+
+Menu:
+OpenATV: Menu → Pluginy → Ciefp Picon Manager
+Ostatné: Prehliadač pluginov → Ciefp Picon Manager
+
+# Hlavná obrazovka
+Hlavná obrazovka je rozdelená do troch panelov:
+
+Obsah panela Navigácia
+Ľavý zoznam kytíc Šípka hore/dole
+Stredný zoznam kanálov Šípka hore/dole
+Pravý Picon + informácie Automatické zobrazenie
+Navigácia:
+
+Ľavý/pravý - prepínanie fokusu medzi panelmi
+Hore/dole - pohyb v zozname
+OK - vstup do vybranej kytice/kanála
+
+# Tlačidlá na hlavnej obrazovke
+Tlačidlo Farba Funkcia
+KONIEC Červená Ukončenie pluginu
+PRIDARIDOVAŤ PICON Zelená Priradenie piconu ku kanálu
+NASTAVENIA Žltá Nastavenia (vybrať Priečinok USB)
+ODSTRÁNIŤ PICON Modrá Odstrániť picon pre kanál
+MENU STIAHNUŤ Biela Stiahnuť picon z kanála
+
+# Priradiť picon (PRIDARENIE PICON)
+Vybrať kanál na hlavnej obrazovke
+Stlačiť zelené tlačidlo (PRIDARENIE PICON)
+Otvorí mriežkové zobrazenie piconov z priečinka USB
+
+Navigácia:
+Hore/dole/vľavo/vpravo - pohyb v mriežke
+OK - priradiť vybraný picon ku kanálu
+UKONČIŤ - návrat na hlavnú obrazovku
+
+# Nastavenia (NASTAVENIA)
+Stlačiť žlté tlačidlo (NASTAVENIA)
+Prehliadač súborov na výber priečinka USB:
+Hore/dole - pohyb v zozname
+OK - vstup do priečinka
+Zelené tlačidlo - výber aktuálneho priečinka
+Modré tlačidlo - návrat do nadradeného priečinka
+Žlté tlačidlo - predvolená cesta
+
+# Stiahnuť picon (MENU)
+Stlačiť tlačidlo MENU na hlavnej obrazovke
+Otvorí zoznam dostupných balíkov picon z kanála OpenATV
+
+Filtre:
+Vľavo/Vpravo - filtrovať podľa typu (všetky, srp, utf8snp, zombie, iné)
+
+Inštalácia:
+Vyberte balík
+Stlačte OK pre inštaláciu
+Potvrdte inštaláciu
+
+# Odstrániť picon (DELETE PICON)
+Vyberte kanál na hlavnej obrazovke
+Stlačte modré tlačidlo (DELETE PICON)
+Plugin odstráni picon zo všetkých umiestnení:
+
+/picon/
+/media/usb/picon/
+
+Technické špecifikácie
+Rozlíšenie obrazovky: 1920x1080 (FHD)
+Verzia Pythonu: Python 3
+Podporované systémy: OpenATV, OpenPLi, OpenVision, PurE2
+Formát Picon: PNG (220x132, 100x60, 400x240)
+
+Verzia
+Verzia: 1.0.0
+Autor: Ciefp
+Podpora: OpenATV, Vu+, Dreambox, Gigablue, Octagon
+
+Ďakujeme
+Plugin používa balíčky picon z kanála OpenATV a GitHub PICONS repozitár.
+
+Ďakujeme, že používate Ciefp Picon Manager! 🚀

@@ -1,0 +1,93 @@
+..:: Ciefp Picon Manager ::..
+
+Ciefp Picon Manager je napredni Enigma2 plugin za upravljanje piconima (kanalskim sličicama) na OpenATV i drugim Enigma2 sistemima. 
+Plugin omogućava jednostavno pregledanje, dodjelu, brisanje i preuzimanje picona sa OpenATV feed-a.
+
+Glavne karakteristike:
+Pregled buketa i kanala - lijevi panel prikazuje bukete, srednji panel prikazuje kanale
+Automatsko prikazivanje picona - desni panel prikazuje picon za selektirani kanal
+Dodjela picona - mogućnost dodjele picona kanalu iz USB foldera
+Preuzimanje picona - direktno sa OpenATV feed-a (42+ paketa)
+Brisanje picona - jednostavno brisanje dodijeljenih picona
+Podrška za podfoldere - pretražuje sve podfoldere u picon direktorijumu
+
+Meniji:
+OpenATV: Menu → Plugins → Ciefp Picon Manager
+Ostali: Plugin browser → Ciefp Picon Manager
+
+# Glavni ekran
+Glavni ekran je podijeljen na tri panela:
+
+Panel	Sadržaj	Navigacija
+Lijevi	Lista buketa	Strelica gore/dolje
+Srednji	Lista kanala	Strelica gore/dolje
+Desni	Picon + info	Automatski prikaz
+Navigacija:
+
+Lijevo/desno - prebacivanje fokusa između panela
+Gore/dolje - kretanje kroz listu
+OK - ulazak u selektirani buket/kanal
+
+# Dugmići na glavnom ekranu
+Dugme	Boja	Funkcija
+EXIT	Crveno	Izlaz iz plugina
+ASSIGN PICON	Zeleno	Dodjela picona kanalu
+SETTINGS	Žuto	Postavke (odabir USB foldera)
+DELETE PICON	Plavo	Brisanje picona za kanal
+MENU DOWNLOAD	Bijelo	Preuzimanje picona sa feeda
+
+# Dodjela picona (ASSIGN PICON)
+Selektuj kanal na glavnom ekranu
+Pritisni Zeleno dugme (ASSIGN PICON)
+Otvara se grid prikaz picona iz USB foldera
+
+Navigacija:
+Gore/dolje/lijevo/desno - kretanje kroz grid
+OK - dodjela selektiranog picona kanalu
+EXIT - povratak na glavni ekran
+
+# Postavke (SETTINGS)
+Pritisni Žuto dugme (SETTINGS)
+File browser za odabir USB foldera:
+Gore/dolje - kretanje kroz listu
+OK - ulazak u folder
+Zeleno dugme - selektiranje trenutnog foldera
+Plavo dugme - povratak na parent folder
+Žuto dugme - default putanja
+
+# Preuzimanje picona (MENU)
+Pritisni MENU dugme na glavnom ekranu
+Otvara se lista dostupnih picon paketa sa OpenATV feed-a
+
+Filteri:
+Lijevo/desno - filtriranje po tipu (all, srp, utf8snp, zombi, other)
+
+Instalacija:
+Selektuj paket
+Pritisni OK za instalaciju
+Potvrdi instalaciju
+
+# Brisanje picona (DELETE PICON)
+Selektuj kanal na glavnom ekranu
+Pritisni Plavo dugme (DELETE PICON)
+Plugin briše picon sa svih lokacija:
+
+/picon/
+/media/usb/picon/
+
+Tehničke specifikacije
+Rezolucija ekrana: 1920x1080 (FHD)
+Python verzija: Python 3
+Podržani sistemi: OpenATV, OpenPLi, OpenVision, PurE2
+Format picona: PNG (220x132, 100x60, 400x240)
+
+
+Verzija
+Verzija: 1.0.0
+Autor: Ciefp
+Podrška: OpenATV, Vu+, Dreambox, Gigablue, Octagon
+
+Zahvalnica
+Plugin koristi picon pakete sa OpenATV feed-a i GitHub PICONS repozitorijuma.
+
+Hvala na korištenju Ciefp Picon Manager! 🚀

@@ -1,0 +1,93 @@
+
+..:: Ciefp Picon Manager ::..
+
+Ciefp Picon Manager is an advanced Enigma2 plugin for managing picons (channel icons) on OpenATV and other Enigma2 systems.
+The plugin allows for easy viewing, assigning, deleting and downloading picons from the OpenATV feed.
+
+Main features:
+Bouquet and channel overview - left panel shows bouquets, middle panel shows channels
+Automatically display icons - right panel shows icons for selected channel
+Assign icons - ability to assign icons to channels from USB folder
+Download icons - directly from OpenATV feed (42+ packages)
+Delete icons - easy to delete assigned icons
+Support for subfolders - searches all subfolders in the picon directory
+
+Menus:
+OpenATV: Menu → Plugins → Ciefp Picon Manager
+Other: Plugin browser → Ciefp Picon Manager
+
+# Main screen
+The main screen is divided into three panels:
+
+Panel Contents Navigation
+Left Bouquet list Up/down arrow
+Middle Channel list Up/down arrow
+Right Picon + info Automatic display
+Navigation:
+
+Left/right - switch focus between panels
+Up/down - move through the list
+OK - enter selected bouquet/channel
+
+# Buttons on the main screen
+Button Color Function
+EXIT Red Exit plugin
+ASSIGN PICON Green Assign a picon to a channel
+SETTINGS Yellow Settings (select USB folder)
+DELETE PICON Blue Delete a picon for a channel
+MENU DOWNLOAD White Download a picon from a feed
+
+# Assign a picon (ASSIGN PICON)
+Select a channel on the main screen
+Press the Green button (ASSIGN PICON)
+Opens a grid view of the picons from the USB folder
+
+Navigation:
+Up/down/left/right - move through the grid
+OK - assign the selected picon to a channel
+EXIT - return to the main screen
+
+# Settings (SETTINGS)
+Press the Yellow button (SETTINGS)
+File browser for selecting a USB folder:
+Up/down - move through the list
+OK - enter the folder
+Green button - select the current folder
+Blue button - return to the parent folder
+Yellow button - default path
+
+# Download a picon (MENU)
+Press the MENU button on the main screen
+Opens a list of available picon packages from the OpenATV feed
+
+Filters:
+Left/Right - filter by type (all, srp, utf8snp, zombie, other)
+
+Installation:
+Select package
+Press OK to install
+Confirm installation
+
+# Delete picon (DELETE PICON)
+Select a channel on the main screen
+Press the Blue button (DELETE PICON)
+The plugin deletes the picon from all locations:
+
+/picon/
+/media/usb/picon/
+
+Technical specifications
+Screen resolution: 1920x1080 (FHD)
+Python version: Python 3
+Supported systems: OpenATV, OpenPLi, OpenVision, PurE2
+Picon format: PNG (220x132, 100x60, 400x240)
+
+Version
+Version: 1.0.0
+Author: Ciefp
+Support: OpenATV, Vu+, Dreambox, Gigablue, Octagon
+
+Thank you note
+The plugin uses picon packages from the OpenATV feed and the GitHub PICONS repository.
+
+Thanks for using Ciefp Picon Manager! 🚀
