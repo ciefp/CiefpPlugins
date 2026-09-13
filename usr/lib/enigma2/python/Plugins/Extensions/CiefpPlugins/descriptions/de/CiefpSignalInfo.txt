@@ -1,0 +1,78 @@
+..:: CiefpSignalInfo v1.5 ::..
+Kurzbeschreibung
+Ein fortschrittliches Plugin zur Anzeige von Signal- und Senderinformationen auf Enigma2-Receivern.
+Unterstützt DVB-S/S2-, DVB-T/T2- und DVB-C/C2-Tuner.
+Zeigt detaillierte technische Parameter, Verschlüsselung, PIDs sowie Echtzeit-Signaldaten an.
+Enthält einen Mini-Skin, der schnelle Signalüberprüfungen und Senderwechsel ermöglicht, ohne die aktuelle Ansicht zu verlassen.
+
+CiefpSignalInfo (Hauptbildschirm)
+✅ Anzeige aller Senderinformationen (Sender, Anbieter, Satellit)
+✅ DVB-S/S2: Frequenz, Polarisation, Symbolrate, FEC, Modulation, System, PLS-Modus/-Code
+✅ DVB-T/T2: Kanal (Kanalnummer), Frequenz, Bandbreite, Coderate HP/LP, Konstellation, Übertragungsmodus Modus, Guard-Intervall, Hierarchie
+✅ DVB-C/C2: Frequenz, Symbolrate, Modulation, FEC, System
+✅ PIDs (Video, Audio, PCR, PMT, Videotext)
+✅ Verschlüsselung (CAID-Liste + [AKTIV]-Markierung)
+✅ SI/TS/ONID
+✅ Service-Referenz
+✅ Picon (DVB-S und DVB-T)
+✅ Satellitenname (für DVB-S)
+✅ SNR/AGC-Balken + % + dB
+✅ Uhrzeit und Datum
+✅ Grüne Taste → Satfinder (mit Signal, fehlerfrei)
+✅ Blaue Taste → Mini-Skin
+
+CiefpSignalInfoMini (Mini-Skin, oben mittig)
+✅ Picon + Sendername
+✅ SNR/AGC-Balken + %
+✅ dB-Wert
+✅ Parameter in 3 Zeilen (Freq/Pol, SR/FEC, System/Mod für DVB-S; CH:24 498MHz, CR/Const, System/Mode für DVB-T)
+✅ Senderwechsel über Links-/Rechts-Pfeiltasten
+✅ Senderliste über Auf-/Ab-Pfeiltasten
+✅ Automatische Aktualisierung beim Senderwechsel
+✅ Automatisches Schließen nach 15 Sek.
+✅ Schließen mit EXIT/OK/Blau
+
+## Tasten:
+
+Taste	Funktion
+🔴 Rot	Plugin schließen
+🟢 Grün	Satfinder öffnen (mit aktivem Tuner)
+🔵 Blau	Mini-Skin öffnen
+OK / EXIT	Plugin schließen
+🎯 Mini-Skin
+Der Mini-Skin wird über die blaue Taste vom Hauptbildschirm aus geöffnet. Er erscheint oben mittig (ähnlich der OpenATV-Infoleiste) und ermöglicht eine schnelle Signalüberprüfung während des Senderwechsels. Bedienung des Mini-Skins
+Taste	Funktion
+◄ LINKS	Vorheriger Sender
+► RECHTS	Nächster Sender
+▲ OBEN	Senderliste öffnen
+▼ UNTEN	Senderliste öffnen
+OK	Mini-Skin schließen
+EXIT	Mini-Skin schließen
+BLAU	Mini-Skin schließen
+Mini-Skin-Automatisierung
+🕐 Automatisches Schließen nach 15 Sekunden Inaktivität
+🔄 Timer-Reset bei jedem Senderwechsel (bleibt während des Wechsels geöffnet)
+⚡ Sofortige Aktualisierung beim Senderwechsel (sofort + 300 ms + 800 ms)
+🎯 Automatische Aktualisierung aller Werte: Picon, Sendername, SNR, AGC, dB, Parameter
+
+Anzeigeinhalte des Mini-Skins
+Für DVB-S/S2:
+Zeile 1: 11914 H — Frequenz + Polarisation
+Zeile 2: 30000 3/4 — Symbolrate + FEC
+Zeile 3: DVB-S2 8PSK — System + Modulation
+
+Für DVB-T/T2:
+Zeile 1: CH:24 498MHz — Kanalnummer + Frequenz
+Zeile 2: 7/8 64QAM — Coderate + Modulation (Konstellation)
+Zeile 3: DVB-T 8K — System + Übertragungsmodus
+
+Für DVB-C/C2:
+Zeile 1: 450 MHz — Frequenz
+Zeile 2: 6900 256QAM — Symbolrate + Modulation
+Zeile 3: DVB-C 3/4 — System + FEC
+
+
+## Autor ##
+✅ Ciefp
+✅ 2026
+..:: CiefpSettings ::..

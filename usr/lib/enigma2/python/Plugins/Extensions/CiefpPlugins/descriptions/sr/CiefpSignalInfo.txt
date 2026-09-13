@@ -1,0 +1,81 @@
+
+..:: CiefpSignalInfo v1.5 ::..
+Kratak opis
+Napredni plugin za prikaz informacija o signalu i kanalu za Enigma2 prijemnike. 
+Podržava DVB-S/S2, DVB-T/T2 i DVB-C/C2 tunere. 
+Prikazuje detaljne tehničke parametre, enkripciju, PID-ove i signal u realnom vremenu. 
+Sadrži mini skin koji omogućava brzu proveru signala i prebacivanje kanala bez napuštanja trenutnog prikaza.
+
+CiefpSignalInfo (glavni ekran)
+✅ Prikaz svih informacija o kanalu (Channel, Provider, Satellite)
+✅ DVB-S/S2: Frequency, Polarization, Symbol Rate, FEC, Modulation, System, PLS Mode/Code
+✅ DVB-T/T2: Channel (broj kanala), Frequency, Bandwidth, Code Rate HP/LP, Constellation, Trans. Mode, Guard Int., Hierarchy
+✅ DVB-C/C2: Frequency, Symbol Rate, Modulation, FEC, System
+✅ PID-ovi (Video, Audio, PCR, PMT, Teletext)
+✅ Enkripcija (CAID lista + [ACTIVE] marker)
+✅ SI/TS/ONID
+✅ Service Reference
+✅ Picon (DVB-S i DVB-T)
+✅ Ime satelita (za DVB-S)
+✅ SNR/AGC trake + % + DB
+✅ Vreme i datum
+✅ ZELENO dugme → Satfinder (sa signalom, bez greške)
+✅ PLAVO dugme → Mini skin
+
+CiefpSignalInfoMini (mini skin, gore centrirano)
+✅ Picon + ime kanala
+✅ SNR/AGC trake + %
+✅ DB vrednost
+✅ Parametri u 3 linije (Freq/Pol, SR/FEC, System/Mod za DVB-S; CH:24 498MHz, CR/Const, System/Mode za DVB-T)
+✅ Prebacivanje kanala strelicama levo/desno
+✅ Lista kanala na gore/dole
+✅ Auto-osvežavanje pri promeni kanala
+✅ Auto-close posle 15s
+✅ EXIT/OK/PLAVO zatvara
+
+## Dugmad:
+
+Dugme	Funkcija
+🔴 CRVENO	Zatvori plugin
+🟢 ZELENO	Otvori Satfinder (sa aktivnim tunerom)
+🔵 PLAVO	Otvori Mini Skin
+OK / EXIT	Zatvori plugin
+🎯 Mini Skin
+Mini skin se otvara na PLAVO dugme iz glavnog ekrana. Prikazuje se gore centrirano (kao OpenATV info bar) i omogućava brzu proveru signala dok menjaš kanale.
+
+Kako koristiti mini skin
+Dugme	Funkcija
+◄ LEVO	Prethodni kanal
+► DESNO	Sledeći kanal
+▲ GORE	Otvori listu kanala
+▼ DOLE	Otvori listu kanala
+OK	Zatvori mini skin
+EXIT	Zatvori mini skin
+PLAVO	Zatvori mini skin
+Automatika mini skina
+🕐 Auto-zatvaranje posle 15 sekundi neaktivnosti
+🔄 Reset timera pri svakoj promeni kanala (ostaje otvoren dok menjaš)
+⚡ Trenutno osvežavanje pri promeni kanala (odmah + 300ms + 800ms)
+🎯 Sve vrednosti se automatski ažuriraju: picon, ime kanala, SNR, AGC, DB, parametri
+
+Šta mini skin prikazuje
+Za DVB-S/S2:
+Linija 1: 11914 H — Frekvencija + Polarizacija
+Linija 2: 30000 3/4 — Symbol Rate + FEC
+Linija 3: DVB-S2 8PSK — System + Modulacija
+
+Za DVB-T/T2:
+Linija 1: CH:24 498MHz — Broj kanala + Frekvencija
+Linija 2: 7/8 64QAM — Code Rate + Constellation
+Linija 3: DVB-T 8K — System + Transmission Mode
+
+Za DVB-C/C2:
+Linija 1: 450 MHz — Frekvencija
+Linija 2: 6900 256QAM — Symbol Rate + Modulacija
+Linija 3: DVB-C 3/4 — System + FEC
+
+
+## Autor ##
+✅ Ciefp  
+✅ 2026 
+..:: CiefpSettings ::..

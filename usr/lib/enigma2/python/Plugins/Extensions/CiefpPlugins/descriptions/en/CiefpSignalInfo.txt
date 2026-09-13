@@ -1,0 +1,79 @@
+
+..:: CiefpSignalInfo v1.5 ::..
+Brief description
+An advanced plugin for displaying signal and channel information on Enigma2 receivers.
+Supports DVB-S/S2, DVB-T/T2, and DVB-C/C2 tuners.
+Displays detailed technical parameters, encryption, PIDs, and real-time signal data.
+Includes a mini-skin that allows for quick signal checks and channel switching without leaving the current view.
+
+CiefpSignalInfo (main screen)
+✅ Display of all channel information (Channel, Provider, Satellite)
+✅ DVB-S/S2: Frequency, Polarization, Symbol Rate, FEC, Modulation, System, PLS Mode/Code
+✅ DVB-T/T2: Channel (channel number), Frequency, Bandwidth, Code Rate HP/LP, Constellation, Trans. Mode, Guard Int., Hierarchy
+✅ DVB-C/C2: Frequency, Symbol Rate, Modulation, FEC, System
+✅ PIDs (Video, Audio, PCR, PMT, Teletext)
+✅ Encryption (CAID list + [ACTIVE] marker)
+✅ SI/TS/ONID
+✅ Service Reference
+✅ Picon (DVB-S and DVB-T)
+✅ Satellite name (for DVB-S)
+✅ SNR/AGC bars + % + dB
+✅ Time and date
+✅ GREEN button → Satfinder (with signal, error-free)
+✅ BLUE button → Mini skin
+
+CiefpSignalInfoMini (mini skin, top-centered)
+✅ Picon + channel name
+✅ SNR/AGC bars + %
+✅ dB value
+✅ Parameters in 3 lines (Freq/Pol, SR/FEC, System/Mod for DVB-S; CH:24 498MHz, CR/Const, System/Mode for DVB-T)
+✅ Channel switching via left/right arrows
+✅ Channel list via up/down arrows
+✅ Auto-refresh on channel change
+✅ Auto-close after 15s
+✅ EXIT/OK/BLUE closes it
+
+## Buttons:
+
+Button	Function
+🔴 RED	Close plugin
+🟢 GREEN	Open Satfinder (with active tuner)
+🔵 BLUE	Open Mini Skin
+OK / EXIT	Close plugin
+🎯 Mini Skin
+The mini skin opens via the BLUE button from the main screen. It appears centered at the top (like the OpenATV info bar) and allows for a quick signal check while changing channels. How to use the mini-skin
+Button	Function
+◄ LEFT	Previous channel
+► RIGHT	Next channel
+▲ UP	Open channel list
+▼ DOWN	Open channel list
+OK	Close mini-skin
+EXIT	Close mini-skin
+BLUE	Close mini-skin
+Mini-skin automation
+🕐 Auto-close after 15 seconds of inactivity
+🔄 Timer reset on every channel change (stays open while changing)
+⚡ Instant refresh upon channel change (immediate + 300ms + 800ms)
+🎯 All values ​​update automatically: picon, channel name, SNR, AGC, dB, parameters
+
+What the mini-skin displays
+For DVB-S/S2:
+Line 1: 11914 H — Frequency + Polarization
+Line 2: 30000 3/4 — Symbol Rate + FEC
+Line 3: DVB-S2 8PSK — System + Modulation
+
+For DVB-T/T2:
+Line 1: CH:24 498MHz — Channel Number + Frequency
+Line 2: 7/8 64QAM — Code Rate + Constellation
+Line 3: DVB-T 8K — System + Transmission Mode
+
+For DVB-C/C2:
+Line 1: 450 MHz — Frequency
+Line 2: 6900 256QAM — Symbol Rate + Modulation
+Line 3: DVB-C 3/4 — System + FEC
+
+
+## Author ##
+✅ Ciefp
+✅ 2026
+..:: CiefpSettings ::..

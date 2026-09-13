@@ -1,0 +1,78 @@
+..:: CiefpSignalInfo v1.5 ::..
+Stručný popis
+Pokročilý plugin na zobrazovanie informácií o signáli a kanáli na prijímačoch s operačným systémom Enigma2.
+Podporuje tunery DVB-S/S2, DVB-T/T2 a DVB-C/C2.
+Zobrazuje podrobné technické parametre, informácie o kódovaní, PID a údaje o signáli v reálnom čase.
+Obsahuje mini-skin, ktorý umožňuje rýchlu kontrolu signálu a prepínanie kanálov bez opustenia aktuálneho zobrazenia.
+
+CiefpSignalInfo (hlavná obrazovka)
+✅ Zobrazenie všetkých informácií o kanáli (kanál, poskytovateľ, satelit)
+✅ DVB-S/S2: frekvencia, polarizácia, symbolová rýchlosť, FEC, modulácia, systém, režim/kód PLS
+✅ DVB-T/T2: kanál (číslo kanála), frekvencia, šírka pásma, kódová rýchlosť (HP/LP), konštelácia, režim prenosu Režim, Guard Interval, Hierarchia
+✅ DVB-C/C2: Frekvencia, Symbolová rýchlosť, Modulácia, FEC, Systém
+✅ PIDy (Video, Audio, PCR, PMT, Teletext)
+✅ Šifrovanie (zoznam CAID + indikátor [AKTÍVNE])
+✅ SI/TS/ONID
+✅ Referencia služby (Service Reference)
+✅ Pikona (DVB-S a DVB-T)
+✅ Názov satelitu (pre DVB-S)
+✅ Ukazovatele SNR/AGC + % + dB
+✅ Čas a dátum
+✅ ZELENÉ tlačidlo → Satfinder (so signálom, bez chýb)
+✅ MODRÉ tlačidlo → Mini skin
+
+CiefpSignalInfoMini (mini skin, centrovaný v hornej časti)
+✅ Pikona + názov kanála
+✅ Ukazovatele SNR/AGC + %
+✅ Hodnota v dB
+✅ Parametre v 3 riadkoch (Freq/Pol, SR/FEC, System/Mod pre DVB-S; CH:24 498MHz, CR/Const, System/Mode pre DVB-T)
+✅ Prepínanie kanálov šípkami vľavo/vpravo
+✅ Zoznam kanálov šípkami hore/dole
+✅ Automatická aktualizácia pri zmene kanála
+✅ Automatické zatvorenie po 15 s
+✅ Zatvorenie pomocou EXIT/OK/MODRÉHO tlačidla
+
+## Tlačidlá:
+
+Tlačidlo	Funkcia
+🔴 ČERVENÉ	Zatvoriť plugin
+🟢 ZELENÉ	Otvoriť Satfinder (s aktívnym tunerom)
+🔵 MODRÉ	Otvoriť Mini Skin
+OK / EXIT	Zatvoriť plugin
+🎯 Mini Skin
+Mini skin sa otvára MODRÝM tlačidlom z hlavnej obrazovky. Zobrazuje sa vycentrovaný v hornej časti (podobne ako informačný panel OpenATV) a umožňuje rýchlu kontrolu signálu počas prepínania kanálov. Používanie mini-skinu
+Tlačidlo	Funkcia
+◄ VĽAVO	Predchádzajúci kanál
+► VPRAVO	Nasledujúci kanál
+▲ HORE	Otvoriť zoznam kanálov
+▼ DOLE	Otvoriť zoznam kanálov
+OK	Zatvoriť mini-skin
+EXIT	Zatvoriť mini-skin
+MODRÉ	Zatvoriť mini-skin
+Automatizácia mini-skinu
+🕐 Automatické zatvorenie po 15 sekundách nečinnosti
+🔄 Resetovanie časovača pri každej zmene kanála (zostáva otvorený počas prepínania)
+⚡ Okamžité obnovenie pri zmene kanála (ihneď + 300 ms + 800 ms)
+🎯 Automatická aktualizácia všetkých hodnôt: picon, názov kanála, SNR, AGC, dB, parametre
+
+Čo mini-skin zobrazuje
+Pre DVB-S/S2:
+Riadok 1: 11914 H — Frekvencia + Polarizácia
+Riadok 2: 30000 3/4 — Symbolová rýchlosť + FEC
+Riadok 3: DVB-S2 8PSK — Systém + Modulácia
+
+Pre DVB-T/T2:
+Riadok 1: CH:24 498MHz — Číslo kanála + Frekvencia
+Riadok 2: 7/8 64QAM — Kódová rýchlosť + Konštelácia
+Riadok 3: DVB-T 8K — Systém + Režim prenosu
+
+Pre DVB-C/C2:
+Riadok 1: 450 MHz — Frekvencia
+Riadok 2: 6900 256QAM — Symbolová rýchlosť + Modulácia
+Riadok 3: DVB-C 3/4 — Systém + FEC
+
+
+## Autor ##
+✅ Ciefp
+✅ 2026
+..:: CiefpSettings ::..
