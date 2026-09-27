@@ -1,0 +1,96 @@
+🇬🇧Engleski
+
+..:: CiefpEPGinfo v1.2 ::..
+FHD EPG informacije sa TMDB/OMDb/GROQ
+
+📺 Novi Enigma2 dodatak – prikazuje EPG listu i detaljne informacije o filmovima/serijama na jednom ekranu!
+
+✨ KARAKTERISTIKE:
+• EPG lista – trenutni + sljedećih 11 događaja
+• TMDB integracija – poster, ocjena, žanr, režiser, radnja
+• IMDB ocjena putem OMDb-a
+• GROQ AI prijevod – 20+ jezika
+• Prikaz glumačke postave 2×5
+• Preglednik filmografije – filmografija glumca
+• Istraživač glumačke postave – profil glumca na istom ekranu
+• YouTube trailer (dugme za informacije)
+• Pametni rezervirana mjesta (sport, vijesti, muzika, djeca, dokumentarci)
+• Detekcija koja nije TMDB (granice riječi)
+• Pametna TMDB pretraga (sličnost naslova)
+• Automatska provjera ažuriranja
+• FHD skin (1920×1080)
+
+🎮 DUGMADI:
+🔴 CRVENO - Izlaz
+🟢 ZELENO - Filmografija
+🟡 ŽUTO - Istraživanje glumačke postave
+🟣 PLAVO - Postavke
+🟣 Informacije: Traileri
+🔵 MENI: Postavke
+
+🔑 POTREBNI API KLJUČEVI (besplatno):
+• TMDB: https://www.themoviedb.org/settings/api
+• OMDb: https://www.omdbapi.com/apikey.aspx
+• GROQ: https://console.groq.com/keys
+
+Alternativa – datoteke
+Možete i ručno kreirati datoteke u mapi dodatka:
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/tmdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/omdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/groqapikey.txt
+Dodatak će ih automatski učitati prilikom pokretanja.
+
+# ⚙️ Postavke
+Opis opcije
+- TMDB API ključ TMDB ključ
+- OMDb API ključ OMDb ključ (IMDb ocjene)
+- GROQ API ključ GROQ ključ (prijevod)
+- GROQ model Model prijevoda (GPT-OSS, Llama, Qwen, ...)
+- Folder keša Folder za pohranjivanje postera
+- Preuzimanje postera DA/NE
+- Prikaži IMDB ocjenu DA/NE
+- Jezik opisa Jezik za TMDB opis (en-US, sr-RS, ...)
+- GROQ Prevedi DA/NE – glavni prekidač
+- Prevedi na jezik prijevoda (sr, hr, en, ar, ...)
+→ EPG opis Prevedi EPG opis
+→ TMDB radnja Prevedi TMDB opis
+→ Biografija Prevedi biografiju glumca
+→ Naslovi Prevedi naslove (sporije)
+Veličina keša Prikaz veličine keša
+OBRIŠI KES Izbriši sve postere iz keša
+Ručno ažuriranje Ručna provjera nove verzije
+
+# 🌍 Podržani jezici prijevoda
+🇷🇸 Srpski (sr)
+🇭🇷 Hrvatski (hr)
+🇧🇦 Bosanski (bs)
+🇸🇮 Slovenski (sl)
+🇲🇰 Makedonski (mk)
+🇬🇧 Engleski (en)
+🇩🇪 Njemački (de)
+🇫🇷 Francuski (fr)
+🇪🇸 Španski (es)
+🇮🇹 Italijanski (it)
+🇷🇺 Ruski (ru)
+🇵🇹Portugalski (pt)
+🇵🇱Poljski (pl)
+🇨🇿 Češki (cs)
+🇭🇺 Mađarski (hu)
+🇷🇴 Rumunski (ro)
+🇧🇬 Bugarski (bg)
+🇬🇷Grčki (hand)
+🇹🇷 Turski (tr)
+🇳🇱 Holandski (nl)
+🇸🇪 Švedski (sv)
+🇸🇦 Arapski (ar) – transliteracija
+
+# Python: 3.x
+
+- Enigma2: OpenPLi, OpenATV, OpenBH, VTi, DreamOS
+- Rezolucija skina: FHD 1920×1080
+- Fontovi: Regular, Bold, Console
+- Zavisnosti: python3-requests, python3-six
+
+🔗 GitHub: https://github.com/ciefp/CiefpEPGinfo
+
+..:: Ciefp postavke ::..

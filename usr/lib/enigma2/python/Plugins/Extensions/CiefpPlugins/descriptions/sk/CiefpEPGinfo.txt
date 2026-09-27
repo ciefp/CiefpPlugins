@@ -1,0 +1,96 @@
+🇬🇧Slovenčina
+
+..:: CiefpEPGinfo v1.2 ::..
+Informácie o FHD EPG s TMDB/OMDb/GROQ
+
+📺 Nový plugin Enigma2 – zobrazuje zoznam EPG a podrobné informácie o filmoch/seriáloch na jednej obrazovke!
+
+✨ VLASTNOSTI:
+• Zoznam EPG – aktuálne + ďalších 11 udalostí
+• Integrácia TMDB – plagát, hodnotenie, žáner, režisér, dej
+• Hodnotenie IMDB cez OMDb
+• Preklad GROQ AI – viac ako 20 jazykov
+• Zobrazenie hercov 2×5
+• Prehliadač filmografie – filmografia herca
+• Prieskumník hercov – profil herca na rovnakej obrazovke
+• Trailer na YouTube (tlačidlo Informácie)
+• Inteligentné zástupné symboly (šport, správy, hudba, deti, dokumenty)
+• Detekcia mimo TMDB (hranice medzi slovami)
+• Inteligentné vyhľadávanie TMDB (podobnosť názvov)
+• Kontrola automatických aktualizácií
+• FHD skin (1920×1080)
+
+🎮 TLAČIDLÁ:
+🔴 ČERVENÁ - Ukončiť
+🟢 ZELENÁ - Filmografia
+🟡 ŽLTÁ - Preskúmať hercov
+🟣 MODRÁ - Nastavenia
+🟣 Informácie: Trailery
+🔵 MENU: Nastavenia
+
+🔑 POŽADOVANÉ KĽÚČE API (zadarmo):
+• TMDB: https://www.themoviedb.org/settings/api
+• OMDb: https://www.omdbapi.com/apikey.aspx
+• GROQ: https://console.groq.com/keys
+
+Alternatíva – súbory
+Súbory môžete v priečinku s pluginom vytvoriť aj manuálne:
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/tmdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/omdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/groqapikey.txt
+Plugin ich automaticky načíta pri spustení.
+
+# ⚙️ Nastavenia
+Popis možností
+- Kľúč TMDB API Kľúč TMDB
+- Kľúč OMDb API Kľúč OMDb (hodnotenia IMDb)
+- Kľúč GROQ API Kľúč GROQ (preklad)
+- Model GROQ Prekladový model (GPT-OSS, Llama, Qwen, ...)
+- Priečinok vyrovnávacej pamäte Priečinok na ukladanie plagátov
+- Stiahnuť plagáty ÁNO/NIE
+- Zobraziť hodnotenie IMDB ÁNO/NIE
+- Jazyk popisu Jazyk pre popis TMDB (en-US, sr-RS, ...)
+- Preklad GROQ ÁNO/NIE – hlavný prepínač
+- Preložiť do jazyka prekladu (sr, hr, en, ar, ...)
+→ Popis EPG Preložiť popis EPG
+→ Dej TMDB Preložiť popis TMDB
+→ Životopis Preložiť životopis herca
+→ Tituly Preložiť tituly (pomalšie)
+Veľkosť vyrovnávacej pamäte Zobraziť veľkosť vyrovnávacej pamäte
+VYMAZAŤ VYROVNACIU PAMIATKU Odstrániť všetky plagáty z vyrovnávacej pamäte
+Manuálna aktualizácia Manuálna kontrola novej verzie
+
+# 🌍 Podporované jazyky prekladu
+🇷🇸 Srbčina (sr)
+🇭🇷 Chorvátčina (hr)
+🇧🇦 Bosniančina (bs)
+🇸🇮 Slovinka (sl)
+🇲🇰 Macedónčina (mk)
+🇬🇧 Angličtina (en)
+🇩🇪 Nemčina (de)
+🇫🇷 Francúzština (fr)
+🇪🇸 Španielčina (es)
+🇮🇹 Taliančina (it)
+🇷🇺 Ruština (ru)
+🇵🇹Portugalčina (pt)
+🇵🇱Poľština (pl)
+🇨🇿 Čeština (cs)
+🇭🇺 Maďarčina (hu)
+🇷🇴 Rumunčina (ro)
+🇧🇬 Bulharčina (bg)
+🇬🇷Gréčtina (hand)
+🇹🇷 Turečtina (tr)
+🇳🇱 Holandčina (nl)
+🇸🇪 Švédčina (sv)
+🇸🇦 Arabčina (ar) – prepis
+
+# Python: 3.x
+
+- Enigma2: OpenPLi, OpenATV, OpenBH, VTi, DreamOS
+- Rozlíšenie vzhľadu: FHD 1920×1080
+- Písma: Normálne, Tučné, Konzolové
+- Závislosti: python3-requests, python3-six
+
+🔗 GitHub: https://github.com/ciefp/CiefpEPGinfo
+
+..:: Nastavenia Ciefp ::..

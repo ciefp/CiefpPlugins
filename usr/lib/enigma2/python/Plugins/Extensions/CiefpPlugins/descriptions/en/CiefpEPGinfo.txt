@@ -1,0 +1,98 @@
+
+🇬🇧 English
+
+..::  CiefpEPGinfo v1.2  ::..  
+FHD EPG Info with TMDB/OMDb/GROQ 
+
+📺 New Enigma2 plugin – shows EPG list and detailed movie/series
+info on a single screen!
+
+✨ FEATURES:
+• EPG list – current + next 11 events
+• TMDB integration – poster, rating, genre, director, plot
+• IMDB rating via OMDb
+• GROQ AI translation – 20+ languages
+• Cast 2×5 display
+• Filmography Browser – actor filmography
+• Cast Explorer – actor profile on same screen
+• YouTube Trailer (Info button)
+• Smart placeholders (sport, news, music, kids, docu)
+• Non-TMDB detection (word boundary)
+• Smart TMDB search (title similarity)
+• Auto update check
+• FHD skin (1920×1080)
+
+🎮 BUTTONS:
+🔴 RED - Exit        
+🟢 GREEN - Filmography
+🟡 YELLOW - Cast explore 
+🟣 BLUE - Settings
+🟣 Info:Trailers
+🔵 MENU: Settings
+
+🔑 REQUIRED API KEYS (free):
+• TMDB: https://www.themoviedb.org/settings/api
+• OMDb: https://www.omdbapi.com/apikey.aspx
+• GROQ: https://console.groq.com/keys
+
+Alternative – files
+You can also manually create files in the plugin folder:
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/tmdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/omdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/groqapikey.txt
+The plugin will automatically load them upon startup. 
+
+# ⚙️ Settings
+Option	Description
+- TMDB API Key	TMDB key
+- OMDb API Key	OMDb key (IMDb ratings)
+- GROQ API Key	GROQ key (translation)
+- GROQ Model	Translation model (GPT-OSS, Llama, Qwen, ...)
+- Cache folder	Folder for storing posters
+- Download Posters	YES/NO
+- Show IMDB Rating	YES/NO
+- Description lang	Language for TMDB description (en-US, sr-RS, ...)
+- GROQ Translate	YES/NO – main switch
+- Translate to	Translation language (sr, hr, en, ar, ...)
+→ EPG description	Translate EPG description
+→ TMDB Plot	Translate TMDB description
+→ Biography	Translate actor biography
+→ Titles	Translate titles (slower)
+Cache size	Display cache size
+CLEAR CACHE	Delete all posters from cache
+Manual Update	Manually check for new version
+
+# 🌍 Supported translation languages
+🇷🇸 Serbian (sr)
+🇭🇷 Croatian (hr)
+🇧🇦 Bosnian (bs)
+🇸🇮 Slovenian (sl)
+🇲🇰 Macedonian (mk)
+🇬🇧 English (en)
+🇩🇪 German (de)
+🇫🇷 French (fr)
+🇪🇸 Spanish (es)
+🇮🇹 Italian (it)
+🇷🇺 Russian (ru)
+🇵🇹 Portuguese (pt)
+🇵🇱 Polish (pl)
+🇨🇿 Czech (cs)
+🇭🇺 Hungarian (hu)
+🇷🇴 Romanian (ro)
+🇧🇬 Bulgarian (bg)
+🇬🇷 Greek (el)
+🇹🇷 Turkish (tr)
+🇳🇱 Dutch (nl)
+🇸🇪 Swedish (sv)
+🇸🇦 Arabic (ar) – transliteration
+
+# Python: 3.x
+
+- Enigma2: OpenPLi, OpenATV, OpenBH, VTi, DreamOS
+- Skin Resolution: FHD 1920×1080
+- Fonts: Regular, Bold, Console
+-Dependencies: python3-requests, python3-six
+
+🔗 GitHub: https://github.com/ciefp/CiefpEPGinfo
+
+..:: Ciefp Settings ::..

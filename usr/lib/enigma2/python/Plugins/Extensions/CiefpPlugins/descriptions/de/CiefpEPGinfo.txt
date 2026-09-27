@@ -1,0 +1,102 @@
+🇬🇧Englisch
+
+..:: CiefpEPGinfo v1.2 ::..
+FHD EPG-Informationen mit TMDB/OMDb/GROQ
+
+📺 Neues Enigma2-Plugin – zeigt EPG-Liste und detaillierte Film-/Serieninformationen auf einem Bildschirm!
+
+
+✨ FUNKTIONEN:
+
+• EPG-Liste – Aktuelle + nächste 11 Veranstaltungen
+• TMDB-Integration – Poster, Bewertung, Genre, Regisseur, Handlung
+• IMDB-Bewertung über OMDb
+• GROQ KI-Übersetzung – über 20 Sprachen
+• Besetzungsanzeige (2x5)
+• Filmografie-Browser – Filmografie der Schauspieler
+• Cast Explorer – Schauspielerprofile auf demselben Bildschirm
+• YouTube-Trailer (Info-Button)
+• Intelligente Platzhalter (Sport, Nachrichten, Musik, Kinderfilme, Dokumentationen)
+• Erkennung von Nicht-TMDB-Inhalten (Wortgrenzen)
+• Intelligente TMDB-Suche (Titelähnlichkeit)
+• Automatische Update-Prüfung
+• FHD-Auflösung (1920×1080)
+
+🎮 TASTEN:
+🔴 ROT – Beenden
+🟢 GRÜN – Filmografie
+🟡 GELB – Cast Explorer
+🟣 BLAU – Einstellungen
+🟣 Info: Trailer
+🔵 MENÜ: Einstellungen
+
+🔑 ERFORDERLICHE API-SCHLÜSSEL (kostenlos):
+
+• TMDB: https://www.themoviedb.org/settings/api
+• OMDb: https://www.omdbapi.com/apikey.aspx
+• GROQ: https://console.groq.com/keys
+
+Alternativ – Dateien
+Sie können auch manuell Dateien im Plugin-Ordner erstellen:
+
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/tmdbapikey.txt
+
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/omdbapikey.txt
+
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/groqapikey.txt
+Das Plugin lädt diese automatisch beim Start.
+
+# ⚙️ Einstellungen
+Optionen Beschreibung
+- TMDB API-Schlüssel TMDB-Schlüssel
+- OMDb API-Schlüssel OMDb-Schlüssel (IMDb-Bewertungen)
+- GROQ API-Schlüssel GROQ-Schlüssel (Übersetzung)
+- GROQ-Modell Übersetzungsmodell (GPT-OSS, Llama, Qwen, ...)
+- Cache-Ordner Ordner zum Speichern von Postern
+- Poster herunterladen JA/NEIN
+- IMDB-Bewertung anzeigen JA/NEIN
+- Beschreibungssprache Sprache für die TMDB-Beschreibung (en-US, sr-RS, ...)
+- GROQ übersetzen JA/NEIN – Hauptschalter
+- Übersetzungssprache (sr, hr, en, ar, ...)
+→ EPG-Beschreibung EPG-Beschreibung übersetzen
+→ TMDB-Handlung TMDB-Beschreibung übersetzen
+→ Biografie Schauspielerbiografie übersetzen
+→ Titel Titel übersetzen (langsamer)
+Cache-Größe Cache-Größe anzeigen
+CACHE LEEREN Alle Poster aus dem Cache löschen
+Manuelle Aktualisierung Manuell nach neuen Versionen suchen
+
+# 🌍 Unterstützte Übersetzungssprachen
+🇷🇸 Serbisch (sr)
+🇭🇷 Kroatisch (hr)
+🇧🇦 Bosnisch (bs)
+🇸🇮 Slowenisch (sl)
+🇲🇰 Mazedonisch (mk)
+🇬🇧 Englisch (en)
+🇩🇪 Deutsch (de)
+🇫🇷 Französisch (fr)
+🇪🇸 Spanisch (es)
+🇮🇹 Italienisch (it)
+🇷🇺 Russisch (ru)
+🇵🇹 Portugiesisch (pt)
+🇵🇱 Polnisch (pl)
+🇨🇿 Tschechisch (cs)
+🇭🇺 Ungarisch (hu)
+🇷🇴 Rumänisch (ro)
+🇧🇬 Bulgarisch (bg)
+🇬🇷 Griechisch (hand)
+🇹🇷 Türkisch (tr)
+🇳🇱 Niederländisch (nl)
+🇸🇪 Schwedisch (sv)
+🇸🇦 Arabisch (ar) – Transliteration
+
+# Python: 3.x
+
+- Enigma2: OpenPLi, OpenATV, OpenBH, VTi, DreamOS
+- Skin-Auflösung: FHD 1920×1080
+- Schriftarten: Normal, Fett, Konsole
+- Abhängigkeiten: python3-requests, python3-six
+
+🔗 GitHub: https://github.com/ciefp/CiefpEPGinfo
+
+..:: Ciefp-Einstellungen ::..
