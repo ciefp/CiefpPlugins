@@ -1,0 +1,102 @@
+CiefpDishPointer v1.1
+Plugin pre Enigma2 (Python 2 a Python 3)
+
+POPIS:
+Plugin, ktorý pomáha začiatočníkom nasmerovať satelitnú anténu – identifikuje
+referenčný satelit, overuje nastavenie a poskytuje
+všetky potrebné uhly pre nastavenie (azimut, elevácia, sklon LNB).
+
+Funguje na rovnakom princípe ako webová stránka dishpointer.com, ale je prispôsobený pre systém Enigma2. 
+Plugin som netestoval v prostredí Python 2.
+
+
+HLAVNÉ FUNKCIE:
+
+▶ Automatická geolokácia
+- Zistenie polohy pomocou IP adresy (ip-api.com)
+- Zobrazenie údajov: kontinent, krajina, mesto, zemepisná šírka a dĺžka
+- Možnosť manuálnej úpravy pomocou tlačidla INFO
+
+▶ Štyri prevádzkové režimy
+- Všetky satelity – zobrazí satelit najbližšie k vašej polohe
+- Motorizovaný systém – vypočíta skutočný juh/sever a deklináciu
+- Multi LNB – výber viacerých satelitov; Plugin vypočíta nulový bod
+- Single (Jeden satelit) — výber jedného satelitu zo zoznamu
+
+▶ Výpočty
+- Geografický a magnetický azimut
+- Elevácia (sklon) paraboly
+- Natočenie LNB (Skew – vľavo/vpravo)
+- Deklinácia pre motorizované systémy
+
+▶ Jeden satelit (zelené tlačidlo)
+- Zoznam všetkých satelitov zo súboru satellites.xml
+- Výber konkrétneho satelitu pomocou šípok
+- Zobrazenie vypočítaných uhlov pre vybraný satelit
+
+▶ Multi LNB (žlté tlačidlo)
+- Zoznam satelitov s možnosťou výberu (zaškrtávacie políčka)
+- Výber viacerých sledovaných satelitov
+- Plugin vypočíta satelit, ktorý je najvhodnejší ako nulový bod
+- Zobrazenie zoznamu vybraných satelitov a stredovej polohy
+
+▶ Pomocné obrázky (modré tlačidlo)
+- Vizuálne vysvetlenie pre:
+• Eleváciu (príliš nízka/vysoká)
+• Azimut (nesprávna os)
+• Deklináciu (príliš vysoká/nízka)
+• Natočenie LNB (Skew)
+• Skutočný juh
+• Nastavenie motora (4 príklady)
+
+▶ Signál v reálnom čase
+- SNR s farebným indikátorom (červená → žltá → zelená)
+- AGC s farebným indikátorom
+- Hodnota v dB (napr. 16,38)
+- Zobrazenie aktuálneho kanála, poskytovateľa a satelitu
+
+▶ Podpora dvoch jazykov
+- Angličtina (predvolené)
+- Srbčina
+- Zmena cez tlačidlo MENU → Nastavenia → Jazyk
+
+
+TLAČIDLÁ NA OBRAZOVKE / KLÁVESY:
+
+ČERVENÉ (EXIT) — ukončenie pluginu
+ZELENÉ (SINGLE SAT) — výber jedného satelitu
+ŽLTÉ (MULTI LNB) — nastavenie Multi LNB
+MODRÉ (HELP IMAGES) — zobrazenie pomocných obrázkov
+MENU (LANGUAGE) — otvorenie nastavení (jazyk, poloha, obnovenie)
+INFO (LOCATION) — manuálna úprava polohy
+VĽAVO/VPRAVO — zmena typu systému (Všetky/Motorizovaný/Multi/Single)
+EXIT — ukončenie pluginu
+
+
+KOMPATIBILITA:
+
+✅ Python 2 (OpenPLi 7, OpenATV 6.4, Egami 8)
+✅ Python 3 (OpenPLi 8+, OpenATV 7+, Egami 10+)
+✅ FHD skin (1920x1080)
+✅ OpenPLi, OpenATV, Egami, OpenBH, PurE2
+
+
+VERZIA 1.1 — ČO JE NOVÉ:
+
+• Pridané nastavenie pre viac LNB so zoznamom a zaškrtávacími políčkami
+• Pridaná obrazovka pre jeden satelit s vypočítanými uhlami
+• Pridaná obrazovka s pomocnými obrázkami a textom
+• Pridaná funkcia úpravy polohy pre manuálnu zmenu umiestnenia
+• Pridaná obrazovka nastavení (jazyk, obnovovanie, poloha)
+• Pridaný srbský preklad
+• Indikátor signálu s prechodom farieb (icon_snr.png, icon_agc.png)
+• Zobrazenie aktuálnej služby (kanál, poskytovateľ, satelit)
+• Ikona satelitnej paraboly v strede obrazovky
+
+
+AUTOR:
+
+Ciefp
+Github: [https://github.com/ciefp]
+Verzia: 1.1
+Dátum: 4. 10. 2026

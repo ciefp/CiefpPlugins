@@ -1,0 +1,103 @@
+
+CiefpDishPointer v1.1
+Plugin za Enigma2 (Python 2 i Python 3)
+
+OPIS:
+Plugin koji pomaže početnicima da podele antenu — da odrede nulti
+satelit, da provere da li je antena dobro podešena, i da dobiju
+sve potrebne uglove za podešavanje (azimut, elevacija, LNB skew).
+
+Radi po principu sajta dishpointer.com, prilagođen Enigma2 sistemu.
+Python2 nisam testirao
+
+
+GLAVNE FUNKCIJE:
+
+▶ Automatska geolokacija
+- Detekcija lokacije preko IP adrese (ip-api.com)
+- Prikazuje: kontinent, državu, grad, geografsku širinu i dužinu
+- Mogućnost ručne izmene preko INFO tastera
+
+▶ Četiri režima rada
+- Svi sateliti — prikazuje najbliži satelit vašoj lokaciji
+- Motorizovani — izračunava True South/North i deklinaciju
+- Multi LNB — birate više satelita, plugin proračuna nulti
+- Pojedinačni — birate jedan satelit iz liste
+
+▶ Izračunavanje
+- Azimut pravi i magnetni
+- Elevacija tanjira
+- LNB skew (Left/Right)
+- Deklinacija za motorizovane sisteme
+
+▶ Single Satellite (zeleno dugme)
+- Lista svih satelita iz satellites.xml
+- Izbor jednog satelita strelicama
+- Prikazuje izračunate uglove za izabrani satelit
+
+▶ Multi LNB (žuto dugme)
+- Checkbox lista satelita
+- Označavate više satelita koje pratite
+- Plugin proračuna koji je najbolji nulti satelit
+- Prikazuje listu izabranih satelita i srednju poziciju
+
+▶ Slike pomoći (plavo dugme)
+- Slikovito objašnjenje za:
+• Elevaciju (premala/prevelika)
+• Azimut (pogrešna osa)
+• Deklinaciju (prevelika/premala)
+• LNB Skew
+• True South
+• Podešavanje motora (4 primera)
+
+▶ Signal u realnom vremenu
+- SNR sa gradijent barom (crveno → žuto → zeleno)
+- AGC sa gradijent barom
+- DB vrednost (npr. 16.38)
+- Prikaz trenutnog kanala, provajdera i satelita
+
+▶ Dvojezična podrška
+- Engleski (default)
+- Srpski
+- Promena preko MENU tastera → Settings → Language
+
+
+DUGMIĆI NA EKRANU / TASTERI:
+
+CRVENO (EXIT) — zatvara plugin
+ZELENO (SINGLE SAT) — otvara izbor pojedinačnog satelita
+ŽUTO (MULTI LNB) — otvara Multi LNB setup
+PLAVO (HELP IMAGES) — otvara slike objašnjenja
+MENU (LANGUAGE) — otvara Settings (jezik, lokacija, refresh)
+INFO (LOCATION) — otvara ručnu izmenu lokacije
+LEVO/DESNO — menja tip sistema (All/Motorised/Multi/Single)
+EXIT — zatvara plugin
+
+
+KOMPATIBILNOST:
+
+✅ Python 2 (OpenPLi 7, OpenATV 6.4, Egami 8)
+✅ Python 3 (OpenPLi 8+, OpenATV 7+, Egami 10+)
+✅ FHD skin (1920x1080)
+✅ OpenPLi, OpenATV, Egami, OpenBH, PurE2
+
+
+VERZIJA 1.1 — ŠTA JE NOVO:
+
+• Dodat Multi LNB setup sa checkbox listom
+• Dodat Single Satellite ekran sa izračunatim uglovima
+• Dodat Help Images ekran sa slikama i tekstom
+• Dodat Location Edit za ručnu izmenu lokacije
+• Dodat Settings ekran (jezik, refresh, lokacija)
+• Dodat srpski prevod
+• Signal bar sa gradijent slikom (icon_snr.png, icon_agc.png)
+• Prikaz trenutnog servisa (kanal, provajder, satelit)
+• Dish ikona u sredini ekrana
+
+
+AUTOR:
+
+Ciefp
+Github: [https://github.com/ciefp]
+Verzija: 1.1
+Datum: 04.10.2026.

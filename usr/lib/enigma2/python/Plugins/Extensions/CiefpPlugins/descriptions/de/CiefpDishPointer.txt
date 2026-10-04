@@ -1,0 +1,97 @@
+CiefpDishPointer v1.1
+Plugin für Enigma2 (Python 2 und Python 3)
+
+BESCHREIBUNG: Dieses Plugin hilft Einsteigern beim Einrichten der Antenne – vom Nullpunkt bis zur Überprüfung der korrekten Ausrichtung.
+
+Es ermöglicht die Einstellung aller notwendigen Winkel für die Justierung (Azimut, Elevation, LNB-Skew).
+
+Das Prinzip basiert auf der Website dishpointer.com, angepasst an das Enigma2-System.
+
+Ich habe Python 2 nicht getestet.
+
+HAUPTFUNKTIONEN:
+
+▶ Automatische Geolokalisierung
+- Standorterkennung über IP-Adresse (ip-api.com)
+- Anzeige: Kontinent, Besitz, Grad, Breitengrad und Längengrad
+- Manuelle Änderung über die INFO-Schaltfläche möglich
+
+▶ Vier Anzeigemodi
+- Alle Satelliten – zeigt den nächstgelegenen Satelliten an
+- Motorisiert – berechnet die wahre Süd-/Nordrichtung und Deklination
+- Multi-LNB – Auswahl mehrerer Satelliten, Zero-Budget-Plugin
+- Einzeln – Auswahl eines Satelliten aus der Liste
+
+▶ Berechnung
+- Wahrer und magnetischer Azimut
+- Plattenhöhe
+- LNB-Skew (Links/Rechts)
+- Deklination für das motorisierte System
+
+▶ Einzelner Satellit (grüne Schaltfläche)
+- Liste aller Satelliten aus satellites.xml
+- Auswahl eines Satelliten mit den Pfeiltasten
+- Anzeige der berechneten Winkel für den ausgewählten Satelliten
+
+▶ Multi-LNB (gelbe Schaltfläche)
+- Satellitenliste mit Kontrollkästchen
+- Markieren Sie mehrere Satelliten, die Sie verwenden möchten Tracking
+- Das Budget-Plugin ist das beste Zero-Satelliten-Plugin.
+- Zeigt die Liste der ausgewählten Satelliten und deren mittlere Position an.
+
+▶ Hilfebilder (plavo dugme)
+- Bildliche Erklärung für:
+• Elevation (zu klein/zu groß)
+• Azimut (falsche Achse)
+• Deklination (zu groß/zu klein)
+• LNB-Skew
+• Wahrer Süden
+• Motoreinstellung (4 Primer)
+
+▶ Signal in Echtzeit
+- SNR mit Farbverlauf (rot → gelb → grün)
+- AGC mit Farbverlauf
+- dB-Wert (z. B. 16,38)
+- Anzeige des aktuellen Kanals, Anbieters und Satelliten
+
+▶ Zweisprachige Unterstützung
+- Englisch (Standard)
+- Serbisch
+- Änderung über die Menü-Taste → Einstellungen → Sprache
+
+Bildschirmtasten:
+
+ROT (BEENDEN) – Schließt das Plugin
+GRÜN (EINZELNER SAT) – Öffnet die Auswahl eines Satelliten Einzelner Satellit
+GELB (MULTI-LNB) – Öffnet die Multi-LNB-Einrichtung
+PLAVO (HILFEBILDER) – Öffnet erklärende Bilder
+MENÜ (SPRACHE) – Öffnet die Einstellungen (Sprache, Standort, Aktualisierung)
+INFO (STANDORT) – Öffnet die manuelle Standortänderung
+LINKS/RECHTS – Wechselt den Systemtyp (Alle/Motorisiert/Multi/Einzeln)
+BEENDEN – Schließt das Plugin
+
+KOMPATIBILITÄT:
+
+✅ Python 2 (OpenPLi 7, OpenATV 6.4, Egami 8)
+✅ Python 3 (OpenPLi 8+, OpenATV 7+, Egami 10+)
+✅ FHD-Skin (1920x1080)
+✅ OpenPLi, OpenATV, Egami, OpenBH, PurE2
+
+VERSION 1.1 – NEU:
+
+• Multi-LNB-Einrichtung mit Kontrollkästchen
+• Einzelner Satellit mit berechneten Winkeln
+• Hilfebilder hinzugefügt Mit Bildern und Text
+• Standortbearbeitung für manuelle Standortänderungen
+• Einstellungsbildschirm (Sprache, Aktualisierung, Standort)
+• Serbische Übersetzung
+• Signalstärkeanzeige mit Farbverlauf (icon_snr.png, icon_agc.png)
+• Anzeige des aktuellen Dienstes (Kanal, Anbieter, Satellit)
+• Satellitenschüssel-Symbol in der Bildschirmmitte
+
+AUTOR:
+
+Ciefp
+GitHub: [https://github.com/ciefp]
+Version: 1.1
+Datum: 04.10.2026

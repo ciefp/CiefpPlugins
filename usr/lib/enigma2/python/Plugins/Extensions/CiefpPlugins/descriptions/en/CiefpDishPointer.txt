@@ -1,0 +1,99 @@
+
+  CiefpDishPointer v1.1
+  Enigma2 Plugin (Python 2 & Python 3)
+
+DESCRIPTION:
+A plugin that helps beginners to align their satellite dish — to
+determine the zero satellite, to check if the dish is properly
+aligned, and to get all required angles (azimuth, elevation, LNB skew).
+
+Works like dishpointer.com, adapted for Enigma2.
+I haven't tested Python 2.
+
+MAIN FEATURES:
+
+▶ Automatic geolocation
+   - IP-based location detection (ip-api.com)
+   - Shows: continent, country, city, latitude, longitude
+   - Manual edit via INFO button
+
+▶ Four operating modes
+   - All Satellites   — shows nearest satellite to your location
+   - Motorised        — calculates True South/North and declination
+   - Multi LNB        — select multiple satellites, plugin finds zero
+   - Single           — select one satellite from list
+
+▶ Calculations
+   - Azimuth true and magnetic
+   - Dish elevation
+   - LNB skew (Left/Right)
+   - Declination for motorised systems
+
+▶ Single Satellite (GREEN button)
+   - List of all satellites from satellites.xml
+   - Select one satellite with arrows
+   - Shows calculated angles for selected satellite
+
+▶ Multi LNB (YELLOW button)
+   - Checkbox list of satellites
+   - Mark multiple satellites you want to track
+   - Plugin calculates best zero satellite
+   - Shows list of selected satellites and average position
+
+▶ Help Images (BLUE button)
+   - Visual explanations for:
+     • Elevation (too low/too high)
+     • Azimuth (wrong axis)
+     • Declination (too high/too low)
+     • LNB Skew
+     • True South
+     • Motor setup (4 examples)
+
+▶ Real-time signal
+   - SNR with gradient bar (red → yellow → green)
+   - AGC with gradient bar
+   - DB value (e.g. 16.38)
+   - Current channel, provider and satellite
+
+▶ Bilingual support
+   - English (default)
+   - Serbian
+   - Switch via MENU → Settings → Language
+
+BUTTONS / REMOTE KEYS:
+
+  RED    (EXIT)              — closes plugin
+  GREEN  (SINGLE SAT)        — opens single satellite selection
+  YELLOW (MULTI LNB)         — opens Multi LNB setup
+  BLUE   (HELP IMAGES)       — opens help images
+  MENU   (LANGUAGE)          — opens Settings (language, location, refresh)
+  INFO   (LOCATION)          — opens manual location edit
+  LEFT/RIGHT                 — changes system type
+  EXIT                       — closes plugin
+
+COMPATIBILITY:
+
+  ✅ Python 2 (OpenPLi 7, OpenATV 6.4, Egami 8)
+  ✅ Python 3 (OpenPLi 8+, OpenATV 7+, Egami 10+)
+  ✅ FHD skin (1920x1080)
+  ✅ OpenPLi, OpenATV, Egami, OpenBH, PurE2
+
+VERSION 1.1 — WHAT'S NEW:
+
+  • Added Multi LNB setup with checkbox list
+  • Added Single Satellite screen with calculated angles
+  • Added Help Images screen with images and text
+  • Added Location Edit for manual location change
+  • Added Settings screen (language, refresh, location)
+  • Added Serbian translation
+  • Signal bar with gradient image (icon_snr.png, icon_agc.png)
+  • Current service display (channel, provider, satellite)
+  • Dish icon in center of screen
+
+AUTHOR:
+
+  Ciefp
+  Github: [https://github.com/ciefp]
+  Version: 1.1
+  Date: 04.10.2026.
+
