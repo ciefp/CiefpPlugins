@@ -1,0 +1,188 @@
+..:: CiefpChannelHistory v1.1 ::..
+Verlauf der angesehenen TV-Sender mit Statistik
+
+
+📺 BESCHREIBUNG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CiefpChannelHistory ist ein Enigma2-Plugin, das den Verlauf der
+angesehenen TV-Sender protokolliert und detaillierte Statistiken
+liefert. Es bietet zudem einen FHD-EPG-Infobildschirm, der mit
+Daten von TMDB/OMDb angereichert ist.
+
+Die Idee für dieses Plugin entstand aus zwei früheren Plugins:
+• CiefpTMDBinfo
+• CiefpEPGinfo
+
+Durch die Kombination der Funktionen dieser beiden Plugins
+wurde CiefpChannelHistory geschaffen – ein umfassendes Tool
+zur Erfassung und Analyse des TV-Nutzungsverhaltens.
+
+📊 WICHTIGER HINWEIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Damit die Statistiken möglichst genau und realistisch sind,
+benötigt das Plugin eine gewisse Nutzungsdauer.
+
+Das Plugin erfasst die Nutzung ab dem Zeitpunkt der Installation.
+Je länger Sie das Plugin verwenden, desto präziser werden die Statistiken:
+
+• Erster Tag    → grundlegende Statistiken (einige wenige Sender)
+• 3–5 Tage      → realistisches Bild des Nutzungsverhaltens
+• 7+ Tage       → zuverlässige Statistiken nach Stunde und Tag
+• 30+ Tage      → vollständige Analyse der Sehgewohnheiten
+
+Wir empfehlen, das Plugin mindestens 3–5 Tage laufen zu lassen,
+ohne die Datenbank zu löschen, bevor Sie Rückschlüsse auf
+Ihre Sehgewohnheiten ziehen.
+
+Die Statistiken werden in einer SQLite-Datenbank gespeichert und
+bleiben auch nach einem Neustart von Enigma erhalten. Sie können
+diese über „Einstellungen“ → „Gesamten Verlauf löschen“ entfernen,
+falls Sie ganz von vorne beginnen möchten. 🎯 HAUPTFUNKTIONEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+▶ Wiedergabeverlauf der Sender
+• Automatische Erfassung aller angesehenen Sender
+• Protokollierung von Dauer, Anzahl der Aufrufe und Zeitpunkt der letzten Wiedergabe
+• Zuverlässige SQLite-Datenbank mit WAL-Modus
+
+▶ FHD-Hauptbildschirm (1920x1080)
+• Liste der letzten 15 Sender (Verlauf)
+• Anzeige des aktuellen Senders im oberen Bereich
+• EPG-Informationen + TMDB-Poster + Besetzung
+• Sender-Picons
+
+▶ FHD-EPG-Infobildschirm (gelbe Taste)
+• Liste der EPG-Ereignisse für den ausgewählten Sender
+• TMDB-Details (Poster, Genre, Regisseur, Beschreibung)
+• IMDb-Bewertung
+• Besetzung & Stab mit Bildern
+• Filmografie-Browser
+• Trailer-Wiedergabe via yt-dlp
+
+▶ Statistiken (grüne Taste)
+• Übersicht: Anzahl der Sender, Sitzungen, Gesamtdauer
+• Top-20-Sender: meistgesehene Sender
+• Nach Diensttyp: DVB-S, DVB-T, IPTV
+• Nach Satellit: über 20 Satelliten mit Namen
+• Nach Verschlüsselung: FTA, Irdeto, NDS, Nagravision...
+• Nach Tageszeit: Hauptsendezeiten
+• Nach Wochentag: Vergleich Wochentag vs. Wochenende
+• Typisch für diesen Zeitpunkt: Was Sie üblicherweise zu dieser Zeit sehen
+
+▶ Satellitenerkennung
+• Auslesen des Namespace aus der Service-Referenz
+• Zuordnung zum Satellitennamen aus der satellites.xml
+• Unterstützung für DVB-S, DVB-T, DVB-C
+• Anzeige von Position und Name (z. B. „23.5E (Astra 3C)“)
+
+▶ CAID-Erkennung
+• Auslesen aktiver CAIDs aus service.info()
+• Auslesen der aktiven CAID aus /tmp/ecm.info
+• Anzeige von Informationen zu allen CAIDs samt Systemnamen
+• Unterstützung für: Irdeto, NDS, Nagravision, Conax,
+Cryptoworks, Viaccess, Seca, PowerVu, Biss...
+
+▶ Erwachsenenfilter (Jugendschutz)
+• Einlesen der Blacklist aus /etc/enigma2/blacklist
+• Überspringen von Sendern für Erwachsene Statistiken
+• Optional: Ein-/Ausschalten in den Einstellungen
+• Automatische Aktualisierung bei Änderung der Jugendschutzeinstellungen
+
+▶ Einstellungsmenü (blaue Taste)
+• DB-Ordner (HDD/USB/tmp)
+• Verlaufsumfang (10–50 Einträge)
+• Mindest-Wiedergabezeit (5–300 Sek.)
+• Entprellzeit (3–60 Sek.)
+• Speicherdauer des Verlaufs (30/60/90/180/365 Tage / unbegrenzt)
+• Filter für Erwachseneninhalte (Jugendschutz): JA/NEIN
+• API-Schlüssel: TMDB, OMDb, GROQ
+• IMDB-Bewertung anzeigen: JA/NEIN
+• Poster herunterladen: JA/NEIN
+• Sprache: 9 Sprachen
+• Alte Sitzungen bereinigen
+• Cache leeren
+• Gesamten Verlauf löschen
+• Manuelle Aktualisierung
+
+💡 VORAUSSETZUNGEN
+-
+
+• Enigma2-Image (getestet mit OpenATV 8.0)
+• Python 3
+• python3-sqlite3
+• python3-requests
+• TMDB-API-Schlüssel (kostenlos: https://www.themoviedb.org/settings/api)
+• OMDb-API-Schlüssel (kostenlos: https://www.omdbapi.com/apikey.aspx)
+• GROQ-API-Schlüssel (kostenlos: https://console.groq.com/keys)
+
+
+⚙️ SO ERHALTEN SIE DIE API-SCHLÜSSEL
+-
+
+1) TMDB-API-Schlüssel
+• Registrieren unter https://www.themoviedb.org/
+• Zu Einstellungen → API → API-Schlüssel anfordern (Request API Key) gehen
+• API-Schlüssel kopieren
+
+2) OMDb-API-Schlüssel
+• Zu https://www.omdbapi.com/apikey.aspx gehen
+• „Free“ (kostenlos, Limit: 1.000 Anfragen/Tag) auswählen
+• API-Schlüssel aus der E-Mail kopieren
+
+3) Schlüssel im Plugin eingeben:
+• CiefpChannelHistory öffnen
+• Blaue Taste (Einstellungen)
+• TMDB-API-Schlüssel → OK → Schlüssel eingeben
+• OMDb-API-Schlüssel → OK → Schlüssel eingeben
+• GROQ-API-Schlüssel → OK → Schlüssel eingeben
+• Speichern (grüne Taste)
+
+Alternative – Dateien
+Sie können die Dateien auch manuell im Plugin-Ordner erstellen:
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/tmdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/omdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/groqapikey.txt
+
+🎨 BEDIENUNG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Hauptbildschirm:
+• Hoch/Runter   — Kanalliste
+• OK            — Zum Kanal wechseln
+• Grün          — Statistik
+• Gelb          — EPG-Info
+• Blau          — Einstellungen
+• Rot           — Beenden
+
+EPG-Info-Bildschirm:
+• Hoch/Runter   — EPG-Ereignisliste
+• Grün          — Filmografie
+• Gelb          — Besetzung anzeigen
+• Blau          — Trailer
+• OK            — Sender wechseln
+• ZURÜCK        — Zurück
+
+Statistik:
+• Hoch/Runter   — Kategorien
+• Grün          — Aktualisieren
+
+
+🔧 TECHNISCHE DETAILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• SQLite-Datenbank mit WAL-Modus
+• Periodische Sitzungsaktualisierung (max. 30 Sek. Datenverlust bei Neustart)
+• 5-Sekunden-Abfrageintervall für Senderwechsel
+• 10-Sekunden-Entprellung (verhindert fehlerhafte Sitzungen)
+• 30 Sekunden Mindestsehdauer (Sender muss 30 Sek. lang geschaut werden)
+• Automatische Bereinigung alter Sitzungen (Aufbewahrungsfrist)
+• Multithreading für alle Netzwerkoperationen
+• FHD-Skin (1920x1080)
+
+👨‍💻 AUTOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ciefp
+https://github.com/ciefp

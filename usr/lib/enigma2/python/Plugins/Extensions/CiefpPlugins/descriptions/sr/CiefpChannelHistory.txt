@@ -1,0 +1,190 @@
+
+..:: CiefpChannelHistory v1.1  ::..          
+Channel Watch History with Statistics         
+
+
+📺 OPIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CiefpChannelHistory je Enigma2 plugin koji prati istoriju gledanja
+TV kanala i pruža detaljnu statistiku, sa FHD EPG Info ekranom
+obogaćenim TMDB/OMDb podacima.
+
+Ideja za plugin je nastala na osnovu prethodna dva plugina:
+  • CiefpTMDBinfo
+  • CiefpEPGinfo
+
+Kombinacijom funkcionalnosti iz ova dva plugina, nastao je
+CiefpChannelHistory — kompletan alat za praćenje i analizu
+gledanosti TV kanala.
+
+📊 VAŽNA NAPOMENA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Da bi statistika bila što tačnija i realnija, potrebno je
+nekoliko dana korišćenja plugina.
+
+Plugin prati gledanost od trenutka instalacije. Što duže
+koristite plugin, statistika je preciznija:
+
+  • Prvi dan    → osnovna statistika (par kanala)
+  • 3-5 dana    → realna slika gledanosti
+  • 7+ dana     → pouzdana statistika po satima i danima
+  • 30+ dana    → kompletna analiza navika gledanja
+
+Preporučujemo da pustite plugin da radi bez brisanja baze
+najmanje 3-5 dana prije nego što donosite zaključke o
+svojim navikama gledanja.
+
+Statistika se čuva u SQLite bazi i preživljava restarte
+Enigme. Možete je obrisati u Settings → Clear All History
+ako želite početi od nule.
+
+🎯 GLAVNE FUNKCIJE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+▶ Istorija gledanja kanala
+  • Automatski prati svaki kanal koji gledate
+  • Beleži trajanje, broj gledanja, zadnji put
+  • SQLite baza sa WAL modom za pouzdanost
+
+▶ FHD Glavni ekran (1920x1080)
+  • Lista zadnjih 15 kanala (history)
+  • Trenutni kanal na vrhu
+  • EPG info + TMDB poster + cast
+  • Picon kanala
+
+▶ FHD EPG Info ekran (žuto dugme)
+  • Lista EPG događaja za selektovani kanal
+  • TMDB detalji (poster, žanr, režiser, opis)
+  • IMDb rejting
+  • Cast & Crew sa slikama
+  • Filmography browser
+  • Trailer preko yt-dlp
+
+▶ Statistike (zeleno dugme)
+  • Overview: broj kanala, sesija, ukupno vrijeme
+  • Top 20 channels: najgledaniji kanali
+  • By service type: DVB-S, DVB-T, IPTV
+  • By satellite: 20+ satelita sa imenima
+  • By encryption: FTA, Irdeto, NDS, Nagravision...
+  • By hour of day: kada najviše gledate
+  • By weekday: razlika radni dan / vikend
+  • Currently typical: šta obično gledate u ovo doba
+
+▶ Detekcija satelita
+  • Čita namespace iz service reference
+  • Mapira na ime satelita iz satellites.xml
+  • Podržava DVB-S, DVB-T, DVB-C
+  • Prikazuje poziciju + ime (npr. "23.5E (Astra 3C)")
+
+▶ Detekcija CAID-a
+  • Čita aktivne CAID-ove iz service.info()
+  • Čita aktivni CAID iz /tmp/ecm.info
+  • Prikazuje sve CAID-ove sa imenima sistema
+  • Podržava: Irdeto, NDS, Nagravision, Conax,
+    Cryptoworks, Viaccess, Seca, PowerVu, Biss...
+
+▶ Adult filter (parental lock)
+  • Čita blacklist iz /etc/enigma2/blacklist
+  • Preskače adult kanale u statistici
+  • Opciono: ON/OFF u Settings
+  • Automatski se ažurira kad mijenjate parental lock
+
+▶ Settings ekran (plavo dugme)
+  • DB folder (HDD/USB/tmp)
+  • History size (10-50)
+  • Min watch time (5-300s)
+  • Debounce (3-60s)
+  • History retention (30/60/90/180/365 dana/Forever)
+  • Filter Adult (parental): YES/NO
+  • API keys: TMDB, OMDb, GROQ
+  • Show IMDB rating: YES/NO
+  • Download posters: YES/NO
+  • Language: 9 jezika
+  • Cleanup old sessions
+  • Clear cache
+  • Clear all history
+  • Manual update
+
+💡 ZAHTJEVI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • Enigma2 image (OpenATV 8.0 testirano)
+  • Python 3
+  • python3-sqlite3
+  • python3-requests
+  • TMDB API key (besplatno: https://www.themoviedb.org/settings/api)
+  • OMDb API key (besplatno: https://www.omdbapi.com/apikey.aspx)
+  • GROQ: API key (besplatno: https://console.groq.com/keys)
+
+
+⚙️ KAKO DO API KLJUČEVA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1) TMDB API Key
+   • Registruj se na https://www.themoviedb.org/
+   • Idi na Settings → API → Request API Key
+   • Kopiraj API Key
+
+2) OMDb API Key
+   • Idi na https://www.omdbapi.com/apikey.aspx
+   • Izaberi Free (1,000 daily limit)
+   • Kopiraj API Key iz email-a
+
+3) Unesi ključeve u plugin:
+   • Otvori CiefpChannelHistory
+   • Plavo dugme (Settings)
+   • TMDB API Key → OK → unesi ključ
+   • OMDb API Key → OK → unesi ključ
+   • GROQ: API key → OK → unesi ključ
+   • Save (zeleno)
+
+Alternativa – datoteke
+Također možete ručno kreirati datoteke u folderu dodatka:
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/tmdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/omdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/groqapikey.txt
+
+🎨 KAKO KORISTITI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Glavni ekran:
+  • Gore/Dolje    — lista kanala
+  • OK            — prebaci na kanal
+  • Zeleno        — Statistics
+  • Žuto          — EPG Info
+  • Plavo         — Settings
+  • Crveno        — Exit
+
+EPG Info ekran:
+  • Gore/Dolje    — lista EPG događaja
+  • Zeleno        — Filmography
+  • Žuto          — Cast explore
+  • Plavo         — Trailer
+  • OK            — prebaci na kanal
+  • BACK          — vrati se
+
+Statistics:
+  • Gore/Dolje    — kategorije
+  • Zeleno        — Refresh
+
+
+🔧 TEHNIČKI DETALJI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • SQLite baza sa WAL modom
+  • Periodic UPDATE sesija (max 30s gubitak pri restartu)
+  • Polling na 5s za promjenu kanala
+  • Debounce 10s (izbjegava lažne sesije)
+  • Min watch 30s (kanal mora biti gledan 30s)
+  • Automatski cleanup starih sesija (retention)
+  • Threading za sve mrežne operacije
+  • FHD 1920x1080 skin
+
+👨‍💻 AUTOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ciefp
+https://github.com/ciefp
+

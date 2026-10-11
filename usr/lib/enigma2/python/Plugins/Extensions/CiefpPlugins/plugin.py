@@ -20,7 +20,7 @@ import urllib.request
 import uuid
 
 # Plugin version
-PLUGIN_VERSION = "4.4"
+PLUGIN_VERSION = "4.5"
 
 # Setup logging
 LOG_FILE = "/tmp/ciefp_plugin.log"
@@ -116,6 +116,7 @@ PLUGIN_LIST = [
     ("CiefpSignalInfo", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpSignalInfo.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSignalInfo/main/installer.sh -O - | /bin/sh", "CiefpSignalInfo"),
     ("CiefpEPGinfo", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpEPGinfo.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpEPGinfo/main/installer.sh -O - | /bin/sh", "CiefpEPGinfo"),
     ("CiefpDishPointer", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpDishPointer.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpDishPointer/main/installer.sh -O - | /bin/sh", "CiefpDishPointer"),
+    ("CiefpChannelHistory", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpChannelHistory.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpChannelHistory/main/installer.sh -O - | /bin/sh", "CiefpChannelHistory"),
     ("Ciefp Whitelist Streamrelay", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpWhitelistStreamrelay.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpWhitelistStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpWhitelistStreamrelay"),
     ("Ciefp T2Mi Abertis", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpT2MiAbertis.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsT2miAbertis/main/installer.sh -O - | /bin/sh", "CiefpT2MiAbertis"),
     ("Ciefp T2Mi Abertis OpenPli", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpT2MiAbertisOpenPli.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsT2miAbertisOpenPLi/main/installer.sh -O - | /bin/sh", "CiefpT2MiAbertisOpenPli"),
@@ -368,7 +369,7 @@ class CiefpPluginsPanel(Screen):
         self["pluginlist"] = List(self.pluginList)
         self["description"] = ScrollLabel("")
         self["status_label"] = Label("")
-        self["title"] = Label(f"..:: Ciefp Plugins (NO.45) ::.. (Version {PLUGIN_VERSION})")
+        self["title"] = Label(f"..:: Ciefp Plugins (NO.46) ::.. (Version {PLUGIN_VERSION})")
         self["actions"] = ActionMap(["OkCancelActions", "ColorActions", "DirectionActions"], {
             "cancel": self.exit,
             "red": self.exit,
@@ -646,4 +647,4 @@ def main(session, **kwargs):
 
 def Plugins(**kwargs):
     from Plugins.Plugin import PluginDescriptor
-    return [PluginDescriptor(name="Ciefp Plugins", description=f"Panel for Ciefp plugins NO.45 (Version {PLUGIN_VERSION})", where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main, icon="plugin.png")]
+    return [PluginDescriptor(name="Ciefp Plugins", description=f"Panel for Ciefp plugins NO.46 (Version {PLUGIN_VERSION})", where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main, icon="plugin.png")]

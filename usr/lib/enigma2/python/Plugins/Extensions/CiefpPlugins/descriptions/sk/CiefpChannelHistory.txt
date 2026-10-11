@@ -1,0 +1,186 @@
+..:: CiefpChannelHistory v1.1  ::..
+História sledovania kanálov so štatistikami
+
+
+📺 POPIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CiefpChannelHistory je plugin pre Enigma2, ktorý zaznamenáva históriu
+sledovania TV kanálov a poskytuje podrobné štatistiky. Súčasťou je
+informačná obrazovka EPG vo Full HD rozlíšení, obohatená o údaje
+z databáz TMDB a OMDb.
+
+Tento plugin vznikol spojením dvoch predchádzajúcich pluginov:
+• CiefpTMDBinfo
+• CiefpEPGinfo
+
+Kombináciou funkcií týchto dvoch pluginov vznikol CiefpChannelHistory –
+komplexný nástroj na sledovanie a analýzu sledovanosti TV kanálov.
+
+📊 DÔLEŽITÉ UPOZORNENIE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Aby boli štatistiky čo najpresnejšie a najvernejšie,
+plugin vyžaduje niekoľkodňové používanie.
+
+Plugin zaznamenáva sledovanosť od okamihu inštalácie.
+Čím dlhšie plugin používate, tým presnejšie sú štatistiky:
+
+• Prvý deň     → základné štatistiky (niekoľko kanálov)
+• 3 – 5 dní    → reálny obraz o sledovanosti
+• 7+ dní       → spoľahlivé štatistiky podľa hodín a dní
+• 30+ dní      → kompletná analýza návykov pri sledovaní
+
+Odporúčame nechať plugin bežať bez vymazania databázy
+aspoň 3 – 5 dní predtým, než začnete vyhodnocovať
+svoje návyky pri sledovaní.
+
+Štatistiky sa ukladajú do databázy SQLite a zostávajú zachované
+aj po reštarte systému Enigma. Ak chcete začať odznova,
+môžete ich vymazať v časti Nastavenia → Vymazať celú históriu. 🎯 KĽÚČOVÉ VLASTNOSTI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+▶ História sledovania kanálov
+• Automaticky zaznamenáva každý sledovaný kanál
+• Ukladá dĺžku sledovania, počet zobrazení a čas posledného sledovania
+• Databáza SQLite s režimom WAL pre vysokú spoľahlivosť
+
+▶ Hlavná obrazovka vo FHD (1920x1080)
+• Zoznam posledných 15 kanálov (história)
+• Aktuálny kanál zobrazený v hornej časti
+• Informácie z EPG + plagát z TMDB + obsadenie
+• Ikony kanálov (picony)
+
+▶ Obrazovka s informáciami EPG vo FHD (žlté tlačidlo)
+• Zoznam udalostí EPG pre vybraný kanál
+• Podrobnosti z TMDB (plagát, žáner, režisér, popis)
+• Hodnotenie IMDb
+• Obsadenie a štáb s fotografiami
+• Prehliadač filmografie
+• Prehrávanie trailerov cez yt-dlp
+
+▶ Štatistiky (zelené tlačidlo)
+• Prehľad: počet kanálov, relácií, celkový čas
+• Top 20 kanálov: najsledovanejšie kanály
+• Podľa typu služby: DVB-S, DVB-T, IPTV
+• Podľa satelitu: viac ako 20 satelitov s názvami
+• Podľa kódovania: FTA, Irdeto, NDS, Nagravision...
+• Podľa hodiny dňa: časy najvyššej sledovanosti
+• Podľa dňa v týždni: porovnanie pracovných dní a víkendu
+• Typický obsah pre daný čas: čo zvyčajne sledujete v tomto čase
+
+▶ Detekcia satelitu
+• Číta „namespace“ z referencie služby (service reference)
+• Priraďuje názov satelitu zo súboru satellites.xml
+• Podporuje DVB-S, DVB-T, DVB-C
+• Zobrazuje pozíciu a názov (napr. „23.5E (Astra 3C)“)
+
+▶ Detekcia CAID
+• Číta aktívne CAID zo service.info()
+• Číta aktívne CAID zo súboru /tmp/ecm.info
+• Zobrazuje informácie o všetkých CAID vrátane názvov systémov
+• Podporuje: Irdeto, NDS, Nagravision, Conax,
+Cryptoworks, Viaccess, Seca, PowerVu, Biss...
+
+▶ Filter pre dospelých (rodičovský zámok)
+• Číta čiernu listinu zo súboru /etc/enigma2/blacklist
+• Preskakuje kanály pre dospelých v Štatistiky
+• Voliteľné: ZAP/VYP v nastaveniach
+• Automatická aktualizácia pri zmene rodičovského zámku
+
+▶ Obrazovka nastavení (modré tlačidlo)
+• Priečinok databázy (HDD/USB/tmp)
+• Veľkosť histórie (10 – 50)
+• Min. čas sledovania (5 – 300 s)
+• Oneskorenie odozvy/Debounce (3 – 60 s)
+• Uchovávanie histórie (30/60/90/180/365 dní / navždy)
+• Filter obsahu pre dospelých (rodičovský zámok): ÁNO/NIE
+• API kľúče: TMDB, OMDb, GROQ
+• Zobraziť hodnotenie IMDB: ÁNO/NIE
+• Sťahovať plagáty: ÁNO/NIE
+• Jazyk: 9 jazykov
+• Vyčistiť staré relácie
+• Vyčistiť vyrovnávaciu pamäť (cache)
+• Vymazať celú históriu
+• Manuálna aktualizácia
+
+💡 POŽIADAVKY
+-
+
+• Image Enigma2 (testované na OpenATV 8.0)
+• Python 3
+• python3-sqlite3
+• python3-requests
+• API kľúč TMDB (bezplatný: https://www.themoviedb.org/settings/api)
+• API kľúč OMDb (bezplatný: https://www.omdbapi.com/apikey.aspx)
+• GROQ: API kľúč (bezplatný: https://console.groq.com/keys)
+
+
+⚙️ AKO ZÍSKAŤ API KĽÚČE
+-
+
+1) API kľúč TMDB
+• Zaregistrujte sa na https://www.themoviedb.org/
+• Prejdite do Nastavenia (Settings) → API → Požiadať o API kľúč (Request API Key)
+• Skopírujte API kľúč
+
+2) API kľúč OMDb
+• Prejdite na https://www.omdbapi.com/apikey.aspx
+• Vyberte možnosť Free (denný limit 1 000 požiadaviek)
+• Skopírujte API kľúč z e-mailu
+
+3) Zadajte kľúče do pluginu:
+• Otvorte CiefpChannelHistory
+• Modré tlačidlo (Nastavenia)
+• TMDB API Key → OK → zadajte kľúč
+• OMDb API Key → OK → zadajte kľúč
+• GROQ: API key → OK → zadajte kľúč
+• Uložiť (zelené tlačidlo)
+
+Alternatíva – súbory
+Súbory môžete v priečinku doplnku vytvoriť aj manuálne:
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/tmdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/omdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/groqapikey.txt
+
+🎨 POUŽÍVANIE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Hlavná obrazovka:
+• Hore/Dole      — zoznam kanálov
+• OK             — prepnúť na kanál
+• Zelené         — štatistika
+• Žlté           — informácie o EPG
+• Modré          — nastavenia
+• Červené        — ukončiť
+
+Obrazovka informácií o EPG:
+• Hore/Dole      — zoznam udalostí EPG
+• Zelené         — Filmografia
+• Žlté          — Zobraziť obsadenie
+• Modré         — Upútavka
+• OK            — Prepnúť kanál
+• SPÄŤ          — Späť
+
+Štatistiky:
+• Hore/Dole     — Kategórie
+• Zelené        — Obnoviť
+
+
+🔧 TECHNICKÉ ÚDAJE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Databáza SQLite s režimom WAL
+• Pravidelná aktualizácia relácie (pri reštarte strata údajov max. 30 s)
+• Kontrola zmien kanála každých 5 s
+• 10-sekundové oneskorenie (debounce) (zabraňuje vzniku falošných relácií)
+• Minimálny čas sledovania 30 s (kanál musí byť sledovaný aspoň 30 s)
+• Automatické čistenie starých relácií (uchovávanie údajov)
+• Viacvláknové spracovanie všetkých sieťových operácií
+• Vzhľad (skin) vo FHD rozlíšení 1920x1080
+
+👨‍💻 AUTOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ciefp
+https://github.com/ciefp

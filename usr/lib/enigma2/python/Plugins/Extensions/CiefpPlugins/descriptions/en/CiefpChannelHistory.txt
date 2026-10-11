@@ -1,0 +1,189 @@
+
+..:: CiefpChannelHistory v1.1  ::..
+Channel Watch History with Statistics
+
+
+📺 DESCRIPTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CiefpChannelHistory is an Enigma2 plugin that tracks TV channel
+viewing history and provides detailed statistics, featuring an
+FHD EPG Info screen enriched with TMDB/OMDb data.
+
+The concept for this plugin originated from two previous plugins:
+• CiefpTMDBinfo
+• CiefpEPGinfo
+
+By combining the functionality of these two plugins,
+CiefpChannelHistory was created—a comprehensive tool for
+tracking and analyzing TV channel viewership. 
+
+📊 IMPORTANT NOTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+To ensure the statistics are as accurate and realistic as possible,
+the plugin requires a few days of use.
+
+The plugin tracks viewership from the moment of installation. The longer
+you use the plugin, the more precise the statistics become:
+
+• First day    → basic statistics (a few channels)
+• 3–5 days     → realistic view of viewership
+• 7+ days      → reliable statistics by hour and day
+• 30+ days     → complete analysis of viewing habits
+
+We recommend letting the plugin run without clearing the database
+for at least 3–5 days before drawing conclusions about
+your viewing habits.
+
+Statistics are stored in an SQLite database and persist through
+Enigma restarts. You can delete them via Settings → Clear All History
+if you wish to start from scratch.
+
+🎯 KEY FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+▶ Channel viewing history
+• Automatically tracks every channel you watch
+• Logs duration, view count, and last viewed timestamp
+• SQLite database with WAL mode for reliability
+
+▶ FHD Main Screen (1920x1080)
+• List of the last 15 channels (history)
+• Current channel displayed at the top
+• EPG info + TMDB poster + cast
+• Channel picons
+
+▶ FHD EPG Info Screen (yellow button)
+• List of EPG events for the selected channel
+• TMDB details (poster, genre, director, description)
+• IMDb rating
+• Cast & Crew with images
+• Filmography browser
+• Trailer playback via yt-dlp
+
+▶ Statistics (green button)
+• Overview: number of channels, sessions, total time
+• Top 20 channels: most watched channels
+• By service type: DVB-S, DVB-T, IPTV
+• By satellite: 20+ satellites with names
+• By encryption: FTA, Irdeto, NDS, Nagravision...
+• By hour of day: peak viewing times
+• By weekday: weekday vs. weekend comparison
+• Currently typical: what you usually watch at this time
+
+▶ Satellite detection
+• Reads namespace from service reference
+• Maps to satellite name from satellites.xml
+• Supports DVB-S, DVB-T, DVB-C
+• Displays position + name (e.g., "23.5E (Astra 3C)")
+
+▶ CAID detection
+• Reads active CAIDs from service.info()
+• Reads active CAID from /tmp/ecm.info
+• Displays information all CAIDs with system names 
+• Supports: Irdeto, NDS, Nagravision, Conax, 
+Cryptoworks, Viaccess, Seca, PowerVu, Biss...
+
+▶ Adult filter (parental lock) 
+• Reads the blacklist from /etc/enigma2/blacklist 
+• Skips adult channels in statistics 
+• Optional: ON/OFF in Settings 
+• Automatically updates when you change the parental lock
+
+▶ Settings screen (blue button) 
+• DB folder (HDD/USB/tmp) 
+• History size (10-50) 
+• Min watch time (5-300s) 
+• Debounce (3-60s) 
+• History retention (30/60/90/180/365 days/Forever) 
+• Filter Adult (parental): YES/NO 
+• API keys: TMDB, OMDb, GROQ 
+• Show IMDB rating: YES/NO 
+• Download posters: YES/NO 
+• Language: 9 languages 
+• Cleanup old sessions 
+• Clear cache 
+• Clear all history 
+• Manual update
+
+💡 REQUIREMENTS
+- 
+
+• Enigma2 image (OpenATV 8.0 tested) 
+• Python 3 
+• python3-sqlite3 
+• python3-requests 
+• TMDB API key (free: https://www.themoviedb.org/settings/api) 
+• OMDb API key (free: https://www.omdbapi.com/apikey.aspx) 
+• GROQ: API key (free: https://console.groq.com/keys)
+
+
+⚙️ HOW TO GET API KEYS
+-
+
+1) TMDB API Key 
+• Register at https://www.themoviedb.org/ 
+• Go to Settings → API → Request API Key
+• Copy API Key
+
+2) OMDb API Key
+• Go to https://www.omdbapi.com/apikey.aspx
+• Select Free (1,000 daily limit)
+• Copy the API Key from the email
+
+3) Enter the keys into the plugin:
+• Open CiefpChannelHistory
+• Blue button (Settings)
+• TMDB API Key → OK → enter key
+• OMDb API Key → OK → enter key
+• GROQ: API key → OK → enter key
+• Save (green)
+
+Alternative – files
+You can also manually create files in the plugin folder:
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/tmdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/omdbapikey.txt
+- /usr/lib/enigma2/python/Plugins/Extensions/CiefpEPGinfo/groqapikey.txt
+
+🎨 HOW TO USE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Main screen:
+• Up/Down       — channel list
+• OK            — switch to channel
+• Green         — Statistics
+• Yellow        — EPG Info
+• Blue          — Settings
+• Red           — Exit
+
+EPG Info screen:
+• Up/Down       — EPG event list
+• Green         — Filmography
+• Yellow        — Cast explore
+• Blue          — Trailer
+• OK            — switch to channel
+• BACK          — go back
+
+Statistics:
+• Up/Down       — categories
+• Green         — Refresh
+
+
+🔧 TECHNICAL DETAILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• SQLite database with WAL mode
+• Periodic UPDATE session (max 30s loss during restart)
+• 5s polling for channel changes
+• 10s debounce (prevents false sessions)
+• 30s minimum watch time (channel must be watched for 30s)
+• Automatic cleanup of old sessions (retention)
+• Threading for all network operations
+• FHD 1920x1080 skin
+
+👨‍💻 AUTHOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ciefp
+https://github.com/ciefp
