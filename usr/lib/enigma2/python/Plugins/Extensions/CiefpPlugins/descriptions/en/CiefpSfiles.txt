@@ -1,0 +1,102 @@
+
+📺 CiefpSfiles v2.0.0 - Stalker / Ministra IPTV Player
+CiefpSfiles je napredni Enigma2 plugin za reprodukciju IPTV sadržaja sa Stalker/Ministra portala. 
+Podržava Live TV, Filmove (VOD) i Serije, sa prelepim modernim i klasičnim interfejsom, kao i automatskim povlačenjem opisa, postera i glumaca sa TMDB-a.
+
+📁 Lokacije fajlova (Putanje)
+Glavni plugin: /usr/lib/enigma2/python/Plugins/Extensions/CiefpSfiles/
+Lista portala (playlist): /etc/enigma2/CiefpSfiles/ciefpsfiles.txt
+API ključevi (TMDB, OMDB, GROQ): /etc/enigma2/CiefpSfiles/keys/
+Keš postera i slika: /etc/enigma2/CiefpSfiles/posters/
+Titlovi (ako se koriste): /etc/enigma2/CiefpSfiles/subtitles/
+
+⚙️ Kako podesiti plugin?
+Otvorite plugin i pritisnite MENU (ili dugme za podešavanja).
+
+Uđite u Settings.
+Unesite svoje TMDB API Key (obavezno za postere i opise), OMDB API Key (za IMDB ocene) i GROQ API Key (za automatski prevod opisa).
+Izaberite Skin Type (Classic ili Modern).
+Izaberite željeni tip plejera (preporučuje se 5002 - Exteplayer3).
+Sačuvajte podešavanja (zeleno dugme).
+
+🎮 Komande na daljinskom upravljaču (u toku reprodukcije)
+Kada pokrenete film ili seriju, Enigma2 prelazi u režim reprodukcije (MoviePlayer). 
+
+Evo tačnih komandi koje rade:
+Dugme - Funkcija
+STOP (ili dugme sa kvadratom) - Prekida reprodukciju i vraća vas nazad na listu filmova/serija. Ovo je glavno dugme za izlazak iz filma!
+PLAY / PAUSE - Pauzira reprodukciju. Ponovni pritisak nastavlja.
+REW (Premotaj unazad) - Premotava unazad.
+FF (Premotaj unapred) - Premotava unapred.
+PREV (Prethodni) - Vraća na prethodni segment (ako plejer podržava).
+NEXT (Sledeći) - Ide na sledeći segment (ako plejer podržava).
+OK - Prikazuje Info bar (traku za napredak, vreme).
+EXIT - U nekim slučajevima zatvara Info bar, ali ne zaustavlja uvek strim. Ako EXIT ne izbaci odmah iz filma, koristite STOP.
+
+💡 Savet: Ako ste ušli u film i želite da ga prekinete, najsigurnije je da pritisnete STOP na daljinskom. 
+To će zatvoriti plejer i vratiti vas na prethodni ekran (listu filmova ili serija).
+
+🔄 Automatsko ažuriranje
+Plugin poseduje ugrađeni sistem za proveru novih verzija. Kada se pojavi nova verzija na GitHub-u:
+Dobićete obaveštenje pri otvaranju plugina.
+Ažuriranje se vrši automatski preko installer.sh skripte.
+
+🙏 Zasluge i zahvalnost
+KiddaC – Specijalna zahvalnost za nesebičnu pomoć, savete i rešavanje najkompleksnijih problema sa Stalker motorom (posebno oko serija).
+
+DeepSeek AI – Zahvalnost za pomoć u kodiranju, optimizaciji koda i rešavanju programerskih izazova.
+
+Razvio: ciefp
+Verzija: 2.0.0
+
+
+########################################################################################################################################################################
+
+
+📺 CiefpSfiles v2.0.0 - Stalker / Ministra IPTV Player
+CiefpSfiles is an advanced Enigma2 plugin for playing IPTV content from Stalker/Ministra portals.
+It supports Live TV, Movies (VOD), and Series, featuring both a beautiful modern interface and a classic one, along with the automatic retrieval of descriptions, posters, and cast information from TMDB.
+
+📁 File Locations (Paths)
+Main plugin: /usr/lib/enigma2/python/Plugins/Extensions/CiefpSfiles/
+Portal list (playlist): /etc/enigma2/CiefpSfiles/ciefpsfiles.txt
+API keys (TMDB, OMDB, GROQ): /etc/enigma2/CiefpSfiles/keys/
+Poster and image cache: /etc/enigma2/CiefpSfiles/posters/
+Subtitles (if used): /etc/enigma2/CiefpSfiles/subtitles/
+
+⚙️ How to configure the plugin?
+Open the plugin and press MENU (or the settings button).
+
+Go to Settings.
+Enter your TMDB API Key (required for posters and descriptions), OMDB API Key (for IMDb ratings), and GROQ API Key (for automatic translation of descriptions).
+Select the Skin Type (Classic or Modern).
+Choose your preferred player type (5002 - Exteplayer3 is recommended).
+Save the settings (green button).
+
+🎮 Remote Control Commands (during playback)
+When you start a movie or series, Enigma2 switches to playback mode (MoviePlayer). Here are the correct, functional commands:
+Button - Function
+STOP (or the button with a square icon) - Stops playback and returns you to the list of movies/series. This is the primary button for exiting a movie!
+PLAY / PAUSE - Pauses playback. Pressing it again resumes playback.
+REW (Rewind) - Rewinds.
+FF (Fast Forward) - Fast-forwards.
+PREV (Previous) - Goes to the previous segment (if supported by the player).
+NEXT (Next) - Goes to the next segment (if supported by the player).
+OK - Displays the Info bar (progress bar, time).
+EXIT - In some cases, this closes the Info bar, but it does not always stop the stream. If pressing EXIT doesn't immediately exit the movie, use the STOP button.
+
+💡 Tip: If you have started a movie and wish to stop it, the safest method is to press the STOP button on your remote control.
+This will close the player and return you to the previous screen (the list of movies or series).
+
+🔄 Automatic Updates
+The plugin includes a built-in system for checking new versions. When a new version is released on GitHub:
+You will receive a notification upon opening the plugin.
+Updates are performed automatically via the `installer.sh` script.
+
+🙏 Credits and Acknowledgments
+KiddaC – Special thanks for selfless assistance, advice, and resolving the most complex issues related to the Stalker engine (particularly concerning TV series).
+
+DeepSeek AI – Thanks for assistance with coding, code optimization, and overcoming programming challenges.
+
+Developed by: ciefp
+Version: 2.0.0

@@ -22,7 +22,7 @@ import uuid
 import json
 from Components.config import ConfigText
 # Plugin version
-PLUGIN_VERSION = "4.7"
+PLUGIN_VERSION = "4.8"
 
 # Setup logging
 LOG_FILE = "/tmp/ciefp_plugin.log"
@@ -140,6 +140,7 @@ PLUGIN_LIST = [
     ("CiefpEPGinfo", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpEPGinfo.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpEPGinfo/main/installer.sh -O - | /bin/sh", "CiefpEPGinfo", "CiefpEPGinfo"),
     ("CiefpDishPointer", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpDishPointer.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpDishPointer/main/installer.sh -O - | /bin/sh", "CiefpDishPointer", "CiefpDishPointer"),
     ("CiefpXfiles", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpXfiles.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpXfiles/main/installer.sh -O - | /bin/sh", "CiefpXfiles", "CiefpXfiles"),
+    ("CiefpSfiles", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpSfiles.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSfiles/main/installer.sh -O - | /bin/sh", "CiefpSfiles", "CiefpfSiles"),
     ("CiefpChannelHistory", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpChannelHistory.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpChannelHistory/main/installer.sh -O - | /bin/sh", "CiefpChannelHistory", "CiefpChannelHistory"),
     ("Ciefp Whitelist Streamrelay", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpWhitelistStreamrelay.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpWhitelistStreamrelay/main/installer.sh -O - | /bin/sh", "CiefpWhitelistStreamrelay", "CiefpWhitelistStreamrelay"),
     ("Ciefp T2Mi Abertis", "/usr/lib/enigma2/python/Plugins/Extensions/CiefpPlugins/icons/CiefpT2MiAbertis.png", "wget -q --no-check-certificate https://raw.githubusercontent.com/ciefp/CiefpSettingsT2miAbertis/main/installer.sh -O - | /bin/sh", "CiefpT2MiAbertis", "CiefpSettingsT2miAbertis"),
@@ -831,7 +832,7 @@ class CiefpPluginsPanel(Screen):
         self["page_label"] = Label()
         self["status_label"] = Label("")
         self["logo"] = Pixmap()
-        self["title"] = Label(f"..:: Ciefp Plugins (NO.47) ::.. (Version {PLUGIN_VERSION})")
+        self["title"] = Label(f"..:: Ciefp Plugins (NO.48) ::.. (Version {PLUGIN_VERSION})")
         self["separator0"] = Label()
         self["separator1"] = Label()
         self["separator3"] = Label()
@@ -1142,4 +1143,4 @@ def main(session, **kwargs):
 
 def Plugins(**kwargs):
     from Plugins.Plugin import PluginDescriptor
-    return [PluginDescriptor(name="Ciefp Plugins", description=f"Panel for Ciefp plugins NO.47 (Version {PLUGIN_VERSION})", where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main, icon="plugin.png")]
+    return [PluginDescriptor(name="Ciefp Plugins", description=f"Panel for Ciefp plugins NO.48 (Version {PLUGIN_VERSION})", where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main, icon="plugin.png")]
